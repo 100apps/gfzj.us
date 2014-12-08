@@ -12,40 +12,30 @@ Linode现在越来越碉堡了，以前我们最初用的时候，还是一般�
 
 被封原因很简单，频繁被投诉，违反linode的Tos
 
-``````````
-It appears that the content has been removed at this time. I've set this ticket to automatically close in 48 hours as we monitor for additional complaints. Please note that any further copyright infringement will result in account termination. I would recommend familiarizing yourself with our Terms of Service, and verifying that all content hosted on your Linode meets these terms:
-
-http://www.linode.com/tos.cfm
-
-Thank you for your cooperation.
-``````````
+    It appears that the content has been removed at this time. I've set this ticket to automatically close in 48 hours as we monitor for additional complaints. Please note that any further copyright infringement will result in account termination. I would recommend familiarizing yourself with our Terms of Service, and verifying that all content hosted on your Linode meets these terms:
+    
+    http://www.linode.com/tos.cfm
+    
+    Thank you for your cooperation.
 
 过了几个小时，不知道怎么寻思回味儿来了，又直接给发了一个
 
-``````````
-As the content has been placed back up, we will be terminating your account in 24 hours. At that time, all your Linodes will be removed and you will receive a prorated refund for remaining paid time.
-``````````
+    As the content has been placed back up, we will be terminating your account in 24 hours. At that time, all your Linodes will be removed and you will receive a prorated refund for remaining paid time.
 
 然后尝试着解释了一下，无果，被封了。封账户估计需要manager操作，回来换了一个人。
 
-``````````
-I apologize for any confusion, but we will not be able to allow your account to remain open. It will be terminated in 8 hours.
-``````````
+    I apologize for any confusion, but we will not be able to allow your account to remain open. It will be terminated in 8 hours.
 
 然后再解释
 
-``````````
-Your account is being terminated for repeated terms of service violations. We take our terms of service and US law very seriously, and cannot allow your account to remain open. Your account will be terminated in approximately 7 hours.
-``````````
+    Your account is being terminated for repeated terms of service violations. We take our terms of service and US law very seriously, and cannot allow your account to remain open. Your account will be terminated in approximately 7 hours.
 
 封账户其实也无可厚非，老外版权意识好，同时也可见 [DMCA][]在国外的执行力。可是上面有40+个linode节点，数据量比较大，在短时间内迁移走是个问题。幸好人多力量大，最后八九不离十，大部分数据保住了。
 
 大家一般都会压缩一下再传 tar czf xx.tar.gz xxx/ yyy/,但是如果空间不够，就不能压缩了。所以还是推荐 nc搭配tar
 
-``````````
-sender: tar cf - xxx/ yyy/ | nc -lv 1111
- receiver: nc sender 1111 > file.tar
-``````````
+    sender: tar cf - xxx/ yyy/ | nc -lv 1111
+     receiver: nc sender 1111 > file.tar
 
 快速，无需其他空间，缺点是不能显示进度，不可恢复。
 

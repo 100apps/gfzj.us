@@ -10,28 +10,26 @@ permalink: /tech/111.html
 ---
 一直没有解决的问题，就是在程序里如何重新获得新ip，linux和windows都很简单，通过java运行命令就可以了。但是mac始终没有找到链接adsl的命令，尝试了各种都没能解决，只能用Robot模拟人点击了。
 
-``````````
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.InputEvent;
-
-public class RobotExp {
- public static void main(String[] args) {
-  try {
-   Robot robot = new Robot();
-   robot.mouseMove(1149, 10);
-   robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-   robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-   robot.delay(1000);
-   robot.mouseMove(1149, 40);
-   robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-   robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-  } catch (AWTException e) {
-   e.printStackTrace();
-  }
- }
-}
-``````````
+    import java.awt.AWTException;
+    import java.awt.Robot;
+    import java.awt.event.InputEvent;
+    
+    public class RobotExp {
+     public static void main(String[] args) {
+      try {
+       Robot robot = new Robot();
+       robot.mouseMove(1149, 10);
+       robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+       robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+       robot.delay(1000);
+       robot.mouseMove(1149, 40);
+       robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+       robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+      } catch (AWTException e) {
+       e.printStackTrace();
+      }
+     }
+    }
 
 Robot类可以发送鼠标了键盘事件，并且可以截屏，这基本上就等于按键精灵了，图片匹配用bufferedimage一算就差不多了。以前一直不知道，前段时间在oschina上看到的，当时有人用来模拟点击玩游戏，相见恨晚。
 

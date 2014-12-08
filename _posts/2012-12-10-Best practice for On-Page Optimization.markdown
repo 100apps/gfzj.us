@@ -118,7 +118,7 @@ URLs with dynamic parameters have been shown in SEOmoz's correlation research to
 
 Appropriate Keyword Usage in H1 Tag
 
-Although employing targeted keywords in the H1 tag does not correlate well to high rankings, it does appear to provide some slight value. It's also considered a best practice for accessibility and to describe a page's content, hence our recommendation.
+Although employing targeted keywords in the H1 tag does not correlate well to high rankings, it does appear to provide some slight value. It's also considered a best practice for accessibility and to describe a page's content, hence our recommendation.  
 However, keyword stuffing may be perceived negatively by the search engines and can impact rankings. Thus, we suggest keeping keyword usage in the H1 to 2 or fewer uses.Employ between 1 and 2 instances of the keyword in the H1 tag.
 
 Employ between 1 and 2 instances of the keyword in the H1 tag.
@@ -139,7 +139,7 @@ Add emphasis using the <b>, <strong>, <em>, or <i> tag to one instance of the ta
 
 Keyword Usage in the Meta Description
 
-Using the queried keywords in the meta description tag gives it a much better chance to be used by the engine as the page's snippet. It also creates prominence and visibility for searchers, as the engines will make query terms in the search results snippets bold.
+Using the queried keywords in the meta description tag gives it a much better chance to be used by the engine as the page's snippet. It also creates prominence and visibility for searchers, as the engines will make query terms in the search results snippets bold.  
 However, employing keywords excessively in the meta description may be used as a spam signal to the search engines and will likely detract from a searcher's desire to click on a listing.Employ the targeted keyword(s) at least once but no more than 3 times in the meta description tag.
 
 Employ the targeted keyword(s) at least once but no more than 3 times in the meta description tag.

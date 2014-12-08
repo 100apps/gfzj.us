@@ -77,15 +77,15 @@ Baidu,site:393 （[www.shbiangchina.com][] 1,090）
 
 yfmac有先天优势，但是网站管理者不用心发展自身内网，而走上了不归路，只能祝他一路走好了。附上，各大搜索引擎举报地址：
 
-baidu：http://utility.baidu.com/antispam/spamreport.php
+baidu：[http://utility.baidu.com/antispam/spamreport.php][http_utility.baidu.com_antispam_spamreport.php]
 
-gogole：http://www.google.com/contact/spamreport.html
+gogole：[http://www.google.com/contact/spamreport.html][http_www.google.com_contact_spamreport.html]
 
 Sogou的举报信箱是： .
 
 如果您对上面的内容感兴趣，可以下载下面的文档。里面有1000个外链和它们的属性
 
-http://liuguangfeng.googlecode.com/files/www.yfmac.com%E5%88%86%E6%9E%90.rar
+[http://liuguangfeng.googlecode.com/files/www.yfmac.com%E5%88%86%E6%9E%90.rar][http_liuguangfeng.googlecode.com_files_www.yfmac.com_E5_88_86_E6_9E_90.rar]  
 
 
 
@@ -97,3 +97,6 @@ http://liuguangfeng.googlecode.com/files/www.yfmac.com%E5%88%86%E6%9E%90.rar
 [98a0683327a8820d73dcc0b60e2e02ba.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/98a0683327a8820d73dcc0b60e2e02ba.jpg
 [www.hustgroup.com]: http://www.hustgroup.com/
 [www.shbiangchina.com]: http://www.shbiangchina.com/
+[http_utility.baidu.com_antispam_spamreport.php]: http://utility.baidu.com/antispam/spamreport.php
+[http_www.google.com_contact_spamreport.html]: http://www.google.com/contact/spamreport.html
+[http_liuguangfeng.googlecode.com_files_www.yfmac.com_E5_88_86_E6_9E_90.rar]: http://liuguangfeng.googlecode.com/files/www.yfmac.com%E5%88%86%E6%9E%90.rar

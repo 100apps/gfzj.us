@@ -7,7 +7,7 @@ by: gf
 description: 想实现这样一个功能：用浏览器打开某个网页模拟人做一下事情，比如发帖。想一下，模拟人，无非是两种思路：用键盘精灵或者AutoIt3或者通过sendmessage之类的在操作系统级别模拟在页
 permalink: /tech/16.html
 ---
-想实现这样一个功能：
+想实现这样一个功能：  
 用浏览器打开某个网页模拟人做一下事情，比如发帖。想一下，模拟人，无非是两种思路：
 
 1.  用键盘精灵或者[AutoIt3][]或者通过send message之类的在操作系统级别模拟
@@ -23,10 +23,8 @@ permalink: /tech/16.html
 
 做了一个爬读秀的小脚本，用的是第三种方法.[猛击这里下载吧。][Link 2]把
 
-``````````
-127.0.0.1 s11.cnzz.com
-127.0.0.1 s10.cnzz.com
-``````````
+    127.0.0.1 s11.cnzz.com
+    127.0.0.1 s10.cnzz.com
 
 添加到**%windir%\\\\System32\\\\Drivers\\\\etc\\\\hosts** 这样所有访问s10.cnzz.com/stat.php都定向到本地，而stat.php是我们的一段js，后果就像这样：
 

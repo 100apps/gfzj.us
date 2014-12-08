@@ -7,167 +7,167 @@ by: gf
 description: Autorun.infEntries--------------------------------------------------------------------------------Thistopicisareferencefortheentriesthatcanbe
 permalink: /tech/191.html
 ---
-**Autorun.inf** Entries
-
-\--------------------------------------------------------------------------------
-
-This topic is a reference for the entries that can be used in an **Autorun.inf** file. An entry consists of a key and a value.
-
-\[AutoRun\] Keys
-\[DeviceInstall\] Keys
-\[AutoRun\] Keys
-action
-icon
-label
-open
-shellexecute
-shell
-shell\\\\verb
-action
-The action entry specifies the text that is used in the Autoplay dialog for the handler representing the program specified in the open or shellexecute entry in the media's **Autorun.inf** file. The value can be expressed as either text or as a resource stored in a binary.
-
-action=ActionText
-action=@\[filepath\\\\\]filename,-resourceID
-Parameters
-ActionText
-Text that is used in the Autoplay dialog for the handler representing the program specified in the open or shellexecute entry in the media's **Autorun.inf** file.
-
-filepath
-A string that contains the fully qualified path of the directory that contains the binary file containing the string. If no path is specified, the file must be in the drive's root directory.
-
-filename
-A string that contains the binary file's name.
-
-resourceID
-The ID of the string within the binary file.
-
-Remarks
-The action key is only used in Microsoft® Windows® XP Service Pack 2 (SP2) or later.
-
-As an example of the use of the action entry, some audio CDs also contain multimedia content accessible only when played in a computer. In the past, an **Autorun.inf** immediately launched that content when the CD was placed in the drive. In Windows XP Service Pack 2 (SP2) or later, however, the Autoplay dialog displays, offering the option of playing the multimedia content or simply playing the music.
-
-The string displayed in the Autoplay dialog is contructed by combining the text specified in the action entry with hard-coded text naming the provider, provided by the Shell. The icon is displayed next to it. This entry always appears as the first option in the Autoplay dialog and is selected by default. If the user accepts the option, the application specified by the open or shellexecute entry in the media's **Autorun.inf** file is launched. The Always do the selected action option is not available in this situation.
-
-The action and icon keys together define the representation of the application that is seen by the end user in the Autoplay dialog. They should be composed in such a way that users can easily identify them. They should indicate the application to be run, the company that created it, and any associated branding.
-
-CD or DVD media that are determined not to be either an audio CD or a movie DVD do not generate the Autoplay dialog. In those cases, the **Autorun.inf** file is allowed to execute without further user interaction.
-
-For backward compatibility, the action entry is optional for devices of type DRIVE\_CDROM and DRIVE\_FIXED. For these types, a default entry is used in the Autoplay dialog if no action entry is present in their **Autorun.inf** file.
-
-The action entry is mandatory for devices of type DRIVE\_REMOVABLE, which until now did not have **Autorun.inf** support. If no action entry is present, the Autoplay dialog is displayed, but with no option to launch the additional content.
-
-icon
-The icon entry specifies an icon which represents the AutoRun-enabled drive in the Windows user interface.
-
-icon=iconfilename\[,index\]
-Parameters
-iconfilename
-Name of an .ico, .bmp, .exe, or .dll file containing the icon information. If a file contains more than one icon, you must also specify zero-based index of the icon.
-
-Remarks
-The icon, together with the label, represents the AutoRun-enabled drive in the Windows user interface. For instance, in Windows Explorer, the drive is represented by this icon instead of the standard drive icon. The icon's file must be in the same directory as the file specified by the open command.
-
-The following example specifies the second icon in the MyProg.exe file.
-
-icon=MyProg.exe,1
-label
-The label entry specifies a text label which represents the AutoRun-enabled drive in the Windows user interface.
-
-label=LabelText
-Parameters
-LabelText
-A text string containing the label. It can contain spaces.
-
-Remarks
-The label, together with an icon, represents the AutoRun-enabled drive in the Windows user interface.
-
-The following example specifies the value "My Drive Label" as the drive's label.
-
-label=My Drive Label
-open
-The open entry specifies the path and file name of the application that AutoRun launches when a user inserts a disc in the drive.
-
-open=\[exepath\\\\\]exefile \[param1 \[param2\] ...\]
-Parameters
-exefile
-Fully qualified path of an executable file that runs when the CD is inserted. If only a file name is specified, it must be in drive's root directory. To locate the file in a subdirectory, you must specify a path. You can also include one or more command-line parameters to pass to the startup application.
-
-Remarks
-For more information about startup applications, see Tips for Writing AutoRun Startup Applications.
-
-shellexecute
-Version 5.0. The shellexecute entry specifies an application or data file that AutoRun will use to call ShellExecuteEx.
-
-shellexecute=\[filepath\\\\\]filename\[param1, \[param2\]...\]
-Parameters
-filepath
-A string that contains the fully qualified path of the directory that contains the data or executable file. If no path is specified, the file must be in the drive's root directory.
-
-filename
-A string that contains the file's name. If it is an executable file, it is launched. If it is a data file, it must be a member of a file class. ShellExecuteEx launches the default command associated with the file class.
-
-paramx
-Contains any additional parameters that should be passed to ShellExecuteEx.
-
-Remarks
-This entry is similar to open, but it allows you to use file association information to run the application.
-
-shell
-The shell entry specifies a default command for the drive's shortcut menu.
-
-shell=verb
-Parameters
-verb
-The verb that corresponds to the menu command. The verb and its associated menu command must be defined in the **Autorun.inf** file with a shell\\\\verb entry.
-
-Remarks
-When a user right-clicks the drive icon, a shortcut menu appears. If an **Autorun.inf** file is present, the default shortcut menu command is taken from it. This command also executes when the user double-clicks the drive's icon.
-
-To specify the default shortcut menu command, first define its verb, command string, and menu text with shell\\\\verb. Then use shell to make it the default shortcut menu command. Otherwise, the default menu item text will be "AutoPlay", which launches the application specified by the open entry.
-
-shell\\\\verb
-The shell\\\\verb entry adds a custom command to the drive's shortcut menu.
-
-shell\\\\verb\\\\command=Filename.exe
-shell\\\\verb=MenuText
-Parameters
-verb
-The menu command's verb. The shell\\\\verb\\\\command entry associates the verb with an executable file. Verbs must not contain embedded spaces. By default, verb is the text that is displayed in the shortcut menu.
-
-Filename.exe
-The path and file name of the application that performs the action.
-
-MenuText
-This parameter specifies the text that is displayed in the shortcut menu. If it is omitted, verb is displayed. MenuText can be mixed-case and can contain spaces. You can set a shortcut key for the menu item by putting an ampersand (&) in front of the letter.
-
-Remarks
-When a user right-clicks the drive icon, a shortcut menu appears. Adding shell/verb entries to the drive's **Autorun.inf** file allows you to add commands to this shortcut menu.
-
-There are two parts to this entry, which must be on separate lines. The first part is shell/verb/command. It is required. It associates a string, called a verb, with the application to launch when the command runs. The second part is the shell/verb entry. It is optional. You can include it to specify the text that displays in the shortcut menu.
-
-To specify a default shortcut menu command, define the verb with shell/verb, and make it the default command with the shell entry.
-
-The following sample **Autorun.inf** fragment associates the readit verb with the command string "Notepad abc\\\\readme.txt". The menu text is "Read Me", and 'M' is defined as the item's shortcut key. When the user selects this command, the drive's abc\\\\readme.txt file opens with Microsoft Notepad.
-
-shell\\\\readit\\\\command=notepad abc\\\\readme.txt
-shell\\\\readit=Read &Me
-\[DeviceInstall\] Keys
-DriverPath
-DriverPath
-The DriverPath entry specifies a directory to search recursively for driver files. This command is used during a driver installation and is not part of an AutoRun operation. The \[DeviceInstall\] section is only supported under Windows XP.
-
-\[DeviceInstall\]
-DriverPath=directorypath
-Parameters
-directorypath
-A path to a directory that Windows searches for driver files, along with all of its subdirectories.
-
-Remarks
-Do not use drive letters in directorypath as they change from one computer to the next.
-
-To search multiple directories, add a DriverPath entry for each directory as in this example.
-
-\[DeviceInstall\]
-DriverPath=drivers\\\\video
-DriverPath=drivers\\\\audio
+**Autorun.inf** Entries  
+  
+\--------------------------------------------------------------------------------  
+  
+This topic is a reference for the entries that can be used in an **Autorun.inf** file. An entry consists of a key and a value.  
+  
+\[AutoRun\] Keys  
+\[DeviceInstall\] Keys  
+\[AutoRun\] Keys  
+action  
+icon  
+label  
+open  
+shellexecute  
+shell  
+shell\\\\verb  
+action  
+The action entry specifies the text that is used in the Autoplay dialog for the handler representing the program specified in the open or shellexecute entry in the media's **Autorun.inf** file. The value can be expressed as either text or as a resource stored in a binary.  
+  
+action=ActionText  
+action=@\[filepath\\\\\]filename,-resourceID  
+Parameters  
+ActionText  
+Text that is used in the Autoplay dialog for the handler representing the program specified in the open or shellexecute entry in the media's **Autorun.inf** file.  
+  
+filepath  
+A string that contains the fully qualified path of the directory that contains the binary file containing the string. If no path is specified, the file must be in the drive's root directory.  
+  
+filename  
+A string that contains the binary file's name.  
+  
+resourceID  
+The ID of the string within the binary file.  
+  
+Remarks  
+The action key is only used in Microsoft® Windows® XP Service Pack 2 (SP2) or later.  
+  
+As an example of the use of the action entry, some audio CDs also contain multimedia content accessible only when played in a computer. In the past, an **Autorun.inf** immediately launched that content when the CD was placed in the drive. In Windows XP Service Pack 2 (SP2) or later, however, the Autoplay dialog displays, offering the option of playing the multimedia content or simply playing the music.  
+  
+The string displayed in the Autoplay dialog is contructed by combining the text specified in the action entry with hard-coded text naming the provider, provided by the Shell. The icon is displayed next to it. This entry always appears as the first option in the Autoplay dialog and is selected by default. If the user accepts the option, the application specified by the open or shellexecute entry in the media's **Autorun.inf** file is launched. The Always do the selected action option is not available in this situation.  
+  
+The action and icon keys together define the representation of the application that is seen by the end user in the Autoplay dialog. They should be composed in such a way that users can easily identify them. They should indicate the application to be run, the company that created it, and any associated branding.  
+  
+CD or DVD media that are determined not to be either an audio CD or a movie DVD do not generate the Autoplay dialog. In those cases, the **Autorun.inf** file is allowed to execute without further user interaction.  
+  
+For backward compatibility, the action entry is optional for devices of type DRIVE\_CDROM and DRIVE\_FIXED. For these types, a default entry is used in the Autoplay dialog if no action entry is present in their **Autorun.inf** file.  
+  
+The action entry is mandatory for devices of type DRIVE\_REMOVABLE, which until now did not have **Autorun.inf** support. If no action entry is present, the Autoplay dialog is displayed, but with no option to launch the additional content.  
+  
+icon  
+The icon entry specifies an icon which represents the AutoRun-enabled drive in the Windows user interface.  
+  
+icon=iconfilename\[,index\]  
+Parameters  
+iconfilename  
+Name of an .ico, .bmp, .exe, or .dll file containing the icon information. If a file contains more than one icon, you must also specify zero-based index of the icon.  
+  
+Remarks  
+The icon, together with the label, represents the AutoRun-enabled drive in the Windows user interface. For instance, in Windows Explorer, the drive is represented by this icon instead of the standard drive icon. The icon's file must be in the same directory as the file specified by the open command.  
+  
+The following example specifies the second icon in the MyProg.exe file.  
+  
+icon=MyProg.exe,1  
+label  
+The label entry specifies a text label which represents the AutoRun-enabled drive in the Windows user interface.  
+  
+label=LabelText  
+Parameters  
+LabelText  
+A text string containing the label. It can contain spaces.  
+  
+Remarks  
+The label, together with an icon, represents the AutoRun-enabled drive in the Windows user interface.  
+  
+The following example specifies the value "My Drive Label" as the drive's label.  
+  
+label=My Drive Label  
+open  
+The open entry specifies the path and file name of the application that AutoRun launches when a user inserts a disc in the drive.  
+  
+open=\[exepath\\\\\]exefile \[param1 \[param2\] ...\]  
+Parameters  
+exefile  
+Fully qualified path of an executable file that runs when the CD is inserted. If only a file name is specified, it must be in drive's root directory. To locate the file in a subdirectory, you must specify a path. You can also include one or more command-line parameters to pass to the startup application.  
+  
+Remarks  
+For more information about startup applications, see Tips for Writing AutoRun Startup Applications.  
+  
+shellexecute  
+Version 5.0. The shellexecute entry specifies an application or data file that AutoRun will use to call ShellExecuteEx.  
+  
+shellexecute=\[filepath\\\\\]filename\[param1, \[param2\]...\]  
+Parameters  
+filepath  
+A string that contains the fully qualified path of the directory that contains the data or executable file. If no path is specified, the file must be in the drive's root directory.  
+  
+filename  
+A string that contains the file's name. If it is an executable file, it is launched. If it is a data file, it must be a member of a file class. ShellExecuteEx launches the default command associated with the file class.  
+  
+paramx  
+Contains any additional parameters that should be passed to ShellExecuteEx.  
+  
+Remarks  
+This entry is similar to open, but it allows you to use file association information to run the application.  
+  
+shell  
+The shell entry specifies a default command for the drive's shortcut menu.  
+  
+shell=verb  
+Parameters  
+verb  
+The verb that corresponds to the menu command. The verb and its associated menu command must be defined in the **Autorun.inf** file with a shell\\\\verb entry.  
+  
+Remarks  
+When a user right-clicks the drive icon, a shortcut menu appears. If an **Autorun.inf** file is present, the default shortcut menu command is taken from it. This command also executes when the user double-clicks the drive's icon.  
+  
+To specify the default shortcut menu command, first define its verb, command string, and menu text with shell\\\\verb. Then use shell to make it the default shortcut menu command. Otherwise, the default menu item text will be "AutoPlay", which launches the application specified by the open entry.  
+  
+shell\\\\verb  
+The shell\\\\verb entry adds a custom command to the drive's shortcut menu.  
+  
+shell\\\\verb\\\\command=Filename.exe  
+shell\\\\verb=MenuText  
+Parameters  
+verb  
+The menu command's verb. The shell\\\\verb\\\\command entry associates the verb with an executable file. Verbs must not contain embedded spaces. By default, verb is the text that is displayed in the shortcut menu.  
+  
+Filename.exe  
+The path and file name of the application that performs the action.  
+  
+MenuText  
+This parameter specifies the text that is displayed in the shortcut menu. If it is omitted, verb is displayed. MenuText can be mixed-case and can contain spaces. You can set a shortcut key for the menu item by putting an ampersand (&) in front of the letter.  
+  
+Remarks  
+When a user right-clicks the drive icon, a shortcut menu appears. Adding shell/verb entries to the drive's **Autorun.inf** file allows you to add commands to this shortcut menu.  
+  
+There are two parts to this entry, which must be on separate lines. The first part is shell/verb/command. It is required. It associates a string, called a verb, with the application to launch when the command runs. The second part is the shell/verb entry. It is optional. You can include it to specify the text that displays in the shortcut menu.  
+  
+To specify a default shortcut menu command, define the verb with shell/verb, and make it the default command with the shell entry.  
+  
+The following sample **Autorun.inf** fragment associates the readit verb with the command string "Notepad abc\\\\readme.txt". The menu text is "Read Me", and 'M' is defined as the item's shortcut key. When the user selects this command, the drive's abc\\\\readme.txt file opens with Microsoft Notepad.  
+  
+shell\\\\readit\\\\command=notepad abc\\\\readme.txt  
+shell\\\\readit=Read &Me  
+\[DeviceInstall\] Keys  
+DriverPath  
+DriverPath  
+The DriverPath entry specifies a directory to search recursively for driver files. This command is used during a driver installation and is not part of an AutoRun operation. The \[DeviceInstall\] section is only supported under Windows XP.  
+  
+\[DeviceInstall\]  
+DriverPath=directorypath  
+Parameters  
+directorypath  
+A path to a directory that Windows searches for driver files, along with all of its subdirectories.  
+  
+Remarks  
+Do not use drive letters in directorypath as they change from one computer to the next.  
+  
+To search multiple directories, add a DriverPath entry for each directory as in this example.  
+  
+\[DeviceInstall\]  
+DriverPath=drivers\\\\video  
+DriverPath=drivers\\\\audio  
 To indicate that the media contains no driver files so that it is not searched at all, include a \[DeviceInstall\] section in **Autorun.inf** that contains no DriverPath entries.

@@ -17,7 +17,7 @@ permalink: /tech/162.html
 
 代理服务器软件如何使用
 
-可以先运行socks5.exe -r试一下。找另外一台机器，运行你的firefox，设置socks代理ip:你的ip，端口：10086。访问http://21shsb.net/ip看看你的ip吧！如果想开机就启动，建议添加系统服务：**socks5.exe -i**。到系统服务里面就能看到了：
+可以先运行socks5.exe -r试一下。找另外一台机器，运行你的firefox，设置socks代理ip:你的ip，端口：10086。访问[http://21shsb.net/ip][http_21shsb.net_ip]看看你的ip吧！如果想开机就启动，建议添加系统服务：**socks5.exe -i**。到系统服务里面就能看到了：
 
 ![c617c9dfa7658074eb77443b88f594b0.jpg][]
 
@@ -36,6 +36,7 @@ permalink: /tech/162.html
 我也是从网上搜到一个用vc写的socks代理的源代码，然后又从google上搜了一个windows nt服务的例子，然后改造了一下，就出来这么一个程序。程序很dirty，感谢互联网。
 
 
+[http_21shsb.net_ip]: http://21shsb.net/ip
 [c617c9dfa7658074eb77443b88f594b0.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/c617c9dfa7658074eb77443b88f594b0.jpg
 [Link 1]: http://liuguangfeng.googlecode.com/files/socks5.rar
 [Link 2]: http://code.google.com/p/liuguangfeng/source/browse/trunk/socks5.cpp

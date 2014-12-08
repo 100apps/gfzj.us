@@ -8,11 +8,9 @@ keyword: dns域传送,axfr,dig
 description: 引用http://drops.wooyun.org/papers/64的原话：Dns是整个互联网公司业务的基础，目前越来越多的互联网公司开始自己搭建DNS服务器做解析服务，同时由于DNS服务是基础性服务非常
 permalink: /tech/80.html
 ---
-引用 http://drops.wooyun.org/papers/64的原话：
+引用 [http://drops.wooyun.org/papers/64][http_drops.wooyun.org_papers_64]的原话：
 
-``````````
-Dns是整个互联网公司业务的基础，目前越来越多的互联网公司开始自己搭建DNS服务器做解析服务，同时由于DNS服务是基础性服务非常重要，因此很多公司会对DNS服务器进行主备配置而DNS主备之间的数据同步就会用到dns域传送，但如果配置不当，就会导致任何匿名用户都可以获取DNS服务器某一域的所有记录，将整个企业的基础业务以及网络架构对外暴露从而造成严重的信息泄露，甚至导致企业网络被渗透。
-``````````
+    Dns是整个互联网公司业务的基础，目前越来越多的互联网公司开始自己搭建DNS服务器做解析服务，同时由于DNS服务是基础性服务非常重要，因此很多公司会对DNS服务器进行主备配置而DNS主备之间的数据同步就会用到dns域传送，但如果配置不当，就会导致任何匿名用户都可以获取DNS服务器某一域的所有记录，将整个企业的基础业务以及网络架构对外暴露从而造成严重的信息泄露，甚至导致企业网络被渗透。
 
 最近经常看到某某网站dns域传送漏洞，于是写了一个脚本扫描了 [alexa top 100万网站][alexa top 100]的dns。100万url列表中有的带路径，有的是二级域名，由于二级域名暂时没有想到好的过滤方法，我们只是粗略的过滤了路径，共得到987681个域名，其中包好dns域传送漏洞的有98046个，约占9.926%。考虑到：
 
@@ -24,184 +22,178 @@ Dns是整个互联网公司业务的基础，目前越来越多的互联网公�
 
 我们看看alexa排名前1000的网站：
 
-``````````
-alex排名        域名
-7       wikipedia.org@ns2.wikimedia.org
-89      about.com@txdns2.about.com
-97      livedoor.com@ns5.livedoor.com
-120     weather.com@dns3.weather.com
-154     goo.ne.jp@ns.via.or.jp
-179     wikimedia.org@ns2.wikimedia.org
-196     hardsextube.com@ns1.netvertise.us
-259     linkbucks.com@ns2.pkdomains.net
-265     liveinternet.ru@ns.liveinternet.ru
-266     y8.com@ns2.y8.com
-271     mobile01.com@dns2.mobile01.com
-303     pof.com@pv-0001.pof.com
-315     doublepimp.com@ns2.pkdomains.net
-328     zing.vn@ns3.sonthuy.com.vn
-334     4dsply.com@ns2.pkdomains.net
-340     movie2k.to@ns05.9it.de
-369     incredibar.com@ns1p.incredizone.com
-384     naukri.com@ns1.dn.net
-396     enet.com.cn@ns2.enet.com.cn
-446     friv.com@ns3.gamedns.com
-467     americanexpress.com@gw4.aexp.com
-482     myfreecams.com@ns2.metapeer.com
-522     hatena.ne.jp@ns1.future-s.com
-523     ce.cn@dns.ce.cn
-524     irctc.co.in@ns2.rcil.gov.in
-531     searchfunmoods.com@ns3.ringtonemoods.com
-533     rapidgator.net@ns2.rapidgator.net
-540     indianrail.gov.in@ns1.indianrail.gov.in
-581     24h.com.vn@dns1.24h.com.vn
-585     haber7.com@dns2.hosttoweb.net
-599     haberturk.com@ns1.cyh.com.tr
-620     123rf.com@ns6.zoneedit.co.uk
-632     tokobagus.com@ns3.tokobagus.com
-653     ad6media.fr@dns1.sd1.fr
-677     allrecipes.com@dns2.allrecipes.com
-709     exblog.jp@dns04.excite.co.jp
-728     over-blog.com@ns0.proceau.net
-751     dantri.com.vn@ns6.synerfy.com
-770     viva.co.id@dns2.vivanews.com
-772     beva.com@ns4.01isp.net
-773     sporx.com@ns1.maksimum.net
-822     excite.co.jp@dns04.excite.co.jp
-831     wiktionary.org@ns1.wikimedia.org
-834     gismeteo.ru@ns18.gismeteo.ru
-837     spotify.com@ns3.spotify.com
-847     quickmeme.com@ns2.quickmeme.com
-851     vporn.com@ns3.vporn.com
-878     probux.com@ns1.probux.com
-880     admagnet.net@ns3.nttindia.com
-917     directadvert.ru@ns2.flexum.ru
-985     akhbarak.net@ns2.akhbarak.net
-1000    udn.com@dns2.udn.com
-``````````
+    alex排名        域名
+    7       wikipedia.org@ns2.wikimedia.org
+    89      about.com@txdns2.about.com
+    97      livedoor.com@ns5.livedoor.com
+    120     weather.com@dns3.weather.com
+    154     goo.ne.jp@ns.via.or.jp
+    179     wikimedia.org@ns2.wikimedia.org
+    196     hardsextube.com@ns1.netvertise.us
+    259     linkbucks.com@ns2.pkdomains.net
+    265     liveinternet.ru@ns.liveinternet.ru
+    266     y8.com@ns2.y8.com
+    271     mobile01.com@dns2.mobile01.com
+    303     pof.com@pv-0001.pof.com
+    315     doublepimp.com@ns2.pkdomains.net
+    328     zing.vn@ns3.sonthuy.com.vn
+    334     4dsply.com@ns2.pkdomains.net
+    340     movie2k.to@ns05.9it.de
+    369     incredibar.com@ns1p.incredizone.com
+    384     naukri.com@ns1.dn.net
+    396     enet.com.cn@ns2.enet.com.cn
+    446     friv.com@ns3.gamedns.com
+    467     americanexpress.com@gw4.aexp.com
+    482     myfreecams.com@ns2.metapeer.com
+    522     hatena.ne.jp@ns1.future-s.com
+    523     ce.cn@dns.ce.cn
+    524     irctc.co.in@ns2.rcil.gov.in
+    531     searchfunmoods.com@ns3.ringtonemoods.com
+    533     rapidgator.net@ns2.rapidgator.net
+    540     indianrail.gov.in@ns1.indianrail.gov.in
+    581     24h.com.vn@dns1.24h.com.vn
+    585     haber7.com@dns2.hosttoweb.net
+    599     haberturk.com@ns1.cyh.com.tr
+    620     123rf.com@ns6.zoneedit.co.uk
+    632     tokobagus.com@ns3.tokobagus.com
+    653     ad6media.fr@dns1.sd1.fr
+    677     allrecipes.com@dns2.allrecipes.com
+    709     exblog.jp@dns04.excite.co.jp
+    728     over-blog.com@ns0.proceau.net
+    751     dantri.com.vn@ns6.synerfy.com
+    770     viva.co.id@dns2.vivanews.com
+    772     beva.com@ns4.01isp.net
+    773     sporx.com@ns1.maksimum.net
+    822     excite.co.jp@dns04.excite.co.jp
+    831     wiktionary.org@ns1.wikimedia.org
+    834     gismeteo.ru@ns18.gismeteo.ru
+    837     spotify.com@ns3.spotify.com
+    847     quickmeme.com@ns2.quickmeme.com
+    851     vporn.com@ns3.vporn.com
+    878     probux.com@ns1.probux.com
+    880     admagnet.net@ns3.nttindia.com
+    917     directadvert.ru@ns2.flexum.ru
+    985     akhbarak.net@ns2.akhbarak.net
+    1000    udn.com@dns2.udn.com
 
 可以用dig测试一下：
 
-``````````
-dig @ns2.wikimedia.org wikipedia.org axfr
-``````````
+    dig @ns2.wikimedia.org wikipedia.org axfr
 
 所以域名一定不要托管在不靠谱的nameserver上，比如，我们看看，哪些ns泄露的域名最多
 
-``````````
-686 ns2.secure.net
- 634 ns1.secure.net
- 468 ns1.net4india.com
- 464 ns2.net4india.com
- 463 ns2.amerinoc.com
- 456 ns1.sedoparking.com
- 446 ns2.mainnameserver.com
- 432 ns2.sedoparking.com
- 391 ns.mainnameserver.com
- 380 ns4.01isp.net
- 254 ns.majordomo.ru
- 243 ns2.1gb.ru
- 236 ns2.majordomo.ru
- 229 ns2.phatservers.com
- 222 ns4.xserver.jp
- 218 ns3.majordomo.ru
- 217 ns1.xserver.jp
- 212 ns3.xserver.jp
- 198 ns2.xserver.jp
- 184 ns4.zoneedit.com
- 179 ns5.xserver.jp
- 178 ns1.future-s.com
- 177 ns9.zoneedit.com
- 172 ns2.mediacenter.hu
- 168 ns2.mxserver.ro
- 168 ns1.proceau.net
- 168 dns2.midphase.com
- 156 ns17.zoneedit.com
- 155 ns8.zoneedit.com
- 146 ns3.zoneedit.com
- 142 ns7.zoneedit.com
- 138 ns1.edong.com
- 134 ns1.1gb.ru
- 133 ns12.linuxpl.com
- 131 ns2.zoneedit.com
- 130 dns1.papaki.gr
- 124 ns12.zoneedit.com
- 122 name1.autoforums.com
- 121 ns2.ocpdns.com
- 118 beta.freehost.com.ua
- 113 ns7.dns.net.cn
- 113 alpha.freehost.com.ua
- 112 ns1.websitehostserver.net
- 112 ns1.businessglobal.com
- 111 ns1.vidahost.com
- 111 dns2.papaki.gr
- 111 dns12.linuxpl.com
- 110 ns2.bilgihost.com
- 107 gamma.freehost.com.ua
- 105 ns1.dnsexit.com
- 105 dns6.tncservers.net
- 104 ns2.vdconline.vn
- 104 ns2.myhosting.com
- 104 ns1.online.net
- 104 ns.heartinternet.co.uk
- 101 ns.dns.net.cn
- 101 name3.autoforums.com
-  99 ns14.zoneedit.com
-  98 ns2.websitehostserver.net
-  97 ns.nexylan.net
-  97 fns1.42.pl
-  96 ns2.netsons.com
-  96 ns1.myhosting.com
-  95 ns7.indialinks.com
-  95 ns18.zoneedit.com
-  95 dns5.tncservers.net
-  91 ultra104.uk2.net
-  91 ns2.conepuppy.com
-  91 ns1.verticalscope.com
-  89 ns2.vidahost.com
-  88 fns2.42.pl
-  88 dns1.3366dns.com
-  88 b.ns.interland.net
-  87 ns5011.01isp.cn
-  86 rsdn1.octor.com
-  84 ns0.online.net
-  83 ns02.1blu.de
-  83 dns11.linuxpl.com
-  83 NS1.jnj.com
-  82 netname.com.ua
-  81 dns2.eunethosting.com
-  80 ns2.mydnslive.com
-  79 ns2.wdp-gazduire.ro
-  79 ns2.turdns.com
-  79 ns.r4h.com
-  78 ns2002.nhanhoa.com
-  78 ns2001.nhanhoa.com
-  78 ns11.linuxpl.com
-  78 ns1.netsons.com
-  78 ns.myhosting.com
-  77 ns3.verticalscope.com
-  77 ns2.rsnx.ru
-  76 ultra102.uk2.net
-  76 ns2.wix.com
-  76 ns2.rapidns.com
-  76 ns2.heartinternet.co.uk
-  76 ns1.seo-linuxpl.com
-  75 ns8.01isp.net
-  75 ns2.ni.net.tr
-  75 dns2.parkpage.foundationapi.com
-``````````
+    686 ns2.secure.net
+     634 ns1.secure.net
+     468 ns1.net4india.com
+     464 ns2.net4india.com
+     463 ns2.amerinoc.com
+     456 ns1.sedoparking.com
+     446 ns2.mainnameserver.com
+     432 ns2.sedoparking.com
+     391 ns.mainnameserver.com
+     380 ns4.01isp.net
+     254 ns.majordomo.ru
+     243 ns2.1gb.ru
+     236 ns2.majordomo.ru
+     229 ns2.phatservers.com
+     222 ns4.xserver.jp
+     218 ns3.majordomo.ru
+     217 ns1.xserver.jp
+     212 ns3.xserver.jp
+     198 ns2.xserver.jp
+     184 ns4.zoneedit.com
+     179 ns5.xserver.jp
+     178 ns1.future-s.com
+     177 ns9.zoneedit.com
+     172 ns2.mediacenter.hu
+     168 ns2.mxserver.ro
+     168 ns1.proceau.net
+     168 dns2.midphase.com
+     156 ns17.zoneedit.com
+     155 ns8.zoneedit.com
+     146 ns3.zoneedit.com
+     142 ns7.zoneedit.com
+     138 ns1.edong.com
+     134 ns1.1gb.ru
+     133 ns12.linuxpl.com
+     131 ns2.zoneedit.com
+     130 dns1.papaki.gr
+     124 ns12.zoneedit.com
+     122 name1.autoforums.com
+     121 ns2.ocpdns.com
+     118 beta.freehost.com.ua
+     113 ns7.dns.net.cn
+     113 alpha.freehost.com.ua
+     112 ns1.websitehostserver.net
+     112 ns1.businessglobal.com
+     111 ns1.vidahost.com
+     111 dns2.papaki.gr
+     111 dns12.linuxpl.com
+     110 ns2.bilgihost.com
+     107 gamma.freehost.com.ua
+     105 ns1.dnsexit.com
+     105 dns6.tncservers.net
+     104 ns2.vdconline.vn
+     104 ns2.myhosting.com
+     104 ns1.online.net
+     104 ns.heartinternet.co.uk
+     101 ns.dns.net.cn
+     101 name3.autoforums.com
+      99 ns14.zoneedit.com
+      98 ns2.websitehostserver.net
+      97 ns.nexylan.net
+      97 fns1.42.pl
+      96 ns2.netsons.com
+      96 ns1.myhosting.com
+      95 ns7.indialinks.com
+      95 ns18.zoneedit.com
+      95 dns5.tncservers.net
+      91 ultra104.uk2.net
+      91 ns2.conepuppy.com
+      91 ns1.verticalscope.com
+      89 ns2.vidahost.com
+      88 fns2.42.pl
+      88 dns1.3366dns.com
+      88 b.ns.interland.net
+      87 ns5011.01isp.cn
+      86 rsdn1.octor.com
+      84 ns0.online.net
+      83 ns02.1blu.de
+      83 dns11.linuxpl.com
+      83 NS1.jnj.com
+      82 netname.com.ua
+      81 dns2.eunethosting.com
+      80 ns2.mydnslive.com
+      79 ns2.wdp-gazduire.ro
+      79 ns2.turdns.com
+      79 ns.r4h.com
+      78 ns2002.nhanhoa.com
+      78 ns2001.nhanhoa.com
+      78 ns11.linuxpl.com
+      78 ns1.netsons.com
+      78 ns.myhosting.com
+      77 ns3.verticalscope.com
+      77 ns2.rsnx.ru
+      76 ultra102.uk2.net
+      76 ns2.wix.com
+      76 ns2.rapidns.com
+      76 ns2.heartinternet.co.uk
+      76 ns1.seo-linuxpl.com
+      75 ns8.01isp.net
+      75 ns2.ni.net.tr
+      75 dns2.parkpage.foundationapi.com
 
 我依稀看到了dns.net.cn。比如：
 
-``````````
-dig @ns7.dns.net.cn mozilla.com.cn axfr
-``````````
+    dig @ns7.dns.net.cn mozilla.com.cn axfr
 
 mozilla.com.cn躺枪了，有木有！
 
-本实验用到的程序和结果在 https://github.com/marginright/axfr
+本实验用到的程序和结果在 [https://github.com/marginright/axfr][https_github.com_marginright_axfr]
 
 本人工作压力极大，利用课余时间出点成绩不容易，并且，2013年06月21日，家里被黑客入侵，丢失thinkpad两台+canon 600D+几百现金。在这种极端情况下，强烈要求，转载注明来源。
 
 
+[http_drops.wooyun.org_papers_64]: http://drops.wooyun.org/papers/64
 [alexa top 100]: http://s3.amazonaws.com/alexa-static/top-1m.csv.zip
+[https_github.com_marginright_axfr]: https://github.com/marginright/axfr

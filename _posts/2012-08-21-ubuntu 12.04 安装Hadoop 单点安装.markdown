@@ -7,7 +7,7 @@ by: zj
 description: 安装JDK和openssh后，可以开始安装Hadoop下载一个稳定版的Hadoop：http://apache.osuosl.org/hadoop/common/hadoop-1.0.3/下载haoop-1.0.3.tar.gz，解压到/home/zj/hadoop修改如
 permalink: /tech/46.html
 ---
-安装JDK和openssh后，可以开始安装Hadoop 下载一个稳定版的Hadoop：http://apache.osuosl.org/hadoop/common/hadoop-1.0.3/ 下载haoop-1.0.3.tar.gz，解压到/home/zj/hadoop 修改如下配置文件： (1)修改hadoop-env.sh： 命令行中进入hadoop/conf，执行  $gedit hadoop-env.sh
+安装JDK和openssh后，可以开始安装Hadoop 下载一个稳定版的Hadoop：[http://apache.osuosl.org/hadoop/common/hadoop-1.0.3/][http_apache.osuosl.org_hadoop_common_hadoop-1.0.3] 下载haoop-1.0.3.tar.gz，解压到/home/zj/hadoop 修改如下配置文件： (1)修改hadoop-env.sh： 命令行中进入hadoop/conf，执行  $gedit hadoop-env.sh
 
 打开编辑行\#export JAVA\_HOME= ...
 
@@ -17,50 +17,43 @@ export JAVA\_HOME=/usr/lib/jvm/jdk1.7.0\_06
 
 很重要的一点：要修改 HADOOP\_PID\_DIR，否则在关闭hadoop时会遇到no namenode to stop 和 no datanode to stop的问题。修改如下： export HADOOP\_PID\_DIR=/home/zj/hadoop    (此路径可以自己指定) (2)修改core-site.xml 首先拷贝src/core文件夹下的core-default.xml文件到conf目录下，然后重命名成core-site.xml(默认在conf文件夹下的core-site.xml内容是空的)，进行如下修改： a、
 
-``````````
-<property>
-  <name>hadoop.tmp.dir</name>
-  <value>/home/zj/hadoop/hadoop-datastore/hadoop</value>
-  <description>A base for other temporary directories.</description>
-</property>
-``````````
+    <property>
+      <name>hadoop.tmp.dir</name>
+      <value>/home/zj/hadoop/hadoop-datastore/hadoop</value>
+      <description>A base for other temporary directories.</description>
+    </property>
 
 b、
 
-``````````
-<property>
-  <name>fs.default.name</name>
-  <value>hdfs://localhost:9999</value>
-  <description>The name of the default file system.  A URI whose
-  scheme and authority determine the FileSystem implementation.  The
-  uri's scheme determines the config property (fs.SCHEME.impl) naming
-  the FileSystem implementation class.  The uri's authority is used to
-  determine the host, port, etc. for a filesystem.</description>
-</property>
-``````````
+    <property>
+      <name>fs.default.name</name>
+      <value>hdfs://localhost:9999</value>
+      <description>The name of the default file system.  A URI whose
+      scheme and authority determine the FileSystem implementation.  The
+      uri's scheme determines the config property (fs.SCHEME.impl) naming
+      the FileSystem implementation class.  The uri's authority is used to
+      determine the host, port, etc. for a filesystem.</description>
+    </property>
 
 <!-- 这个配置非常重要，这是在之后的编程中要匹配的地址，确保端口号没被使用. --> (3)hdfs-site.xml 首先拷贝src/hdfs文件夹下的hdfs-default.xml文件到conf目录下，然后重命名成hdfs-site.xml(默认在conf文件夹下的hdfs-site.xml内容是空的)，进行如下修改：
 
-``````````
-<property>
-  <name>dfs.replication.min</name>
-  <value>1</value>
-  <description>Minimal block replication. 
-  </description>
-</property>
-``````````
+    <property>
+      <name>dfs.replication.min</name>
+      <value>1</value>
+      <description>Minimal block replication. 
+      </description>
+    </property>
 
 <!-- 由于是在单节点上配置，所以副本为1 --> (4)mapred-site.xml
 
-``````````
-<property>
-    <name>mapred.job.tracker</name>
-    <value>localhost:9998</value>
-    <description></description>
-  </property>
-``````````
+    <property>
+        <name>mapred.job.tracker</name>
+        <value>localhost:9998</value>
+        <description></description>
+      </property>
 
 <! -- 配置job tracker -->   参考 [http://wiki.apache.org/hadoop/Running\_Hadoop\_On\_Ubuntu\_Linux\_(Single-Node\_Cluster)][http_wiki.apache.org_hadoop_Running_Hadoop_On_Ubuntu_Linux_Single-Node_Cluster]  
 
 
+[http_apache.osuosl.org_hadoop_common_hadoop-1.0.3]: http://apache.osuosl.org/hadoop/common/hadoop-1.0.3/
 [http_wiki.apache.org_hadoop_Running_Hadoop_On_Ubuntu_Linux_Single-Node_Cluster]: http://wiki.apache.org/hadoop/Running_Hadoop_On_Ubuntu_Linux_%28Single-Node_Cluster%29

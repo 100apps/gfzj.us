@@ -9,13 +9,35 @@ permalink: /tech/119.html
 ---
 安装之前编译好的64bits hadoop 2.2.0： 1、配置hadoop环境变量：在bash\_profile中加入 export HADOOP\_HOME=/home/hadoop 2、修改配置文件：在解压之后的hadoop/etc目录下面 （1）core-site.xml配置namenode和tmp目录 <property> <name>fs.default.name</name>    <value>hdfs://localhost:9000</value> </property> <property> <name>hadoop.tmp.dir</name><value>/Users/hellouniverse/Documents/Apache/hadoop-2.2.0/hadoop\_tmp</value> </property> （2）hdfs-site.xml: 对namenode 和 datanode 存储路径的设置。 <property> <name>dfs.namenode.name.dir</name><value>/Users/hellouniverse/Documents/Apache/hadoop-2.2.0/namenode</value> </property> <property> <name>dfs.datanode.data.dir</name><value>/Users/hellouniverse/Documents/Apache/hadoop-2.2.0/datanode</value> </property> (3)mapred-site.xml: hadoop2.2.0有了yarn,所以原来的mapred配置都转向yarn-site.xml文件中了，这里也就指定yarn <property><name>mapreduce.framework.name</name> <value>yarn</value> </property> （4）修改hadoop-env.sh，配置java路径 export JAVA\_HOME=/System/Library/Frameworks/JavaVM.framework/Home 3、启动hadoop 启动的文件都在 sbin、bin下，都是命令。 使用命令cd $HADOOP\_HOME切换到该安装目录下。 （1）格式化 namenode ./bin/hdfs namenode -format 运行不报错，并显示 /\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* SHUTDOWN\_MSG: Shutting down NameNode at startos/localhost \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/ （2）启动namenode和datanode
 
-    | ------------------------------------------------------------------------------ |
-    | ./sbin/hadoop-daemon.sh start namenode  ./sbin/hadoop-daemon.sh start datanode |
+<table> 
+ <tbody> 
+  <tr> 
+   <td> 
+    <div>
+     ./sbin/hadoop-daemon.sh start namenode
+    </div> 
+    <div>
+     ./sbin/hadoop-daemon.sh start datanode
+    </div></td> 
+  </tr> 
+ </tbody> 
+</table>
 
 （3）启动Manage管理
 
-    | ------------------------------------------------------------------------------------ |
-    | ./sbin/yarn-daemon.sh start resourcemanager  ./sbin/yarn-daemon.sh start nodemanager |
+<table> 
+ <tbody> 
+  <tr> 
+   <td> 
+    <div>
+     ./sbin/yarn-daemon.sh start resourcemanager
+    </div> 
+    <div>
+     ./sbin/yarn-daemon.sh start nodemanager
+    </div></td> 
+  </tr> 
+ </tbody> 
+</table>
 
 （4）测试：输入jps 显示： 866 Jps 715 ResourceManager 800 NameNode 750 NodeManager 840 DataNode 如果缺少其中任何一项，则启动失败。 如果没有单独配置yarn-site.xml中的yarn.resourcemanager.webapp.address，默认的端口8088 访问 [http://127.0.0.1:8088/][http_127.0.0.1_8088]  可以访问hadoop管理页面 如果没有单独配置 hdfs-site.xml中的dfs.namenode.http-address,默认端口50070 [http://127.0.0.1:50070][http_127.0.0.1_50070] 可以访问namenode节点信息。 可以用如下命令关闭： ./sbin/hadoop-daemon.sh stop datanode（或namenode） ./yarn-daemon.sh stop resourcemanager（nodemanager） 4、运行测试 cd $HADOOP\_HOME （1） 在dfs上创建一个目录input    ./bin/hadoop dfs -mkdir /input （2）上传本地文件到input中    ./bin/hadoop dfs -put README.txt  /input （3）查看上传的文件 ./bin/hadoop dfs -ls /input  同时也可以通过[http://127.0.0.1:50070][http_127.0.0.1_50070] 查看节点下的文件。
 

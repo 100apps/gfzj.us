@@ -11,58 +11,58 @@ permalink: /tech/35.html
 
 ## 极力推荐的SEO博客 ##
 
-包括： 
-[Matt Cutts的博客][Matt Cutts] – 重要性就不必再说了，最好每篇都仔细阅读。 
-[SERoundtable][] – 及时总结与SEO有关的论坛和博客里有价值的帖子，内容挑选非常精确。 
-[SEOmoz][] – 这个公司的老板Rand是我最敬佩的SEO专家之一，对SEO技术的分析非常深入。 
-[Jim Boykin][] – Jim也是SEO业界响当当的人物，尤其擅长外部链接分析。 
-[SEO by the Sea][] – 专门分析各个搜索引擎申请的专利项目，引伸出SEO技术，大部分帖子都很长，有些晦涩难懂，不过很有参考价值。 
-[SEO Black Hat][] – 专门探讨黑帽和灰帽SEO技术，经常会有意想不到的窍门。 
-[SEO Book][] – 大名鼎鼎的Aaron Wall，发帖数量很大，范围广泛，讨论也都很深入。有个缺点，就是有的帖子太长了点。 
-[Shoemoney][] – 在SEO业界有点另类特色的人物，经常提出标新立异的观点。 
+包括：   
+[Matt Cutts的博客][Matt Cutts] – 重要性就不必再说了，最好每篇都仔细阅读。   
+[SERoundtable][] – 及时总结与SEO有关的论坛和博客里有价值的帖子，内容挑选非常精确。   
+[SEOmoz][] – 这个公司的老板Rand是我最敬佩的SEO专家之一，对SEO技术的分析非常深入。   
+[Jim Boykin][] – Jim也是SEO业界响当当的人物，尤其擅长外部链接分析。   
+[SEO by the Sea][] – 专门分析各个搜索引擎申请的专利项目，引伸出SEO技术，大部分帖子都很长，有些晦涩难懂，不过很有参考价值。   
+[SEO Black Hat][] – 专门探讨黑帽和灰帽SEO技术，经常会有意想不到的窍门。   
+[SEO Book][] – 大名鼎鼎的Aaron Wall，发帖数量很大，范围广泛，讨论也都很深入。有个缺点，就是有的帖子太长了点。   
+[Shoemoney][] – 在SEO业界有点另类特色的人物，经常提出标新立异的观点。   
 下面是几个必须看，但比较少实质内容的博客，都是搜索引擎自己的
 
 ## 官方博客 ##
 
-。 
-[Google官方Blog][Google_Blog] 
-[Google Webmaster Central Blog][] 
-[MSN Live Search Blog][] 
-[Yahoo!官方Blog][Yahoo_Blog] 
-[Inside Adsense][] 
-[Yahoo! Publisher Network][Yahoo_ Publisher Network] 
+。   
+[Google官方Blog][Google_Blog]   
+[Google Webmaster Central Blog][]   
+[MSN Live Search Blog][]   
+[Yahoo!官方Blog][Yahoo_Blog]   
+[Inside Adsense][]   
+[Yahoo! Publisher Network][Yahoo_ Publisher Network]   
 
 
 ## SEO论坛 ##
 
- 
-[站长世界WebmasterWorld.com][WebmasterWorld.com] 
-如果你只有时间看一个论坛和博客，那就看这个。站长世界包含的不仅仅是SEO，还有很多关于建站的内容，服务器技术，广告，电子商务等等。几乎所有做SEO应该了解的东西，都可以在站长世界里找到。 
-[SEW论坛][SEW] 
-[SearchEngineWacth搜索引擎观察][SearchEngineWacth]是最早提供搜索引擎新闻和知识的网站之一，论坛版主也都是搜索引擎业界重量级的人物。 
-[DigitalPoint论坛][DigitalPoint] 
-另外一个经常会出现很有意义话题的论坛。 
-[High Rankings SEO Forum][] 
-有时间也建议看看。 
+   
+[站长世界WebmasterWorld.com][WebmasterWorld.com]   
+如果你只有时间看一个论坛和博客，那就看这个。站长世界包含的不仅仅是SEO，还有很多关于建站的内容，服务器技术，广告，电子商务等等。几乎所有做SEO应该了解的东西，都可以在站长世界里找到。   
+[SEW论坛][SEW]   
+[SearchEngineWacth搜索引擎观察][SearchEngineWacth]是最早提供搜索引擎新闻和知识的网站之一，论坛版主也都是搜索引擎业界重量级的人物。   
+[DigitalPoint论坛][DigitalPoint]   
+另外一个经常会出现很有意义话题的论坛。   
+[High Rankings SEO Forum][]   
+有时间也建议看看。   
 下面这些博客也
 
 ## 值得推荐 ##
 
-。 
-[Link Building Blog][] – 专谈建立链接。 
-[Marketing Pilgrim][] – Andy Beal，著名的网络营销顾问，Rand和Jim都向他咨询。 
-[Copyblogger][] – 文案写作。 
-[Google Blogoscoped][] – Philipp Lenssen，Google新闻大全。 
-[Graywolf SEO Blog][] – SEO N人。 
-[Greg Boser][] – 又一N人。 
-[martinibuster][] – 还是N人。 
-[JenSense][] – Jennifer Slegg，女同志，专门研究Adsense等竞价广告发布商赚钱问题。 
-[Mike Grehan][] – 最近常在中国活动的N人。 
-[Online Marketing Blog][] – Lee Odden，也是N人。 
-[Paradigm Shift][] – Markus Frind，[每天Adsense收入一万美元][Adsense]的那位。 
-[Search Engine Journal][] – 综合SEO新闻。 
-[SEW Blog][] – 搜索引擎新闻。多位作者一起写。 
-[stuntdubl][] – Todd Malicoat，曾经是Jim Boykin的员工。 
+。   
+[Link Building Blog][] – 专谈建立链接。   
+[Marketing Pilgrim][] – Andy Beal，著名的网络营销顾问，Rand和Jim都向他咨询。   
+[Copyblogger][] – 文案写作。   
+[Google Blogoscoped][] – Philipp Lenssen，Google新闻大全。   
+[Graywolf SEO Blog][] – SEO N人。   
+[Greg Boser][] – 又一N人。   
+[martinibuster][] – 还是N人。   
+[JenSense][] – Jennifer Slegg，女同志，专门研究Adsense等竞价广告发布商赚钱问题。   
+[Mike Grehan][] – 最近常在中国活动的N人。   
+[Online Marketing Blog][] – Lee Odden，也是N人。   
+[Paradigm Shift][] – Markus Frind，[每天Adsense收入一万美元][Adsense]的那位。   
+[Search Engine Journal][] – 综合SEO新闻。   
+[SEW Blog][] – 搜索引擎新闻。多位作者一起写。   
+[stuntdubl][] – Todd Malicoat，曾经是Jim Boykin的员工。   
 [V7N Search Marketing][] – 又是一N人。
 
 

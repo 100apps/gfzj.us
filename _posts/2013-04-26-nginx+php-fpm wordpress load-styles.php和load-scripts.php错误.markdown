@@ -17,15 +17,11 @@ wordpress 后台js和style有个合并机制，减少服务器请求次数。但
 
 为什么会写这个文件呢？因为php生成的内容过大，超过了fastcgi\_buffers限制，nginx就会写文件。所以要解决这个问题，增大fastcgi\_buffers是一个方法。
 
-``````````
-fastcgi_buffers 256 4k;
-``````````
+    fastcgi_buffers 256 4k;
 
 1M缓存，一般足够了。还是不放心，于是
 
-``````````
-fastcgi_max_temp_file_size  0;
-``````````
+    fastcgi_max_temp_file_size  0;
 
 世界清净多了
 
@@ -35,12 +31,10 @@ fastcgi_max_temp_file_size  0;
 
 buffer并不都是好的，比如
 
-``````````
-<?php
-for($i=0;$i<3;$i++){
-        echo $i."\\n";flush();sleep(1);
-}
-``````````
+    <?php
+    for($i=0;$i<3;$i++){
+            echo $i."\\n";flush();sleep(1);
+    }
 
 我们期望，每隔一秒返回一个数，但是实际上nginx是一下子返回的。就是因为buffer。
 

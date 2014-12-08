@@ -10,9 +10,7 @@ permalink: /tech/89.html
 ---
 昨天晚上跟两个同事聊天。提到：
 
-``````````
-搜索引擎(这里指百度,下文同)的竞争对手是谁？用了这么多年了，好像没有什么杀手级的对手。
-``````````
+    搜索引擎(这里指百度,下文同)的竞争对手是谁？用了这么多年了，好像没有什么杀手级的对手。
 
 我感觉不是这样的。市场正在细分，以前我们幻想用户只要有一个搜索框，要什么搜什么就行了。但是后来我们发现搜索引擎虽然内容多，但是有些不专业，比如我要买一条牛仔裤，我上淘宝搜索;我想要团购，可能去tuan800、美团之类的网站看看；我想了解最新的安全相关信息，可能去cve搜索；想知道上海是不是刚才发生地震了，去微博搜索一下；想找供应商，去阿里巴巴搜索,你要在手机上装个应用，去app store搜索。等等
 
@@ -50,7 +48,7 @@ O2O也不是什么新东西，一直在提，看起来很美好。但是没有�
 
 突然想起了前两年风起云涌的团购，你说怎么突然就退火了呢？欢迎评论
 
-另外，你的汽车是天猫特供的吗？http://www.taobao.com/market/auto/qcrsl.php
+另外，你的汽车是天猫特供的吗？[http://www.taobao.com/market/auto/qcrsl.php][http_www.taobao.com_market_auto_qcrsl.php]
 
 最后，补充一点，百度，咱能带点节操吗？
 
@@ -62,4 +60,5 @@ O2O也不是什么新东西，一直在提，看起来很美好。但是没有�
 [- 1]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/e18af23e139889def8d7428b958ec388.jpg
 [- 2]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4a7dd42f6b2c1fca05537a7158adc2a4.jpg
 [_KTV]: http://bbs.taobao.com/catalog/thread/508895-263485264.htm?spm=1.1000386.221670.2.apjcUh
+[http_www.taobao.com_market_auto_qcrsl.php]: http://www.taobao.com/market/auto/qcrsl.php
 [a61ff2eca0ed9ed8ed0cb9d38af0a5b8.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a61ff2eca0ed9ed8ed0cb9d38af0a5b8.png

@@ -14,7 +14,7 @@ permalink: /tech/161.html
 
 原来mac还有这种输入法。比如输入uniE603，只需按住option，然后输入E603即可。
 
-ps，http://app.fontastic.me这种可以自定义文字的icon更方便一些。
+ps，[http://app.fontastic.me][http_app.fontastic.me]这种可以自定义文字的icon更方便一些。
 
 Photoshop可以不重启就reload字体，执行下面操作：window→character然后：
 
@@ -23,6 +23,7 @@ Photoshop可以不重启就reload字体，执行下面操作：window→characte
 
 [icomoon]: https://icomoon.io/app/#/select
 [mac-unicode]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a4c00488f30a429da5673c9222419f4e.jpg
-[mac-unicode 1]: http://gfzj.us/wp-content/uploads/2014/09/mac-unicode.jpg
+[mac-unicode 1]: http://www.gfzj.us/wp-content/uploads/2014/09/mac-unicode.jpg
+[http_app.fontastic.me]: http://app.fontastic.me
 [ps]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/ef4dd8530f17d9adb82a4cd6f30163b6.jpg
-[ps_ps]: http://gfzj.us/wp-content/uploads/2014/09/ps重新加载字体.jpg
+[ps_ps]: http://www.gfzj.us/wp-content/uploads/2014/09/ps重新加载字体.jpg

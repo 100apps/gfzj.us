@@ -12,28 +12,24 @@ permalink: /tech/158.html
 
 **c语言代码：**
 
-``````````
-#include <stdio.h>
-int main(){
- int length=10;
- int arr[length] ;
- for(int i=0;i<length;i++)
-  printf("arr[%d]=%d\\n",i,arr[i]);
-}
-``````````
+    #include <stdio.h>
+    int main(){
+     int length=10;
+     int arr[length] ;
+     for(int i=0;i<length;i++)
+      printf("arr[%d]=%d\\n",i,arr[i]);
+    }
 
 **Java代码**
 
-``````````
-public class Test{
- public static void main(String[] args){
-  int length=10;
-  int arr[]=new int[length];
-  for(int i=0;i<length;i++)
-   System.out.printf("arr[%d]=%d\\n",i,arr[i]);
- }
-}
-``````````
+    public class Test{
+     public static void main(String[] args){
+      int length=10;
+      int arr[]=new int[length];
+      for(int i=0;i<length;i++)
+       System.out.printf("arr[%d]=%d\\n",i,arr[i]);
+     }
+    }
 
 运行一下。就看到结果了：
 

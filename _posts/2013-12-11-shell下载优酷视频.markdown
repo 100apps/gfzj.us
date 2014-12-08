@@ -10,50 +10,46 @@ permalink: /tech/105.html
 ---
 优酷并没有在linux或者mac上面发布客户端，而且客户端貌似也不能下载列表。比如要下载一个电视剧，一个个的点击，也挺麻烦的。所以理由youkuxia.com谢了一个调用脚本，方便linux/mac上的同学使用。
 
-``````````
-#!/bin/sh
-if [ -z "$1" ]
-then
- echo "运行：./youku.sh http://v.youku.com/v_show/id_XNjM3NDEwMDky.html"
-else 
- echo STEP 1. 获取下载地址
- url=`curl -v  ${1/youku/youkuxia} 2>&1 | pcregrep -o1 "url=(.*?)\\r"`
- url=`curl -s "http://www.flvxz.com/getFlv.php?url=$url" | pcregrep --buffer-size=11m -o1 "http://f.youku.com(.*?)\\"" | grep "hd=1"`
- n=1
- if [ -f videolist ]
- then
-  rm videolist
- fi
- echo STEP 2. 开始下载
- for i in $url
- do
-  echo 正在下载第${n}段
-  wget -U "Mozilla/5.0" "http://f.youku.com$i" -O $n.mp4
-  echo file $n.mp4 >> videolist
-  let n=$n+1
- done
- fn=out.mp4
- if [ "x$2" != "x" ]
- then 
-  fn=$2
- fi
- echo STEP 3. 合并至$fn
- ffmpeg -f concat -i videolist -codec copy $fn
-
- #clean
- rm videolist 
- let n=$n-1
- for i in `seq 1 1 $n`
- do
-  rm $i.mp4
- done
-fi
-``````````
+    #!/bin/sh
+    if [ -z "$1" ]
+    then
+     echo "运行：./youku.sh http://v.youku.com/v_show/id_XNjM3NDEwMDky.html"
+    else 
+     echo STEP 1. 获取下载地址
+     url=`curl -v  ${1/youku/youkuxia} 2>&1 | pcregrep -o1 "url=(.*?)\\r"`
+     url=`curl -s "http://www.flvxz.com/getFlv.php?url=$url" | pcregrep --buffer-size=11m -o1 "http://f.youku.com(.*?)\\"" | grep "hd=1"`
+     n=1
+     if [ -f videolist ]
+     then
+      rm videolist
+     fi
+     echo STEP 2. 开始下载
+     for i in $url
+     do
+      echo 正在下载第${n}段
+      wget -U "Mozilla/5.0" "http://f.youku.com$i" -O $n.mp4
+      echo file $n.mp4 >> videolist
+      let n=$n+1
+     done
+     fn=out.mp4
+     if [ "x$2" != "x" ]
+     then 
+      fn=$2
+     fi
+     echo STEP 3. 合并至$fn
+     ffmpeg -f concat -i videolist -codec copy $fn
+    
+     #clean
+     rm videolist 
+     let n=$n-1
+     for i in `seq 1 1 $n`
+     do
+      rm $i.mp4
+     done
+    fi
 
 使用方法。首先去优酷获取下载列表。可以用firefox+firequery，很方便：
 
-``````````
-s="";jQuery("#episode a").each(function(){s+=("youku.sh "+jQuery(this).attr("href")+"\\t第"+jQuery(this).text().trim()+"集.mp4\\n")});console.log(s)
-``````````
+    s="";jQuery("#episode a").each(function(){s+=("youku.sh "+jQuery(this).attr("href")+"\\t第"+jQuery(this).text().trim()+"集.mp4\\n")});console.log(s)
 
 然后把这个列表存下来，比如放到cmd里面。运行 **bash cmd**即可

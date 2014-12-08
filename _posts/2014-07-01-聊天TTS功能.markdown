@@ -12,35 +12,31 @@ permalink: /tech/144.html
 
 为了方便，我用了一台自己的vps，因为有公网ip，她的电脑可以直接连接。先用ssh登录服务器，然后在服务器上开始监听：
 
-``````````
-count=1;while true;do date;echo 第$count次监听;nc -lvp 443;let count=$count+1;done
-``````````
+    count=1;while true;do date;echo 第$count次监听;nc -lvp 443;let count=$count+1;done
 
 然后让她在自己的mba上打开terminal，运行
 
 :
 
-``````````
-#!/bin/sh
-while true;do
-
-nc gfzj.us 443 |while read line do
-do 
-echo server [`date -u`]:
-echo $line;
-
-if [ ${line:0:4} = "http" ];then
- mplayer "$line"
-else
- echo
- curl -s "http://translate.google.cn/translate_tts?ie=UTF-8&q=${line}&tl=zh-CN&total=1&idx=0&textlen=2&client=t&prev=input" -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:30.0) Gecko/20100101 Firefox/30.0' -o /tmp/gfzj.us.mp3
- mplayer /tmp/gfzj.us.mp3 1>/dev/null 2>/dev/null
-
-fi
-done
-sleep 1;
-done
-``````````
+    #!/bin/sh
+    while true;do
+    
+    nc gfzj.us 443 |while read line do
+    do 
+    echo server [`date -u`]:
+    echo $line;
+    
+    if [ ${line:0:4} = "http" ];then
+     mplayer "$line"
+    else
+     echo
+     curl -s "http://translate.google.cn/translate_tts?ie=UTF-8&q=${line}&tl=zh-CN&total=1&idx=0&textlen=2&client=t&prev=input" -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:30.0) Gecko/20100101 Firefox/30.0' -o /tmp/gfzj.us.mp3
+     mplayer /tmp/gfzj.us.mp3 1>/dev/null 2>/dev/null
+    
+    fi
+    done
+    sleep 1;
+    done
 
 运行一下：
 

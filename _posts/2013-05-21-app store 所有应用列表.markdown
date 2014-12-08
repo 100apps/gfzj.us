@@ -9,170 +9,166 @@ permalink: /tech/74.html
 ---
 进步的最好方式，莫过于研究别人的应用。看看ios上其他人开发的应用，张张见识。今天下午search了 'app store list',找了半天没有结果，无意之间发现了
 
-``````````
-https://itunes.apple.com/cn/genre/ios/id36?mt=8
-``````````
+    https://itunes.apple.com/cn/genre/ios/id36?mt=8
 
 把cn改成其他国家就ok了。app store目前支持的国家有：
 
-``````````
-Albania
-Algeria
-Angola
-Anguilla
-Antigua and Barbuda
-Argentina
-Armenia
-Australia
-Austria
-Azerbaijan
-Bahamas
-Bahrain
-Barbados
-Belarus
-Belgium
-Belize
-Benin
-Bermuda
-Bhutan
-Bolivia
-Botswana
-Brazil
-Brunei Darussalam
-Bulgaria
-Burkina Faso
-Cambodia
-Canada
-Cape Verde
-Cayman Islands
-Chad
-Chile
-China
-Colombia
-Congo, Republic of
-Costa Rica
-Croatia
-Cyprus
-Czech Republic
-Denmark
-Dominica
-Dominican Republic
-Ecuador
-Egypt
-El Salvador
-Estonia
-Fiji
-Finland
-France
-Gambia
-Germany
-Ghana
-Greece
-Grenada
-Guatemala
-Guinea-Bissau
-Guyana
-Honduras
-Hong Kong
-Hungary
-Iceland
-India
-Indonesia
-Ireland
-Israel
-Italy
-Jamaica
-Japan
-Jordan
-Kazakhstan
-Kenya
-Korea, Republic Of
-Kuwait
-Kyrgyzstan
-Lao People's Democratic Republic
-Latvia
-Lebanon
-Liberia
-Lithuania
-Luxembourg
-Macau
-Macedonia, The Former Yugoslav Republic Of
-Madagascar
-Malawi
-Malaysia
-Mali
-Malta
-Mauritania
-Mauritius
-Mexico
-Micronesia, Federated States of
-Moldova, Republic Of
-Mongolia
-Montserrat
-Mozambique
-Namibia
-Nepal
-Netherlands
-New Zealand
-Nicaragua
-Niger
-Nigeria
-Norway
-Oman
-Pakistan
-Palau
-Panama
-Papua New Guinea
-Paraguay
-Peru
-Philippines
-Poland
-Portugal
-Qatar
-Romania
-Russia
-Saint Lucia
-Saudi Arabia
-Senegal
-Seychelles
-Sierra Leone
-Singapore
-Slovakia
-Slovenia
-Solomon Islands
-South Africa
-Spain
-Sri Lanka
-St. Kitts and Nevis
-St. Vincent and The Grenadines
-Suriname
-Swaziland
-Sweden
-Switzerland
-São Tomé and Príncipe
-Taiwan
-Tajikistan
-Tanzania, United Republic Of
-Thailand
-Trinidad and Tobago
-Tunisia
-Turkey
-Turkmenistan
-Turks and Caicos
-Uganda
-Ukraine
-United Arab Emirates
-United Kingdom
-United States
-Uruguay
-Uzbekistan
-Venezuela
-Vietnam
-Virgin Islands, British
-Yemen
-Zimbabwe
-New Territories As Added
-``````````
+    Albania
+    Algeria
+    Angola
+    Anguilla
+    Antigua and Barbuda
+    Argentina
+    Armenia
+    Australia
+    Austria
+    Azerbaijan
+    Bahamas
+    Bahrain
+    Barbados
+    Belarus
+    Belgium
+    Belize
+    Benin
+    Bermuda
+    Bhutan
+    Bolivia
+    Botswana
+    Brazil
+    Brunei Darussalam
+    Bulgaria
+    Burkina Faso
+    Cambodia
+    Canada
+    Cape Verde
+    Cayman Islands
+    Chad
+    Chile
+    China
+    Colombia
+    Congo, Republic of
+    Costa Rica
+    Croatia
+    Cyprus
+    Czech Republic
+    Denmark
+    Dominica
+    Dominican Republic
+    Ecuador
+    Egypt
+    El Salvador
+    Estonia
+    Fiji
+    Finland
+    France
+    Gambia
+    Germany
+    Ghana
+    Greece
+    Grenada
+    Guatemala
+    Guinea-Bissau
+    Guyana
+    Honduras
+    Hong Kong
+    Hungary
+    Iceland
+    India
+    Indonesia
+    Ireland
+    Israel
+    Italy
+    Jamaica
+    Japan
+    Jordan
+    Kazakhstan
+    Kenya
+    Korea, Republic Of
+    Kuwait
+    Kyrgyzstan
+    Lao People's Democratic Republic
+    Latvia
+    Lebanon
+    Liberia
+    Lithuania
+    Luxembourg
+    Macau
+    Macedonia, The Former Yugoslav Republic Of
+    Madagascar
+    Malawi
+    Malaysia
+    Mali
+    Malta
+    Mauritania
+    Mauritius
+    Mexico
+    Micronesia, Federated States of
+    Moldova, Republic Of
+    Mongolia
+    Montserrat
+    Mozambique
+    Namibia
+    Nepal
+    Netherlands
+    New Zealand
+    Nicaragua
+    Niger
+    Nigeria
+    Norway
+    Oman
+    Pakistan
+    Palau
+    Panama
+    Papua New Guinea
+    Paraguay
+    Peru
+    Philippines
+    Poland
+    Portugal
+    Qatar
+    Romania
+    Russia
+    Saint Lucia
+    Saudi Arabia
+    Senegal
+    Seychelles
+    Sierra Leone
+    Singapore
+    Slovakia
+    Slovenia
+    Solomon Islands
+    South Africa
+    Spain
+    Sri Lanka
+    St. Kitts and Nevis
+    St. Vincent and The Grenadines
+    Suriname
+    Swaziland
+    Sweden
+    Switzerland
+    São Tomé and Príncipe
+    Taiwan
+    Tajikistan
+    Tanzania, United Republic Of
+    Thailand
+    Trinidad and Tobago
+    Tunisia
+    Turkey
+    Turkmenistan
+    Turks and Caicos
+    Uganda
+    Ukraine
+    United Arab Emirates
+    United Kingdom
+    United States
+    Uruguay
+    Uzbekistan
+    Venezuela
+    Vietnam
+    Virgin Islands, British
+    Yemen
+    Zimbabwe
+    New Territories As Added
 
 大多数应用在上架的时候，都不选择国家，所以在全球的应用商店店面都能搜索。所以如果按国家搜索，会有重复。
 

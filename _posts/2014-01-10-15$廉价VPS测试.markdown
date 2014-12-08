@@ -14,9 +14,7 @@ permalink: /tech/113.html
 
 我一开始以为ds的配置是假的，但是测试了一下，ds确实比较快。编译nginx+php没遇到任何问题。但是在buyVM上就不行了，由于内存太小，gcc老是被kill，无法进行。最后disable-fileinfo，就可以了。
 
-``````````
-./configure --prefix=`pwd`-build --enable-fpm --enable-mbstring --with-zlib --disable-fileinfo --enable-opcache
-``````````
+    ./configure --prefix=`pwd`-build --enable-fpm --enable-mbstring --with-zlib --disable-fileinfo --enable-opcache
 
 我用的时最新版的php5.5.7,有个opcache，就不用xcache之类的了。方便多了。
 

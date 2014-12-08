@@ -202,3 +202,30 @@ pre {
         }
     }
 }
+
+#pagination {
+    border-top: 1px dotted #888888;
+padding-bottom: 2em;
+    padding-top: 2em;
+    ul{
+		margin-left:0;
+	}
+}
+#pagination li {
+display: block;
+    float: left;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    width: 2em;
+}
+#pagination li.current-page {
+    background-color: #ddd;
+}
+#pagination li a {
+
+}
+p.caption-img{
+    text-align:center;
+}
+.ds-powered-by{display:none}

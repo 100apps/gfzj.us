@@ -16,4 +16,4 @@ permalink: /tech/110.html
 
 
 [13-12-30 _9.04]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a76981646cc1d8f65f95a76cbd61fcd2.jpg
-[13-12-30 _9.04 _13-12-30 _9.04]: http://gfzj.us/wp-content/uploads/2013/12/在-13-12-30-上午9.04-拍摄的照片.jpg
+[13-12-30 _9.04 _13-12-30 _9.04]: http://www.gfzj.us/wp-content/uploads/2013/12/在-13-12-30-上午9.04-拍摄的照片.jpg

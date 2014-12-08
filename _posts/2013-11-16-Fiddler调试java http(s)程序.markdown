@@ -14,20 +14,16 @@ permalink: /tech/103.html
 
 通过这个配置文件，我们可以修改jvm默认的网络连接方式，配置默认使用http(s)代理
 
-``````````
-http.proxyHost=127.0.0.1
- http.proxyPort=8888
- https.proxyHost=127.0.0.1
- https.proxyPort=8888
-``````````
+    http.proxyHost=127.0.0.1
+     http.proxyPort=8888
+     https.proxyHost=127.0.0.1
+     https.proxyPort=8888
 
 ## STEP2:添加证书 ##
 
 默认情况下，jvm信任的证书存放在jre/lib/security/cacerts下面。现在需要把fiddler生成的证书导入到这个默认信任列表里面。
 
-``````````
-bin/keytool -keystore lib/security/cacerts -storepass changeit -importcert -file ~/Downloads/FiddlerRoot.cer
-``````````
+    bin/keytool -keystore lib/security/cacerts -storepass changeit -importcert -file ~/Downloads/FiddlerRoot.cer
 
 在mac/linux下面可能需要sudo，你懂得。
 
@@ -39,30 +35,24 @@ bin/keytool -keystore lib/security/cacerts -storepass changeit -importcert -file
 
 ## STEP1:导出证书 ##
 
-``````````
-"JDK_HOME\\bin\\keytool.exe" -import -file C:\\Users\\user\\Desktop\\FiddlerRoot.cer -keystore fiddlerkeystore -alias Fiddler
-``````````
+    "JDK_HOME\\bin\\keytool.exe" -import -file C:\\Users\\user\\Desktop\\FiddlerRoot.cer -keystore fiddlerkeystore -alias Fiddler
 
 ## STEP2:配置实用代理 ##
 
-``````````
-//设置使用代理
-  System.setProperty("http.proxyHost", "172.16.3.226");
-  System.setProperty("https.proxyHost", "172.16.3.226");
-  System.setProperty("http.proxyPort", "8888");
-  System.setProperty("https.proxyPort", "8888");
-  //配置证书位置
-  System.setProperty("javax.net.ssl.trustStore", "path\\to\\FiddlerKeystore");
-  System.setProperty("javax.net.ssl.trustStorePassword", "Password");
-``````````
+    //设置使用代理
+      System.setProperty("http.proxyHost", "172.16.3.226");
+      System.setProperty("https.proxyHost", "172.16.3.226");
+      System.setProperty("http.proxyPort", "8888");
+      System.setProperty("https.proxyPort", "8888");
+      //配置证书位置
+      System.setProperty("javax.net.ssl.trustStore", "path\\to\\FiddlerKeystore");
+      System.setProperty("javax.net.ssl.trustStorePassword", "Password");
 
 当然，也可以通过java -D传递以上参数。如果有没有源代码的话。
 
 ## STEP0:另外一种方法就是直接让jvm忽略证书验证,就像curl -k参数 ##
 
-``````````
-直接google出来的源代码，贴过来吧：java ssl ignore certificate validation
-``````````
+    直接google出来的源代码，贴过来吧：java ssl ignore certificate validation
 
 --------------------
 
@@ -74,10 +64,8 @@ update 2014年07月15日16:08:10
 
 今天从stackoverflow上发现两个新的参数：
 
-``````````
-System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");       
-System.setProperty("javax.net.debug","all");
-``````````
+    System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");       
+    System.setProperty("javax.net.debug","all");
 
 
 [Fiddler]: http://fiddler2.com/

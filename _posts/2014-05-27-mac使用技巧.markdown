@@ -21,15 +21,11 @@ permalink: /tech/138.html
 
 永久停用Spotlight：
 
-``````````
-sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-``````````
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 
 恢复spotlight服务
 
-``````````
-sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
-``````````
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
 
 所以，如果只是当做一个应用程序启动器的话，Alfred之类的程序也完全没有必要用，因为Alfred是建立在Spotlight的索引上的。
 
@@ -37,9 +33,7 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plis
 
 经常会有处理一些临时文件，都是一些小文件，放在RAMDisk里面，速度快，而且不伤害硬盘，是一个好方法，如果是16G内存的话，拿出2G做RAMDisk，基本上没什么压力。方法(RAMDisk的大小根据自己的物理内存自行调节)：
 
-``````````
-diskutil erasevolume HFS+ ramdisk `hdiutil attach -nomount ram://4629672`
-``````````
+    diskutil erasevolume HFS+ ramdisk `hdiutil attach -nomount ram://4629672`
 
 ## 复制到便签 ##
 
@@ -53,14 +47,12 @@ diskutil erasevolume HFS+ ramdisk `hdiutil attach -nomount ram://4629672`
 
 有些命令，比如自动启动mysql、nginx、ramdisk之类的，linux下直接放在/etc/rc.local就可以了，mac下面没有这个文件，我们可以直接创建一个，然后写上想要自动运行的命令就可以了。比如：
 
-``````````
-#!/bin/bash
-
-# ramdisk
-/usr/sbin/diskutil erasevolume HFS+ ramdisk `/usr/bin/hdiutil attach -nomount ram://4629672` &
-
-exit 0
-``````````
+    #!/bin/bash
+    
+    # ramdisk
+    /usr/sbin/diskutil erasevolume HFS+ ramdisk `/usr/bin/hdiutil attach -nomount ram://4629672` &
+    
+    exit 0
 
 ## 在同一个应用中切换 2014年09月17日20:33:06 ##
 

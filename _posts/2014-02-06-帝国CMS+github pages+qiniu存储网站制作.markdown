@@ -22,24 +22,20 @@ permalink: /tech/116.html
 
 创建.gitignore文件，里面写上不上传的文件，比如：
 
-``````````
-.DS_Store 
-.gitignore
-d
-e
-testdata
-``````````
+    .DS_Store 
+    .gitignore
+    d
+    e
+    testdata
 
 然后运行:
 
-``````````
-git init
-git checkout --orphan gh-pages
-git add .
-git commit -m "提交注释,比如 first post"
-git remote add origin https://github用户名:github密码@github.com/你的用户名/web.gfzj.us.git
-git push origin gh-pages
-``````````
+    git init
+    git checkout --orphan gh-pages
+    git add .
+    git commit -m "提交注释,比如 first post"
+    git remote add origin https://github用户名:github密码@github.com/你的用户名/web.gfzj.us.git
+    git push origin gh-pages
 
 *update 2014年04月07日11:06:48*,可以通过编辑.git/config来设置一些配置。
 
@@ -49,7 +45,7 @@ git push origin gh-pages
 
 建立CNAME文件。写入要绑定的域名，比如 web.gfzj.us。然后git add && git commit -m "CNAME" && git push 就可以了。
 
-然后设置DNS,解析web.gfzj.us到103.245.222.133。这个ip是http://pages.github.com/的ip。可以用http://alibench.com/找一个较快的ip即可。
+然后设置DNS,解析web.gfzj.us到103.245.222.133。这个ip是http://pages.github.com/的ip。可以用[http://alibench.com/][http_alibench.com]找一个较快的ip即可。
 
 ## 国内加速 ##
 
@@ -61,11 +57,10 @@ git push origin gh-pages
 
 可以通过cname绑定域名。github请cname到pages.github.io，七牛cname到bucket.qiniudn.com。另外，七牛一定要配置好 `.qrignore文件`，sync完了以后，如果需要更新已有文章，请手动运行：
 
-``````````
-qboxrsctl refresh gfzj
-``````````
+    qboxrsctl refresh gfzj
 
 
 [GitHub Pages]: http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html
 [GitHub]: https://github.com/
+[http_alibench.com]: http://alibench.com/
 [10G_10G]: http://www.qiniu.com/pricing

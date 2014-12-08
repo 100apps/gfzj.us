@@ -32,11 +32,9 @@ permalink: /tech/99.html
 
 一切都是由parent.window.opener.location引起的。浏览器来源页面的url被篡改，就导致了这种问题。在这个示例中，index.html中有这样一段js：
 
-``````````
-if(document.referrer.indexOf("http://www.baidu.com")==0){
-  parent.window.opener.location="/test.php?url="+document.referrer;
- }
-``````````
+    if(document.referrer.indexOf("http://www.baidu.com")==0){
+      parent.window.opener.location="/test.php?url="+document.referrer;
+     }
 
 实际上把原来的页面跳到了另外一个，而新页面和老页面一样，一般人并没有注意上面URL地址栏。所以很容易被欺骗。
 

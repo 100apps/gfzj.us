@@ -16,21 +16,17 @@ permalink: /tech/112.html
 
 linux系统可以参考[官方文档(wiki:remastering)][wiki_remastering],用到的几个工具一般linux发行版都自带了。但是mac没有mkisofs，首先需要：
 
-``````````
-brew install cdrtools
-``````````
+    brew install cdrtools
 
 另外，要注意，mac的非系统盘分区，chown不好用。所以最好解压到系统分区的某个文件夹，解压到RAMDisk可能有问题。比如我是用的工作目录是/tmp/
 
 ## STEP 1:解压 ##
 
-``````````
-hdiutil mount Core-current.iso
-cp -a /Volumes/Core/boot .
-mkdir extract
-cd extract
-sudo tar xzfv ../boot/core.gz
-``````````
+    hdiutil mount Core-current.iso
+    cp -a /Volumes/Core/boot .
+    mkdir extract
+    cd extract
+    sudo tar xzfv ../boot/core.gz
 
 ## STEP 2: 修改 ##
 
@@ -48,25 +44,19 @@ sudo tar xzfv ../boot/core.gz
 
 现在可以重新打包core了。新建一个文件夹newiso
 
-``````````
-mkdir newiso
-cp -r boot newiso
-``````````
+    mkdir newiso
+    cp -r boot newiso
 
 修改一下newiso/boot/isolinux/isolinux.cfg,把timeout改成1
 
-``````````
-sudo chmod +w newiso/boot/isolinux/isolinux.cfg 
-sudo vi newiso/boot/isolinux/isolinux.cfg 
-sudo chmod -w newiso/boot/isolinux/isolinux.cfg
-``````````
+    sudo chmod +w newiso/boot/isolinux/isolinux.cfg 
+    sudo vi newiso/boot/isolinux/isolinux.cfg 
+    sudo chmod -w newiso/boot/isolinux/isolinux.cfg
 
-``````````
-cd extract
-find . |sudo cpio -o -H newc|gzip > ../tinycore.gz
-cp tinycore.gz newiso/boot/core.gz
-sudo mkisofs -l -J -R -V TC-custom -no-emul-boot -boot-load-size 4 -boot-info-table -b boot/isolinux/isolinux.bin  -c boot/isolinux/boot.cat -o TC-remastered.iso newiso
-``````````
+    cd extract
+    find . |sudo cpio -o -H newc|gzip > ../tinycore.gz
+    cp tinycore.gz newiso/boot/core.gz
+    sudo mkisofs -l -J -R -V TC-custom -no-emul-boot -boot-load-size 4 -boot-info-table -b boot/isolinux/isolinux.bin  -c boot/isolinux/boot.cat -o TC-remastered.iso newiso
 
 可以尝试用virtualbox从生成的光盘启动测试一下了。
 

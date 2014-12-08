@@ -21,15 +21,15 @@ permalink: /tech/193.html
 
 的写法，感觉很好！其中y是一个String类型的数组，遍历了，相当于。
 
-5.strus2 if标签的问题，，可能会碰到说“ According to TLD or attribute directive in tag file, attribute test does not accept any expressions”这是strust2版本的问题，**struts2** \_2.0.11   版本不支持 s **标签**嵌套 EL
-struts2\_2.0.08 这个支持但是不支持集合封装pojo。**struts2**.0**标签**主要支持的是ognl**表达式**
-所以把<s:elseif test="$\{age > 35\}">
-改为<s:elseif test="\#age>35">
+5.strus2 if标签的问题，，可能会碰到说“ According to TLD or attribute directive in tag file, attribute test does not accept any expressions”这是strust2版本的问题，**struts2** \_2.0.11   版本不支持 s **标签**嵌套 EL  
+struts2\_2.0.08 这个支持但是不支持集合封装pojo。**struts2**.0**标签**主要支持的是ognl**表达式**  
+所以把<s:elseif test="$\{age > 35\}">  
+改为<s:elseif test="\#age>35">  
 就ok了
 
 就是说用到的struts2版本不同支持的表达式也可能不同，$\{expression\}是EL表达式，\#expression是ognl表达式。。。
 
-6.struts2的标签的错误：**quote** **symbol** **expected**
+6.struts2的标签的错误：**quote** **symbol** **expected**  
 多是因为“引用错误”即表达式错误引起比如少了“”等等
 
 7.eclipse开发web应用时class下的.xml文件丢失。。。
@@ -42,8 +42,8 @@ struts2\_2.0.08 这个支持但是不支持集合封装pojo。**struts2**.0**标
 
 很老的问题了，一直都是忍着。。今天打算彻底解决一下子，就google了一下，大部分是说在jdbc url中添加参数，比如在hibernate-cfg.xml中
 
-<property name="hibernate.connection.url">
-    jdbc:mysql://121.250.215.39:3306/hbpcp2?useUnicode=true&characterEncoding=utf8&mysqlEncoding=utf8   
+<property name="hibernate.connection.url">  
+    jdbc:mysql://121.250.215.39:3306/hbpcp2?useUnicode=true&characterEncoding=utf8&mysqlEncoding=utf8     
    </property>
 
 可是这样在Mysql command line client中还是？？？，在命令行中添加的中文在hibernate中也是乱码或者？？？，郁闷！看来只改正hibernate的配置文件还是不行。。。。
@@ -54,5 +54,5 @@ note:修改成utf8还是不行，乱码，不是？？？了，呵呵所以修�
 
 事实上，我们修改了hibernate的property，通过hibernate insert和select没有问题的，都能显示正确，但是在command line clinet中就是乱码，究其原因，就是因为my.ini中mysql默认编码的原因，所以修改之，ok！
 
-我不知道hibernate默认的是什么字符集，反正必须得加上参数useUnicode=true&characterEncoding=utf8&mysqlEncoding=utf8   
+我不知道hibernate默认的是什么字符集，反正必须得加上参数useUnicode=true&characterEncoding=utf8&mysqlEncoding=utf8     
 ，否则，真的不行。。

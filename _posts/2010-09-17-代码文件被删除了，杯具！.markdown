@@ -7,63 +7,63 @@ by: gf
 description: 刚才一不小心把一个星期写的代码全删除了，因为放在了一个文件夹下面，而用php删除这个文件夹下的其他文件，没整好，结果整个文件夹全没了，，那个悔啊！！幸好我用的是Eclipse，右键工程=&gt;
 permalink: /tech/172.html
 ---
-刚才一不小心把一个星期写的代码全删除了，因为放在了一个文件夹下面，而用php删除这个文件夹下的其他文件，没整好，结果整个文件夹全没了，，那个悔啊！！
-幸好我用的是Eclipse，右键工程=>restore from local history。可是只能回复一些，不全。想起以前用的R-studio，还是这东西好用啊，很轻松就把删掉的文件恢复了。
-
-tips：文件被删除以后千万别动了，千万不要再操作Eclipse了，比我当文件被删除，但是还打开着编辑面板，切换过去会说什么文件不同步了，问你是不是刷新，要是傻乎乎的按F5刷新，那一下子就杯具了，因为Eclipse有可能会从写。我那个文件虽然后来用r-studio恢复了，但是内容却被Eclipse重写了。
-
-rs.Viewer$2.run(Viewer.java:162)
-at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
-at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
-at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
-at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)
-at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2162)
-at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1190)
-at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1220)
-at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)
-at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)
-at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)
-at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)
-at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
-at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2629)
-at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2593)
-at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2427)
-at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:670)
-at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:663)
-at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
-at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
-at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
-at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
-at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
-!SUBENTRY 1 org.eclipse.core.resources 4 274 2010-09-17 09:31:42.247
-!MESSAGE Resource is out of sync with the file system: '/SEA/crawler/百度/破碎机/2010/09/16/11-58-31.html.links'.
-
-!ENTRY org.eclipse.wst.sse.ui 4 4 2010-09-17 09:31:42.247
-!MESSAGE Resource is out of sync with the file system: '/SEA/crawler/百度/破碎机/2010/09/16/11-58-31.html.oursites'.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/SEA/crawler/百度/破碎机/2010/09/16/11-58-31.html.oursites'.
-at org.eclipse.core.internal.resources.File.checkSynchronized(File.java:103)
-at org.eclipse.core.internal.resources.File.getContentDescription(File.java:273)
-at org.eclipse.wst.sse.ui
-
-大家看看，多杯具。
-所以，千万别做任何操作，立马用R-studio恢复。基本ok
-附：r-studio [下载地址][Link 1]和注册码
-DuBHbEVCATfzF4xvnxItKcKPuOop+/u0JZwx67L0yRki1L/uYQB2qqSZ7Ihs11LsQkobQBoA10ds1Wn9jUfidS97ZE+VG8gGn3PsnQ7Gx8ANZndxUZw6JMoWAK0r
-建议：即使一个人也要用版本控制工具，比如visual SVN
-
+刚才一不小心把一个星期写的代码全删除了，因为放在了一个文件夹下面，而用php删除这个文件夹下的其他文件，没整好，结果整个文件夹全没了，，那个悔啊！！  
+幸好我用的是Eclipse，右键工程=>restore from local history。可是只能回复一些，不全。想起以前用的R-studio，还是这东西好用啊，很轻松就把删掉的文件恢复了。  
+  
+tips：文件被删除以后千万别动了，千万不要再操作Eclipse了，比我当文件被删除，但是还打开着编辑面板，切换过去会说什么文件不同步了，问你是不是刷新，要是傻乎乎的按F5刷新，那一下子就杯具了，因为Eclipse有可能会从写。我那个文件虽然后来用r-studio恢复了，但是内容却被Eclipse重写了。  
+  
+rs.Viewer$2.run(Viewer.java:162)  
+at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)  
+at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)  
+at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)  
+at org.eclipse.jface.viewers.Viewer.fireSelectionChanged(Viewer.java:160)  
+at org.eclipse.jface.viewers.StructuredViewer.updateSelection(StructuredViewer.java:2162)  
+at org.eclipse.jface.viewers.StructuredViewer.handleSelect(StructuredViewer.java:1190)  
+at org.eclipse.jface.viewers.StructuredViewer$4.widgetSelected(StructuredViewer.java:1220)  
+at org.eclipse.jface.util.OpenStrategy.fireSelectionEvent(OpenStrategy.java:228)  
+at org.eclipse.jface.util.OpenStrategy.access$4(OpenStrategy.java:222)  
+at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:389)  
+at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)  
+at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)  
+at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)  
+at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)  
+at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2629)  
+at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2593)  
+at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2427)  
+at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:670)  
+at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)  
+at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:663)  
+at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)  
+at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)  
+at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)  
+at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)  
+at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)  
+at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)  
+at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)  
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)  
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)  
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)  
+at java.lang.reflect.Method.invoke(Unknown Source)  
+at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)  
+at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)  
+at org.eclipse.equinox.launcher.Main.run(Main.java:1407)  
+!SUBENTRY 1 org.eclipse.core.resources 4 274 2010-09-17 09:31:42.247  
+!MESSAGE Resource is out of sync with the file system: '/SEA/crawler/百度/破碎机/2010/09/16/11-58-31.html.links'.  
+  
+!ENTRY org.eclipse.wst.sse.ui 4 4 2010-09-17 09:31:42.247  
+!MESSAGE Resource is out of sync with the file system: '/SEA/crawler/百度/破碎机/2010/09/16/11-58-31.html.oursites'.  
+!STACK 1  
+org.eclipse.core.internal.resources.ResourceException: Resource is out of sync with the file system: '/SEA/crawler/百度/破碎机/2010/09/16/11-58-31.html.oursites'.  
+at org.eclipse.core.internal.resources.File.checkSynchronized(File.java:103)  
+at org.eclipse.core.internal.resources.File.getContentDescription(File.java:273)  
+at org.eclipse.wst.sse.ui  
+  
+大家看看，多杯具。  
+所以，千万别做任何操作，立马用R-studio恢复。基本ok  
+附：r-studio [下载地址][Link 1]和注册码  
+DuBHbEVCATfzF4xvnxItKcKPuOop+/u0JZwx67L0yRki1L/uYQB2qqSZ7Ihs11LsQkobQBoA10ds1Wn9jUfidS97ZE+VG8gGn3PsnQ7Gx8ANZndxUZw6JMoWAK0r  
+建议：即使一个人也要用版本控制工具，比如visual SVN  
+  
 
 
 

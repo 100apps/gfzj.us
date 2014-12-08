@@ -13,11 +13,10 @@ permalink: /tech/72.html
 
 以前一直认为上架的时候要选择店面地区，一直没见到可选的地方，上架成功才看到：
 
-``````````
-Unless you select specific stores, your app will be for sale in all App Stores worldwide.
-``````````
+    Unless you select specific stores, your app will be for sale in all App Stores worldwide.
 
-附上第一版的应用，比较初级：https://itunes.apple.com/us/app/miningnews/id645397745?ls=1&mt=8
+附上第一版的应用，比较初级：[https://itunes.apple.com/us/app/miningnews/id645397745?ls=1&mt=8][https_itunes.apple.com_us_app_miningnews_id645397745_ls_1_mt_8]
 
 
 [https_itunesconnect.apple.com]: http://www.gfzj.us
+[https_itunes.apple.com_us_app_miningnews_id645397745_ls_1_mt_8]: https://itunes.apple.com/us/app/miningnews/id645397745?ls=1&mt=8

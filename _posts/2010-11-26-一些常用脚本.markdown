@@ -9,9 +9,11 @@ permalink: /tech/169.html
 ---
 **web qq**
 
-function talk2(id,msg)\{
-document.getElementById("chatBox\_textArea\_"+id+"\_editArea").innerHTML=msg;
-var evt = document.createEvent("MouseEvents");
-evt.initEvent("click", true, true);
-document.getElementById("chatBox\_sendMsgButton\_"+id).dispatchEvent(evt);
+function talk2(id,msg)\{  
+document.getElementById("chatBox\_textArea\_"+id+"\_editArea").innerHTML=msg;  
+var evt = document.createEvent("MouseEvents");  
+evt.initEvent("click", true, true);  
+document.getElementById("chatBox\_sendMsgButton\_"+id).dispatchEvent(evt);  
 \}
+
+  

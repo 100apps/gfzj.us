@@ -20,10 +20,8 @@ permalink: /tech/77.html
 
 dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。以前用just-ping.com的方法得到ip的办法局限性太大。可以用第二种方法封掉。证明：
 
-``````````
-能打开http://just-ping.com/
-但是当我们请求的时候：http://just-ping.com/index.php?vh=savedbythegoog.appspot.com&c=&s=ping%21 就打不开了。相当于url过滤。如果just-ping提供https服务，基本上应该能解决了。
-``````````
+    能打开http://just-ping.com/
+    但是当我们请求的时候：http://just-ping.com/index.php?vh=savedbythegoog.appspot.com&c=&s=ping%21 就打不开了。相当于url过滤。如果just-ping提供https服务，基本上应该能解决了。
 
 虽然just-ping不能用了。国外还是有很多提供online dns服务器的网站，google一个，比如 [http://www.dnsqueries.com/en/dns\_lookup.php][http_www.dnsqueries.com_en_dns_lookup.php]我们查询savedbythegoog.appspot.com。返回了结果：173.194.70.141。我们添加到hosts，发现可用。那就用这个ip吧。如果不能用，说明该ip被封了，可以用其他网站在测试一下，可能能找到能用ip。
 
@@ -33,9 +31,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 我们用chrome开发工具发现，有一个域名savedbythegoog.appspot.com打不开了。所以添加记录
 
-``````````
-173.194.70.141 savedbythegoog.appspot.com
-``````````
+    173.194.70.141 savedbythegoog.appspot.com
 
 但是比较杯具的是，173.194.70.141 savedbythegoog.appspot.com在原网页中引用的时候，居然是http协议，这样会被第二种方法封掉。所以要强制改成https。
 
@@ -45,9 +41,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 用了这种方法，还是有问题。我们发现控制台报错
 
-``````````
-Uncaught ReferenceError: google is not defined
-``````````
+    Uncaught ReferenceError: google is not defined
 
 这是由于chrome的安全策略，Blocking insecure content from http://。所以需要：
 
@@ -55,9 +49,7 @@ Uncaught ReferenceError: google is not defined
 
 右键chrome的快捷方式，点击属性。然后在把目标改成类似：
 
-``````````
-"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --allow-running-insecure-content
-``````````
+    "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --allow-running-insecure-content
 
 也就是加一个--allow-running-insecure-content选项。
 
@@ -73,7 +65,7 @@ Uncaught ReferenceError: google is not defined
 
 ![facebook-youtube][]
 
-另外，别忘了有个前提，那就是网站用了cdn，有N多ip，粗鲁地封ip的话，影响面太广，所以存在一些能用的ip。如果一个网站没用用cdn，那就扯淡了。直接封了ip，就只能用VPN了。比如http://www.slideshare.net/
+另外，别忘了有个前提，那就是网站用了cdn，有N多ip，粗鲁地封ip的话，影响面太广，所以存在一些能用的ip。如果一个网站没用用cdn，那就扯淡了。直接封了ip，就只能用VPN了。比如[http://www.slideshare.net/][http_www.slideshare.net]
 
 再另外，你知道吗？当代年轻人的四项必备技能：外语、驾车、计算机、翻墙。
 
@@ -87,3 +79,4 @@ Uncaught ReferenceError: google is not defined
 [chrome]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/172a33d86577a031ce498b44f026e35a.png
 [google-playground]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/c439d2fc610fe94a9d3e3d438c916034.png
 [facebook-youtube]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/dac69dff53dd584e32ab232beabf585d.png
+[http_www.slideshare.net]: http://www.slideshare.net/

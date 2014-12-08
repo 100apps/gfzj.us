@@ -12,11 +12,9 @@ permalink: /tech/129.html
 
 ## 替换编辑器 ##
 
-帝国的可视化编辑器并不适合直接写html代码，我们当然要把它替换成emmet！emmet js版本在https://github.com/emmetio/textarea。修改修改e/admin/ecmseditor/infoeditor/fckeditor.php第9行ECMS\_ShowEditorVar函数：
+帝国的可视化编辑器并不适合直接写html代码，我们当然要把它替换成emmet！emmet js版本在[https://github.com/emmetio/textarea][https_github.com_emmetio_textarea]。修改修改e/admin/ecmseditor/infoeditor/fckeditor.php第9行ECMS\_ShowEditorVar函数：
 
-``````````
-return \\"<textarea name=\\'{$varname}\\' style=\\'width:{$width};height:{$height}\\'>{$varvalue}</textarea><script src=\\'/d/js/emmet.js\\'></script><script>emmet.require(\\'textarea\\'). setup({pretty_break: true,use_tab: true });</script>\\";
-``````````
+    return \\"<textarea name=\\'{$varname}\\' style=\\'width:{$width};height:{$height}\\'>{$varvalue}</textarea><script src=\\'/d/js/emmet.js\\'></script><script>emmet.require(\\'textarea\\'). setup({pretty_break: true,use_tab: true });</script>\\";
 
 内容添加页面的html静态模板在：**e/data/html/1.php** 。我们可以通过修改这个文件，来修改后台添加内容页面。
 
@@ -24,9 +22,7 @@ return \\"<textarea name=\\'{$varname}\\' style=\\'width:{$width};height:{$heigh
 
 帝国可以设置，这个目录的附件是否建立文件夹，但是不能在发布文章的时候设置。比我我们用火车头发布的时候，一下子发布很多，但是图片都在某个日期下面，不大好；而我们手工发的，每天一个目录，挺正常，我们可以通过修改e/class/connect.php第2892行:
 
-``````````
-$r[filepath]=FormatFilePath($classid,$mynewspath,empty($_POST["DoNotCreateDateDir"])?0:1)
-``````````
+    $r[filepath]=FormatFilePath($classid,$mynewspath,empty($_POST["DoNotCreateDateDir"])?0:1)
 
 通过火车头DoNotCreateDateDir字段可以控制是否创建目录。
 
@@ -42,32 +38,28 @@ $r[filepath]=FormatFilePath($classid,$mynewspath,empty($_POST["DoNotCreateDateDi
 
 \[e:loop\]绝对是一招鲜吃遍天，基本上用着一个标签就够了。比如，生成导航栏：
 
-``````````
-<li>?=$GLOBALS[navclassid]==0?' class="active"':''?>><a href="/">Home</a></li>
-[e:loop={'select classid,classname,classpath from [!db.pre!]enewsclass where bclassid=0 and showclass=0 order by myorder',0,24,0}]
-    <li>?=(($GLOBALS[navclassid]==$bqr[classid]) || ($class_r[$GLOBALS[navclassid]][bclassid] == $bqr[classid])) ?' class="active"':''?>><a href=">?=$public_r[newsurl]?>>?=$bqr[classpath]?>/" title=">?=$bqr[classname]?>">>?=$bqr[classname]?></a></li>
- [/e:loop]
-``````````
+    <li>?=$GLOBALS[navclassid]==0?' class="active"':''?>><a href="/">Home</a></li>
+    [e:loop={'select classid,classname,classpath from [!db.pre!]enewsclass where bclassid=0 and showclass=0 order by myorder',0,24,0}]
+        <li>?=(($GLOBALS[navclassid]==$bqr[classid]) || ($class_r[$GLOBALS[navclassid]][bclassid] == $bqr[classid])) ?' class="active"':''?>><a href=">?=$public_r[newsurl]?>>?=$bqr[classpath]?>/" title=">?=$bqr[classname]?>">>?=$bqr[classname]?></a></li>
+     [/e:loop]
 
 嵌套循环
 
-``````````
-<li>
-  <a href="#cat->?=$bqr["classid"]?>">>?=$bqr["classname"]?></a>
-  <ul class="nav">
-<?php
-$sql=$empire->query("select id,title from {$dbtbpre}ecms_news where classid='$bqr[classid]'");
-while($info=$empire->fetch($sql))
-{
-?<
-<li><a href="#pro->?=$info["id"]?>">>?=$info["title"]?></a></li>
-<?php
-}
-?>  
-</ul>
-</li>
-[/e:loop]
-``````````
+    <li>
+      <a href="#cat->?=$bqr["classid"]?>">>?=$bqr["classname"]?></a>
+      <ul class="nav">
+    <?php
+    $sql=$empire->query("select id,title from {$dbtbpre}ecms_news where classid='$bqr[classid]'");
+    while($info=$empire->fetch($sql))
+    {
+    ?<
+    <li><a href="#pro->?=$info["id"]?>">>?=$info["title"]?></a></li>
+    <?php
+    }
+    ?>  
+    </ul>
+    </li>
+    [/e:loop]
 
 ## 特别注意 ##
 
@@ -89,41 +81,34 @@ while($info=$empire->fetch($sql))
 
 ## 清空所有文章 在PHPmyadmin里面操作比帝国后台快多了 ##
 
-``````````
-truncate table `gfzj_ecms_news`;
-truncate table `gfzj_ecms_news_index`;
-truncate table `gfzj_ecms_news_data_1` ;
-update gfzj_enewsclass set allinfos=0,infos=0；
-``````````
+    truncate table `gfzj_ecms_news`;
+    truncate table `gfzj_ecms_news_index`;
+    truncate table `gfzj_ecms_news_data_1` ;
+    update gfzj_enewsclass set allinfos=0,infos=0；
 
 ## 帝国模板调试 ##
 
 dump出来所有的变量，是做模板的好方法：
 
-``````````
-ob_start();
-var_dump(get_defined_vars());
-$result = ob_get_clean();
-``````````
+    ob_start();
+    var_dump(get_defined_vars());
+    $result = ob_get_clean();
 
 ## 绑定域名「/」之后的修改 ##
 
 class/t\_functions.php101行 `sys_ShowListMorePage`函数
 
-``````````
-if(substr($dolink,0,2)=="//")$dolink=substr($dolink,1);
-``````````
+    if(substr($dolink,0,2)=="//")$dolink=substr($dolink,1);
 
 ## 「远程保存图片」的url中有中文 ##
 
 php直接file\_get\_content($url)试试，如果不能下载，帝国肯定也不能保存。因为url编码的问题。修改class/connect.php 中的`ReadFiletext`函数，1190行
 
-``````````
-$idx=strpos($filepath,"/",8);
-        $filepath=substr($filepath,0,$idx).preg_replace_callback("{[^0-9a-z_.!~*'();,/?:@&=+$#]}i", function ($m) {
-            return sprintf('%%%02X', ord($m[0]));
-        }, substr($filepath,$idx));
-``````````
+    $idx=strpos($filepath,"/",8);
+            $filepath=substr($filepath,0,$idx).preg_replace_callback("{[^0-9a-z_.!~*'();,/?:@&=+$#]}i", function ($m) {
+                return sprintf('%%%02X', ord($m[0]));
+            }, substr($filepath,$idx));
 
 
-[sitemap.php]: http://gfzj.us/wp-content/uploads/2014/04/sitemap.php_.7z
+[https_github.com_emmetio_textarea]: https://github.com/emmetio/textarea
+[sitemap.php]: http://www.gfzj.us/wp-content/uploads/2014/04/sitemap.php_.7z

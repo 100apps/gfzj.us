@@ -12,32 +12,28 @@ permalink: /tech/100.html
 
 一般都是用
 
-``````````
-<meta http-equiv="refresh" content="0;URL=someurl"/>
-``````````
+    <meta http-equiv="refresh" content="0;URL=someurl"/>
 
 来屏蔽，但是chrome还是会发送，所以还要想办法处理一下。
 
-今天在 http://www.zhe800.com/发现跳转连接有一串很长的"data:text/html;charset=utf-8"，感觉很奇怪，于是研究了一下，确实可以屏蔽referrer，而且对任何浏览器都有效。
+今天在 [http://www.zhe800.com/][http_www.zhe800.com]发现跳转连接有一串很长的"data:text/html;charset=utf-8"，感觉很奇怪，于是研究了一下，确实可以屏蔽referrer，而且对任何浏览器都有效。
 
 比如，在一个跳转页面中：[http://out.zhe800.com/ju/fan/jingjulian\_85469?page\_stats\_w=index/3\*1][http_out.zhe800.com_ju_fan_jingjulian_85469_page_stats_w_index_3_1],点击“不要积分，悲催的前往”，然后用fiddler观察一下，发现确实没有发送referrer。核心代码在http://z0.tuanimg.com/v1/jifen/welfare/js/ddloginpi1.5.min.js中，zhe800用jquery实现的，但是为了简化，完全可以写成：
 
-``````````
-function gotourl(url){
-            var html = "<html><head><meta http-equiv='Refresh' content='0; URL=" + url + "' /></head><body></body></html>";
-   var a=document.createElement("a");
-   a.onclick= function() {
-                if (navigator.userAgent.toLowerCase().indexOf("msie")>-1) {
-                    document.write(html);
-                    document.execCommand("Refresh")
-                } else {
-                    window.location =  "data:text/html;charset=utf-8," + (encodeURIComponent(html));
-                }
-            };
-   document.body.appendChild(a);
-   a.click();
-}
-``````````
+    function gotourl(url){
+                var html = "<html><head><meta http-equiv='Refresh' content='0; URL=" + url + "' /></head><body></body></html>";
+       var a=document.createElement("a");
+       a.onclick= function() {
+                    if (navigator.userAgent.toLowerCase().indexOf("msie")>-1) {
+                        document.write(html);
+                        document.execCommand("Refresh")
+                    } else {
+                        window.location =  "data:text/html;charset=utf-8," + (encodeURIComponent(html));
+                    }
+                };
+       document.body.appendChild(a);
+       a.click();
+    }
 
 这样就没有了任何依赖。对于支持data:的非ie浏览器，创建了一个临时页面，这个临时页面也是通过meta跳转的，chrome发送的时候，发送的是这个临时页面的地址，为空，所以就避开了。
 
@@ -54,8 +50,10 @@ function gotourl(url){
 
 ## 关于referrer的拼写问题 ##
 
-查看浏览器发送的头部信息，用的是Referer: http://xxxx/yy。然后在js中只有document.referrer变量。中间有个"r"。到底是怎么拼写的？ 详情见：http://english.stackexchange.com/questions/42630/referer-or-referrer
+查看浏览器发送的头部信息，用的是Referer: http://xxxx/yy。然后在js中只有document.referrer变量。中间有个"r"。到底是怎么拼写的？ 详情见：[http://english.stackexchange.com/questions/42630/referer-or-referrer][http_english.stackexchange.com_questions_42630_referer-or-referrer]
 
 
+[http_www.zhe800.com]: http://www.zhe800.com/
 [http_out.zhe800.com_ju_fan_jingjulian_85469_page_stats_w_index_3_1]: http://out.zhe800.com/ju/fan/jingjulian_85469?page_stats_w=index/3*1
 [referrer]: http://www.gfzj.us/wp-content/uploads/2013/09/test-referrer.php
+[http_english.stackexchange.com_questions_42630_referer-or-referrer]: http://english.stackexchange.com/questions/42630/referer-or-referrer

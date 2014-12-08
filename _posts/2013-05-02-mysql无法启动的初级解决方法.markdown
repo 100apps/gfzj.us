@@ -13,9 +13,7 @@ mysql无法启动也是常见问题。现在总结一下，我自己水平比较
 
 端口冲突，因为某些进程(比如，另外一个mysql)占用了端口。为什么会有另外一个mysql呢？可能是因为apt安装某些程序的时候，这些程序依赖mysql，导致mysql被安装，或者自己不小心 apt-get install了mysql等等。最简单的方法用：
 
-``````````
-netstat -antp
-``````````
+    netstat -antp
 
 看一下，是否3306端口被占用。然后结束这个进程就可以了。用kill、killall、/etc/init.d/mysql stop等等
 
@@ -23,28 +21,22 @@ netstat -antp
 
 因为mysql还用到了unixsocket，所以要保证对应的目录有读写权限。自己 [编译的mysql][mysql]可能把unix socket文件写到了/tmp目录一般还没什么问题。如果用lampp，要保证/opt/lampp/var/mysql目录对nobody是可写的。由于各种原因，可能这个目录对nobody不可写了，肯定就启动不起来了。看看日志，有：
 
-``````````
-130502  2:34:27 [ERROR] Can't start server : Bind on unix socket: Permission denied
-130502  2:34:27 [ERROR] Do you already have another mysqld server running on socket: /opt/lampp/var/mysql/mysql.sock ?
-``````````
+    130502  2:34:27 [ERROR] Can't start server : Bind on unix socket: Permission denied
+    130502  2:34:27 [ERROR] Do you already have another mysqld server running on socket: /opt/lampp/var/mysql/mysql.sock ?
 
 解决方法，比较简单：
 
-``````````
-chown nobody /opt/lampp/var/mysql
-``````````
+    chown nobody /opt/lampp/var/mysql
 
 ### 有表错误 ###
 
 有的myisam错误，导致mysql无法启动。看日志，也看不错来，直接修复吧：
 
-``````````
-find /opt/lampp/var/mysql -name *.MYI /opt/lampp/bin/myismcheck -f -r {} \\;
-``````````
+    find /opt/lampp/var/mysql -name *.MYI /opt/lampp/bin/myismcheck -f -r {} \\;
 
 ### 磁盘空间不足导致mysql无法启动 ###
 
 用df -h看一下，看看磁盘剩余空间，大体就了解了。没有别的办法，删一下日志，备份文件等等，就可以了。
 
 
-[mysql]: http://gfzj.us/521.html
+[mysql]: http://www.gfzj.us/521.html

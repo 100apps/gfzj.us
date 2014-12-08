@@ -28,7 +28,7 @@ permalink: /tech/36.html
 
 当然是cookie stuffing！用了一下午时间做了一个工具。地址是：
 
-http://ooxxbaidu.sinaapp.com/
+[http://ooxxbaidu.sinaapp.com/][http_ooxxbaidu.sinaapp.com]
 
 只需两步就可以控制用户的收藏了：
 
@@ -37,7 +37,7 @@ http://ooxxbaidu.sinaapp.com/
     1.  显示的词：类似上面的"百度官方网站"
     2.  url：不用说了
     3.  搜索词，就是当用户搜索这个词的时候显示收藏结果
-2.  添加后找到对应的嵌入的js的网址。比如http://ooxxbaidu.sinaapp.com/1.js 添加到任何用户可以访问的页面里面。
+2.  添加后找到对应的嵌入的js的网址。比如[http://ooxxbaidu.sinaapp.com/1.js][http_ooxxbaidu.sinaapp.com_1.js] 添加到任何用户可以访问的页面里面。
     
     <script src="嵌入的js的网址"></script> 这样，当用户访问这个页面的时候，用户的cookie就被悄悄的stuffing了。当用户再次搜索这个词的时候就会看到收藏结果了。
     
@@ -63,6 +63,8 @@ http://ooxxbaidu.sinaapp.com/
 [1761eb9d8fbbd44a79c3cbd0ed126480.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/1761eb9d8fbbd44a79c3cbd0ed126480.png
 [Link 1]: http://www.baidu.com/search/favo/help.html
 [fb7c43dd3c121e2e0cd3d54608ddea4e.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/fb7c43dd3c121e2e0cd3d54608ddea4e.png
+[http_ooxxbaidu.sinaapp.com]: http://ooxxbaidu.sinaapp.com/
+[http_ooxxbaidu.sinaapp.com_1.js]: http://ooxxbaidu.sinaapp.com/1.js
 [Link 2]: http://gfzj.sinaapp.com/285.html
 [Link 3]: http://www.baidu.com/s?wd=干爹
 [2a1726783c4a2f21f58de0fe195506bc.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/2a1726783c4a2f21f58de0fe195506bc.png

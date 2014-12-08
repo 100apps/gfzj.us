@@ -7,7 +7,7 @@ by: gf
 description: 前端工程师必备良药：如果更改了某个文件，自动刷新浏览器url，这样就可以在浏览器里面看到效果了，以前喜欢alt+tab。以前同事分享过f5和nof5.感觉还是有点小麻烦，现在用firefox的
 permalink: /tech/54.html
 ---
-前端工程师必备良药：
+前端工程师必备良药：  
 如果更改了某个文件，自动刷新浏览器url，这样就可以在浏览器里面看到效果了，以前喜欢alt+tab。以前同事分享过f5和nof5.感觉还是有点小麻烦，现在用firefox的插件 [autoreload][] 。对于配备双显示器的同学来说，尤其给力！ [![autoreload][autoreload 1]][autoreload_autoreload 1]
 
 

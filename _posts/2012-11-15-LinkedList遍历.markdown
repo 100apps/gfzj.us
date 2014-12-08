@@ -9,20 +9,16 @@ permalink: /tech/59.html
 ---
 今天发现有一段程序出奇地慢，重新查看了一下代码，有一行：
 
-``````````
-LinkedList wd = getDownloadList(list);
-for (int i = 0; i < wd.size(); i++) {
-   sb.append(wd.get(i)).append("\\n");
-  }
-``````````
+    LinkedList wd = getDownloadList(list);
+    for (int i = 0; i < wd.size(); i++) {
+       sb.append(wd.get(i)).append("\\n");
+      }
 
 怪不得慢，抓紧改成下面这样
 
-``````````
-for (String w : wd) {
-   sb.append(w).append("\\n");
-  }
-``````````
+    for (String w : wd) {
+       sb.append(w).append("\\n");
+      }
 
 当wd.size=465842的时候，瞬间完成了。晕死。喝多了，才会像上面那样遍历linkedlist吧。
 

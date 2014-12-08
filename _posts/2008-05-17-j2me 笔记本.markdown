@@ -7,13 +7,13 @@ by: gf
 description: 1.java.lang.IllegalArgumentException:atCanvas3.paint(+11)atjavax.microedition.lcdui.Canvas.callPaint(+85)atjavax.microedition.lcdui.Display.repaint(+82)
 permalink: /tech/192.html
 ---
-1. java.lang.IllegalArgumentException:
-at Canvas3.paint(+11)
-at javax.microedition.lcdui.Canvas.callPaint(+85)
-at javax.microedition.lcdui.Display.repaint(+82)
-at javax.microedition.lcdui.Display$DisplayAccessor.repaint(+14)
-at javax.microedition.lcdui.Display$DisplayManagerImpl.repaint(+16)
-at com.sun.midp.lcdui.DefaultEventHandler.repaintScreenEvent(+24)
+1. java.lang.IllegalArgumentException:  
+at Canvas3.paint(+11)  
+at javax.microedition.lcdui.Canvas.callPaint(+85)  
+at javax.microedition.lcdui.Display.repaint(+82)  
+at javax.microedition.lcdui.Display$DisplayAccessor.repaint(+14)  
+at javax.microedition.lcdui.Display$DisplayManagerImpl.repaint(+16)  
+at com.sun.midp.lcdui.DefaultEventHandler.repaintScreenEvent(+24)  
 at com.sun.midp.lcdui.DefaultEventHandler$QueuedEventHandler.run(+485)
 
 g.drawImage(i, 0, 0, Graphics.LEFT);
@@ -22,159 +22,159 @@ g.drawImage(i, 0, 0, Graphics.LEFT);
 
 Left=4,top=16.Left|top=20,可能是因为这个anchor参数不合法吧。太大太小都不行的。。
 
-2.java.lang.SecurityException: Application not authorized to access the restricted API
-at com.sun.midp.security.SecurityToken.checkIfPermissionAllowed(+40)
-at com.sun.midp.security.SecurityToken.checkIfPermissionAllowed(+7)
-at com.sun.midp.midletsuite.MIDletSuiteImpl.checkIfPermissionAllowed(+8)
-at com.sun.midp.midlet.MIDletState.<init>(+83)
-at javax.microedition.midlet.MIDletProxy.<init>(+5)
-at javax.microedition.midlet.MIDlet.<init>(+13)
-at LrcAnalyst.<init>(+4)
-at TestLrc.startApp(+15)
-at javax.microedition.midlet.MIDletProxy.startApp(+7)
-at com.sun.midp.midlet.Scheduler.schedule(+270)
-at com.sun.midp.main.Main.runLocalClass(+28)
+2.java.lang.SecurityException: Application not authorized to access the restricted API  
+at com.sun.midp.security.SecurityToken.checkIfPermissionAllowed(+40)  
+at com.sun.midp.security.SecurityToken.checkIfPermissionAllowed(+7)  
+at com.sun.midp.midletsuite.MIDletSuiteImpl.checkIfPermissionAllowed(+8)  
+at com.sun.midp.midlet.MIDletState.<init>(+83)  
+at javax.microedition.midlet.MIDletProxy.<init>(+5)  
+at javax.microedition.midlet.MIDlet.<init>(+13)  
+at LrcAnalyst.<init>(+4)  
+at TestLrc.startApp(+15)  
+at javax.microedition.midlet.MIDletProxy.startApp(+7)  
+at com.sun.midp.midlet.Scheduler.schedule(+270)  
+at com.sun.midp.main.Main.runLocalClass(+28)  
 at com.sun.midp.main.Main.main(+116)
 
 说什么安全性异常，这是因为把对象定义成局部变量了，我把它的new 放到全局变量，就ok了。
 
-3.Method............: 257f640 'TestLrc.startApp (virtual)'
-Stack Chunk.......: 2390300
-Frame Pointer.....: 23903a8
-Current IP........: 257f5bf = 257f5ac + offset 19
-Previous Frame....: 2390388
-Previous IP.......: 10324375 (offset 7)
-Frame size........: 2 (1 arguments, 1 local variables)
-Argument\[0\].......: 257efcc
-Local\[1\]..........: 257e7a0
-Operand\[1\]........: 257e7a0
+3.Method............: 257f640 'TestLrc.startApp (virtual)'  
+Stack Chunk.......: 2390300  
+Frame Pointer.....: 23903a8  
+Current IP........: 257f5bf = 257f5ac + offset 19  
+Previous Frame....: 2390388  
+Previous IP.......: 10324375 (offset 7)  
+Frame size........: 2 (1 arguments, 1 local variables)  
+Argument\[0\].......: 257efcc  
+Local\[1\]..........: 257e7a0  
+Operand\[1\]........: 257e7a0  
 Operand\[2\]........: 257f6a4
 
-Method............: 1021ecac 'javax/microedition/midlet/MIDletProxy.startApp (virtual)'
-Stack Chunk.......: 2390300
-Frame Pointer.....: 2390388
-Current IP........: 10324375 = 1032436e + offset 7
-Previous Frame....: 239036c
-Previous IP.......: 1038a23e (offset 270)
-Frame size........: 1 (1 arguments, 0 local variables)
+Method............: 1021ecac 'javax/microedition/midlet/MIDletProxy.startApp (virtual)'  
+Stack Chunk.......: 2390300  
+Frame Pointer.....: 2390388  
+Current IP........: 10324375 = 1032436e + offset 7  
+Previous Frame....: 239036c  
+Previous IP.......: 1038a23e (offset 270)  
+Frame size........: 1 (1 arguments, 0 local variables)  
 Argument\[0\].......: 257ef90
 
-Method............: 10263264 'com/sun/midp/midlet/Scheduler.schedule (virtual)'
-Stack Chunk.......: 2390300
-Frame Pointer.....: 239036c
-Current IP........: 1038a23e = 1038a130 + offset 270
-Previous Frame....: 2390338
-Previous IP.......: 103750f1 (offset 28)
-Frame size........: 7 (2 arguments, 5 local variables)
-Argument\[0\].......: 238fe40
-Argument\[1\].......: 2381f14
-Local\[2\]..........: 257ef90
-Local\[3\]..........: 2
-Local\[4\]..........: 238fe34
-Local\[5\]..........: 257f4c4
+Method............: 10263264 'com/sun/midp/midlet/Scheduler.schedule (virtual)'  
+Stack Chunk.......: 2390300  
+Frame Pointer.....: 239036c  
+Current IP........: 1038a23e = 1038a130 + offset 270  
+Previous Frame....: 2390338  
+Previous IP.......: 103750f1 (offset 28)  
+Frame size........: 7 (2 arguments, 5 local variables)  
+Argument\[0\].......: 238fe40  
+Argument\[1\].......: 2381f14  
+Local\[2\]..........: 257ef90  
+Local\[3\]..........: 2  
+Local\[4\]..........: 238fe34  
+Local\[5\]..........: 257f4c4  
 Local\[6\]..........: 10263184
 
-Method............: 10257600 'com/sun/midp/main/Main.runLocalClass (static)'
-Stack Chunk.......: 2390300
-Frame Pointer.....: 2390338
-Current IP........: 103750f1 = 103750d5 + offset 28
-Previous Frame....: 2390314
-Previous IP.......: 10374b38 (offset 116)
-Frame size........: 3 (1 arguments, 2 local variables)
-Argument\[0\].......: 23900a4
-Local\[1\]..........: 2381f14
+Method............: 10257600 'com/sun/midp/main/Main.runLocalClass (static)'  
+Stack Chunk.......: 2390300  
+Frame Pointer.....: 2390338  
+Current IP........: 103750f1 = 103750d5 + offset 28  
+Previous Frame....: 2390314  
+Previous IP.......: 10374b38 (offset 116)  
+Frame size........: 3 (1 arguments, 2 local variables)  
+Argument\[0\].......: 23900a4  
+Local\[1\]..........: 2381f14  
 Local\[2\]..........: 257f48c
 
-Method............: 10257560 'com/sun/midp/main/Main.main (static)'
-Stack Chunk.......: 2390300
-Frame Pointer.....: 2390314
-Current IP........: 10374b38 = 10374ac4 + offset 116
-Previous Frame....: 0
-Previous IP.......: 1
-Frame size........: 3 (1 arguments, 2 local variables)
-Argument\[0\].......: 23905f0
-Local\[1\]..........: 23900a4
+Method............: 10257560 'com/sun/midp/main/Main.main (static)'  
+Stack Chunk.......: 2390300  
+Frame Pointer.....: 2390314  
+Current IP........: 10374b38 = 10374ac4 + offset 116  
+Previous Frame....: 0  
+Previous IP.......: 1  
+Frame size........: 3 (1 arguments, 2 local variables)  
+Argument\[0\].......: 23905f0  
+Local\[1\]..........: 23900a4  
 Local\[2\]..........: 238d9a4
 
-VM status:
-Instruction pointer.: 257f5bf (offset within invoking method: 19)
-Next instruction....: 0xb6
-Frame pointer.......: 23903a8
-Local pointer.......: 23903a0
-Stack size..........: 256; sp: 23903c4; ranges: 2390308-2390508;257ecb0-257eeb0;
-Contents of the current stack frame:
-    23903a0: 257efcc (lp)
-    23903a4: 257e7a0
-    23903a8: 2390388 (fp)
-    23903ac: 10324375
-    23903b0: 239039c
-    23903b4: 257f640
-    23903b8: 2390300
-    23903bc: 0 (end of frame)
-    23903c0: 257e7a0
-    23903c4: 257f6a4 (sp)
-Execution stack contains 192 items:
-23905f0
-23900a4
-238d9a4
-0
-1
-257f47c
-10257560
-2390300
-0
-23900a4
-2381f14
-257f48c
-2390314
-10374b38
-2390328
-10257600
-2390300
-0
-238fe40
-2381f14
-257ef90
-2
-238fe34
-257f4c4
-10263184
-2390338
-103750f1
-239034c
-10263264
-2390300
-0
-257ef90
-239036c
-1038a23e
-2390380
-1021ecac
-2390300
-0
-257efcc
-257e7a0
-2390388
-10324375
-239039c
-257f640
-2390300
-0
-257e7a0
+VM status:  
+Instruction pointer.: 257f5bf (offset within invoking method: 19)  
+Next instruction....: 0xb6  
+Frame pointer.......: 23903a8  
+Local pointer.......: 23903a0  
+Stack size..........: 256; sp: 23903c4; ranges: 2390308-2390508;257ecb0-257eeb0;  
+Contents of the current stack frame:  
+    23903a0: 257efcc (lp)  
+    23903a4: 257e7a0  
+    23903a8: 2390388 (fp)  
+    23903ac: 10324375  
+    23903b0: 239039c  
+    23903b4: 257f640  
+    23903b8: 2390300  
+    23903bc: 0 (end of frame)  
+    23903c0: 257e7a0  
+    23903c4: 257f6a4 (sp)  
+Execution stack contains 192 items:  
+23905f0  
+23900a4  
+238d9a4  
+0  
+1  
+257f47c  
+10257560  
+2390300  
+0  
+23900a4  
+2381f14  
+257f48c  
+2390314  
+10374b38  
+2390328  
+10257600  
+2390300  
+0  
+238fe40  
+2381f14  
+257ef90  
+2  
+238fe34  
+257f4c4  
+10263184  
+2390338  
+103750f1  
+239034c  
+10263264  
+2390300  
+0  
+257ef90  
+239036c  
+1038a23e  
+2390380  
+1021ecac  
+2390300  
+0  
+257efcc  
+257e7a0  
+2390388  
+10324375  
+239039c  
+257f640  
+2390300  
+0  
+257e7a0  
 257f6a4
 
-Execution completed.
-3417736 bytecodes executed
-273 thread switches
-1647 classes in the system (including system classes)
-17730 dynamic objects allocated (528660 bytes)
-2 garbage collections (458296 bytes collected)
-Execution completed.
-3417736 bytecodes executed
-273 thread switches
-1647 classes in the system (including system classes)
-17730 dynamic objects allocated (528660 bytes)
-2 garbage collections (458296 bytes collected)
+Execution completed.  
+3417736 bytecodes executed  
+273 thread switches  
+1647 classes in the system (including system classes)  
+17730 dynamic objects allocated (528660 bytes)  
+2 garbage collections (458296 bytes collected)  
+Execution completed.  
+3417736 bytecodes executed  
+273 thread switches  
+1647 classes in the system (including system classes)  
+17730 dynamic objects allocated (528660 bytes)  
+2 garbage collections (458296 bytes collected)  
 ALERT: java/lang/NoSuchMethodError: No such method showLrc.(Ljava/lang/String;)V.
 
 这个异常太搞笑了，so long....

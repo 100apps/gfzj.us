@@ -9,9 +9,7 @@ permalink: /tech/45.html
 ---
 终端执行如下命令 *$ssh-keygen -t rsa -P ""* (生成SSH key) *$cat ~/.ssh/id\_rsa.pub >> ~/.ssh/authorized\_keys* (公布公钥。如果~下没有.ssh文件夹，首先手动先创建一个.ssh文件夹) *$ssh localhost* (测试是否成功) 如果出现 ssh: connect to host localhost port 22: Connection refused ，表明还没有安装ssh 服务，需要自己手动安装ssh-server： $sudo apt-get install openssh-server $sudo /etc/init.d/ssh start  //安装完后启动 $ps -ef | grep sshd
 
-``````````
-root      2571     1  0 13:55 ?        00:00:00 /usr/sbin/sshd -D
-zj       11835  8450  0 19:19 pts/0    00:00:00 grep --color=auto sshd
-``````````
+    root      2571     1  0 13:55 ?        00:00:00 /usr/sbin/sshd -D
+    zj       11835  8450  0 19:19 pts/0    00:00:00 grep --color=auto sshd
 
 启动ok。 $ssh localhost

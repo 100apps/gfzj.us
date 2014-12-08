@@ -33,4 +33,7 @@ permalink: /tech/178.html
 
 **真是无知，，看看那些开源的东西吧！**
 
-http://www.open-open.com/24.htm
+[http://www.open-open.com/24.htm][http_www.open-open.com_24.htm]
+
+
+[http_www.open-open.com_24.htm]: http://www.open-open.com/24.htm

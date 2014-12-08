@@ -9,24 +9,20 @@ permalink: /tech/83.html
 ---
 大学确实没有好好学这么课程，大家都是这样过来的。除了参加ACM之类比赛的同学，用心去做题，研究这些东西。一些水货，比如我。谁会去看这个。并且，根本不影响考试，考试无非就出那几道题而已。书到用时方恨少，昨天被一个同学问到：
 
-``````````
-给你一个数组array,还有一个函数rand(n)返回0-n的随机数。写一个方法，把array随机化。
-``````````
+    给你一个数组array,还有一个函数rand(n)返回0-n的随机数。写一个方法，把array随机化。
 
 我一下子不知所措，但是还是硬着头皮写了一个：
 
-``````````
-$output=array();
- $len=count($array);
- while(count($output)<$len){
-  $output[rand(n)]=1;
- }
- $ret=array();
- for($output as $k=>$v){
-  $ret[]=$array[$k];
- }
- $array=$ret;
-``````````
+    $output=array();
+     $len=count($array);
+     while(count($output)<$len){
+      $output[rand(n)]=1;
+     }
+     $ret=array();
+     for($output as $k=>$v){
+      $ret[]=$array[$k];
+     }
+     $array=$ret;
 
 然后他问我时间复杂度。
 
@@ -38,14 +34,12 @@ $output=array();
 
 他说有个不算好的算法，O(N)时间复杂度。
 
-``````````
-for($i=0,len=count($array);$i<$len;$i++){
-  $temp=$array[i];
-  $j=rand(n);
-  $array[i]=$array[$j];
-  $array[j]=$temp;
- }
-``````````
+    for($i=0,len=count($array);$i<$len;$i++){
+      $temp=$array[i];
+      $j=rand(n);
+      $array[i]=$array[$j];
+      $array[j]=$temp;
+     }
 
 我觉得太丢人了。没想到那货说了一句，这是算法导论第五章第三节的内容。
 

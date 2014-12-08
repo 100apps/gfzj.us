@@ -11,8 +11,8 @@ permalink: /tech/179.html
 
 今天中午大膽兄弟給我发了一条短信，內容是：
 
-相信有能让你手机失灵的短信吗？今天就让你梦想成真！
-继续往下看！♪ 哈哈~~
+相信有能让你手机失灵的短信吗？今天就让你梦想成真！  
+继续往下看！♪ 哈哈~~  
 (扣电池吧）
 
 我按任何鍵都不管用了，只能乖乖地扣電池，然後重啟。。![e101fc2488d649a43f06cc760040bc8f.gif][]
@@ -31,17 +31,17 @@ permalink: /tech/179.html
 
 主要的格式：
 
-BEGIN:IMELOPY
-BEAT://执行参数（数字）
-MELODY://灯光及震动控制脚本
-END:IMELODY
+BEGIN:IMELOPY  
+BEAT://执行参数（数字）  
+MELODY://灯光及震动控制脚本  
+END:IMELODY  
 该种短信音符利用了2000年爱立信公司推出的短信插入声音功能现在该功能已经普及，因为该音符能控制模式为铃声的手机（对模式是震动的手机无效；对品牌手机也可能有作用如nokia和moto等）的灯光及震动。我现在也没有找到具体的语法。只是知道：
 
 黑屏音符：
 
-BEGIN:IMELODY
-BEAT:1200
-MELODY:(ledoffbackoffvibeoffr5ledoffbackoffvibeoffr5@600)
+BEGIN:IMELODY  
+BEAT:1200  
+MELODY:(ledoffbackoffvibeoffr5ledoffbackoffvibeoffr5@600)  
 END:IMELODY
 
 复制上面的文本，另存为.imy文件就可以了，试一下把它出入到一条短信里面。等着黑屏吧。。my god~

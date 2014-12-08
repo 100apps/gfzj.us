@@ -14,7 +14,7 @@ openshift的ssh可以用来-D来做代理，也可以用sftp或者rsync、scp等
 
 ## STEP 1：注册 ##
 
-通过https://www.openshift.com/app/account/new注册。
+通过[https://www.openshift.com/app/account/new][https_www.openshift.com_app_account_new]注册。
 
 ## STEP 2: 生成密钥(新账户创建第一个应用的时候需要) ##
 
@@ -28,17 +28,13 @@ openshift可以创建很多环境，也可以通过命令行增加，但是我�
 
 应用创建完成以后，服务器返回一个ssh地址，比如：
 
-``````````
-ssh://534217a5e0b8cd5f38000500@php-sbjq.rhcloud.com/~/git/php.git/
-``````````
+    ssh://534217a5e0b8cd5f38000500@php-sbjq.rhcloud.com/~/git/php.git/
 
 我们可以用 ssh 534217a5e0b8cd5f38000500@php-sbjq.rhcloud.com直接登录服务器，注意这时候用的验证方式是私钥，不是密码。网站根目录在/var/lib/openshift/**534217a5e0b8cd5f38000500(此处是你的用户名)**/app-root/runtime/repo,注意硬盘空间是1G，支持htaccess。通过 ping php-sbjq.rhcloud.com可以得到服务器的ip地址。我们轻易就能获得：
 
-``````````
-ping php-sbjq.rhcloud.com
-PING ec2-54-224-132-165.compute-1.amazonaws.com (54.224.132.165): 56 data bytes
-64 bytes from 54.224.132.165: icmp_seq=0 ttl=42 time=480.044 ms
-``````````
+    ping php-sbjq.rhcloud.com
+    PING ec2-54-224-132-165.compute-1.amazonaws.com (54.224.132.165): 56 data bytes
+    64 bytes from 54.224.132.165: icmp_seq=0 ttl=42 time=480.044 ms
 
 openshift其实是用的aws的云服务。所以此时，一个应用就相当于一台只有1G硬盘的Amazon vps。而且是免费的，绝对超值！
 
@@ -48,6 +44,7 @@ openshift其实是用的aws的云服务。所以此时，一个应用就相当�
 
 
 [Openshift]: https://www.openshift.com/
+[https_www.openshift.com_app_account_new]: https://www.openshift.com/app/account/new
 [puttygen.exe]: http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe
 [https_openshift.redhat.com_app_console_application_type_cart_php-5.4]: https://openshift.redhat.com/app/console/application_type/cart!php-5.4
 [php-sbjq.rhcloud.com]: http://www.gfzj.us/php-sbjq.rhcloud.com

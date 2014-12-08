@@ -4,12 +4,12 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">我们写过的文章</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts%}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>  <span class="post-meta">by {{post.by}}</span> 
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -18,11 +18,40 @@ layout: default
 	<p>{{post.description}}</p>
 	{%endif%}
 	{% if post.img%}
-	<img src="{{post.img}}"/></p>
+	<p class="caption-img"><img src="{{post.img}}"/></p>
 	{%endif%}
       </li>
     {% endfor %}
   </ul>
+
+
+{% if paginator.total_pages != 1  %}
+<div id="pagination" class="pagination">
+    <ul class="pages fix_height">
+        {% if paginator.page == 1  %}
+        <li class="current-page">
+            <span>1</span>
+            {% else  %}
+        <li class="page">
+            <a href="{{ pager_url  }}/">1</a>
+            {% endif  %}
+        </li>
+        {% for count in (2..paginator.total_pages)  %}
+
+        {% if count == paginator.page  %}
+        <li class="page current-page">
+            <span>{{ count  }}</span>
+            {% else  %}
+        <li class="page">
+            <a href="{{ pager_url  }}/page{{ count  }}/">{{ count  }}</a>
+            {% endif  %}
+        </li>
+        {% endfor  %}
+    </ul><div style="clear:both"></div>
+</div>
+{% endif   %}
+
+
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 

@@ -16,10 +16,11 @@ permalink: /life/202.html
 
 另外，今天上午收到apple发来的邮件，说我的app 正在「in review」状态，过了10分钟以后，又收到邮件，说已经「ready for sale」了，真是不错。幸亏我录了demo视频，看来真的很重要啊。
 
-体重宝下载地址：https://itunes.apple.com/app/id925697616或者扫描下面的二维码下载：
+体重宝下载地址：[https://itunes.apple.com/app/id925697616][https_itunes.apple.com_app_id925697616]或者扫描下面的二维码下载：
 
 ![体重宝下载地址][ea6c93cab8edbff0fec0d812c9439883.jpg]
 
 
 [b08a5173a3e793ebae2ba4b66886080b.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
+[https_itunes.apple.com_app_id925697616]: https://itunes.apple.com/app/id925697616
 [ea6c93cab8edbff0fec0d812c9439883.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/ea6c93cab8edbff0fec0d812c9439883.jpg

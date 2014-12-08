@@ -9,8 +9,8 @@ permalink: /tech/33.html
 ---
 1.  ishare.iask.sina.com.cn 需要sina用户名，2分钱一个。Api已经完成。支持title、keyword、description优化。并无长度显示。SE表现良好，人工审核机制强大。会封号。
 2.  金山快盘。可以通过自带api发布外链，但是需要审核，审核时间并未考察。需要注册用户。只是title优化。不能添加描述。在百度表现一般。[http://www.kuaipan.cn/developers/document\_apishare.htm][http_www.kuaipan.cn_developers_document_apishare.htm]
-3.  http://www.vdisk.cn/ 威盘。分享只需把数据post过去。及其简单。但是内容需要审核。SE表现一般
-4.  http://115.com/ 115网盘上传、分享都很简单，百度表现比google要好一些，只支持title优化。容易删除，可以试试
+3.  [http://www.vdisk.cn/][http_www.vdisk.cn] 威盘。分享只需把数据post过去。及其简单。但是内容需要审核。SE表现一般
+4.  [http://115.com/][http_115.com] 115网盘上传、分享都很简单，百度表现比google要好一些，只支持title优化。容易删除，可以试试
     
      
     
@@ -18,3 +18,5 @@ permalink: /tech/33.html
 
 
 [http_www.kuaipan.cn_developers_document_apishare.htm]: http://www.kuaipan.cn/developers/document_apishare.htm
+[http_www.vdisk.cn]: http://www.vdisk.cn/
+[http_115.com]: http://115.com/

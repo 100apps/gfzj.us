@@ -9,11 +9,9 @@ permalink: /tech/82.html
 ---
 看看这段代码
 
-``````````
--(void)showNews:(int)id{
-  //TODO
- }
-``````````
+    -(void)showNews:(int)id{
+      //TODO
+     }
 
 本来觉得很正常啊，用来显示id是x的新闻，一开始运行也正常。后来想加个for循环，发现xcode死活不给提示。![输入for，xcode的提示][for_xcode]
 
@@ -23,11 +21,9 @@ permalink: /tech/82.html
 
 真是想不通。给的提示也看不懂，不经意间发现。这里居然有个id
 
-``````````
--(void)showNews:(int)id{
-  //TODO
- }
-``````````
+    -(void)showNews:(int)id{
+      //TODO
+     }
 
 然后这个id和类型id混了。果断把参数id改成aid，正常了。![for循环正常了][for]
 

@@ -1,0 +1,23 @@
+---
+layout: post
+title: "app store上架应用"
+date: 2013-05-16 08:54:38
+category: tech
+by: gf
+description: 经过8天等待，miningnews终于上架成功了。以前一直是review状态，心想怎么也得退回来，因为很多地方编码实在是太懒了，但是足够幸运，一次就ReadyforSale了在黑苹果下面开发得，黑
+permalink: /tech/72.html
+---
+经过8天等待，miningnews终于上架成功了。以前一直是review状态，心想怎么也得退回来，因为很多地方编码实在是太懒了，但是足够幸运，一次就 Ready for Sale 了
+
+在黑苹果下面开发得，黑苹果配置比较高，买个键盘鼠标，也挺好用。装个xcode基本上就可以一路next了。发布到appsotre的时候，注意证书，各种证书和配置文件，具体含义可以google，一般失败很可能是因为证书原因。打包好了以后，要先到 [https://itunesconnect.apple.com][https_itunesconnect.apple.com]新建一个产品，才能继续在xcode里面上架。
+
+以前一直认为上架的时候要选择店面地区，一直没见到可选的地方，上架成功才看到：
+
+``````````
+Unless you select specific stores, your app will be for sale in all App Stores worldwide.
+``````````
+
+附上第一版的应用，比较初级：https://itunes.apple.com/us/app/miningnews/id645397745?ls=1&mt=8
+
+
+[https_itunesconnect.apple.com]: http://www.gfzj.us

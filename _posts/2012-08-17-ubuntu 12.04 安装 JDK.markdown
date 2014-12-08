@@ -1,0 +1,41 @@
+---
+layout: post
+title: "ubuntu 12.04 安装 JDK"
+date: 2012-08-17 18:44:53
+category: tech
+by: zj
+description: 一、安装JDKJDKforlinux 32bits 下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u4-downloads-1591156.html 选择 jdk-7u4-linux-i586.t
+permalink: /tech/44.html
+---
+一、安装JDK JDK for linux  32 bits  下载地址：http://www.oracle.com/technetwork/java/javase/downloads/jdk-7u4-downloads-1591156.html  选择 jdk-7u4-linux-i586.tar.gz下载 安装过程如下： (1)解压jdk-7u4-linux-i586.tar.gz： $ tar zxvf  jdk-7u4-linux-i586.tar.gz    //得到jdk1.7.0\_06 (2)复制jdk1.7.0\_06到 /usr/liv/jvm下： $sudo mv -r  jdk1.7.0\_06 /usr/liv/jvm (3)配置环境变量： $sudo gedit  ~/.bashrc  //打开并编辑该文件 在文件尾添加：
+
+``````````
+export JAVA_HOME=/usr/lib/jvm/jdk1.7.0_06
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+``````````
+
+保存修改，关闭文件，再执行如下命令使更改生效： $source ~/.bashrc (4)更改系统默认的JDK $ sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.7.0\_06/bin/java 300 $ sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.7.0\_06/bin/javac 300 $ sudo update-alternatives --config javac $ sudo update-alternatives --config java  //执行该命令后，会让你选择
+
+``````````
+有 2 个候选项可用于替换 java (提供 /usr/bin/java)。
+
+  选择       路径                                         优先级  状态
+------------------------------------------------------------
+ *0            /usr/lib/jvm/java-6-openjdk-i386/jre/bin/java   1061      自动模式
+  1            /usr/lib/jvm/java-6-openjdk-i386/jre/bin/java   1061      手动模式
+  2            /usr/lib/jvm/jdk1.7.0_06/bin/java               300       手动模式
+
+要维持当前值[*]请按回车键，或者键入选择的编号：2
+``````````
+
+输入你刚刚安装的JDK对应的选择即可 (5)检测，输入命令行： $java -version 显示如下结果便是配置完成
+
+``````````
+java version "1.7.0_06"
+Java(TM) SE Runtime Environment (build 1.7.0_06-b24)
+Java HotSpot(TM) Server VM (build 23.2-b09, mixed mode)
+``````````
+
+   

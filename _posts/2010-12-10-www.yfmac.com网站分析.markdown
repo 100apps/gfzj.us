@@ -1,0 +1,99 @@
+---
+layout: post
+title: "www.yfmac.com网站分析"
+date: 2010-12-10 15:04:00
+category: tech
+by: gf
+description: 现在www.yfmac.com在百度搜索破碎机排在第一位，偶尔还排到百度百科的前面，所以现在全面分析一下排名好的原因。所有的原因都是基于一定事实的猜测，百度整天像抽风似的，今天可能
+permalink: /tech/167.html
+---
+现在[www.yfmac.com][]在百度搜索破碎机排在第一位，偶尔还排到百度百科的前面，所以现在全面分析一下排名好的原因。所有的原因都是基于一定事实的猜测，百度整天像抽风似的，今天可能排在第一，明天就不知道排到哪里去了。所以下面的所有都是一家之言，仅供坊间流传。
+
+主要还是两方面，网站自身和外链
+
+ 网站自身
+
+域名年龄：2002-04-19注册，很老，这个先天优势，无法比拟。
+
+常用SEO标准对首页分析：70～
+
+![01a67f23d9bd8cd82dc65e11f65f658a.jpg][]
+
+最夸张的是，首页放置了太多的东西，导致过大，而且没用sprite优化小图像。看图：
+
+![a3463f0f0a95dd13dce058144ee5fe08.jpg][]
+
+相比之下，shibangchina就好得多
+
+![0eacc9faada16a505ff08fee2914ec74.jpg][]
+
+![ff30f95a6bf39cf4312cb6a65e0307e8.jpg][]
+
+基本上也就是说，yfmac比淘宝的首页还要大3倍！速度和用户体验可见一斑，我每次打开yfmac的首页基本上都是浏览器假死状态，加上现在网速比较慢，如果是第一次打开，没有缓存的话，相当悲剧，但是有缓存就另说了。
+
+再说一下更新频率吧，yfmac基本上已经有三个月不更新了。相当无语。
+
+关于内容，基本上也是全部伪原创，而且还是比较低级的伪原创，价格@什么的。![98a0683327a8820d73dcc0b60e2e02ba.jpg][]
+
+所以从网站自身来说，yfmac最多能给70分。比较差了，不管对用户还是对SE。
+
+2.外链分析
+
+我觉得外链是yfmac排名的关键所在，从yahoo外链工具上察看www.yfmac.com的外链分析,共1976个.但是我们只能得到前1000个，所以下面分析这1000个。
+
+博客    sites:16;links:32
+
+B2B    sites:30;links:495
+
+站群    sites:20;links:273
+
+论坛回复    sites:8;links:28
+
+行业站发贴    sites:10;links:172
+
+黑链：[www.hustgroup.com][] 
+
+ www.xca.gov.cn 湖北通信管理局PR=7
+
+psychology.zjnu.net.cn浙江师范大学PR=6
+
+目录：
+
+cooldir.com (不可用)
+
+www.edcba.com (PR=5)
+
+招聘类网站：vip.tianjihr.com 
+
+和黎明交换链接：www.mofenji8.com lmzg.cn www.eposuiji.net  
+
+14个底部浅色友情链接
+
+PR5
+
+Baidu,site:393 （[www.shbiangchina.com][] 1,090）
+
+3.总结
+
+yfmac有先天优势，但是网站管理者不用心发展自身内网，而走上了不归路，只能祝他一路走好了。附上，各大搜索引擎举报地址：
+
+baidu：http://utility.baidu.com/antispam/spamreport.php
+
+gogole：http://www.google.com/contact/spamreport.html
+
+Sogou的举报信箱是： .
+
+如果您对上面的内容感兴趣，可以下载下面的文档。里面有1000个外链和它们的属性
+
+http://liuguangfeng.googlecode.com/files/www.yfmac.com%E5%88%86%E6%9E%90.rar
+
+
+
+[www.yfmac.com]: http://www.yfmac.com/
+[01a67f23d9bd8cd82dc65e11f65f658a.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/01a67f23d9bd8cd82dc65e11f65f658a.jpg
+[a3463f0f0a95dd13dce058144ee5fe08.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a3463f0f0a95dd13dce058144ee5fe08.jpg
+[0eacc9faada16a505ff08fee2914ec74.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/0eacc9faada16a505ff08fee2914ec74.jpg
+[ff30f95a6bf39cf4312cb6a65e0307e8.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/ff30f95a6bf39cf4312cb6a65e0307e8.jpg
+[98a0683327a8820d73dcc0b60e2e02ba.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/98a0683327a8820d73dcc0b60e2e02ba.jpg
+[www.hustgroup.com]: http://www.hustgroup.com/
+[www.shbiangchina.com]: http://www.shbiangchina.com/

@@ -1,0 +1,123 @@
+---
+layout: post
+title: "lampp1.8.0 VS nginx1.3.3+APC-3.1.11+php5.4.5 VS httpserver on JDK 1.7.0_05"
+date: 2012-07-31 13:55:00
+category: tech
+by: gf
+description: 测试内容容随机产生100个随机数，然后返回。php代码：&lt;?php$ret=\"\";for($i=0;$i
+permalink: /tech/40.html
+---
+测试内容容随机产生100个随机数，然后返回。 php代码：
+
+``````````
+<?php
+$ret="";
+for($i=0;$i<100;$i++)$ret.=rand();
+echo $ret;
+``````````
+
+java代码：
+
+``````````
+import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.util.Random;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
+
+public class Server {
+ public static void main(String[] args) {
+  try {
+   HttpServer server = HttpServer.create(new InetSocketAddress(8000),
+     0);
+   final Random r = new Random();
+   server.createContext("/", new HttpHandler() {
+
+    @Override
+    public void handle(HttpExchange h) throws IOException {
+     StringBuffer sb = new StringBuffer();
+     for (int i = 0; i < 100; i++) {
+      sb.append(r.nextInt());
+     }
+     byte[] r = sb.toString().getBytes("UTF-8");
+     h.sendResponseHeaders(200, r.length);
+     h.getResponseBody().write(r);
+     h.close();
+    }
+   });
+   server.setExecutor(null); 
+   server.start();
+  } catch (Exception e) {
+   e.printStackTrace();
+  }
+ }
+
+}
+``````````
+
+用apache ab测试结果
+
+    | ----------- | --------- | ----------- | ---------- |
+    | Server Software:       || lampp1.8.0              ||
+    | Server Hostname:       || key.eagle-project.org   ||
+    | Server Port:           || 80                      ||
+    | Document Path:         || /                       ||
+    | Document Length:       || 486 bytes               ||
+    | Concurrency Level:     || 1000                    ||
+    | Time taken for tests:  || 31.229 seconds          ||
+    | Complete requests:     || 10000                   ||
+    | Failed requests:       || 9984                    ||
+    | (Connect: 0, Length: 9660, Exceptions: 162)     ||||
+    | Total transferred:     || 7266194 bytes           ||
+    | HTML transferred:      || 4835714 bytes           ||
+    | Requests per second:   || 320215.07               ||
+    | Transfer rate:         || 232674.48 kb/s received ||
+    | Connnection Times (ms)                          ||||
+    |             | min       | avg         | max        |
+    | Connect:    | 139       | 276         | 7169       |
+    | Processing: | 180       | 985         | 24046      |
+    | Total:      | 319       | 1261        | 31215      |
+
+    | ----------- | --------- | -------------- | -------------- |
+    | Server Software:       || nginx1.3.3+APC-3.1.11+php5.4.5 ||
+    | Server Hostname:       || key.eagle-project.org          ||
+    | Server Port:           || 80                             ||
+    | Document Path:         || /                              ||
+    | Document Length:       || 949 bytes                      ||
+    | Concurrency Level:     || 1000                           ||
+    | Time taken for tests:  || 12.247 seconds                 ||
+    | Complete requests:     || 10000                          ||
+    | Failed requests:       || 9372                           ||
+    | (Connect: 0, Length: 9372, Exceptions: 0)              ||||
+    | Total transferred:     || 10633670 bytes                 ||
+    | HTML transferred:      || 9483670 bytes                  ||
+    | Requests per second:   || 816508.23                      ||
+    | Transfer rate:         || 868247.91 kb/s received        ||
+    | Connnection Times (ms)                                 ||||
+    |             | min       | avg            | max            |
+    | Connect:    | 163       | 460            | 3388           |
+    | Processing: | 203       | 641            | 5854           |
+    | Total:      | 366       | 1101           | 9242           |
+
+    | ----------- | --------- | ----------- | ---------- |
+    | Server Software:       || JDK 1.7.0\_05           ||
+    | Server Hostname:       || key.eagle-project.org   ||
+    | Server Port:           || 8000                    ||
+    | Document Path:         || /                       ||
+    | Document Length:       || 996 bytes               ||
+    | Concurrency Level:     || 1000                    ||
+    | Time taken for tests:  || 15.387 seconds          ||
+    | Complete requests:     || 10000                   ||
+    | Failed requests:       || 9479                    ||
+    | (Connect: 0, Length: 9479, Exceptions: 0)       ||||
+    | Total transferred:     || 10947712 bytes          ||
+    | HTML transferred:      || 9983100 bytes           ||
+    | Requests per second:   || 649902.52               ||
+    | Transfer rate:         || 711494.56 kb/s received ||
+    | Connnection Times (ms)                          ||||
+    |             | min       | avg         | max        |
+    | Connect:    | 144       | 580         | 7393       |
+    | Processing: | 261       | 802         | 5943       |
+    | Total:      | 405       | 1382        | 13336      |

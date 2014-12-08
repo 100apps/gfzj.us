@@ -1,0 +1,37 @@
+---
+layout: post
+title: "尝试使用google可用ip"
+date: 2014-06-04 15:02:17
+category: tech
+by: gf
+keyword: google
+description: 最近防火墙多google增加了审查力度，很多google的ip直接被封了，我们使用google一般是用来搜索一些技术问题，绝对跟政治无关，而且，用国内的百度，对于技术问题，搜索质量确实不尽人意，所
+permalink: /tech/139.html
+---
+最近防火墙多google增加了审查力度，很多google的ip直接被封了，我们使用google一般是用来搜索一些技术问题，绝对跟政治无关，而且，用国内的百度，对于技术问题，搜索质量确实不尽人意，所以google必须用。感谢https://raw.githubusercontent.com/greatfire/wiki/master/README.md为我们整理了大量可用ip，但是感觉用起来还不是很方便，于是写了一个php脚本，让大家更方便的使用google。
+
+## 使用 ##
+
+根据提供的ip列表，我们自动抓取可用ip，自动更新，然后随机301到其中的一个，这样就能以不变应万变了。搜索url形如：
+
+``````````
+http://g.gfzj.us/search?q=java
+``````````
+
+我们可以改变firefox的搜索框地址(编辑/Applications/Firefox.app/Contents/MacOS/browser/searchplugins/google.xml文件)，或者修改chrome的搜索地址，即使google的某些ip被封，我们也无需修改，系统会自动301。
+
+当然，我们定向的都是ip，如果直接加个https，会造成证书问题，不建议使用，当然，可以在参数后面加个https，强制301到google https，比如：
+
+``````````
+http://g.gfzj.us/search?q=java&https
+``````````
+
+实际上，我们只是把原来的www.google.com替换成了g.gfzj.us，所以以前google搜索的参数，都可以添加，比如 [http://g.gfzj.us/search?q=java&lr=lang\_zh-CN][http_g.gfzj.us_search_q_java_lr_lang_zh-CN]，更多google搜索参数，请查看：[谷歌搜索表单参数url参数详解][url]
+
+所以，现在可以大胆的设置**http://g.gfzj.us/**为首页了。
+
+如果想在自己的服务器上搭建，请自己下载http://g.gfzj.us/google.7z。
+
+
+[http_g.gfzj.us_search_q_java_lr_lang_zh-CN]: http://g.gfzj.us/search?q=java&lr=lang_zh-CN
+[url]: http://ylbook.com/cms/web/gugecanshu.htm

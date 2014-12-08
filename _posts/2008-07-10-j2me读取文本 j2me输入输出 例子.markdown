@@ -1,0 +1,106 @@
+---
+layout: post
+title: "j2me读取文本 j2me输入输出 例子"
+date: 2008-07-10 14:35:00
+category: tech
+by: gf
+description: 在J2ME开发过程中,我们经常会把一个文字信息保存在txt格式的文本文件中做为资源.这样便于修改和管理.那么读取它们对于一些刚接触j2me的朋友会有些困难.前几天研究了
+permalink: /tech/190.html
+---
+在 **J2ME**开发过程中,我们经常会把一个文字信息保存在txt格式的 **文本** **文件**中做为资源.这样便于修改和管理.那么 **读** **取**它们对于一些刚接触 **j2me**的朋友 会有些困难.前几天研究了下,看了一些兄弟的文章和代码,总结出3种方法分别 **读** **取**Unicode,UTF-8,Unicode big endian格式的 **文件**...本文没考虑 **读** **取**的效率问题.
+这三种方法都能 **读** **取**中文和英文字符.用来存放的数组长度视 **文本**长度而定....
+另外还有一些只能 **读** **取**英文字符的方法就不列举出来了.
+一, **读** **取**Unicode格式
+    private String read\_Uni(String resource)
+    \{
+        byte word\_uni\[\]=new byte\[1024\];
+        String strReturn="";
+        InputStream is;
+        try
+        \{
+            is=getClass().getResourceAsStream(resource);
+            is.read(word\_uni);
+            is.close();
+            StringBuffer stringbuffer = new StringBuffer("");
+            for (int j = 0; j < word\_uni.length; )
+            \{
+              int k = word\_uni\[j++\]; //注意在这个地方进行了码制的转换
+              if (k < 0)
+                k += 256;
+              int l = word\_uni\[j++\];
+              if (l < 0)
+                l += 256;
+              char c = (char) (k + (l << 8)); //把高位和低位数组装起来
+              stringbuffer.append(c);
+            \}
+            strReturn=stringbuffer.toString();
+        \}
+        catch(IOException e)
+        \{
+            e.printStackTrace();
+        \}
+        finally
+        \{
+            is=null;
+        \}
+        return strReturn;
+    \}
+二, **读** **取**UTF-8格式
+    public String read\_UTF(String name)
+    \{
+        String strReturn = "";
+        InputStream in = null;
+        byte\[\] word\_utf= new byte\[1024\];
+        try
+        \{
+          in = getClass().getResourceAsStream(name);
+          in.read(word\_utf);
+          in.close();
+          strReturn=new String(word\_utf,"UTF-8");
+        \}
+        catch(Exception e)
+        \{
+          System.out.println("readUTF Error:"+e.toString());
+        \}
+        finally
+        \{
+          in = null;
+        \}
+        return strReturn;
+    \}
+三, **读** **取**Unicode big endian格式
+**读** **取**Unicode big endian格式时,采用readChar()方法 **读** **取**,所以存放时使用char数组存放.
+注意:在 **文本**的末尾加上'$'表示 **文本**的结束.
+另外代码第10行dis.skip(2)是略过 **文件**头2个字符,如果用microsoft notepad保存的一定存在这两个头字符.
+当然,可以使用UltraEdit可以先删掉这两个头字符,然后使用新建 **文件**,复制粘贴,保存为其它格式.这样两个头字符就没了..
+    private String read\_Uni\_b\_e(String resource)
+    \{
+        char word\_uni\_b\_e\[\]=new char\[1024\];
+        String strReturn="";
+        DataInputStream dis;
+        try
+        \{
+            dis=new DataInputStream(getClass().getResourceAsStream(resource));
+            int counter=0;
+            dis.skip(2);
+            char temp;
+            while(true)
+            \{
+                temp=dis.readChar();
+                if(temp=='$')
+                    break;
+                word\_uni\_b\_e\[counter++\]=temp;
+            \}
+            dis.close();
+            strReturn=String.valueOf(word\_uni\_b\_e,0,counter);
+        \}
+        catch(Exception e)
+        \{
+            System.out.println("read\_Uni\_b\_e error!"+e.getMessage());
+        \}
+        finally
+        \{
+            dis=null;
+        \}
+        return strReturn;
+    \}

@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Php中神奇的0"
+date: 2011-03-31 15:14:07
+category: tech
+by: gf
+description: 今天遇到两个关于0的问题。一个是$handle=opendir($dir);while($fn=readdir($handle)){//dosth}另外一个是if($cat!=0){//dosth}弱类型就是弱。第一个问题中，我的文件
+permalink: /tech/9.html
+---
+今天遇到两个关于0的问题。一个是
+
+$handle=opendir($dir);
+
+while($fn=readdir($handle))\{//do sth\}
+
+另外一个是
+
+if($cat!=0)\{//do sth\}
+
+弱类型就是弱。第一个问题中，我的文件夹下有一个名称是0的文件，表示文件夹的索引文件，所以碰到文件0以后就返回了，因为0被转化成false，一比较，玩蛋了。
+
+第二个问题是string和int的比较：string先会被转换成int，然后比较。String转化int，就像js中那样，能转化多少转多少，比如intval(123string)就是123.如果不以数字开头就是0啊。所以第二个问题中基本上都是true。

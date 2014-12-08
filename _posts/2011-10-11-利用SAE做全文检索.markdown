@@ -1,0 +1,30 @@
+---
+layout: post
+title: "利用SAE做全文检索"
+date: 2011-10-11 14:43:17
+category: tech
+by: gf
+description: 中文全文检索的最头疼的问题之一就是切词(分词)，惊奇地发现，SAE提供了分词服务。最近由于用到了全文检索，所以动手做了一个，用到的是最简单的倒排索引技术。实际上整个程序只需
+permalink: /tech/17.html
+---
+中文全文检索的最头疼的问题之一就是切词(分词)，惊奇地发现，[SAE提供了分词服务][SAE]。最近由于用到了全文检索，所以动手做了一个，用到的是最简单的[倒排索引][Link 1]技术。
+
+实际上整个程序只需要建立倒排索引表，一开始打算用SAE提供的KVDB,用来索引关键词是相当的方便，也不用自己造个B+树了，但是当数据量一大，KVDB就不稳定了，浪费了我一个下午的时间，bug已经提交，因为KVDB还是内测版，所以不稳定在所难免，直接用php构造B+树做索引，先不说效率，SAE不支持文件写，就够麻烦的，所以直接用mysql，把关键词当primary key，用mysql的索引，相当方便。最后用memcache对结果缓存，速度能提高一个数量级。
+
+如果你也想运行在自己的SAE应用上，需要开启的服务有：
+
+1.  MySql
+2.  memcache
+3.  分词服务
+
+然后上传代码，先把内容post到数据库里，然后建立索引，就ok了。耗时最长的是建立索引，因为SAE限制脚本运行的最长时间是30s，所以，显然，索引要分批建立。我每次建立100篇文章，数据库里有28,766篇文章，然后在命令行里:
+
+> for /l %a in (0,100,28800) do curl "http://indexserver.sinaapp.com/index.php?cmd=build&api&sid=%a"
+
+等所有的索引建立完成以后就可以搜索了。[demo在这里][demo] [完整代码猛击这里下载吧][Link 2]
+
+
+[SAE]: http://sae.sina.com.cn/?m=seg
+[Link 1]: http://zh.wikipedia.org/zh/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95
+[demo]: http://indexserver.sinaapp.com/
+[Link 2]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/10/indexserver.zip

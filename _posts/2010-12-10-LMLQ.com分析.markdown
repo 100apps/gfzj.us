@@ -1,0 +1,134 @@
+---
+layout: post
+title: "LMLQ.com分析"
+date: 2010-12-10 14:52:00
+category: tech
+by: gf
+description: LMLQ.com在百度破碎机搜索第一页，今天跑到第三，对于这个老站，排在第一页还是有道理的。下面是一些非专业分析网站自身：域名：CreationDate:2003-12-3000:00:00内容：更新速度
+permalink: /tech/168.html
+---
+LMLQ.com在百度破碎机搜索第一页，今天跑到第三，对于这个老站，排在第一页还是有道理的。下面是一些非专业分析
+
+网站自身：
+
+域名：Creation Date : 2003-12-30 00:00:00
+
+内容：更新速度比较快，有远程内容，新闻页下面的“您可能对以下信息感兴趣！”设计比较合理
+
+首页：
+
+YSLOW分析：性能一般，js比较多是因为挂了百度商桥、商务通等等都是第三方工具。
+
+![0589bf901c1905a50e74aa3a85f8e442.jpg][]
+
+![64f6d3846f2188b79680b7c44675ec2b.jpg][]
+
+![df34038eb9f31a61d24f4aa613833ffe.jpg][]
+
+底部友情链接。两种说法，一个是分散pr rank，一个是链接同行业站点会得到SE加分。这个待定。
+
+总之，最后网站自身得分应该是85。
+
+外链：
+
+www.lmlq.com的外链分析,共5666个.
+
+not sure    sites:4;links:5
+
+友情链接    sites:41;links:139
+
+行业站发帖    sites:14;links:26
+
+招聘类网站发帖    sites:1;links:1
+
+黑链    sites:19;links:52
+
+论坛回复    sites:18;links:22
+
+站群    sites:60;links:512
+
+B2B    sites:51;links:232
+
+博客    sites:6;links:11
+
+最给力：站群
+
+我们发现黎明的地方站和产品站做的比较多，。比如www.yidongposuizhan.com [www.shanxiposuiji.com][] 这个对百度还是比较好的。有关百度对不同地域搜索结果的不同可以参考往期文章。
+
+谈一下黎明网站的黑链问题。话说这些老站哪个不和黑链沾点边？哪个清白？不过黎明的站明显是购买的黑链公司的。因为家黑链的时候还有什么商务通之类其他东西的链接。发的黑链不过下面几种形式。如果SE不像百度这么SB的话，很容易就识别出来了。
+
+height=0 width=0
+
+<marquee height=0 width=0 SCROLLAMOUNT=30000 SCROLLDELAY=20000>
+
+</marquee>
+
+height:1px;
+
+<div style="float:left; width:100px; height:1px; overflow:hidden; line-height:18px;">  
+
+</div>
+
+display:none
+
+<script language="JavaScript" type="text/javascript">
+
+document.write( "<div style='display:none'>" );
+
+</script>
+
+<a href="http://www.lmlq.com/" title="制砂机">制砂机</a>
+
+document.write( "</div>" );
+
+只有锚点没文字
+
+<div><a href="http://www.lmpsj.cn/" title="破碎机"></div>
+
+height:1px
+
+<marquee width="1"  scrollamount="890"></marquee>
+
+<script language="JavaScript" type="text/javascript">
+
+document.write( "<div style='float:left; width:100px; height:1px; overflow:hidden; line-height:18px;'>" );
+
+</script>
+
+<a href="http://www.lmlq.com/chongjipo/lishi/" title="立式破碎机">立式破碎机</a>
+
+<script language="JavaScript" type="text/javascript">
+
+document.write( "</div>" );
+
+display:none
+
+<script language="JavaScript" type="text/javascript">
+
+document.write( "<div style='display:none'>" );
+
+</script>
+
+<a href="http://www.lmlq.com/" title="破碎机">破碎机</a>
+
+<script language="JavaScript" type="text/javascript">
+
+document.write( "</div>" );
+
+</script>
+
+总结
+
+lmlq排名靠前是有道理的。首先资格比较老，其次链接比较多，内容也有。比较明显的缺点就是那些黑链，给老站抹黑。可能前期是有效果的。不知道等SE回过来味会怎么样呢？静观其变。还是那句话：出来混的，迟早要还的。
+
+如果您对上面的分析感兴趣。可以查看下面的文档，里面包含了1000个外链和属性
+
+http://liuguangfeng.googlecode.com/files/lmlq.com%E5%88%86%E6%9E%90.rar
+
+
+
+
+[0589bf901c1905a50e74aa3a85f8e442.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/0589bf901c1905a50e74aa3a85f8e442.jpg
+[64f6d3846f2188b79680b7c44675ec2b.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/64f6d3846f2188b79680b7c44675ec2b.jpg
+[df34038eb9f31a61d24f4aa613833ffe.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/df34038eb9f31a61d24f4aa613833ffe.jpg
+[www.shanxiposuiji.com]: http://www.shanxiposuiji.com/

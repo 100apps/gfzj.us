@@ -1,0 +1,10 @@
+---
+layout: post
+title: "抱椿树"
+date: 2012-09-14 13:26:24
+category: life
+by: gf
+description: 抱抱长长你不长俺长你长粗俺长长你长粗了当大梁俺长长了穿衣裳
+permalink: /tech/50.html
+---
+抱抱长长 你不长俺长 你长粗 俺长长 你长粗了当大梁 俺长长了穿衣裳

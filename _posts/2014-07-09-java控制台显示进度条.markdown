@@ -1,0 +1,38 @@
+---
+layout: post
+title: "java控制台显示进度条"
+date: 2014-07-09 18:28:26
+category: tech
+by: gf
+keyword: java,终端,console
+description: 就像wget显示进度条一样，我们有的程序在终端运行，也想显示进度条。利用\\r可以来实现：classConsoleTest{publicstaticvoidmain(String()args){System.out.print(&quot;\\033(0
+permalink: /tech/148.html
+---
+就像wget显示进度条一样，我们有的程序在终端运行，也想显示进度条。利用\\\\r可以来实现：
+
+![终端显示][bfd350dc7b3f849124eb0386cc0c4086.gif]
+
+``````````
+class ConsoleTest{
+ public static void main(String[] args){
+  System.out.print("\\033[0;1;5;31m");
+  System.out.println("----------\\n正在下载\\n----------");
+  System.out.println("\\033[0m");
+
+  for(int i=0;i<=100;i++){
+   System.out.print('\\r');
+   StringBuilder sb=new StringBuilder();
+   for(int j=0;j<100;j++)sb.append(j<i?"=":(i==j?">":" "));
+   System.out.print(sb.toString()+"\\t"+i+"%");
+   try{
+    Thread.sleep(100);
+   }catch(Exception e){}
+  }
+ 
+  System.out.println("\\nAll done!");
+ }
+}
+``````````
+
+
+[bfd350dc7b3f849124eb0386cc0c4086.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/bfd350dc7b3f849124eb0386cc0c4086.gif

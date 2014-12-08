@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Ie6 bug积累"
+date: 2011-03-10 17:25:22
+category: tech
+by: gf
+description: div最小高度。在posuiji.hk中，本想定义最上方的#818181颜色的hr，用div吧。本来定义的是height:4px。可是无论怎么设置都是14px。无语，心想可能是有个什么最小高度吧。果然如此
+permalink: /tech/4.html
+---
+1.  div最小高度。
+    
+    在posuiji.hk中，本想定义最上方的\#818181颜色的hr，用div吧。本来定义的是height:4px。可是无论怎么设置都是14px。无语，心想可能是有个什么最小高度吧。果然如此，定义font-size:0就ok了。 ![031011_0924_Ie6bug11.png][] ![031011_0924_Ie6bug21.png][]
+2.  $("id").children 把注释也给包括了,真让人郁闷啊。有的版本甚至连换行符都包括。
+
+
+[031011_0924_Ie6bug11.png]: http://www.gfzj.us/wp-content/uploads/2011/03/031011_0924_Ie6bug11.png
+[031011_0924_Ie6bug21.png]: http://www.gfzj.us/wp-content/uploads/2011/03/031011_0924_Ie6bug21.png

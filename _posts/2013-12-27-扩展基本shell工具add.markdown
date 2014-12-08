@@ -1,0 +1,40 @@
+---
+layout: post
+title: "扩展基本shell工具:add"
+date: 2013-12-27 15:06:59
+category: tech
+by: gf
+keyword: add,工资
+description: 今天有个同学问我他借我的钱还了没有，我也忘了，就登陆网银看了一下交易记录。有个导出功能，于是把今年的交易明细导出了一把，心想算一下今年的工资收入吧。但是shell里面貌似连
+permalink: /tech/108.html
+---
+今天有个同学问我他借我的钱还了没有，我也忘了，就登陆网银看了一下交易记录。有个导出功能，于是把今年的交易明细导出了一把，心想算一下今年的工资收入吧。但是shell里面貌似连个add程序都没有。于是自己做一个吧，算是对shell基本工具的一个扩展。C语言已经N久不用了，写个add函数应该还是非常简单的吧，小学生水平。
+
+``````````
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc,char *argv[]){
+ double res=0;
+ int count;
+ for(count=1;count<argc;count++){
+  res+=atof(argv[count]);
+ }
+ printf("%f\\n",res);
+}
+``````````
+
+``````````
+gcc add.c -o add
+sudo cp add /usr/bin/
+``````````
+
+然后计算一下,对我我用的建行的导出列表：
+
+``````````
+grep 工资 交易明细_9316_20100601_20130903.csv|cut -d "," -f 6|xargs add
+``````````
+
+额。好吧。
+
+用Excel的同学表示呵呵。

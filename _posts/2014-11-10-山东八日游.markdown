@@ -1,0 +1,23 @@
+---
+layout: post
+title: "山东八日游"
+date: 2014-11-10 20:00:29
+category: life
+img: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/dab0dade5f482e9f5d042277ee733248.jpg
+by: gf
+keyword: 烟台,山东
+description: 金友结婚的时候，碰到老郑，说在烟台，我有时间，过去玩两天。我真的有时间，于是直接杀过去了，然后又去了临沂看zj。最后回济南，用时8天。
+permalink: /life/206.html
+---
+烟台真是个好地方。整个城市很干净，滨海大道也不堵车，基本上没见到纸屑，空气湿润，海水干净。像我这种在雾霾城市呆惯了的人，到了烟台放佛到了「天堂」。
+
+![烟台][dab0dade5f482e9f5d042277ee733248.jpg] ![烟台山公园][c41aa96db31626702ffe28846f802eba.jpg] ![滨海广场][07ba22ae889c6c97abc01748b012787f.jpg] ![栈桥][b51f69f74fea446ffa96133fda0c630e.jpg] ![17路公交上][17] ![养马岛－老人与海][71c069a764a1dd3002bf9a548c03f47a.jpg] ![养马岛][86d5f1a4dcb8cb4e878c96ab563d492e.jpg]
+
+
+[dab0dade5f482e9f5d042277ee733248.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/dab0dade5f482e9f5d042277ee733248.jpg
+[c41aa96db31626702ffe28846f802eba.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/c41aa96db31626702ffe28846f802eba.jpg
+[07ba22ae889c6c97abc01748b012787f.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/07ba22ae889c6c97abc01748b012787f.jpg
+[b51f69f74fea446ffa96133fda0c630e.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/b51f69f74fea446ffa96133fda0c630e.jpg
+[17]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/25ea57aed5020c06c47f76a3a8660dd5.jpg
+[71c069a764a1dd3002bf9a548c03f47a.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/71c069a764a1dd3002bf9a548c03f47a.jpg
+[86d5f1a4dcb8cb4e878c96ab563d492e.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/86d5f1a4dcb8cb4e878c96ab563d492e.jpg

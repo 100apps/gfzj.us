@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Java的类修饰符"
+date: 2011-03-18 21:59:22
+category: tech
+by: gf
+description: Toplevel的java类得修饰符只能是public,abstract&amp;final，或者default。但是内部类就可以作为field了，所有什么protected和private都能用.
+permalink: /tech/5.html
+---
+Top level的java类得修饰符只能是public,abstract&final，或者default。但是内部类就可以作为field了，所有什么protected和private都能用.

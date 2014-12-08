@@ -1,0 +1,55 @@
+---
+layout: post
+title: "聊天TTS功能"
+date: 2014-07-01 09:23:17
+category: tech
+by: gf
+keyword: tts,聊天,qq
+description: 和zj开qq视频聊天，她在宿舍收拾东西，我在办公室，不方便说话。于是她边收拾东西边说话，我听到，然后打字回复，但是还是不方便，因为她还要看屏幕，如果有个TTS功能就好了，好友发过来的消
+permalink: /tech/144.html
+---
+和zj开qq视频聊天，她在宿舍收拾东西，我在办公室，不方便说话。于是她边收拾东西边说话，我听到，然后打字回复，但是还是不方便，因为她还要看屏幕，如果有个TTS功能就好了，好友发过来的消息，直接读出来。但是qq貌似没有，那我就自己改造一个。
+
+为了方便，我用了一台自己的vps，因为有公网ip，她的电脑可以直接连接。先用ssh登录服务器，然后在服务器上开始监听：
+
+``````````
+count=1;while true;do date;echo 第$count次监听;nc -lvp 443;let count=$count+1;done
+``````````
+
+然后让她在自己的mba上打开terminal，运行
+
+:
+
+``````````
+#!/bin/sh
+while true;do
+
+nc gfzj.us 443 |while read line do
+do 
+echo server [`date -u`]:
+echo $line;
+
+if [ ${line:0:4} = "http" ];then
+ mplayer "$line"
+else
+ echo
+ curl -s "http://translate.google.cn/translate_tts?ie=UTF-8&q=${line}&tl=zh-CN&total=1&idx=0&textlen=2&client=t&prev=input" -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:30.0) Gecko/20100101 Firefox/30.0' -o /tmp/gfzj.us.mp3
+ mplayer /tmp/gfzj.us.mp3 1>/dev/null 2>/dev/null
+
+fi
+done
+sleep 1;
+done
+``````````
+
+运行一下：
+
+![tts-client][] ![tts-server][]
+
+## 希望qq加入TTS功能 ##
+
+这个功能有时候还挺方便的，在自己不方便说话的时候，TTS一下，代替自己说话。不知道腾讯的同学能否考虑？
+
+
+[tts-client]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/78040a599526eb0b2e8a6ad2f4abbd30.jpg
+[tts-server]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/eb5e73096a4662424eaddd97932a2358.jpg

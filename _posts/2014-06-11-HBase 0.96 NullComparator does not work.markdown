@@ -1,0 +1,21 @@
+---
+layout: post
+title: "HBase 0.96 NullComparator does not work"
+date: 2014-06-11 10:08:33
+category: tech
+by: zj
+description: 修改方法：publicclassNullComparatorextendsWritableByteArrayComparable{@OverridepublicintcompareTo(byte()value,intoffset,intlength){-throw
+permalink: /tech/142.html
+---
+修改方法：
+
+``````````
+public class NullComparator extends WritableByteArrayComparable {
+ 
+   @Override
+   public int compareTo(byte[] value, int offset, int length) {
+-    throw new UnsupportedOperationException();
++    return compareTo(value);
+   }
+ }
+``````````

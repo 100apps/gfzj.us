@@ -1,0 +1,11 @@
+---
+layout: post
+title: "HBase 0.96 自定义Comparator"
+date: 2014-07-08 16:40:09
+category: tech
+by: zj
+keyword: HBase,自定义Comparator
+description: HBase0.96及更高版本的RPC使用protocolbuffer进行序列化和反序列化如果查询时使用SingleColumnValueFilter，并且想要使用自定义的Comparator，就需要按照如下步骤进行：1、编写
+permalink: /tech/147.html
+---
+HBase 0.96及更高版本的RPC使用protocol buffer进行序列化和反序列化  如果查询时使用SingleColumnValueFilter，并且想要使用自定义的Comparator，就需要按照如下步骤进行： 1、编写proto文件：如何编写，查阅protocol buffer；举例如下 文件名：CustomProtos.proto 文件内容: message MyComparator\{ required string MyString = 1; \} 2、编译proto文件：使用protoc编译器，可以把proto文件编译成java、c++等目标语言 在bash中运行命令 protoc --proto\_path=IMPORT\_PATH --cpp\_out=DST\_DIR --java\_out=DST\_DIR --python\_out=DST\_DIR path/to/file.proto 编译CustomProtos.proto成java会得到CustomProtos.java 3、创建MyComparator.java，使用生成的CustomProtos.java实现序列化方法toByteArray()和反序列化方法parseFrom()： public class MyComparator extends ByteArrayComparable \{ private String MyString; public MatcherComparator(String qrStr) \{ super(Bytes.toBytes(qrStr)); this.MyString = qrStr; \} @Override public int compareTo(byte\[\] value, int offset, int length) \{ //some codes \} public static MyComparator parseFrom(final byte \[\] pbBytes) throws DeserializationException \{ CustomProtos.MyComparator proto; try \{ proto = CustomProtos.MyComparator.parseFrom(pbBytes); \} catch (InvalidProtocolBufferException e) \{ throw new DeserializationException(e); \} return new MyComparator(proto.getMyString()); \} @Override public byte\[\] toByteArray() \{ CustomProtos.MyComparator.Builder builder = CustomProtos.MyComparator.newBuilder(); builder.setMyString(this.MyString); return builder.build().toByteArray(); \} \}

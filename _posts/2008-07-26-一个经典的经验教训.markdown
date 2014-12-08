@@ -1,0 +1,56 @@
+---
+layout: post
+title: "一个经典的经验教训"
+date: 2008-07-26 11:28:00
+category: tech
+by: gf
+description: 比如做一道题目：Inthisproblem,youhavetofindthelastthreedigitsbeforethedecimalpointforthenumber(3+√5)n.Forexample,whenn=5,(3+√5)5=
+permalink: /tech/187.html
+---
+比如做一道题目：
+
+In this problem, you have to find the last three digits before the decimal point for the number (3 + √5)**n**.
+
+For example, when **n** = 5, (3 + √5)5 = 3935.73982... The answer is 935.
+
+For **n** = 2, (3 + √5)2 = 27.4164079... The answer is 027.
+
+怎样得到只有三位数的结果呢？因为小数点前面不知道有几位数。
+
+思路一：
+
+得到小数点前面的String pre。pre="000"+pre;pre=pre.subString(pre.length()-3);
+
+思路二：
+
+分情况讨论之。
+
+int length=pre.length();
+
+switch(length)\{
+
+case 3：
+
+case 2：
+
+.......
+
+\}
+
+最容易想到的是第二种了，然而我用了十分钟想别的思路，知道第二种可以在3分钟内搞定确没有用它，而是扥到十分钟过去了，还没有一种想法。。悲哀啊！！！就这样挂掉在google code jam上了。
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>![3cea0c20b839b53dc4f793b8e92fa8a3.gif][]>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+ps:很早以前就有过这样的经历，明明知道这个问题用这种比较慢的方法可以解决，却还是一直在想那种所谓的快的方法，结果好的方法没有想到，时间已经过去。连用差的方法的机会都没有了。真是悲哀。
+
+所以比较好的方法是：确认问题的复杂度。如果有好的思路，尽量去完善那个好的思路，如果没有的话，就直接用那个差点的方法，先把问题解决了，再说别的吧。
+
+老师说，真正的软件，真正的project，比的不是编程的小技巧，而是代码的规范程度，文档的规范程度。中国的编程高手有很多小技巧，能够把程序写得只有他自己能看懂，但是不规范。规范就是按部就班，不跳跃，不精简。
+
+就像高三的时候做数学题目，苦思冥想一个好的算法。最后没有交上卷子。
+
+![50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg][]
+
+
+[3cea0c20b839b53dc4f793b8e92fa8a3.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/3cea0c20b839b53dc4f793b8e92fa8a3.gif
+[50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg

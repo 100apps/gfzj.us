@@ -1,0 +1,42 @@
+---
+layout: post
+title: "如何控制你所看到的页面"
+date: 2011-09-26 12:01:15
+category: tech
+by: gf
+description: 想实现这样一个功能：用浏览器打开某个网页模拟人做一下事情，比如发帖。想一下，模拟人，无非是两种思路：用键盘精灵或者AutoIt3或者通过sendmessage之类的在操作系统级别模拟在页
+permalink: /tech/16.html
+---
+想实现这样一个功能：
+用浏览器打开某个网页模拟人做一下事情，比如发帖。想一下，模拟人，无非是两种思路：
+
+1.  用键盘精灵或者[AutoIt3][]或者通过send message之类的在操作系统级别模拟
+2.  在页面注入js，通过dom操作
+
+这里显然要选择第二种,第一种方法在找到dom中某个元素的时候难度不小，除非都可以用键盘操作，设计到鼠标click位置的时候注定要悲剧。第二种方法，适应性最强，难度是不能真正意义上模拟人，服务器总有一下方法，检测到客户端被注入(如果他们愿意的话)。但是第二种方法还是比较简单的。所以思路就是注入页面js，用js操作dom
+
+## 如何给页面注入js ##
+
+1.  用过[油猴][Link 1]的同学肯定都懂了，用过adblock或者autoproxy的同学也懂得，所以在firefox下面我们可以通过插件，每当页面加载完了以后，就向页面注入一段js，剩下的事情就不用多说了。这种方法的缺点是你总不能给每个浏览器都写个插件并且装上吧。比较繁琐
+2.  代理，用过[fiddler][]的同学肯定熟悉这种方法，比如某个页面每次都要加载统计代码，那么我就每次都把这段统计代码给换成要注入的js，客户端只需要设置一下代理就可以了。这种方法的极致用法是[中国电信(大代理啊，我们都是通过它上网的)给用户push广告][push]，就是在某些页面中插入广告js，如出一辙。。这种方法在在线调试js的时候用处相当大，相当方便.
+3.  还有一种变体，不用代理，而是改host文件，比如把统计代码的host定向到127.0.0.1，然后返回一段特定的js，这种方法适应性还是很强的，相当推荐。
+
+做了一个爬读秀的小脚本，用的是第三种方法.[猛击这里下载吧。][Link 2]把
+
+``````````
+127.0.0.1 s11.cnzz.com
+127.0.0.1 s10.cnzz.com
+``````````
+
+添加到**%windir%\\\\System32\\\\Drivers\\\\etc\\\\hosts** 这样所有访问s10.cnzz.com/stat.php都定向到本地，而stat.php是我们的一段js，后果就像这样：
+
+[![fuck读秀的后果][fuck]][fuck_fuck]
+
+
+[AutoIt3]: http://www.autoitscript.com/site/autoit/
+[Link 1]: https://addons.mozilla.org/zh-cn/firefox/addon/greasemonkey/
+[fiddler]: http://www.gfzj.us/www.fiddler2.com
+[push]: http://littz.com/china-telecom-advertising-walk-away-point-push.html
+[Link 2]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/09/stat.zip
+[fuck]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/508f43a1cdebd7ec924deaebf028ce94.jpg
+[fuck_fuck]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/09/QQ截图20110927113754.jpg

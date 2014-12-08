@@ -1,0 +1,23 @@
+---
+layout: post
+title: "linux一些备忘"
+date: 2010-04-13 12:22:00
+category: tech
+by: gf
+description: 1.ln功能很强大，在于如果系统中重复安装了一些东西，而又找不到的话，ln过去就有了，比如mysqlsocket问题2ifyouwantsudowithoutpromptpassword,edit/etc/sudoers
+permalink: /tech/174.html
+---
+1.ln功能很强大，在于如果系统中重复安装了一些东西，而又找不到的话，ln过去就有了，比如mysql socket问题
+2if you want sudo without prompt password,
+
+
+edit /etc/sudoers
+
+and add:
+
+username ALL=(ALL) NOPASSWD: ALL
+
+
+save and that's it.
+
+the username is the user you want to give doing sudo without password.

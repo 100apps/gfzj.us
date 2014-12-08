@@ -1,0 +1,66 @@
+---
+layout: post
+title: "sftp限定用户目录"
+date: 2013-05-23 17:09:45
+category: tech
+by: gf
+keyword: sftp,linux
+description: 很常用的功能，这样基本上就能替代ftp了。网上教程一大堆，但是还是遇到了问题。经过实践，在ubuntuserver13.04上运行成功。STEP1首选建立用户和组groupaddxxoouseradd-gxx
+permalink: /tech/76.html
+---
+很常用的功能，这样基本上就能替代ftp了。网上教程一大堆，但是还是遇到了问题。经过实践，在ubuntu server 13.04上运行成功。
+
+## STEP 1 ##
+
+首选建立用户和组
+
+``````````
+groupadd xxoo
+useradd -g xxoo -d /home/xxoo -s /usr/sbin/nologin xxoouser1
+给用户设定密码
+passwd xxoouser1
+``````````
+
+## STEP 2 ##
+
+修改/etc/ssh/sshd\_config文件。这一步一定谨慎。实在不行，弄个nc shell，万一ssh没有启动，又把当前session关了，那就麻烦了，对于远程vps，搞不好只能**重装**了。
+
+``````````
+#注释掉这一行
+#Subsystem sftp /usr/lib/openssh/sftp-server
+#然后添加成这个
+Subsystem sftp internal-sftp
+``````````
+
+在**sshd\_config的最后面**添加下面的配置。注意，一定是最下面。比如我的原来的配置文件最后一行是一个UsePAM yes。如果在这个前面添加，会导致ssh启动不起来!
+
+``````````
+Match Group xxoo
+ChrootDirectory /home/%u
+ForceCommand internal-sftp
+AllowTcpForwarding no
+X11Forwarding no
+``````````
+
+## STEP 3 ##
+
+然后就是修改对应文件夹的权限。这一步非常重要，否则用sftp客户端登陆，显示不出来，会很懊恼的。
+
+``````````
+mkdir /home/xxoouser1/
+chown root:root /home/xxoouser1
+chmod 755 /home/xxoouser1 #非常重要，否则sftp客户端提示 connection reset
+``````````
+
+这个目录目前还不能上传东西，无权限。建立一个上传目录
+
+``````````
+mkdir /home/xxoouser1/upload
+chown xxoouser1 /home/xxoouser1/upload
+``````````
+
+这样，就可以向upload目录上传东西了。
+
+## And Then? ##
+
+可用用ngxin或者apache root到这个目录。autoindex一下，就可以下载了，别忘了，还可以用basic auth设置一个密码。

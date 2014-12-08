@@ -1,0 +1,106 @@
+---
+layout: post
+title: "国内seo获取信息渠道"
+date: 2014-04-29 18:49:08
+category: tech
+by: gf
+keyword: seo
+description: SEO不能闭门造车，翻了《SEO深度解析》这本书，书后面有个推荐链接。整理了一下：以上推荐的渠道中,可能有一些你并没有听说过的,但其博主都是非常有能力和见解的,只是平时比较
+permalink: /tech/134.html
+---
+SEO不能闭门造车，翻了《SEO深度解析》这本书，书后面有个推荐链接。整理了一下：
+
+``````````
+以上推荐的渠道中, 可能有一些你并没有听说过的, 但其博主都是非常有能力和见解的, 只是平时比较低调且只在小型交流圈子中活跃而已。 大家不熟悉那么可能就没有阅读过他们的 文章, 但是文章内容的含金量可能比大家熟知的博客、 论坛中的内容要高很多。 以上所推荐博 客的博主, 每个人都有自己所擅长的方面, 每个人的博客内容也都有着自己的风格, 值得大家
+关注、 订阅及添加到浏览器收藏夹。
+``````````
+
+## 官方渠道 ##
+
+ *  [百度站长平台官方微博][Link 1]
+ *  [百度网页搜索官方微博][Link 2]
+ *  [百度官方微博][Link 3]
+ *  [百度站长平台运营人员曹丽丽][Link 4]
+ *  [Google黑板报微博][Google]
+ *  [Robin (柳焕斌) 的百度说微博 ][Robin _ _]
+ *  [百度站长平台站长「资讯」][Link 5]
+ *  [百度官方帮助][Link 6]
+ *  [Google网站站长工具帮助][Google 1]
+ *  [百度站长社区][Link 7]
+ *  [Google网站管理员帮助论坛][Google 2]
+ *  [GoogIe网页搜索用户论坛][GoogIe]
+ *  [Bing网络管理员帮助和使用指南][Bing]
+ *  [百度搜索研发部官方博客][Link 8]
+ *  [百度技术沙龙][Link 9]
+ *  [Google黑板报][Google 3]
+ *  [搜狗实验室「数据资源」][Link 10]
+
+## 个人渠道 ##
+
+ *  [Zac的SEO每天一贴][Zac_SEO]
+ *  [国平的SEM一家之言][SEM]
+ *  [SEMWATCH(群博)][SEMWATCH]
+ *  [Zero的SEO乱谈][Zero_SEO]
+ *  [SEO前线][SEO]
+ *  [夜息博客][Link 11]
+ *  [阮一峰的网络日志][Link 12]
+ *  [Robin(柳焕斌)的BSG论坛][Robin_BSG]
+ *  [小五博客][Link 13]
+ *  [郝聪SEO博客][SEO 1]
+ *  [丘仕达的SEO资料站][SEO 2]
+ *  [网站优化在中国][Link 14]
+ *  [刘明的SEO最佳建议][SEO 3]
+ *  [耗资小王新浪微博][Link 15]
+ *  [SEOWHY搜外][SEOWHY]
+ *  [ITSEO(群博+小工具)][ITSEO]
+ *  [卢松松博客][Link 16]
+ *  [月光博客][Link 17]
+ *  [宋星的网站分析在中国][Link 18]
+ *  [蓝鲸的网站分析笔记][Link 19]
+ *  [丁利的199IT][199IT]
+ *  [威言威语][Link 20]
+ *  [知乎 (相关话题)][Link 21]
+ *  [原创][Link 22]
+
+
+[Link 1]: http://e.weibo.com/baiduzhanzhang
+[Link 2]: http://e.weibo.com/baiduwangyesousuo
+[Link 3]: http://e.weibo.com/baiduguanfang
+[Link 4]: http://weibo.com/208282487
+[Google]: http://weibo.com/googlev
+[Robin _ _]: http://t.qq.com/baidusays
+[Link 5]: http://zhanzhang.baidu.com/Wiki/index
+[Link 6]: http://www.baidu.com/search/jiqiao.html
+[Google 1]: https://support.google.com/webmasters/
+[Link 7]: http://bbs.zhanzhang.baidu.com/
+[Google 2]: https://productforums.google.com/forum/#!forum/Webmaster-zh-cn
+[GoogIe]: https://productforums.google.com/forum/#!forum/websearch-zh-cn
+[Bing]: http://www.bing.com/Webmaster/help
+[Link 8]: http://www.baidu-tech.com/
+[Link 9]: http://www.infoq.com/cn/zones/baidu-salon/
+[Google 3]: http://blog.sina.com.cn/u/2617744132
+[Link 10]: http://www.sogou.com/labs/resources.html
+[Zac_SEO]: http://www.seozac.com/
+[SEM]: http://www.semyj.com/
+[SEMWATCH]: http://semwatch.org/
+[Zero_SEO]: http://seosay.me/
+[SEO]: http://www.seoqianxian.com/
+[Link 11]: http://www.imyexi.com/
+[Link 12]: http://www.ruanyifeng.com/blog/
+[Robin_BSG]: http://baiduseoguide.com/bbs/
+[Link 13]: http://lingdonge.com/
+[SEO 1]: http://www.bloghuman.com/
+[SEO 2]: http://www.chinaseo.org.cn/
+[Link 14]: http://www.chinaweboptimization.com/
+[SEO 3]: http://seoaqua.com/
+[Link 15]: http://www.weibo.com/alexwhu
+[SEOWHY]: http://www.seowhy.com/
+[ITSEO]: http://www.itseo.net/
+[Link 16]: http://lusongsong.com/
+[Link 17]: http://www.williamlong.info/
+[Link 18]: http://www.chinawebanalytics.cn/
+[Link 19]: http://bluewhale.cc/
+[199IT]: http://www.199it.com/
+[Link 20]: http://www.weisay.com/blog/
+[Link 21]: http://www.gfzj.us/http;//www.zhihu.com/
+[Link 22]: http://www.lxysem.cn/

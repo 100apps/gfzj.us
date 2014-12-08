@@ -1,0 +1,80 @@
+---
+layout: post
+title: "shell上传文件到百度网盘"
+date: 2014-04-02 11:32:26
+category: tech
+by: gf
+keyword: shell,百度网盘
+description: 百度网盘确实做得很不错了，空间大，速度又快。百度网盘提供各种平台的客户端，但是貌似没有linux下面的，尤其是server下面的，我们服务器上每天产生很多日志文件，如果每天自动打包，然
+permalink: /tech/124.html
+---
+百度网盘确实做得很不错了，空间大，速度又快。百度网盘提供各种平台的客户端，但是貌似没有linux下面的，尤其是server下面的，我们服务器上每天产生很多日志文件，如果每天自动打包，然后上传到百度网盘，再删除本地文件，这样能节省一些空间；还有其他文件，比如数据库打包之类的，加个密码压缩一下，然后上传过去，每隔一段时间产生一个新版本，还是很实用的。
+
+**！！！注意！！！**这个脚本用到了pcregrep和curl，如果没有的话，自己apt-get install 或者yum install吧。
+
+脚本的核心是模拟浏览器中pan.baidu.com上传文件的过程，所以我们需要一个cookie，代表当前登录的用户，cookie可以在浏览器中获得，比如：
+
+![百度网盘cookie][cookie]
+
+我们只需要BDUSS这一个，把它复制下来，加入到下面的脚本，替换BDUSS=VN..
+
+我们可以通过下面的方法运行：
+
+``````````
+#上传到网盘根目录
+baidupan.sh /tmp/test.zip /
+#上传到网盘test目录
+baidupan.sh /tmp/test.zip /test/
+``````````
+
+注意如果网盘中同一目录下面有两个文件，文件名相同，服务器会自动重命名这个上传的文件。
+
+linux server中配合crontab可以做很多实用的功能，你懂得。
+
+``````````
+#!/bin/sh
+
+#1 首先设置自己的 BDUSS
+BDUSS=VN2xxxxWkhLN345Vn5OQnlnUW54cmRicG9vcHllT35hNFYxRTNjeGZLZ3FFR05UQVFBQUFBJCQAAAAAAAAAAAEAAACWZN5DsrzCs8u5Ymx1ZTJkaWUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqDO1MqgztTT
+if [ x$BDUSS = "x" ]
+then
+ echo 请先设置BDUSS，参考 http://gfzj.us/900.html
+ exit
+fi
+
+if [ x$1 = "x" ] || [ x$2 = "x" ]
+then
+ echo "baidupan.sh 本地文件名 上传路径(以/开头，/结尾,/表示根目录)"
+ exit
+fi
+echo 开始上传。。。
+fn=`echo $1 |xxd -plain | sed 's/\\(..\\)/%\\1/g'`
+dir=`echo $2 |xxd -plain | sed 's/\\(..\\)/%\\1/g'`
+ret=`curl -F file=@$1 "https://c.pcs.baidu.com/rest/2.0/pcs/file?method=upload&app_id=250528&ondup=newcopy&dir=$dir&filename=$fn&BDUSS=$BDUSS"`
+md5=`echo $ret|pcregrep -o1 'md5":"(.*?)"'`
+mymd5=`md5sum $1|cut -f1 -d " "`
+echo
+echo 输入的文件的md5: $mymd5;
+echo 服务器返回的md5: $md5;
+if [ x$md5 = x$mymd5 ] 
+then
+ echo "上传成功,路径是："
+ echo $ret|pcregrep -o1 'path":"(.*?)",'|sed 's|\\\\/|/|g';
+else
+ echo "上传失败"
+ echo $ret
+fi
+``````````
+
+## 补充 ##
+
+本文提供的方法，只可以上传，如果想下载自己网盘里面的数据，比如批量下载，可以直接打开:
+
+``````````
+http://pan.baidu.com/api/list?channel=chunlei&clienttype=0&web=1&num=1000&page=1&dir=/
+``````````
+
+配合wget和jQuery、json viewer、迅雷之类的工具，下载更简单。
+
+
+[cookie]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/378debc7546e4a853198948e03ec5e56.jpg

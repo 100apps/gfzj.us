@@ -1,0 +1,10 @@
+---
+layout: post
+title: "几个研究方向"
+date: 2012-04-24 12:50:34
+category: life
+by: gf
+description: 1。计算机视觉：查看opencv源代码即可2。机器学习：查看weka源代码3。分布式文件系统和大数据处理：hadoop4。操作系统原理，内存管理，程序调度：linux和jvm源代码每个工程分配一个月时
+permalink: /tech/30.html
+---
+1。计算机视觉：查看opencv源代码即可 2。机器学习：查看weka源代码 3。分布式文件系统和大数据处理：hadoop 4。操作系统原理，内存管理，程序调度：linux和jvm源代码 每个工程分配一个月时间。一个季度以后查看效果。 2012年4月24日13:20:01  

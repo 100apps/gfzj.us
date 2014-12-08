@@ -222,10 +222,15 @@ display: block;
 #pagination li.current-page {
     background-color: #ddd;
 }
-#pagination li a {
+p.caption-img img,.post-content img{
+    
 
-}
-p.caption-img{
-    text-align:center;
+    border: 0.5em solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    margin: 20px auto;
+    text-align: center;
+
+
 }
 .ds-powered-by{display:none}

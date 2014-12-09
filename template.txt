@@ -1,0 +1,9 @@
+---
+layout: post
+title: "这里写文章标题"
+date: 2014-11-17 16:33:55
+category: tech
+by: zj
+description: 这里写描述，现实在首页。
+---
+这里开始内容

@@ -5,7 +5,7 @@ date: 2014-12-08 18:02:19
 category: tech
 img: /images/xcode512.png
 by: gf
-description: 积累一些iOS开发的经验，已备查阅。
+description: 积累一些iOS开发的经验，以备查阅。
 ---
 #md5
 objective-c计算`md5`的方法：

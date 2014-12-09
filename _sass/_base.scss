@@ -224,7 +224,7 @@ display: block;
 }
 p.caption-img img,.post-content img{
     
-
+	display:block;
     border: 0.5em solid #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
@@ -234,3 +234,6 @@ p.caption-img img,.post-content img{
 
 }
 .ds-powered-by{display:none}
+.upper-case{
+	text-transform:uppercase;
+}

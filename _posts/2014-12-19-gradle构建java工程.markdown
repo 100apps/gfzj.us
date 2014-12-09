@@ -14,4 +14,4 @@ description: 构建一个具有maven目录结构的java工程
 3. 命令行下，在Test目录下，执行命令`gradle init --type java-library`,得到如下目录结构的java工程：
 ![java工程目录结构][image1]
 
-[image1]:/image/gradle-java-project.png
+[image1]:/images/gradle-java-project.png

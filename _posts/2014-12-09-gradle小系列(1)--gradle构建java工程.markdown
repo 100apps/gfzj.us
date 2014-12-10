@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "gradle构建java工程"
+title: "gradle小系列(1)--gradle构建java工程"
 date: 2014-12-9 10:49:13
 category: tech/zj/gradle
 by: zj

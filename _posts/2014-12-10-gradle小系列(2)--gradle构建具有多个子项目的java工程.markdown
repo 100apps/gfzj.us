@@ -14,7 +14,7 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 ##Gradle构建项目##
 
 1. 创建目录GradleTest，并在该目录下建立文件build.gradle和settings.gradle，另外建立子项目目录SubPro1、SubPro2。GradleTest内文件如下：
-![GradleTest文件结构][/images/gradle-java-multiprojects.png]
+![GradleTest文件结构](/images/gradle-java-multiprojects.png)
 2. 进入目录SubPro1，初始为空，命令行下定位到该目录，执行命令`gradle init --type java-library`，SubPro1目录下会生成maven格式的java项目目录结构。
 3. 对于子项目SubPro2，执行和SubPro1同样的操作即可。
 4. 修改GradleTest下的配置文件settings.gradle，添加

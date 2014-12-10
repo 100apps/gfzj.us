@@ -60,9 +60,9 @@ ios默认提供PKCS7Padding加密，但是 java时PKCS5Padding，所以需要fix
 	}
 
 #不响应屏幕旋转
-```objc
+{%highlight objc%}
 /*ipad 不旋转。*/
 - (BOOL)shouldAutorotate {
     return NO;
 }
-```
+{%endhighlight%}

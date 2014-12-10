@@ -48,6 +48,7 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 
 [gradle小系列(3)–gradle构建java工程][link3]
 
+
 [image1]:/images/gradle-java-multiprojects.png
 [link1]:http://www.gfzj.us/tech/zj/gradle/2014/12/09/gradle%E5%B0%8F%E7%B3%BB%E5%88%97(1)--gradle%E6%9E%84%E5%BB%BAjava%E5%B7%A5%E7%A8%8B.html
 [link3]:http://www.gfzj.us/tech/zj/gradle/2014/12/11/gradle%E5%B0%8F%E7%B3%BB%E5%88%97(3)--gradle%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E5%8F%A6%E4%B8%80%E5%AD%90%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98.html

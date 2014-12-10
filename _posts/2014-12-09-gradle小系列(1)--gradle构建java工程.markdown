@@ -15,4 +15,7 @@ description: 构建一个具有maven目录结构的java工程
 
 ![java工程目录结构][image1]
 
+[gradle小系列(2)--gradle构建具有多个子项目的java工程][link1]
+
 [image1]:/images/gradle-java-project.png
+[link1]:/_posts/2014-12-10-gradle小系列(2)--gradle构建具有多个子项目的java工程.markdown

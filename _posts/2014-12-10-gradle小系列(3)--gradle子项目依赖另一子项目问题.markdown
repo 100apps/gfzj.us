@@ -35,6 +35,7 @@ SubPro1和SubPro2都使用junit，那么我们修改SubPro2的build.gradle文件
 
 
 [gradle小系列(1)–gradle构建java工程][link1]
+
 [gradle小系列(2)--gradle构建具有多个子项目的java工程][link2]
 
 [image1]:/images/gradle-java-multiprojects.png

@@ -34,7 +34,7 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 			mavenCentral()
 		}
 		dependencies {
-			testCompile 'junit:junit:4.11'
+			
 		}
 	}
 

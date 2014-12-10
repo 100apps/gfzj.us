@@ -21,10 +21,12 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 3. 对于子项目SubPro2，执行和SubPro1同样的操作即可。
 
 4. 修改GradleTest下的配置文件settings.gradle，添加
-		include 'SubPro1','SubPro2'
-表示该项目包括SubPro1和SubPro2两个子项目。
 
-5. 修改GradleTest下的配置文件build.gradle。添加(下面配置是项目的所有子项目都共享的配置，此处我们使用java和eclipse两个插件)：
+		include 'SubPro1','SubPro2'
+		
+	表示该项目包括SubPro1和SubPro2两个子项目。
+
+5. 修改GradleTest下的配置文件build.gradle。添加：
 
         subprojects{
         	apply plugin: 'java'
@@ -36,6 +38,8 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
         
         	}
         }
+
+	上面配置是项目的所有子项目都共享的配置，此处我们使用java和eclipse两个插件。
 
 6. 在子项目SubPro1和SubPro2中，只需要配置build.gradle即可，由于此处没有特殊需求，可以将其中内容都删除即可。
 

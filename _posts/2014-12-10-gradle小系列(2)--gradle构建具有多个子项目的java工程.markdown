@@ -14,15 +14,12 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 ##Gradle构建项目##
 
 1. 创建目录GradleTest，并在该目录下建立文件build.gradle和settings.gradle，另外建立子项目目录SubPro1、SubPro2。GradleTest内文件如下：
-
-![GradleTest文件结构][image1]
-
+![GradleTest文件结构][/images/gradle-java-multiprojects.png]
 2. 进入目录SubPro1，初始为空，命令行下定位到该目录，执行命令`gradle init --type java-library`，SubPro1目录下会生成maven格式的java项目目录结构。
 3. 对于子项目SubPro2，执行和SubPro1同样的操作即可。
 4. 修改GradleTest下的配置文件settings.gradle，添加
 		include 'SubPro1','SubPro2'
 表示该项目包括SubPro1和SubPro2两个子项目。
-
 5. 修改GradleTest下的配置文件build.gradle。添加：
 		subprojects{
 			apply plugin: 'java'
@@ -49,6 +46,5 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 [gradle小系列(3)–gradle构建java工程][link3]
 
 
-[image1]:/images/gradle-java-multiprojects.png
 [link1]:http://www.gfzj.us/tech/zj/gradle/2014/12/09/gradle%E5%B0%8F%E7%B3%BB%E5%88%97(1)--gradle%E6%9E%84%E5%BB%BAjava%E5%B7%A5%E7%A8%8B.html
 [link3]:http://www.gfzj.us/tech/zj/gradle/2014/12/11/gradle%E5%B0%8F%E7%B3%BB%E5%88%97(3)--gradle%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E5%8F%A6%E4%B8%80%E5%AD%90%E9%A1%B9%E7%9B%AE%E9%97%AE%E9%A2%98.html

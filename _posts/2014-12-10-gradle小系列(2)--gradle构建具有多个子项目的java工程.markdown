@@ -33,7 +33,6 @@ description: 构建一个具有maven目录结构的java项目，且该工程包�
 			}
 		}
 上述配置是项目的所有子项目都共享的配置，此处我们使用java和eclipse两个插件。
-
 6. 在子项目SubPro1和SubPro2中，只需要配置build.gradle即可，由于此处没有特殊需求，可以将其中内容都删除即可。
 
 ##生成Eclipse工程##

@@ -3,9 +3,8 @@ layout: page
 title: 友情链接
 permalink: /links/
 ---
-
+#朋友们的博客
 <ul class="list-unstyled">
-                       
 <li><a href="http://www.sunweina.com/" rel="friend" target="_blank">Florentina – WOW in our life</a></li>
 <li><a href="http://www.jiadingqiang.com/" target="_blank">google seo</a></li>
 <li><a href="http://holeboat.com/" rel="friend" target="_blank">Holeboat</a></li>

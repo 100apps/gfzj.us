@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "gradle小系列(3)--gradle打包java项目"
+title: "gradle小系列(4)--gradle打包java项目"
 date: 2014-12-11 18:35:57
 categories: series gradle
 by: zj

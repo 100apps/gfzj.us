@@ -14,6 +14,7 @@ description: 对于一个具有maven目录结构的java项目打包发布
 该种方法将工程所依赖的jar包等资源都会打到一个可执行jar包中，生成的jar包很大。
 
 在GradleTest项目中，我们对SubPro1进行打包，所以需要修改SubPro1下的build.gradle文件：
+	
 	jar {
 		from { 
 			configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } 

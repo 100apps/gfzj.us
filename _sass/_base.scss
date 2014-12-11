@@ -230,10 +230,24 @@ p.caption-img img,.post-content img{
     box-sizing: border-box;
     margin: 20px auto;
     text-align: center;
-
+    background:#fff;
 
 }
 .ds-powered-by{display:none}
 .upper-case{
 	text-transform:uppercase;
+}
+.series,.at_author{
+   border: 0.5em solid #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    margin: 20px auto;
+    background:#fff;
+}
+.series strong{
+    color:red;
+}
+.at_author{
+    padding-left:120px;
+    background:url(/images/face-gf.jpg) no-repeat left center white;
 }

@@ -13,3 +13,13 @@ markdown: kramdown
 paginate: 10
 paginate_path: "page:num"
 timezone: 'Asia/Shanghai'
+
+authors:
+ zj:
+  display_name: Jing Zhou
+  email: zj@gfzj.us
+  note: 大数据存储／云计算／Java
+ gf:
+  display_name: Logan Liu
+  email: gf@gfzj.us
+  note: iOS developer @xidibuy.

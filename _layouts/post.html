@@ -8,9 +8,34 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
+{% if page.categories[0] == 'series' %}
+ <div class="series">
+ <h3>本文为系列文章<strong>{{page.categories[1]}}</strong>中的一篇，相关文章：</h3>
+<ol>
+{% for cat in site.categories %}{%if cat.first == page.categories[1]%}{%for post in cat.last%}	
+<li><a href="{{post.url}}">{{post.title}}</a></li>
+{%endfor%}{%endif%}{% endfor %}
+</ol>
+ </div>
+{%endif%}
+
+
   <article class="post-content">
     {{ content }}
   </article>
+{% assign author = site.authors[page.by] %}
+<h2>关于作者</h2>
+<div class="at_author" style="background-image:url('/images/face-{{page.by}}.jpg')">
+<h3>{{author.display_name}} &lt;{{author.email}}&gt; </h3>
+<p>{{author.note}}</p>
+
+<p style="color:#999">
+本文欢迎转载，但请注明来源。
+</p>
+
+</div>
+
+
   <!-- 多说评论框 start -->
       <div class="ds-thread"  data-title="{{page.title}}"></div>
       <!-- 多说评论框 end -->

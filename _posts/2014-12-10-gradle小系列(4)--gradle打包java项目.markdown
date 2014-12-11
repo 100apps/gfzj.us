@@ -52,4 +52,4 @@ Application插件提供5个tasks实现项目的发布，分别是
 
 	run、startScript、installApp、distZip、distTar
 
-我假设使用distZip，在根目录下运行命令`gradle distZip`，在SubPro1的build/distributions中，可以看到zip文件，其中包含了bin和lib文件夹，bin下有软件启动脚本，lib则是软件jar包和其所有依赖。
+假设使用distZip，在GradleTest目录下运行命令`gradle distZip`，在SubPro1的build/distributions中，可以看到zip文件，其中包含了bin和lib文件夹，bin下有软件启动脚本，lib则是软件jar包和其所有依赖。

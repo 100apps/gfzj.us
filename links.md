@@ -21,3 +21,8 @@ permalink: /links/
 
 #iOS 开发
 - [SwiftV课堂 - 中国最大的Swift视频学习站](http://www.swiftv.cn/)
+- [唐巧的技术博客](http://blog.devtang.com/)
+
+#神器
+- [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
+- [Generate Objective-C headers from Mach-O files `class-dump`](https://github.com/nygard/class-dump)

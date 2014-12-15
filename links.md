@@ -19,9 +19,10 @@ permalink: /links/
 <li><a href="http://evilat.com/">evilat</a></li>
                     </ul>
 
-#iOS 开发
+#技术博客
 - [SwiftV课堂 - 中国最大的Swift视频学习站](http://www.swiftv.cn/)
 - [唐巧的技术博客](http://blog.devtang.com/)
+- [Limboy's HQ](http://limboy.me/)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
@@ -30,3 +31,8 @@ permalink: /links/
 
 #官网和文档
 - [Google Design](http://www.google.com/design/)
+- [Concepts in Objective-C Programming](https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html)
+
+#社区
+- [OurCoders (我们程序员)](http://ourcoders.com/home/)
+- [v2ex](https://v2ex.com)

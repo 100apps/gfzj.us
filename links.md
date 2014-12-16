@@ -21,6 +21,7 @@ permalink: /links/
 
 #技术博客
 - [SwiftV课堂 - 中国最大的Swift视频学习站](http://www.swiftv.cn/)
+- [麦子学院](http://www.maiziedu.com)
 - [唐巧的技术博客](http://blog.devtang.com/)
 - [Limboy's HQ](http://limboy.me/)
 - [酷 壳](http://coolshell.cn/)

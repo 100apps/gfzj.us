@@ -23,6 +23,7 @@ permalink: /links/
 - [SwiftV课堂 - 中国最大的Swift视频学习站](http://www.swiftv.cn/)
 - [唐巧的技术博客](http://blog.devtang.com/)
 - [Limboy's HQ](http://limboy.me/)
+- [酷 壳](http://coolshell.cn/)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)

@@ -67,6 +67,12 @@ update 2014年07月15日16:08:10
     System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");       
     System.setProperty("javax.net.debug","all");
 
+update Wed Dec 17 14:12:26 CST 2014
+
+设置socks proxy
+
+	System.setProperty("socksProxyHost", "127.0.0.1");
+	System.setProperty("socksProxyPort", "8889");
 
 [Fiddler]: http://fiddler2.com/
 [Fiddler_https]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4728bd11b921c30906926f31b87093d6.png

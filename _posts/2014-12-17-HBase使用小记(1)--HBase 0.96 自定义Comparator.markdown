@@ -4,9 +4,8 @@ title: "HBase应用小记(1)--HBase 0.96 自定义Comparator"
 date: 2014-12-17 18:54:13
 categories: series hbase
 by: zj
-keyword: HBase,自定义Comparator
+keyword: HBase,protocol buffer,自定义Comparator
 description: HBase0.96及更高版本的RPC如何使用protocolbuffer进行序列化和反序列化；如何自定义Comparator
-permalink: /tech/147.html
 ---
 HBase 0.96及更高版本的RPC使用protocol buffer进行序列化和反序列化，那么如果查询时使用SingleColumnValueFilter，并且想要使用自定义的Comparator，该如何去做呢？
 
@@ -14,7 +13,7 @@ HBase 0.96及更高版本的RPC使用protocol buffer进行序列化和反序列�
 
 以上述假设为例，执行如下步骤可实现上述需求：
 
-####编写proto文件####
+###**编写proto文件**###
 
 如何编写proto文件，此处给出小示例，更为详细的内容，请查阅protocol buffer相关资料。
 	
@@ -28,7 +27,7 @@ HBase 0.96及更高版本的RPC使用protocol buffer进行序列化和反序列�
 	
 注释掉的是一些可选设置。
 	
-####编译proto文件####
+###**编译proto文件**###
 
 使用protoc编译器（需要下载），可以把proto文件编译成java、c++等目标语言，在bash中运行命令编译proto文件，命令格式如下：
 
@@ -38,7 +37,7 @@ HBase 0.96及更高版本的RPC使用protocol buffer进行序列化和反序列�
 
 	protoc --proto_path=/Users/jzhou/documents/workspace/Test/src/main/java/test --java_out=/Users/jzhou/documents/workspace/Test/src/main/java/test /Users/jzhou/documents/workspace/Test/src/main/java/test/CustomProtos.proto
 
-####编写自定义Comparator####
+###**编写自定义Comparator**###
 
 创建MyComparator.java，使用生成的CustomProtos.java实现序列化方法toByteArray()和反序列化方法parseFrom()：
 

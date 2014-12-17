@@ -19,5 +19,27 @@ permalink: /links/
 <li><a href="http://evilat.com/">evilat</a></li>
                     </ul>
 
-#iOS 开发
+#技术博客
 - [SwiftV课堂 - 中国最大的Swift视频学习站](http://www.swiftv.cn/)
+- [麦子学院](http://www.maiziedu.com)
+- [唐巧的技术博客](http://blog.devtang.com/)
+- [Limboy's HQ](http://limboy.me/)
+- [酷 壳](http://coolshell.cn/)
+
+#神器
+- [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
+- [Generate Objective-C headers from Mach-O files `class-dump`](https://github.com/nygard/class-dump)
+- [轻松应用分发，提供企业签名 `蒲公英`](http://www.pgyer.com/)
+-[GitBook 文档／图书编写](https://www.gitbook.com/)
+
+#官网和文档
+- [Google Design](http://www.google.com/design/)
+- [Concepts in Objective-C Programming](https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html)
+
+#社区
+- [OurCoders (我们程序员)](http://ourcoders.com/home/)
+- [v2ex](https://v2ex.com)
+- [Dribbble *设计交互*](https://dribbble.com)
+- [Github *代码*](https://github.com)
+
+

@@ -193,6 +193,6 @@ public class APNs {
 	}
 }
 
-{endhighlight}
+{%endhighlight%}
 
 这样我们的app就能收到推送消息了。

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HBase应用小记(1)--HBase 0.96 自定义Comparator"
-date: 2014-12-17 18:54:13
+date: 2014-07-12 18:54:13
 categories: series hbase
 by: zj
 keyword: HBase,protocol buffer,自定义Comparator

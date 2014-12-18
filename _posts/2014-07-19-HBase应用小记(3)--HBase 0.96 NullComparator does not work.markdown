@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "HBase 0.96 NullComparator does not work"
-date: 2014-06-11 10:08:33
-category: tech
+title: "HBase应用小记(3)--HBase 0.96 NullComparator does not work"
+date: 2014-07-19 10:08:33
+categories: series hbase
 by: zj
-description: 修改方法：publicclassNullComparatorextendsWritableByteArrayComparable{@OverridepublicintcompareTo(byte()value,intoffset,intlength){-throw
+description: HBase 0.96 NullComparator有问题
 permalink: /tech/142.html
 ---
 修改方法：

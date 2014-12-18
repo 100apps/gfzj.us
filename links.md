@@ -25,6 +25,7 @@ permalink: /links/
 - [唐巧的技术博客](http://blog.devtang.com/)
 - [Limboy's HQ](http://limboy.me/)
 - [酷 壳](http://coolshell.cn/)
+- [Cocoabit | 做自己喜欢的事情](http://blog.cocoabit.com/)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
@@ -35,6 +36,7 @@ permalink: /links/
 #官网和文档
 - [Google Design](http://www.google.com/design/)
 - [Concepts in Objective-C Programming](https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html)
+- [iPhone Development Wiki `share the sum of all human knowledge about jailbroken iOS development`](http://iphonedevwiki.net/index.php/Main_Page)
 
 #社区
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)

@@ -25,7 +25,7 @@ permalink: /links/
 - [唐巧的技术博客](http://blog.devtang.com/)
 - [Limboy's HQ](http://limboy.me/)
 - [酷 壳](http://coolshell.cn/)
-- [Cocoabit | 做自己喜欢的事情](http://blog.cocoabit.com/)
+- [Cocoabit](http://blog.cocoabit.com/)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)

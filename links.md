@@ -31,7 +31,7 @@ permalink: /links/
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
 - [Generate Objective-C headers from Mach-O files `class-dump`](https://github.com/nygard/class-dump)
 - [轻松应用分发，提供企业签名 `蒲公英`](http://www.pgyer.com/)
--[GitBook 文档／图书编写](https://www.gitbook.com/)
+- [GitBook 文档／图书编写](https://www.gitbook.com/)
 
 #官网和文档
 - [Google Design](http://www.google.com/design/)

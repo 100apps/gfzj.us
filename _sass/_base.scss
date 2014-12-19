@@ -237,7 +237,7 @@ p.caption-img img,.post-content img{
 .upper-case{
 	text-transform:uppercase;
 }
-.series,.at_author{
+.series,.at_author,table{
    border: 0.5em solid #fff;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
@@ -255,4 +255,14 @@ p.caption-img img,.post-content img{
     font-weight: bold;
     cursor:wait;
     text-decoration:underline;
+}
+table{
+            border-collapse: collapse;
+}
+table tr {
+    border-bottom: 1px solid #ddd;
+}
+table td {
+    border-right: 1px solid #ddd;
+    padding:10px;
 }

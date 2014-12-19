@@ -38,7 +38,7 @@ company和enterprise申请都需要[邓白氏编码（D-U-N-S® Number）](http:
 
 |时间|操作|
 |2014年12月11日 17:02|进入[官网](https://developer.apple.com/programs/start/enterprise/)开始申请，注意公司名称可以用Google翻译，但是要和`营业执照`上的一样，不要增加或减少。因为没有邓白氏编码，所以通过[apple提供的链接](https://developer.apple.com/ios/enroll/dunsLookupForm.action)申请。|
-|  09:20:57|因为是上周五申请的，所以周一一过来就发邮件给<appdeveloper@dnb.com>, <chinadev@asia.apple.com>询问邓白氏编码申请状态|
+|2014-12-15 09:20:57|因为是上周五申请的，所以周一一过来就发邮件给<appdeveloper@dnb.com>, <chinadev@asia.apple.com>询问邓白氏编码申请状态|
 |2014-12-15 15:26:20|上海邓白氏（电话61961650）打来电话验证，询问了几个简单的问题如实回答一下，就通过了，然后收到dsmmssqladmin发的邮件，说`You may start using your number in 14 days. `|
 |2014-12-16 13:13|发现在apple后台发现邓白氏已经同步过来了，可以进行下一步了。说是14天，实际上感觉1天之内apple就能同步过来，所以邓白氏申请下来以后，要每天都要去apple后台试一下。|
 |2014-12-16 13:30:22|收到Apple Developer Support发来的邮件* Your Apple Developer Program Enrollment Request*|

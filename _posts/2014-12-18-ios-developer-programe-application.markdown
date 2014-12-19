@@ -50,7 +50,7 @@ company和enterprise申请都需要[邓白氏编码（D-U-N-S® Number）](http:
 ||2014-12-17 17:21:38||Apple Store 发来邮件`订单确认_W47808xxxx`||
 || 2014-12-17 17:26:09||Apple Developer Support发来邮件`Thank You for Joining an Apple Developer Program`||
 ||2014-12-18 08:34:50||Apple Support发来邮件`您的_Apple_Developer_Program_Support_体验`。至此，账号申请完毕，可以用了。||
-||2014-12-18 12:19:18||APPLE STORE发来邮件E-invoice for your order #254509xxxx||可以把这个电子发票交给财物了||
+||2014-12-18 12:19:18||APPLE STORE发来邮件E-invoice for your order #254509xxxx，可以把这个电子发票交给财物了||
 
 #总结
 现在申请开发者账号还是很快的，如果想更快的话，就要不停地发邮件／打电话催。个人版的话24小时，企业版的话，加上邓白氏申请，加上周末两天，一共用去6天时间，所以一周应该足够了。如果有邓白氏编码，估计2天之内也能搞定。

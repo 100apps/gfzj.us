@@ -66,3 +66,6 @@ ios默认提供PKCS7Padding加密，但是 java时PKCS5Padding，所以需要fix
     return NO;
 }
 {%endhighlight%}
+
+#应用闪退
+打开应用后，直接闪退，肯定是App crash了，并且不出现在UI上，一般可以检查`AppDelegate`里面的方法调用，比如网络异常等，如果没有try－catch都有可能导致App直接崩溃。

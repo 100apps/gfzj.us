@@ -8,6 +8,9 @@ keyword: github,gitcafe,pages,免费做网站
 description: 用Githubpages做的网站在国内访问速度还是有问题。这时候我们可以在gitcafe也托管一份，配合dns解析，国内访问gitcafe；国外访问github。速度非常非常的快。屌丝网站访问速度马上飞起来。
 permalink: /tech/208.html
 ---
+###update 2014-12-18
+gitcafe pages最终还是因为备案问题挂了，很遗憾
+
 以前的时候介绍过 [帝国CMS+github pages+qiniu存储网站制作][CMS_github pages_qiniu],用了一段时间以后发现有问题，七牛cdn更新比较慢，同步过去需要等待时间比较长，感觉没有github的fastly给力，另外，dnspod免费版不能区分国内／国外解析，太蛋疼了。今天分享一种升级版解决方案。
 
 首先说，这些服务都是免费的，你只需要一个域名。实际上某些后缀的域名也可以免费注册，具体可以Google一下，这样就真的成了0费用建站。

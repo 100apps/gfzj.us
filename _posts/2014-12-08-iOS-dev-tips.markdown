@@ -69,3 +69,8 @@ ios默认提供PKCS7Padding加密，但是 java时PKCS5Padding，所以需要fix
 
 #应用闪退
 打开应用后，直接闪退，肯定是App crash了，并且不出现在UI上，一般可以检查`AppDelegate`里面的方法调用，比如网络异常等，如果没有try－catch都有可能导致App直接崩溃。
+
+#Xcode调试中失去连接
+xcode启动程序以后，断开连接，这是证书原因。debug 的时候不能用distribute证书。另外，如果有today extension之类的，这是一个新的target，需要单独设置证书：
+
+![xcode设置target](/images/xcode-targets-cer.png)

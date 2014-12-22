@@ -30,7 +30,7 @@ company和enterprise都可以建立子账号，在<https://developer.apple.com/m
 
 至此，个人版的开发者账号就申请下来了，以前的时候付款还要传真确认单，现在都不需要了，信用卡扣款就搞定了。顺利的话，24小时之内账号到手。
 
-＃company账号和enterprise账号申请
+#company账号和enterprise账号申请
 
 company和enterprise申请都需要[邓白氏编码（D-U-N-S® Number）](http://zh.wikipedia.org/wiki/%E9%82%93%E7%99%BD%E6%B0%8F),这个如果单独申请时需要付费的。如果我们没有邓白氏编码，可以通过Apple提供的链接直接申请，是免费的。我们公司当时并没有邓白氏编码，所以一切从头开始。而且是同时申请的，如下图
 

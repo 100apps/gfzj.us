@@ -26,6 +26,7 @@ permalink: /links/
 - [Limboy's HQ](http://limboy.me/)
 - [酷 壳](http://coolshell.cn/)
 - [Cocoabit](http://blog.cocoabit.com/)
+- [sunnyxx的技术博客](http://blog.sunnyxx.com/)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)

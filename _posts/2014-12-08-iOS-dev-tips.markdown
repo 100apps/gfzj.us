@@ -74,3 +74,18 @@ ios默认提供PKCS7Padding加密，但是 java时PKCS5Padding，所以需要fix
 xcode启动程序以后，断开连接，这是证书原因。debug 的时候不能用distribute证书。另外，如果有today extension之类的，这是一个新的target，需要单独设置证书：
 
 ![xcode设置target](/images/xcode-targets-cer.png)
+
+#自动转换类型的问题
+比如下面的代码：
+
+{%highlight objc%}
+#import <Foundation/Foundation.h>
+int main(int argc,const char *argv[]){
+	NSArray *items = @[@1, @2, @3];
+	for (int i = -1; i < items.count; i++) {
+	    NSLog(@"%d", i);
+	}
+}
+{%endhighlight%}
+
+编译运行`gcc -ObjC -framework Foundation test.m && ./a.out`我们发现，什么也没有输出。这是因为，在for循环中，items.count是`NSUInteger（typedef unsigned long NSUInteger）`类型的，－1被强制转换，变成一个很大的数。

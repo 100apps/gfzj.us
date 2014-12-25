@@ -34,8 +34,13 @@ permalink: /links/
 - [Generate Objective-C headers from Mach-O files `class-dump`](https://github.com/nygard/class-dump)
 - [轻松应用分发，提供企业签名 `蒲公英`](http://www.pgyer.com/)
 - [GitBook 文档／图书编写](https://www.gitbook.com/)
+- [ The package manager for Xcode ](http://alcatraz.io/)
+- iOS开发类库
+	- [ConciseKit](https://github.com/petejkim/ConciseKit)
+	- [RFKit](https://github.com/BB9z/RFKit/)
 
 #官网和文档
+- [App Store Distribution](https://developer.apple.com/support/appstore/)
 - [Google Design](http://www.google.com/design/)
 - [Concepts in Objective-C Programming](https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html)
 - [iPhone Development Wiki `share the sum of all human knowledge about jailbroken iOS development`](http://iphonedevwiki.net/index.php/Main_Page)
@@ -45,5 +50,6 @@ permalink: /links/
 - [v2ex](https://v2ex.com)
 - [Dribbble *设计交互*](https://dribbble.com)
 - [Github *代码*](https://github.com)
+- [Custom Controls for iOS and OS X](https://www.cocoacontrols.com/)
 
 

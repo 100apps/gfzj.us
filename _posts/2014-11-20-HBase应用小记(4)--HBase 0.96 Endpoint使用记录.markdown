@@ -13,18 +13,18 @@ HBase 0.96及以上版本实现Endpoints的方式跟0.94版本及以前版本是
 Coprocessor包括Observers和Endpoints，这里只详细介绍Endpoints的实现。Endpoint的实现是安装在HBase服务器端的，客户端通过HBase RPC调用endpoint。
 实现一个endpoint的步骤如下：
 
-*编写.proto文件，在其中定义coprocessor service和相关的messages，并执行protoc命令编译该文件
+* 编写.proto文件，在其中定义coprocessor service和相关的messages，并执行protoc命令编译该文件
 （[HBase使用小记(1)--HBase 0.96 自定义Comparator][link2]中有介绍如何编写.proto文件以及编译方法）
 
-*编写Endpoint类，实现如下接口
+* 编写Endpoint类，实现如下接口
 
 	(1)由.proto文件编译生成的java代码中的Service接口
 	(2)org.apache.hadoop.hbase.coprocessor.CoprocessorService接口，该接口是RegionCoprocessorHost用于注册service的
 	
-*客户端调用方法HTable.coprocessorService()执行endpoint RPCs。
+* 客户端调用方法HTable.coprocessorService()执行endpoint RPCs。
 
 通过一个详细点儿的小示例走一遍上述步骤，假设HBase表student_info中的每条记录是一个学生的个人信息，包括姓名、性别、身份证等，
-我们想分别获取男生(或女生)的总人数，不可能把所有的记录取回客户端再统计，那么可以通过Endpoint实现。
+我们想获取男生(或女生)的总人数，不可能把所有的记录取回客户端再统计，那么可以通过Endpoint实现。
 
 ##第一步，编写并编译NumCount.proto文件##
 
@@ -177,6 +177,11 @@ NumCountClient.java代码如下：
 		table.close();
 	}
 }
+
+其实，HBase本身为很多数据结构提供序列化工具，如scan、filter等都有，在hbase的hbase-protocol子工程中有其对应的.proto文件和
+编译后的文件。这些工具，在coprocessor的调用中中可以直接使用，例如，客户端直接给出scan对象作为调用coprocessor的参数，
+endpoint端有提供工具ProtobufUtil（Scan scan = ProtobufUtil.toScan(request.getScan());），直接调用就可以反序列化。
+上述例子使用的NumCountRequest完全可以在客户端由scan代替，此处使用NumCountRequest仅是为了更全面地介绍endpoint。
 
 [link1]:https://blogs.apache.org/hbase/entry/coprocessor_introduction"Coprocessor Introduction"
 [link2]:http://www.gfzj.us/series/hbase/2014/07/13/HBase%E4%BD%BF%E7%94%A8%E5%B0%8F%E8%AE%B0(1)--HBase%200.96%20%E8%87%AA%E5%AE%9A%E4%B9%89Comparator.html"HBase 0.96 自定义Comparator"

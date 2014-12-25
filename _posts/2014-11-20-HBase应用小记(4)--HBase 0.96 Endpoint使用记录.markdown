@@ -47,7 +47,7 @@ Coprocessor包括Observers和Endpoints，这里只详细介绍Endpoints的实现
 	
 编译生成NumCountProtos.java文件
 	
-##编写Endpoint类##
+##第二步，编写Endpoint类##
 
 NumCountEndpoint.java代码如下：
 
@@ -126,7 +126,7 @@ NumCountEndpoint.java代码如下：
 
 }
 
-##编写Endpoints客户端##
+##第三步，编写Endpoints客户端##
 
 NumCountClient.java代码如下：
 

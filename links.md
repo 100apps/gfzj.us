@@ -28,6 +28,8 @@ permalink: /links/
 - [酷 壳](http://coolshell.cn/)
 - [Cocoabit](http://blog.cocoabit.com/)
 - [sunnyxx的技术博客](http://blog.sunnyxx.com/)
+- [iOS App Dev Libraries, Controls, Tutorials, Examples and Tools](https://maniacdev.com/)
+- [iOS Frameworks](http://iosframeworks.com/)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
@@ -51,5 +53,7 @@ permalink: /links/
 - [Dribbble *设计交互*](https://dribbble.com)
 - [Github *代码*](https://github.com)
 - [Custom Controls for iOS and OS X](https://www.cocoacontrols.com/)
+- [Code4App-iOS开发](http://code4app.com/)
+- [友盟指数](http://www.umindex.com/)
 
 

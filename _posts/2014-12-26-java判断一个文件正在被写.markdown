@@ -70,3 +70,10 @@ keywords: java
 是否正在被写。
 	
 为什么没有一个合适的接口？或者是我没有找到，持续寻找ing...
+
+[类FileStatusTester][link1]
+
+[类FileOperator][link2]
+
+[link1]:https://github.com/vivianforzj/HistoricalMakeProgress/blob/master/Testers/src/main/java/filestatus/FileStatusTester.java "类FileStatusTester"
+[link2]:https://github.com/vivianforzj/HistoricalMakeProgress/blob/master/Testers/src/main/java/filestatus/FileOperator.java "类FileOperator"

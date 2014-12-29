@@ -46,6 +46,8 @@ permalink: /links/
 - [Google Design](http://www.google.com/design/)
 - [Concepts in Objective-C Programming](https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html)
 - [iPhone Development Wiki `share the sum of all human knowledge about jailbroken iOS development`](http://iphonedevwiki.net/index.php/Main_Page)
+- [App Annie - App Ranking, Analytics, Market Intelligence](http://www.appannie.com/cn/)
+- [Flurry](https://dev.flurry.com/home.do)
 
 #社区
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)

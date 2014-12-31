@@ -1,9 +1,8 @@
 ---
 layout: post
-title: "title"
+title: "买车记"
 date: 2014-12-31 14:47:08
 category: 买车记
-img: /images/buy-car.jpg
 by: gf
 description: 2014年12月30日，购买了第一辆车，买车也靠缘分，买来以后，非常满意。特别感谢James的指导和帮助。
 ---

@@ -7,6 +7,11 @@ img: /images/xcode512.png
 by: gf
 description: 积累一些iOS开发的经验，以备查阅。
 ---
+推荐其他链接：
+
+- <http://www.jianshu.com/p/08f194e9904c>
+- <http://www.jianshu.com/p/50b63a221f09>
+
 #md5
 objective-c计算`md5`的方法：
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Hadoop小文件问题[译]"
 date: 2015-1-6 11:19:04
-category: tech
+categories: series small-files
 by: zj
 description: Hadoop小文件问题及可用的解决方案
 keywords: java
@@ -31,7 +31,7 @@ datanode，从而获取每个小文件，然而，上述每个操作都是低效
 ###Problems with small files and MapReduce###
 
 Map tasks通常是以block为单位进行数据的处理。如果文件非常小且文件数量极大，那么每个map
-task处理的数据就非常少，且需要启动大量的map task说，而记录每个map，而记录每个map task信息（bookkeeping）也需要一定的开销。
+task处理的数据就非常少，且需要启动大量的map tasks，而记录每个map task信息（bookkeeping）也需要一定的开销。
 举个例子：一个是单独的1GB的文件，在HDFS中存储到16个64MB blocks；另一个是10000个
 100KB的小文件，大约共1GB。这10000个文件每个都用一个map task处理，那么处理这些文件所需的
 时间要比第一种情况慢上十倍甚至百倍。

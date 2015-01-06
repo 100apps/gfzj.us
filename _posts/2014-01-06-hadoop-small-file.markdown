@@ -69,5 +69,5 @@ bookkeeping是指在一个job的初始化阶段记录每个task的状态和进�
 
 [link1]:http://blog.cloudera.com/blog/2009/02/the-small-files-problem/ "The Small Files Problem"
 [link2]:http://hadoop.apache.org/docs/r1.0.4/cn/hadoop_archives.html "Hadoop Archives"
-[image1]:images/har.png "HAR File Layout"
-[image2]:images/sequencefile.png "SequenceFile File Layout"
+[image1]:/images/har.png "HAR File Layout"
+[image2]:/images/sequencefile.png "SequenceFile File Layout"

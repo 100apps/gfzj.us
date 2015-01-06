@@ -65,5 +65,5 @@ permalink: /links/
 - [17statup](http://17startup.com/)
 - [iOS开发者中心 - CocoaChina](http://d.cocoachina.com/)
 
-
-
+#其他链接
+- <http://www.jianshu.com/p/e5353a1a752c>

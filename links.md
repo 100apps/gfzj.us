@@ -42,6 +42,9 @@ permalink: /links/
 - [iOS开发类库](https://github.com/trending?l=objective-c&since=monthly)
 	- [ConciseKit](https://github.com/petejkim/ConciseKit)
 	- [RFKit](https://github.com/BB9z/RFKit/)
+	- [一句话添加下拉刷新](https://github.com/samvermette/SVPullToRefresh)
+	- [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
+	- [a collection of animation examples for iOS apps](https://github.com/schneiderandre/popping)
 
 #官网和文档
 - [WWDC](https://developer.apple.com/videos/wwdc/)

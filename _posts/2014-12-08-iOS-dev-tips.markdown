@@ -7,6 +7,11 @@ img: /images/xcode512.png
 by: gf
 description: 积累一些iOS开发的经验，以备查阅。
 ---
+推荐其他链接：
+
+- <http://www.jianshu.com/p/08f194e9904c>
+- <http://www.jianshu.com/p/50b63a221f09>
+
 #md5
 objective-c计算`md5`的方法：
 
@@ -89,3 +94,14 @@ int main(int argc,const char *argv[]){
 {%endhighlight%}
 
 编译运行`gcc -ObjC -framework Foundation test.m && ./a.out`我们发现，什么也没有输出。这是因为，在for循环中，items.count是`NSUInteger（typedef unsigned long NSUInteger）`类型的，－1被强制转换，变成一个很大的数。
+
+#iOS7 企业账号发布应用出现两个图标
+
+![两个图标](/images/ios-adhoc-double-icon.png)
+
+这个问题出在plist上，google了一番，有的说是bundle id不一致导致的，但是亲测，bundle id即使一致，也存在这个问题。最后发现是`metadata`的`title`的问题，我这个和com.xidibuy.`moa`中的`moa`一致。会出现两个图标，
+
+其中一个`正在安装`的图标是删不掉的。发布一个新应用（xcode新建一个）bundle id设置成和原来的一样。然后adhoc发布，安装。这时候不论是否安装成功，都会覆盖掉原来的，这样就能删除了。
+
+#xcode6 新建的应用在iOS7下出现上下黑边
+因为xcode6种启动屏改成了`LaunchScreen.xib`，所以就没有了`Default-568h@2x.png`,这样在iOS7下，系统就认为不支持iPhone5的分辨率，所以按iPhone4的分辨率启动了，产生黑边。

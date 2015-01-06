@@ -30,6 +30,8 @@ permalink: /links/
 - [sunnyxx的技术博客](http://blog.sunnyxx.com/)
 - [iOS App Dev Libraries, Controls, Tutorials, Examples and Tools](https://maniacdev.com/)
 - [iOS Frameworks](http://iosframeworks.com/)
+- [James Tang — Medium](https://medium.com/@jamztang)
+- [叶孤城___](http://www.jianshu.com/users/b82d2721ba07)
 
 #神器
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)
@@ -37,15 +39,22 @@ permalink: /links/
 - [轻松应用分发，提供企业签名 `蒲公英`](http://www.pgyer.com/)
 - [GitBook 文档／图书编写](https://www.gitbook.com/)
 - [ The package manager for Xcode ](http://alcatraz.io/)
-- iOS开发类库
+- [iOS开发类库](https://github.com/trending?l=objective-c&since=monthly)
 	- [ConciseKit](https://github.com/petejkim/ConciseKit)
 	- [RFKit](https://github.com/BB9z/RFKit/)
+	- [一句话添加下拉刷新](https://github.com/samvermette/SVPullToRefresh)
+	- [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
+	- [a collection of animation examples for iOS apps](https://github.com/schneiderandre/popping)
 
 #官网和文档
+- [WWDC](https://developer.apple.com/videos/wwdc/)
 - [App Store Distribution](https://developer.apple.com/support/appstore/)
 - [Google Design](http://www.google.com/design/)
 - [Concepts in Objective-C Programming](https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Introduction/Introduction.html)
 - [iPhone Development Wiki `share the sum of all human knowledge about jailbroken iOS development`](http://iphonedevwiki.net/index.php/Main_Page)
+- [App Annie - App Ranking, Analytics, Market Intelligence](http://www.appannie.com/cn/)
+- [Flurry](https://dev.flurry.com/home.do)
+- [iOS逆向](http://weibo.com/iosre)
 
 #社区
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)
@@ -55,6 +64,9 @@ permalink: /links/
 - [Custom Controls for iOS and OS X](https://www.cocoacontrols.com/)
 - [Code4App-iOS开发](http://code4app.com/)
 - [友盟指数](http://www.umindex.com/)
+- [IT桔子](http://itjuzi.com/)
+- [17statup](http://17startup.com/)
+- [iOS开发者中心 - CocoaChina](http://d.cocoachina.com/)
 
-
-
+#其他链接
+- <http://www.jianshu.com/p/e5353a1a752c>

@@ -118,4 +118,15 @@ int main(int argc,const char *argv[]){
 
 键盘uiwebview样式，可以上一个／下一个，不隐藏uitextfield。用<https://github.com/hackiftekhar/IQKeyboardManager>，只需要pod install，什么也不需要做。
 
+#更精确的sizeclass
+sizeclass的屏幕区分粒度还是不大，比如，如果想区分iPhone4和iPhone5屏幕，直接用sizeclass就很困难。这时候可以用：
+![http://i.stack.imgur.com/BUwMv.gif](xcode constaints也能connect)
+{%highlight objc%}
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+    if ([UIScreen mainScreen].bounds.size.height<=480) {
+        self.bgConstraint.constant=100;
+    }
+}
+{%endhighlight%}
 

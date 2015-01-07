@@ -120,7 +120,7 @@ int main(int argc,const char *argv[]){
 
 #更精确的sizeclass
 sizeclass的屏幕区分粒度还是不大，比如，如果想区分iPhone4和iPhone5屏幕，直接用sizeclass就很困难。这时候可以用：
-![http://i.stack.imgur.com/BUwMv.gif](xcode constaints也能connect)
+![xcode constaints也能connect](http://i.stack.imgur.com/BUwMv.gif)
 {%highlight objc%}
 - (void)updateViewConstraints {
     [super updateViewConstraints];

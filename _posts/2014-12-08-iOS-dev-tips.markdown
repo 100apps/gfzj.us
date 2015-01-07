@@ -105,3 +105,15 @@ int main(int argc,const char *argv[]){
 
 #xcode6 新建的应用在iOS7下出现上下黑边
 因为xcode6种启动屏改成了`LaunchScreen.xib`，所以就没有了`Default-568h@2x.png`,这样在iOS7下，系统就认为不支持iPhone5的分辨率，所以按iPhone4的分辨率启动了，产生黑边。
+
+#键盘问题
+首先是点击其他地方，键盘隐藏
+
+{%highlight objc%}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
+}
+{%endhighlight%}
+
+键盘uiwebview样式，可以上一个／下一个，不隐藏uitextfield。用<https://github.com/hackiftekhar/IQKeyboardManager>，只需要pod install，什么也不需要做。

@@ -21,9 +21,11 @@ HDFS中每一个文件、目录或是block在namenode的内存中都对应一个
 
 ###Problems with small files and MapReduce###
 
-Map tasks通常是以block为单位进行数据的处理。如果文件非常小且文件数量极大，那么每个map task处理的数据就非常少，且需要启动大量的map tasks，而记录每个map task信息（bookkeeping）也需要一定的开销。举个例子：一个是单独的1GB的文件，在HDFS中存储到16个64MB blocks；另一个是10000个100KB的小文件，大约共1GB。这10000个文件每个都用一个map task处理，那么处理这些文件所需的时间要比第一种情况慢上十倍甚至百倍。
+Map tasks通常是以block为单位进行数据的处理。如果文件非常小且文件数量极大，那么每个map task处理的数据就非常少，且需要启动大量的map tasks，而记录每个map task信息（**bookkeeping**）也需要一定的开销。举个例子：一个是单独的1GB的文件，在HDFS中存储到16个64MB blocks；另一个是10000个100KB的小文件，大约共1GB。这10000个文件每个都用一个map task处理，那么处理这些文件所需的时间要比第一种情况慢上十倍甚至百倍。
 
 Hadoop提供了一些方法用于减少bookkeeping带来的开销：设置mapred.job.reuse.jvm.num.tasks属性，允许一个JVM同时执行多个map tasks，以这种重用task JVM的方式减少启动多个JVM的开销；使用MultiFileInputSplit，每个map task可处理多个blocks数据。
+
+**PS:** bookkeeping是指在一个job的初始化阶段记录每个task的状态和进度。
 
 ###One Example###
 
@@ -65,7 +67,7 @@ HBase也可用于存储小文件，前提是文件真的很小。
 
 **PS:**
 
-bookkeeping是指在一个job的初始化阶段记录每个task的状态和进度。
+
 
 [link1]:http://blog.cloudera.com/blog/2009/02/the-small-files-problem/ "The Small Files Problem"
 [link2]:http://hadoop.apache.org/docs/r1.0.4/cn/hadoop_archives.html "Hadoop Archives"

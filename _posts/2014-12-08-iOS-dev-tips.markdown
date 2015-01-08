@@ -130,3 +130,24 @@ sizeclass的屏幕区分粒度还是不大，比如，如果想区分iPhone4和i
 }
 {%endhighlight%}
 
+#自定义字体不加载
+要加载自定义字体，除了要在Info.plist里面加入：
+{%highlight xml%}
+<key>UIAppFonts</key>
+	<array>
+		<string>xidi.ttf</string>
+	</array>
+{%endhighlight%}
+
+还需要在`Build Phases`->`Copy Bundle Resources`里面添加该字体。然后遍历字体名称：
+{%highlight objc%}
+
+  for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
+{%endhighlight%}

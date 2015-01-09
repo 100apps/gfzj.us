@@ -73,4 +73,5 @@ permalink: /links/
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>
+- [Limboy：自学 iOS 开发的一些经验](http://www.cocoachina.com/ios/20150104/10823.html)
 

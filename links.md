@@ -32,7 +32,7 @@ permalink: /links/
 - [iOS Frameworks](http://iosframeworks.com/)
 - [James Tang — Medium](https://medium.com/@jamztang)
 - [叶孤城___](http://www.jianshu.com/users/b82d2721ba07)
-- [Luke's Homepage | 卢克](http://geeklu.com/)
+- [Luke's Homepage - 卢克](http://geeklu.com/)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)
@@ -70,8 +70,9 @@ permalink: /links/
 - [IT桔子](http://itjuzi.com/)
 - [17statup](http://17startup.com/)
 - [iOS开发者中心 - CocoaChina](http://d.cocoachina.com/)
+- [Awesome OmniGraffle stencils](https://www.graffletopia.com)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>
 - [Limboy：自学 iOS 开发的一些经验](http://www.cocoachina.com/ios/20150104/10823.html)
-- [NEXT | 不错过任何一个新产品](http://next.36kr.com/posts)
+- [NEXT - 不错过任何一个新产品](http://next.36kr.com/posts)

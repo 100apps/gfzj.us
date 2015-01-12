@@ -47,6 +47,7 @@ permalink: /links/
 	- [一句话添加下拉刷新](https://github.com/samvermette/SVPullToRefresh)
 	- [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
 	- [a collection of animation examples for iOS apps](https://github.com/schneiderandre/popping)
+- [ObjCViz](http://people.no-distance.net/ol/software/objcviz/)
 
 #官网和文档
 - [WWDC](https://developer.apple.com/videos/wwdc/)
@@ -71,6 +72,8 @@ permalink: /links/
 - [17statup](http://17startup.com/)
 - [iOS开发者中心 - CocoaChina](http://d.cocoachina.com/)
 - [Awesome OmniGraffle stencils](https://www.graffletopia.com)
+- [iOS_移动开发 - 51CTO.COM](http://mobile.51cto.com/iphone/)
+- [iOS开发 -  CocoaChina 苹果开发中文站](http://www.cocoachina.com/ios/)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>

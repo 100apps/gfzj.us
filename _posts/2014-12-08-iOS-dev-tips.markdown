@@ -151,3 +151,6 @@ sizeclass的屏幕区分粒度还是不大，比如，如果想区分iPhone4和i
         }
     }
 {%endhighlight%}
+
+#xcode在异常处中断
+cmd＋7，新建（＋）breakpoint

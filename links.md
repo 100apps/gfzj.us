@@ -3,6 +3,9 @@ layout: page
 title: 友情链接
 permalink: /links/
 ---
+# to be covered
+- [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
+- [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 #朋友们的博客
 <ul class="list-unstyled">
 <li><a href="http://www.sunweina.com/" rel="friend" target="_blank">Florentina – WOW in our life</a></li>
@@ -47,9 +50,11 @@ permalink: /links/
 	- [一句话添加下拉刷新](https://github.com/samvermette/SVPullToRefresh)
 	- [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
 	- [a collection of animation examples for iOS apps](https://github.com/schneiderandre/popping)
+	- [nimbus](https://github.com/jverkoey/nimbus)
 - [ObjCViz](http://people.no-distance.net/ol/software/objcviz/)
 - [开发工具]
 	- [RBTool](https://www.reviewboard.org/docs/codebase/dev/getting-started/#rbtools)
+	- [apple doc](http://gentlebytes.com/appledoc/)
 
 #官网和文档
 - [WWDC](https://developer.apple.com/videos/wwdc/)

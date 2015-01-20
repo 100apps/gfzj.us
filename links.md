@@ -6,7 +6,7 @@ permalink: /links/
 #awesome projects
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
 - [GitHub Most Starred](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)
-# to be covered
+#to be covered
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 #朋友们的博客

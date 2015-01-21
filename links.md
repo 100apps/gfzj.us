@@ -10,6 +10,7 @@ permalink: /links/
 #to be covered
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
+
 #朋友们的博客
 <ul class="list-unstyled">
 <li><a href="http://www.sunweina.com/" rel="friend" target="_blank">Florentina – WOW in our life</a></li>
@@ -40,6 +41,7 @@ permalink: /links/
 - [James Tang — Medium](https://medium.com/@jamztang)
 - [叶孤城___](http://www.jianshu.com/users/b82d2721ba07)
 - [Luke's Homepage - 卢克](http://geeklu.com/)
+- [Why's Blog](http://blog.callmewhy.com/)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

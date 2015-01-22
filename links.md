@@ -42,6 +42,7 @@ permalink: /links/
 - [叶孤城___](http://www.jianshu.com/users/b82d2721ba07)
 - [Luke's Homepage - 卢克](http://geeklu.com/)
 - [Why's Blog](http://blog.callmewhy.com/)
+- [NSHipster 中文版](http://nshipster.cn/)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

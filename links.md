@@ -43,6 +43,7 @@ permalink: /links/
 - [Luke's Homepage - 卢克](http://geeklu.com/)
 - [Why's Blog](http://blog.callmewhy.com/)
 - [NSHipster 中文版](http://nshipster.cn/)
+- [萧宸宇](http://iiiyu.com/)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

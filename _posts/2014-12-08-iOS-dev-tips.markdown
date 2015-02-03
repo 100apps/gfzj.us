@@ -154,6 +154,7 @@ sizeclass的屏幕区分粒度还是不大，比如，如果想区分iPhone4和i
 
 #xcode在异常处中断
 cmd＋7，新建（＋）breakpoint
+
 #SDWebImage修改全局useragent
 所有的image都是在SDWebImageDownloader里面下载的，修改`downloadImageWithURL`方法里面的NSMutableURLRequest即可
 首先添加两个属性：

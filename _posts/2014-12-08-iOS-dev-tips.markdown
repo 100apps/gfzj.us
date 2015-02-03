@@ -179,3 +179,14 @@ cmd＋7，新建（＋）breakpoint
         }
         [request setValue:wself.userAgent forHTTPHeaderField:@"User-Agent"];
 {%endhighlight%}
+
+#uiwebview开启远程调试
+只能在模拟器中使用，就像firebug一样。我们可以通过mac上的Safari调试uiwebview中的html和js。需要在appdelegate中的`didFinishLaunchingWithOptions`中加入：
+
+{%highlight objc%}
+#if (TARGET_IPHONE_SIMULATOR)
+    [NSClassFromString(@"WebView") performSelector:@selector(_enableRemoteInspector)];
+#endif
+{%endhighlight%}
+
+然后启动mac上的Safari，偏好设置－>高级－>在菜单中显示“开发”菜单。进入 开发－>iOS simulator即可

@@ -44,6 +44,7 @@ permalink: /links/
 - [Why's Blog](http://blog.callmewhy.com/)
 - [NSHipster 中文版](http://nshipster.cn/)
 - [萧宸宇](http://iiiyu.com/)
+- [念茜的博客](http://blog.csdn.net/yiyaaixuexi)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

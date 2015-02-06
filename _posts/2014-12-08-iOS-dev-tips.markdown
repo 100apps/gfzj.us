@@ -191,3 +191,6 @@ cmd＋7，新建（＋）breakpoint
 {%endhighlight%}
 
 然后启动mac上的Safari，偏好设置－>高级－>在菜单中显示“开发”菜单。进入 开发－>iOS simulator即可
+
+#Reveal再来30天
+~/Library/Preferences/com.ittybittyapps.Reveal.plist 删除了就能再用 30 天。

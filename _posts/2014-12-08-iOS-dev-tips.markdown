@@ -196,5 +196,4 @@ cmd＋7，新建（＋）breakpoint
 ~/Library/Preferences/com.ittybittyapps.Reveal.plist 删除了就能再用 30 天。
 
 #UIScrollView滚动完成回调
-使用`scrollViewDidEndScrollingAnimation`，不要使用`scrollViewDidEndDecelerating`,因为因为scrollViewDidEndDecelerating不被scrollRectToVisible或者setContentOffset触发
-<http://stackoverflow.com/questions/6241632/>
+自动触发scroll，比如使用scrollRectToVisible或者setContentOffset，回调`scrollViewDidEndScrollingAnimation`；手动拖拽出发`scrollViewDidEndDecelerating`

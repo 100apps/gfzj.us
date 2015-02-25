@@ -197,3 +197,13 @@ cmd＋7，新建（＋）breakpoint
 
 #UIScrollView滚动完成回调
 自动触发scroll，比如使用scrollRectToVisible或者setContentOffset，回调`scrollViewDidEndScrollingAnimation`；手动拖拽出发`scrollViewDidEndDecelerating`
+
+#给uiview添加MotionEffect
+就像在Home页的壁纸，随着手机角度移动，壁纸会动。
+{%highlight objc%}
+   UIInterpolatingMotionEffect * xEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+   xEffect.minimumRelativeValue =  [NSNumber numberWithFloat:-40.0];
+   xEffect.maximumRelativeValue = [NSNumber numberWithFloat:40.0];
+   [img addMotionEffect:xEffect];
+{%endhighlight%}
+![UIview可以add的其他东西](/images/viewadd.png)

@@ -201,9 +201,21 @@ cmd＋7，新建（＋）breakpoint
 #给uiview添加MotionEffect
 就像在Home页的壁纸，随着手机角度移动，壁纸会动。
 {%highlight objc%}
-   UIInterpolatingMotionEffect * xEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-   xEffect.minimumRelativeValue =  [NSNumber numberWithFloat:-40.0];
-   xEffect.maximumRelativeValue = [NSNumber numberWithFloat:40.0];
-   [img addMotionEffect:xEffect];
+UIInterpolatingMotionEffect * xEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+xEffect.minimumRelativeValue =  [NSNumber numberWithFloat:-40.0];
+xEffect.maximumRelativeValue = [NSNumber numberWithFloat:40.0];
+[img addMotionEffect:xEffect];
 {%endhighlight%}
 ![UIview可以add的其他东西](/images/viewadd.png)
+
+#OC的getter和setter方法命名
+默认情况下，属性的getter方法用属性名，而不是getXxx。比如：
+{%highlight objc%}
+[[UILabel new]font];
+[[UILabel new]setFont:nil]
+{%endhighlight%}
+在Cocoa中，一般用getXxx的参数表示返回值存放的位置。比如`NSData`中的：
+{%highlight objc%}
+- (void)getBytes:(void *)buffer/*指针*/;
+{%endhighlight%}
+这是命名惯例，希望遵守

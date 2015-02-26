@@ -100,3 +100,10 @@ permalink: /links/
 - [NEXT - 不错过任何一个新产品](http://next.36kr.com/posts)
 - [中文 iOS/Mac 开发博客列表](https://github.com/tangqiaoboy/iOSBlogCN)
 
+#iOS逆向相关
+- [theos](http://theos.howett.net/nic/)
+- [Hopper](http://www.hopperapp.com/download.html)
+- [IDA](https://www.hex-rays.com/products/ida/support/download_demo.shtml)
+- [ldid](https://github.com/rpetrich/ldid) &nbsp;[下载](https://cloud.github.com/downloads/rpetrich/ldid/ldid.zip)
+- [dyld_decache](https://github.com/kennytm/Miscellaneous) &nbsp;[下载](https://github.com/kennytm/Miscellaneous/downloads)
+- iOS上常用工具: `SBSettings` `MobileSubstrate` `OpenSSH` `GDB` [Cycript](http://www.cycript.org/) `BigBoss Recommended Tools` `App Crackr` `iFile` `Mobile Terminal` `Vi IMproved` `Sqlite`

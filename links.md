@@ -107,3 +107,8 @@ permalink: /links/
 - [ldid](https://github.com/rpetrich/ldid) &nbsp;[下载](https://cloud.github.com/downloads/rpetrich/ldid/ldid.zip)
 - [dyld_decache](https://github.com/kennytm/Miscellaneous) &nbsp;[下载](https://github.com/kennytm/Miscellaneous/downloads)
 - iOS上常用工具: `SBSettings` `MobileSubstrate` `OpenSSH` `GDB` [Cycript](http://www.cycript.org/) `BigBoss Recommended Tools` `App Crackr` `iFile` `Mobile Terminal` `Vi IMproved` `Sqlite`
+
+#大千世界
+- [任毅飞](http://blog.sina.com.cn/u/1262345964)
+- [胡正](http://www.huzheng.org/)
+- [高学勇](http://www.thesct.net/sct.html)

@@ -9,6 +9,8 @@ description: 我自己使用mac已经有段时间了，mac下面有一些快捷�
 permalink: /tech/138.html
 ---
 我自己使用mac已经有段时间了，mac下面有一些快捷键和技巧，还是相当好用的，这里不会收录市面上常见的技巧，只收录「奇技淫巧」。另外，这篇文章将不定期更新。
+#mac快捷键
+<https://support.apple.com/zh-cn/HT201236>
 
 ## 关闭Spotlight ##
 

@@ -48,6 +48,7 @@ permalink: /links/
 - [萧宸宇](http://iiiyu.com/)
 - [念茜的博客](http://blog.csdn.net/yiyaaixuexi)
 - [iWangKe.me](http://www.iwangke.me/)
+- [稀土 每天都有特别的人](https://xitu.io/gold)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

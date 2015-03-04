@@ -68,6 +68,9 @@ permalink: /links/
 - [开发工具]
 	- [RBTool](https://www.reviewboard.org/docs/codebase/dev/getting-started/#rbtools)
 	- [apple doc](http://gentlebytes.com/appledoc/)
+- [把动画转成代码	]
+	- [coreanimator](http://www.coreanimator.com/)
+	- [quartzcode](http://www.quartzcodeapp.com/)
 
 #官网和文档
 - [WWDC](https://developer.apple.com/videos/wwdc/)

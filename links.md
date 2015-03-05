@@ -3,6 +3,9 @@ layout: page
 title: 友情链接
 permalink: /links/
 ---
+#industry leaders
+- [Paul Graham](http://paulgraham.com/articles.html)
+
 #awesome projects
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
 - [GitHub Most Starred](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)

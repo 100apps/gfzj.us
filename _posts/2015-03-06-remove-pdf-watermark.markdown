@@ -7,6 +7,7 @@ by: gf
 description: 下载了一些电子书，但是里面包括了一种类似页脚的东西，全是某个网站的链接。写了一个小程序出去这些链接
 ---
 pdf是一种很常用的格式，但是不像纯文本我们可以直接`sed`，但是我们可以先研究一下pdf的格式，然后删除。java程序如下：
+
 {%highlight java%}
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -111,7 +112,7 @@ public class WatermarkRemover {
 	}
 }
 
-{%endhighlight%}
+{% endhighlight %}
 
 编译：
 

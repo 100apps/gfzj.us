@@ -101,6 +101,7 @@ permalink: /links/
 - [iOS_移动开发 - 51CTO.COM](http://mobile.51cto.com/iphone/)
 - [iOS开发 -  CocoaChina 苹果开发中文站](http://www.cocoachina.com/ios/)
 - [Mobile Agency. iOS & Android design and development.](https://github.com/Yalantis)
+- [iOS Dev Weekly](http://iosdevweekly.com/)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>

@@ -120,7 +120,7 @@ public class WatermarkRemover {
 
 运行：
 
-	java WatermarkRemover a.pdf b.pdf
-
+	java WatermarkRemover a.pdf "it-ebooks.info" b.pdf
+	
 效果
 ![pdf去处水印效果](/images/pdf-watermark-remover.png)

@@ -3,7 +3,7 @@ layout: post
 title: "删除pdf文件中的水印"
 date: 2015-03-06 13:32:09
 category: tech
-image: /images/pdf-watermark-remover.png
+img: /images/pdf-watermark-remover.png
 by: gf
 description: 下载了一些电子书，但是里面包括了一种类似页脚的东西，全是某个网站的链接。写了一个小程序出去这些链接
 ---

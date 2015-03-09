@@ -301,3 +301,8 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 
 #UIAlertView 在springboard弹出
 使用 `CFUserNotificationCreate()`和 `CFUserNotificationReceiveResponse()`
+
+#UItableview刷新cell高度
+{%highlight objc%}
+ [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:textField.tag+1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
+{%endhighlight%}

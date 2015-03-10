@@ -52,6 +52,7 @@ permalink: /links/
 - [念茜的博客](http://blog.csdn.net/yiyaaixuexi)
 - [iWangKe.me](http://www.iwangke.me/)
 - [稀土 每天都有特别的人](https://xitu.io/gold)
+- [浮生猎趣](http://blog.lessfun.com/)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

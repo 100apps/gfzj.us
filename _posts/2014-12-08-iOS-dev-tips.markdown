@@ -195,6 +195,10 @@ cmd＋7，新建（＋）breakpoint
 #Reveal再来30天
 ~/Library/Preferences/com.ittybittyapps.Reveal.plist 删除了就能再用 30 天。
 
+但是如果已经过超过了30天，这种方法就不行了。可以通过用xcode编辑`/Applications/Reveal.app/Contents/Info.plist`中的Bundle identifier，然后重启Reveal再来30天。此时，也可以直接重装一下。
+为了方便，可以写一个定时任务，每天清除一下com.ittybittyapps.Reveal.plist。
+
+
 #UIScrollView滚动完成回调
 自动触发scroll，比如使用scrollRectToVisible或者setContentOffset，回调`scrollViewDidEndScrollingAnimation`；手动拖拽出发`scrollViewDidEndDecelerating`
 

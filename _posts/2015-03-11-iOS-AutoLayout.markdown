@@ -43,3 +43,4 @@ AutoLayout确实非常方便，比起刀耕火种的手写frame要强大很多�
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-padding-[c]-padding-|" options:0 metrics:metrics views:views]];
     
 {%endhighlight%}
+

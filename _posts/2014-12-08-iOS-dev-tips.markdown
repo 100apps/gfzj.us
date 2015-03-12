@@ -310,3 +310,7 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 {%highlight objc%}
  [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:textField.tag+1 inSection:0]] withRowAnimation:UITableViewRowAnimationFade];
 {%endhighlight%}
+
+#UIWebview和NSURLConnection功用一个cookiestore
+
+这一点非常好用。可以更好地让native和h5页面交互，无需自己处理cookie

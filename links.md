@@ -13,6 +13,7 @@ permalink: /links/
 #to be covered
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
+- [iOS常见问题](http://stackoverflow.com/questions/tagged/ios?sort=frequent)
 
 #朋友们的博客
 <ul class="list-unstyled">

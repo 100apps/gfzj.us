@@ -18,6 +18,10 @@ description: 最近打了一段时间的台球，总结一下瞄准的方法和�
 
 	sinα=d/2r	(其中r是台球的半径，d是假象球覆盖住目标球的距离)
 
+所以在瞄准距离为d的情况下，目标球的角度是：
+
+	α＝arcsin(d/2r)
+
 我们知道sina不是线性关系。我们画个图,计算角度和距离的关系
 
 <div id="chart1" style="height:500px"></div>
@@ -35,18 +39,18 @@ require.config({
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main')); 
+                var myChart = ec.init(document.getElementById('chart1')); 
                 
                 var option = {
                     tooltip: {
                         show: true
                     },
                     legend: {
-                        data:['销量']
+                        data:['瞄准距离为d所能打出的角度']
                     },
                     xAxis : [
                         {
-                            type : 'category',
+                            type : '瞄准距离',
                             data : ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
                         }
                     ],
@@ -57,8 +61,8 @@ require.config({
                     ],
                     series : [
                         {
-                            "name":"销量",
-                            "type":"bar",
+                            "name":"角度",
+                            "type":"line",
                             "data":[5, 20, 40, 10, 10, 20]
                         }
                     ]

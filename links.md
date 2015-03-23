@@ -56,6 +56,7 @@ permalink: /links/
 - [稀土 每天都有特别的人](https://xitu.io/gold)
 - [浮生猎趣](http://blog.lessfun.com/)
 - [Glow 技术团队博客](http://tech.glowing.com/cn/)
+- [Kevin Blog](http://zhowkev.in/)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

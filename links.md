@@ -57,6 +57,8 @@ permalink: /links/
 - [浮生猎趣](http://blog.lessfun.com/)
 - [Glow 技术团队博客](http://tech.glowing.com/cn/)
 - [Kevin Blog](http://zhowkev.in/)
+- [放慢脚步](http://blog.codingcoder.com/)
+- [不会开机的男孩](http://studentdeng.github.io)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

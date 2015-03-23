@@ -15,6 +15,7 @@ permalink: /links/
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 - [iOS常见问题](http://stackoverflow.com/questions/tagged/ios?sort=frequent)
 - [Motion Design for iOS](https://dn-motion-design.qbox.me/)
+- [官网指导必看](https://developer.apple.com/videos/wwdc/2014/?id=229)
 
 #朋友们的博客
 <ul class="list-unstyled">

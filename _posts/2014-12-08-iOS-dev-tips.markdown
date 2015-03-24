@@ -314,3 +314,6 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 #UIWebview和NSURLConnection功用一个cookiestore
 
 这一点非常好用。可以更好地让native和h5页面交互，无需自己处理cookie
+
+#Xcode->debug菜单很强大
+比如截屏（保存到桌面），view frame bounds等。可以设置快捷键。非常方便

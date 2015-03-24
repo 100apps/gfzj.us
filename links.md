@@ -114,6 +114,7 @@ permalink: /links/
 - [iOS Dev Weekly](http://iosdevweekly.com/)
 - [极客标签](http://www.gbtags.com/gb/index.htm)
 - [微盟游戏-游戏头条](http://www.wmyouxi.com/)
+- [APICloud 重新定义移动应用开发](http://www.apicloud.com/)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>

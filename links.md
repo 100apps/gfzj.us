@@ -76,6 +76,7 @@ permalink: /links/
 	- [a collection of animation examples for iOS apps](https://github.com/schneiderandre/popping)
 	- [nimbus](https://github.com/jverkoey/nimbus)
 - [ObjCViz](http://people.no-distance.net/ol/software/objcviz/)
+- [fastlane: iOS Automation for Continuous Delivery](https://fastlane.tools/)
 - [开发工具]
 	- [RBTool](https://www.reviewboard.org/docs/codebase/dev/getting-started/#rbtools)
 	- [apple doc](http://gentlebytes.com/appledoc/)

@@ -60,6 +60,7 @@ permalink: /links/
 - [Kevin Blog](http://zhowkev.in/)
 - [放慢脚步](http://blog.codingcoder.com/)
 - [不会开机的男孩](http://studentdeng.github.io)
+- [淘测试](http://www.taobaotest.com/blogs)
 
 #神器
 - [Tmux](http://tmux.sourceforge.net/)

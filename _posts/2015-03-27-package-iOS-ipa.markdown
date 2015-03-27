@@ -9,7 +9,7 @@ description: 命令行打包到ipa，是持续集成的第一步，iOS应用现�
 
 命令行打包到ipa，是持续集成的第一步，iOS应用现在一般都是用xcode图形界面打包，通过命令行和svn/git hook可以实现自动发布。
 
-如果只是打包*.xcodeproj，最简单了。只需要在*.xcodeproj所在目录运行`xcodebuild`就可以了。这样就会在`build/Release-iphoneos/app.app`目录生成app文件夹。下一步，用:
+如果只是打包\*.xcodeproj，最简单了。只需要在*.xcodeproj所在目录运行`xcodebuild`就可以了。这样就会在`build/Release-iphoneos/app.app`目录生成app文件夹。下一步，用:
 
 	xcrun -sdk iphoneos PackageApplication -v build/Release-iphoneos/app.app -o /ramdisk/xx.ipa
 

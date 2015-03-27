@@ -15,4 +15,8 @@ description: 命令行打包到ipa，是持续集成的第一步，iOS应用现�
 
 就可以生成xx.ipa了。然后用scp覆盖到服务器上，也是分分钟的事情。
 
+如果对于xcworkspace，比如用了CocoaPods，生成*.app的时候需要加个参数：
 
+	xcodebuild -workspace app.xcworkspace -scheme app -configuration Release -derivedDataPath build
+
+在当前目录的build/Build/Products/Release-iphoneos/会生成app文件

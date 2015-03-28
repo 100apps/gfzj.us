@@ -133,6 +133,9 @@ permalink: /links/
 - iOS上常用工具: `SBSettings` `MobileSubstrate` `OpenSSH` `GDB` [Cycript](http://www.cycript.org/) `BigBoss Recommended Tools` `App Crackr` `iFile` `Mobile Terminal` `Vi IMproved` `Sqlite`
 - [libimobiledevice](http://www.libimobiledevice.org/)
 
+#算法与数据结构
+- [VisuAlgo \- visualising data structures and algorithms through animation](http://www.comp.nus.edu.sg/~stevenha/visualization/)
+
 #大千世界
 - [任毅飞](http://blog.sina.com.cn/u/1262345964)
 - [胡正](http://www.huzheng.org/)

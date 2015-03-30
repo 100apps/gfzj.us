@@ -22,7 +22,8 @@ Kerberos则是提供一个第三方的认证，无论是用户、服务等，对
 如上图所示，Kerberos由Workstation、Server（KDC）两个部分组成。Workstation即Client端，提供用户使用的一些工具（即命令，如kinit、klist等），KDC是key distribution center的缩写，之前提到的zj通过kerberos认证，就是要到KDC的authentication server(AS)进行认证，认证通过后zj就能从AS获取一个ticket，即TGT。但是zj并不能直接拿着TGT去访问ES，而是拿着TGT跟Ticket-Granting Server(TGS)请求一个Service Ticket，这个ticket才是zj能够用于向ES请求服务的。所以TGT是一个特殊的ticket，用户可以拿着TGT获取想要使用的service的Service Ticket。上图中KDC的一个重要组成部分就是Database，其中存储着已经在KDC注册的Clients的信息，包括用户名、密码等。
 
 1. 术语
-*
+*principal:KDC database中每一条记录就是一个principal。一个用户或者一个服务，只要其在KDC进行了注册，在database中就会有一条相应的记录，这条记录就是其对应的principal
+
 
 [image1]: /images/kerberos_component "kerberos_component"
 

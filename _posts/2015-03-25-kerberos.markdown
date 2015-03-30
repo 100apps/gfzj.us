@@ -11,11 +11,18 @@ description: kerberos简介
 ##What is kerberos##
 最近身陷kerberos，有一点点了解，且这一点点了解也是为了配置secure hadoop，并不深入，但暂可用。
 
-假设一个用户zj，想要访问一个email server（简称ES）使用其email服务，一般来说zj应该是ES的一个注册用户，在登录的时候输入用户名和密码，ES验证zj的输入信息，若正确，则提供服务，否则拒绝为其服务。有一个naughty guy，在zj的用户名密码在网络传输的过程中拿走了zj的个人信息，就此伪装成zj使用ES。上述是一个关于安全的小例子，也许有人说可以使用加密技术，也可行，但是加密也可破解；现在假设说有超过1000的服务可以被访问，zj想要使用任何一个服务就要到这个服务所在的节点去注册，那zj如果是个神经病，他就去注册超过1000次；另外，如果一个服务从当前节点搬迁到另一个节点，该服务就需要告知其所有注册用户更新相应的信息；etc.反正，就是各种麻烦。
+假设一个用户zj，想要访问一个email server（简称ES）使用其email服务，一般来说zj应该是ES的一个注册用户，在登录的时候输入用户名和密码，ES验证zj的输入信息，若正确，则提供服务，否则拒绝为其服务。有一个naughty guy，在zj的用户名密码在网络传输的过程中拿走了zj的个人信息，就此伪装成zj使用ES。上述是一个关于安全的小例子，也许有人说可以使用加密技术，也可行，但是加密也可破解；现在假设说有超过1000个的服务可以被访问，zj想要使用任何一个服务就要到这个服务所在的节点去注册，那zj如果是个神经病，她就去注册超过1000次；另外，如果一个服务从当前节点搬迁到另一个节点，该服务就需要告知其所有注册用户更新相应的信息；etc.反正，就是各种麻烦。
 
-Kerberos则是提供一个第三方的认证，无论是用户、服务等，对于Kerberos来说都是一样的，即Client。Kerberos如何发挥作用的呢？很简单，还以上述ES为例，如果ES启用了Kerberos，那么zj就需要先通过Kerberos认证（你说你是zj，你就要拿出证据证明自己是zj，而不是gf），认证后获得一个身份证明，zj拿着这个身份证就可以跟ES发出请求了,即"我是zj，不是非法分子，都有证了，给你看看，所以让我使用email service吧"，ES拿着这个身份证明验证一下，证明这个自称zj的人确实是zj，那么就授权她使用email service，但是ES又担心zj怀疑自己不是她想请求的服务（毕竟ES也可能是个木马伪装的），所以在给zj授权的时候，顺便证明一下自己就是ES，zj拿到授权后也顺便验证一下ES的身份，若皆大欢喜，则zj可以使用email service啦。
+Kerberos则是提供一个第三方的认证，无论是用户、服务等，对于Kerberos来说都是一样的，即Client，都要到Kerberos进行注册。Kerberos如何发挥作用的呢？很简单，还以上述ES为例，如果ES启用了Kerberos，那么zj就需要先通过Kerberos认证（你说你是zj，你就要拿出证据证明自己是zj，而不是gf），认证后获得一个身份证明，zj拿着这个身份证就可以跟ES发出请求了，即"我是zj，不是不法分子，都有证了，给你看看，所以让我使用email service吧"，ES拿着这个身份证明验证一下，证明这个自称zj的人确实是zj，那么就授权她使用email service，但是ES又担心zj怀疑自己不是她想请求的服务（毕竟ES也可能是个木马伪装的），所以在给zj授权的时候，顺便证明一下自己就是ES，zj拿到授权后也顺便验证一下ES的身份，若皆大欢喜，则zj可以使用email service啦。
 
 上述过程描述的较为简单，实际上认证过程涉及较多。
 
 ###Kerberos Component###
+![kerberos_component][image1]
+如上图所示，Kerberos由Workstation、Server（KDC）两个部分组成。Workstation即Client端，提供用户使用的一些工具（即命令，如kinit、klist等），KDC是key distribution center的缩写，之前提到的zj通过kerberos认证，就是要到KDC的authentication server(AS)进行认证，认证通过后zj就能从AS获取一个ticket，即TGT。但是zj并不能直接拿着TGT去访问ES，而是拿着TGT跟Ticket-Granting Server(TGS)请求一个Service Ticket，这个ticket才是zj能够用于向ES请求服务的。所以TGT是一个特殊的ticket，用户可以拿着TGT获取想要使用的service的Service Ticket。上图中KDC的一个重要组成部分就是Database，其中存储着已经在KDC注册的Clients的信息，包括用户名、密码等。
+
+1. 术语
+*principal:
+
+[image1]: /images/kerberos_component "kerberos_component"
 

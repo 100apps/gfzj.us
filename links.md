@@ -3,6 +3,9 @@ layout: page
 title: 友情链接
 permalink: /links/
 ---
+#news
+- [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
+
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
 

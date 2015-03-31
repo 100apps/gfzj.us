@@ -3,6 +3,10 @@ layout: page
 title: 友情链接
 permalink: /links/
 ---
+#news
+- [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
+- [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
+
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
 
@@ -34,6 +38,8 @@ permalink: /links/
                     </ul>
 
 #技术博客
+- [首页 \- 美团技术团队](http://tech.meituan.com/)
+- [yulingtianxia&#39;s blog](http://yulingtianxia.com/)
 - [Topic:iOS开发 - Wikiversity](http://beta.wikiversity.org/wiki/Topic:iOS%E5%BC%80%E5%8F%91)
 - [SwiftV课堂 - 中国最大的Swift视频学习站](http://www.swiftv.cn/)
 - [麦子学院](http://www.maiziedu.com)

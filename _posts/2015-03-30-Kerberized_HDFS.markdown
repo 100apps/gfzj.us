@@ -80,7 +80,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 		dict_file = /usr/share/dict/words
 		admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
 		supported_enctypes = aes256-cts:normal aes128-cts:normal des3hmac-sha1:normal arcfour-hmac:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
-		}
+	}
 {% endhighlight %}
 上述是对realm进行详细配置，如访问控制列表（ACL）文件路径，支持的加密方式等。
 
@@ -123,8 +123,10 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 创建远程管理的管理员，在node21上执行命令：
 
-	# kadmin.local -q "addprinc root/admin"
+	# kadmin.local -q "addprinc root/admin@HADOOP"
 
 手动输入两次密码即可。
 
 ###Java相关###
+
+待续...

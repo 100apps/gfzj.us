@@ -35,7 +35,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 ###配置###
 我的realm名为HADOOP，在配置kerberos时使用。
 
-#####配置KDC#####
+####配置KDC####
 
 在node21上修改文件/etc/krb5.conf，内容如下：
 
@@ -63,12 +63,68 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 	}
 {% endhighlight %}
 
-[logging]是配置日志目录；配置默认realm为HADOOP；[realms]则是配置每个realm的kdc和admin_server所在节点，此处只有HADOOP的信息，如果有多个realms，可直接追加即可。在admin_server所在节点，如果用户有root权限，就可以直接执行命令kadmin.local，进入kerberos，执行一系列操作。
+[logging]是配置日志文件路径；配置默认realm为HADOOP；[realms]则是配置每个realm的kdc和admin_server所在节点，此处只有HADOOP的信息，如果有多个realms，可直接追加即可。在admin_server所在节点，如果管理员有root权限，就可以直接执行命令kadmin.local，进入kerberos shell，执行一系列操作，如添加principal等。
+
+修改/var/kerberos/krb5kdc/kdc.conf，内容如下：
+	
+{% highlight java %}
+[kdcdefaults]
+	kdc_ports = 88
+	kdc_tcp_ports = 88
+
+[realms]
+	HADOOP = {
+		kadmind_port = 749
+		#master_key_type = aes256-cts
+		acl_file = /var/kerberos/krb5kdc/kadm5.acl
+		dict_file = /usr/share/dict/words
+		admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
+		supported_enctypes = aes256-cts:normal aes128-cts:normal des3hmac-sha1:normal arcfour-hmac:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
+	}
+{% endhighlight %}
+上述是对realm进行详细配置，如访问控制列表（ACL）文件路径，支持的加密方式等。
+
+修改ACL文件内容，即/var/kerberos/krb5kdc/kadm5.acl，内容如下：
+
+	*/admin@HADOOP	*	
+
+之前提到过可以在admin_server所在节点以root身份直接进入kerberos shell进行admin操作，但是，并不是所有的管理员都具有root权限，所以配置ACL文件，给予格式为*/admin@HADOOP的principals管理权限，即使不在admin_server节点，也能够远程登录KDC执行授权的admin操作。
+
+####配置workstation####
+
+将在KDC server配置的文件/etc/krb5.conf 拷贝到集群中所有的workstations即可。
+	
+(省去node21，因为已有）
+
+	# scp /etc/krb5.conf node22:/etc/krb5.conf
+	# scp /etc/krb5.conf node23:/etc/krb5.conf
 
 ###初始化###
 
+为realm HADOOP创建相应的数据库，在node21上执行命令
+
+	# kdb5_util -P 123456 -r HADOOP create -s
+
+该命令默认创建一个名为principal的数据库，当然也可以指定要创建的数据库名，使用-d。如果遇到数据库已经存在的情况，直接删除掉 /var/kerberos/krb5kdc/下与数据库名相关的文件。
 
 ###启动Kerberos###
 
+在node21上执行如下命令启动kerberos服务：
 
-##Java相关##
+	# chkconfig --level 35 krb5kdc on
+	# chkconfig --level 35 kadmin on
+	# service krb5kdc start
+	# service kadmin start
+
+
+###创建管理员###
+
+管理kerberose，可以使用kadmin.local或kadmin。如果有访问 kdc 服务器的 root 权限，但是没有 kerberos admin 账户，使用 kadmin.local。如果没有访问 kdc 服务器的 root 权限，但是用 kerberos admin 账户，使用 kadmin。
+
+创建远程管理的管理员，在node21上执行命令：
+
+	# kadmin.local -q "addprinc root/admin@HADOOP"
+
+手动输入两次密码即可。
+
+###Java相关###

@@ -38,6 +38,7 @@ permalink: /links/
                     </ul>
 
 #技术博客
+- [bang&#8217;s blog](http://blog.cnbang.net/)
 - [首页 \- 美团技术团队](http://tech.meituan.com/)
 - [yulingtianxia&#39;s blog](http://yulingtianxia.com/)
 - [Topic:iOS开发 - Wikiversity](http://beta.wikiversity.org/wiki/Topic:iOS%E5%BC%80%E5%8F%91)

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Kerberized Hadoop系列(1)-what is kerberos"
+title: "Kerberized Hadoop系列(1)-What is Kerberos"
 date: 2015-03-25 17:51:48
-categories: series kerberized hadoop
+categories: series kerberized_hadoop
 by: zj
 keyword: kerberos
 description: kerberos简介

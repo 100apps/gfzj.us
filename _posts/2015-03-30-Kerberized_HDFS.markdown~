@@ -67,21 +67,21 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 修改/var/kerberos/krb5kdc/kdc.conf，内容如下：
 	
-```
+{% highlight java %}
 [kdcdefaults]
-			 kdc_ports = 88
-			 kdc_tcp_ports = 88
+	kdc_ports = 88
+	kdc_tcp_ports = 88
 
-			[realms]
-			 HADOOP = {
-			  kadmind_port = 749
-  			  #master_key_type = aes256-cts
- 			  acl_file = /var/kerberos/krb5kdc/kadm5.acl
-			  dict_file = /usr/share/dict/words
-			  admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
-			  supported_enctypes = aes256-cts:normal aes128-cts:normal des3hmac-sha1:normal arcfour-hmac:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
-			 }
-```
+[realms]
+	HADOOP = {
+		kadmind_port = 749
+		#master_key_type = aes256-cts
+		acl_file = /var/kerberos/krb5kdc/kadm5.acl
+		dict_file = /usr/share/dict/words
+		admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
+		supported_enctypes = aes256-cts:normal aes128-cts:normal des3hmac-sha1:normal arcfour-hmac:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
+		}
+{% endhighlight %}
 上述是对realm进行详细配置，如访问控制列表（ACL）文件路径，支持的加密方式等。
 
 修改ACL文件内容，即/var/kerberos/krb5kdc/kadm5.acl，内容如下：
@@ -93,7 +93,9 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 #####配置workstation#####
 
 将在KDC server配置的文件/etc/krb5.conf 拷贝到集群中所有的workstations即可。
-	(省去node21，因为已有）
+	
+(省去node21，因为已有）
+
 	# scp /etc/krb5.conf node22:/etc/krb5.conf
 	# scp /etc/krb5.conf node23:/etc/krb5.conf
 
@@ -109,15 +111,20 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 在node21上执行如下命令启动kerberos服务：
 
-```
-# chkconfig --level 35 krb5kdc on
-# chkconfig --level 35 kadmin on
-# service krb5kdc start
-# service kadmin start
-```
+	# chkconfig --level 35 krb5kdc on
+	# chkconfig --level 35 kadmin on
+	# service krb5kdc start
+	# service kadmin start
+
 
 ###创建管理员###
 
+管理kerberose，可以使用kadmin.local或kadmin。如果有访问 kdc 服务器的 root 权限，但是没有 kerberos admin 账户，使用 kadmin.local。如果没有访问 kdc 服务器的 root 权限，但是用 kerberos admin 账户，使用 kadmin。
 
+创建远程管理的管理员，在node21上执行命令：
+
+	# $ kadmin.local -q "addprinc root/admin"
+
+手动输入两次密码即可。
 
 ##Java相关##

@@ -35,7 +35,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 ###配置###
 我的realm名为HADOOP，在配置kerberos时使用。
 
-#####配置KDC#####
+####配置KDC####
 
 在node21上修改文件/etc/krb5.conf，内容如下：
 
@@ -90,7 +90,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 之前提到过可以在admin_server所在节点以root身份直接进入kerberos shell进行admin操作，但是，并不是所有的管理员都具有root权限，所以配置ACL文件，给予格式为*/admin@HADOOP的principals管理权限，即使不在admin_server节点，也能够远程登录KDC执行授权的admin操作。
 
-#####配置workstation#####
+####配置workstation####
 
 将在KDC server配置的文件/etc/krb5.conf 拷贝到集群中所有的workstations即可。
 	
@@ -127,4 +127,4 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 手动输入两次密码即可。
 
-##Java相关##
+###Java相关###

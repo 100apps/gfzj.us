@@ -128,3 +128,18 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 手动输入两次密码即可。
 
 ###Java相关###
+
+在配置kdc.conf时，支持的加密方式有AES-256，对于使用 centos5. 6及以上的系统，默认使用 AES-256 来加密的，java默认不支持，需换jar包。到oracle官网下载相应版本的JCE jar（点击下载[java7 JCE](http://www.oracle.com/technetwork/java/embedded/embedded-se/downloads/jce-7-download-432124.html "java7 JCE")），解压zip文件后，将jar文件拷贝到目录$JAVA_HOME/jre/lib/security。
+
+##配置Kerberized HDFS##
+
+主要分为两个部分：在KDC为HDFS添加相关信息，如principal；修改HDFS配置文件，启用安全模式，并设置kerberos相关信息。
+
+###Kerberos端的工作###
+####创建HDFS principals####
+
+###HDFS端的工作###
+
+
+
+待续...

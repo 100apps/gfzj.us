@@ -17,3 +17,9 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 还在微博上@了一下大牛，也没有什么回复。
 
 这篇文章持续更新，直到我得到我想要的答案。
+
+查看libobjc.A.dylib的函数
+
+	nm -gU /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib/libobjc.A.dylib
+	nm -gU /usr/lib/libobjc.A.dylib
+

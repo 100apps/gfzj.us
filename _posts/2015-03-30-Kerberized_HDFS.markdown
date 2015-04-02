@@ -139,8 +139,104 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 ####创建HDFS principals####
 
+NameNode 和 DataNode 是通过用户hdfs启动的，故为集群中每个服务器节点添加hdfs的principal；另外为每个节点添加HTTP的principal。
+
+在KDC (即node21)上创建hdfs principle，并随机生成密钥
+
+	#kadmin.local
+	addprinc -randkey hdfs/node21@HADOOP
+	addprinc -randkey hdfs/node22@HADOOP
+	addprinc -randkey hdfs/node23@HADOOP
+
+
+创建HTTP principle：
+
+	addprinc -randkey hdfs/node21@HADOOP
+	addprinc -randkey hdfs/node22@HADOOP
+	addprinc -randkey hdfs/node23@HADOOP
+
+
+####生成keytab文件####
+
+每个节点上只存储自己对应的principals的keytab文件。 keytab文件名必须是生成principals对应的服务名称，如果你为 HDFS 生成一个 keytab文件,则文件名必须为 hdfs.keytab 。
+
+创建一个名为/tmp/hdfs_keytabs 的目录。
+在该目录下，执行
+
+	# kadmin.local 
+	ktadd -k hdfs_21.keytab hdfs/node21@HADOOP
+	ktadd -k hdfs_21.keytab HTTP/node21@HADOOP
+	ktadd -k hdfs_22.keytab hdfs/node22@HADOOP
+	ktadd -k hdfs_22.keytab HTTP/node22@HADOOP
+	ktadd -k hdfs_23.keytab hdfs/node23@HADOOP
+	ktadd -k hdfs_23.keytab HTTP/node23@HADOOP
+
+生成的keytab文件就在 /tmp/hdfs_keytabs下。
+
+####部署keytab文件####
+
+将每个keytab文件拷贝到相应的节点的/etc下，并命名为hdfs.keytab文件：
+
+	# scp hdfs_21.keytab root@node21:/etc/hdfs.keytab
+	# scp hdfs_22.keytab root@node22:/etc/hdfs.keytab
+	# scp hdfs_23.keytab root@node23:/etc/hdfs.keytab
+	
+keytab文件内容敏感，在每个节点上将其owner改为hdfs:hadoop，权限改为400:
+
+	# chown hdfs:hadoop /etc/hdfs.keytab; chmod 400 /etc/hdfs.keytab
+
 ###HDFS端的工作###
 
+停掉集群。
+
+####启动安全模式####
+
+修改集群中所有节点的core-site.xml，添加如下内容：
+
+{% highlight xml %}
+<property>
+    <name>hadoop.security.authentication</name>
+    <value>kerberos</value>
+</property>
+<property>
+  <name>hadoop.security.authorization</name>
+  <value>true</value>
+</property>
+{% endhighlight %}
+
+
+####配置hdfs-site.xml####
+
+分别为NameNode、JounalNode、Secondary NameNode、DataNode等配置principal及其keytab文件的路径。
+
+为NameNode添加安全配置：
+
+{% highlight xml %}
+  <property>
+    <name>dfs.namenode.keytab.file</name>
+    <value>/etc/hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.principal</name>
+    <value>hdfs/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.keytab.file</name>
+    <value>/etc/hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.kerberos.principal</name>
+    <value>hdfs/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@HADOOP</value>
+  </property>
+{% endhighlight %}
 
 
 待续...

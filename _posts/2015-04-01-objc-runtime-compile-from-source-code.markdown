@@ -23,3 +23,6 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 	nm -gU /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib/libobjc.A.dylib
 	nm -gU /usr/lib/libobjc.A.dylib
 
+<http://stackoverflow.com/questions/25590945/trouble-when-linking-objective-c-program-with-my-own-libobjc-a-dylib> 解释了如何替换`libobjc.A.dylib`
+
+(The Objective-C Runtime:  Understanding and Abusing)[http://phrack.org/issues/66/4.html]

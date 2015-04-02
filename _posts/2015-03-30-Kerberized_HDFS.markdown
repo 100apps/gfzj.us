@@ -139,8 +139,205 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 ####创建HDFS principals####
 
+NameNode 和 DataNode 是通过用户hdfs启动的，故为集群中每个服务器节点添加hdfs的principal；另外为每个节点添加HTTP的principal。
+
+在KDC (即node21)上创建hdfs principle，并随机生成密钥
+
+	#kadmin.local
+	addprinc -randkey hdfs/node21@HADOOP
+	addprinc -randkey hdfs/node22@HADOOP
+	addprinc -randkey hdfs/node23@HADOOP
+
+
+创建HTTP principle：
+
+	addprinc -randkey hdfs/node21@HADOOP
+	addprinc -randkey hdfs/node22@HADOOP
+	addprinc -randkey hdfs/node23@HADOOP
+
+
+####生成keytab文件####
+
+每个节点上只存储自己对应的principals的keytab文件。 keytab文件名必须是生成principals对应的服务名称，如果你为 HDFS 生成一个 keytab文件，则文件名必须为 hdfs.keytab 。
+
+创建一个名为/tmp/hdfs_keytabs 的目录。
+在该目录下，执行
+
+	# kadmin.local 
+	ktadd -k hdfs_21.keytab hdfs/node21@HADOOP
+	ktadd -k hdfs_21.keytab HTTP/node21@HADOOP
+	ktadd -k hdfs_22.keytab hdfs/node22@HADOOP
+	ktadd -k hdfs_22.keytab HTTP/node22@HADOOP
+	ktadd -k hdfs_23.keytab hdfs/node23@HADOOP
+	ktadd -k hdfs_23.keytab HTTP/node23@HADOOP
+
+生成的keytab文件就在 /tmp/hdfs_keytabs下。
+
+####部署keytab文件####
+
+将每个keytab文件拷贝到相应的节点的/etc下，并命名为hdfs.keytab文件：
+
+	# scp hdfs_21.keytab root@node21:/etc/hdfs.keytab
+	# scp hdfs_22.keytab root@node22:/etc/hdfs.keytab
+	# scp hdfs_23.keytab root@node23:/etc/hdfs.keytab
+	
+keytab文件内容敏感，在每个节点上将其owner改为hdfs:hadoop，权限改为400:
+
+	# chown hdfs:hadoop /etc/hdfs.keytab; chmod 400 /etc/hdfs.keytab
+
 ###HDFS端的工作###
 
+停掉集群。
+
+####启动安全模式####
+
+修改集群中所有节点的core-site.xml，添加如下内容：
+
+{% highlight xml %}
+<property>
+    <name>hadoop.security.authentication</name>
+    <value>kerberos</value>
+</property>
+<property>
+  <name>hadoop.security.authorization</name>
+  <value>true</value>
+</property>
+{% endhighlight %}
 
 
-待续...
+####配置hdfs-site.xml####
+
+分别为NameNode、JounalNode、Secondary NameNode、DataNode等配置principal及其keytab文件的路径。
+
+为NameNode添加安全配置：
+
+{% highlight xml %}
+  <property>
+    <name>dfs.namenode.keytab.file</name>
+    <value>/etc/hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.principal</name>
+    <value>hdfs/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.namenode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.keytab.file</name>
+    <value>/etc/hdfs.keytab</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.kerberos.principal</name>
+    <value>hdfs/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.journalnode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@HADOOP</value>
+  </property>
+{% endhighlight %}
+
+_HOST会在HDFS启动登录KDC时替换为hostname。在以上配置中看到，对jounalnode进行了配置，这样的话，就要求此时Zookeeper已经配置了Kerberos，同时不需要再配置secondary namenode了，但是如果需要配置secondary namenode，就再添加如下内容：
+
+{% highlight xml %}
+  <property>
+    <name>dfs.secondary.namenode.keytab.file</name>
+    <value>/etc/hdfs.keytab</value> 
+  </property>
+  <property>
+    <name>dfs.secondary.namenode.kerberos.principal</name>
+    <value>hdfs/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.secondary.namenode.kerberos.internal.spnego.principal</name>
+    <value>HTTP/_HOST@HADOOP</value>
+  </property>
+{% endhighlight %}
+
+为DataNode进行安全配置：
+
+{% highlight xml %}
+<property>
+    <name>dfs.datanode.data.dir.perm</name>   <!--该属性原文件已有，此处修改-->
+    <value>700</value>
+  </property>
+  <property>
+    <name>dfs.datanode.keytab.file</name>
+    <value>/etc/hdfs.keytab</value> 
+  </property>
+  <property>
+    <name>dfs.datanode.kerberos.principal</name>
+    <value>hdfs/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.web.authentication.kerberos.principal</name>
+    <value>HTTP/_HOST@HADOOP</value>
+  </property>
+  <property>
+    <name>dfs.web.authentication.kerberos.keytab</name>
+    <value>/etc/hdfs.keytab</value>
+  </property>
+ <property>
+    <name>dfs.datanode.address</name>      <!--该属性原文件已有，此处修改-->
+    <value>0.0.0.0:1002</value>
+  </property>
+  <property>
+    <name>dfs.datanode.http.address</name>    <!--该属性原文件已有，此处修改-->
+    <value>0.0.0.0:1004</value>
+  </property>
+{% endhighlight %}
+
+dfs.datanode.address表示 data transceiver RPC server 所绑定的 hostname 或 IP 地址，如果开启 security，端口号必须小于 1024(privileged port)，否则的话启动 datanode 时候会报 Cannot start secure cluster without privileged resources 错误。
+
+####启动集群####
+
+重启已经停掉的集群
+
+#####启动NameNode#####
+
+在node21上启动，启动前先获取所需要的ticket，即用户hdfs的principal hdfs/node21@HADOOP的TGT： 
+
+	# kinit -k -t /etc/hdfs.keytab hdfs/node21@HADOOP
+	# klist                 //查看ticket信息
+	# service hadoop-hdfs-namenode start     //启动NameNode
+	# service hadoop-hdfs-namenode status    //看一下是否启动成功。
+
+#####启动DataNode#####
+
+启动node21 DataNode：
+
+       # service hadoop-hdfs-datanode start
+
+启动node22 DataNode（在node22）：
+
+       # kinit -k -t /etc/hdfs.keytab hdfs/node22@HADOOP
+
+       # service hadoop-hdfs-datanode start
+
+node23 DataNode的启动如node22一样.
+
+###测试###
+
+执行：
+	# klist
+
+查看当前是否有Ticket，因为之前在每个节点上都执行了kinit，所以应该是有的。但是，一个HDFS用户一般是没有hdfs principal的Ticket的，所以默认应该是没有Ticket的，执行：
+
+	# kdestroy
+
+清空一下cache。
+
+在cache中没有任何Ticket的情况下执行：
+
+	# hdfs dfs -ls /
+
+报错：会报出错误No valid credentials provided (Mechanism level: Failed to find any Kerberos tgt)]，就是说，当前用户没有通过认证，无法访问HDFS。
+
+所以现在为当前用户添加一个principal，在node21上：
+
+	# kadmin.local
+	kadmin.local:  addprinc test@HADOOP        //会要求输入密码，输入即可，记住此密码
+	kadmin.local:  exit
+	# kinit test@HADOOP
+	# hdfs dfs -ls /          //成功

@@ -72,6 +72,7 @@ permalink: /links/
 - [淘测试](http://www.taobaotest.com/blogs)
 
 #神器
+- [云编程，屌炸天](https://ide.c9.io)
 - [录制终端](https://showterm.io/) [ttyrec](http://0xcc.net/ttyrec/index.html.en) [ttyrec2gif](https://github.com/icholy/ttygif)
 - [Tmux](http://tmux.sourceforge.net/)
 - [Count Lines Of Code `cloc`](https://downloads.sourceforge.net/project/cloc/)

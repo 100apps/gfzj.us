@@ -30,3 +30,5 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 	OBJC_HELP=1 ./a.out #显示debug 信息
 	NSObjCMessageLoggingEnabled=Yes ./a.out
 
+
+<https://github.com/RetVal/objc4-532.2> build on OSX Yosemite 10.10.2 (14C109)

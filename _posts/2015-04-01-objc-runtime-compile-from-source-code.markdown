@@ -28,7 +28,7 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 [The Objective-C Runtime:  Understanding and Abusing](http://phrack.org/issues/66/4.html)
 
 	OBJC_HELP=1 ./a.out #显示debug 信息
-	NSObjCMessageLoggingEnabled=Yes ./a.out
+	NSObjCMessageLoggingEnabled=Yes ./a.out #在/tmp/msgSend-xx生成
 
 
 <https://github.com/RetVal/objc4-532.2> build on OSX Yosemite 10.10.2 (14C109)

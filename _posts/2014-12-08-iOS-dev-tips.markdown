@@ -317,3 +317,15 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 
 #Xcode->debug菜单很强大
 比如截屏（保存到桌面），view frame bounds等。可以设置快捷键。非常方便
+
+#objc category全局改变backBarButtonItem
+
+{%highlight objc%}
+#import "UINavigationItem+XDNav.h"
+
+@implementation UINavigationItem (XDNav)
+-(UIBarButtonItem*)backBarButtonItem{
+    return [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+}
+@end
+{%endhighlight%}

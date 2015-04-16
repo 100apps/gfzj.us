@@ -35,7 +35,8 @@ permalink: /links/
 <li><a href="http://www.seowebber.com/">seo webber</a></li>
 <li><a href="http://www.yinfeng.me/">正见的博客</a></li>
 <li><a href="http://evilat.com/">evilat</a></li>
-                    </ul>
+<li><a href="http://blog.cnbluebox.com/">刘坤的技术博客</a></li>
+</ul>
 
 #技术博客
 - [Phrack Magazine](http://phrack.org)
@@ -71,7 +72,6 @@ permalink: /links/
 - [不会开机的男孩](http://studentdeng.github.io)
 - [淘测试](http://www.taobaotest.com/blogs)
 - [Casa Taloyum](http://casatwy.com/)
-- [刘坤的技术博客](http://blog.cnbluebox.com/)
 
 #神器
 - [云编程，屌炸天](https://ide.c9.io)

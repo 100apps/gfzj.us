@@ -380,6 +380,8 @@ host.txt内容：
 
 这样我们可以通过:
 
-		<http://server:port/[dump/set/save]>
+		http://server:port/[dump/set/save]
 
 来管理dns服务器，并且服务器还能每隔10分钟，自动save一次。
+
+代码同步在Github上，以后如有更新，以Github为准: <https://github.com/100apps/DNSd>

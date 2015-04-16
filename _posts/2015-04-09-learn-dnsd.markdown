@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "用node.js实现一个dns服务器"
+title: "用java实现一个dns服务器"
 date: 2015-04-09 10:53:02
 category: tech
 by: gf

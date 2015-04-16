@@ -70,6 +70,8 @@ permalink: /links/
 - [放慢脚步](http://blog.codingcoder.com/)
 - [不会开机的男孩](http://studentdeng.github.io)
 - [淘测试](http://www.taobaotest.com/blogs)
+- [Casa Taloyum](http://casatwy.com/)
+- [刘坤的技术博客](http://blog.cnbluebox.com/)
 
 #神器
 - [云编程，屌炸天](https://ide.c9.io)

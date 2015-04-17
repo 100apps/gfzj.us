@@ -16,7 +16,7 @@ description: 配置ZooKeeper的Kerberos
 
 在KDC上创建ZooKeeper principals，并随机生成密钥：
 
-{% high light java %}
+{% highlight java %}
 
 \# kadmin.local
 addprinc -randkey zookeeper/node21@HADOOP
@@ -32,7 +32,7 @@ listprincs
 
 创建名为/tmp/zookeeper_keytabs的目录，在该目录下执行：
 
-{% high light java %}
+{% highlight java %}
 
 \# kadmin.local 
 ktadd -k zookeeper_21.keytab zookeeper/node21@HADOOP
@@ -68,7 +68,7 @@ ktadd -k zookeeper_23.keytab zookeeper/node23@HADOOP
 
 在/ZOOKEEPER_CONF/创建JAAS（Java Authentication and Authorization Service）配置文件，内容如下（每个节点的principal不同，以node21为例）：
 
-{% high light java %}
+{% highlight java %}
 
 Server {
   com.sun.security.auth.module.Krb5LoginModule required

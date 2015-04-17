@@ -91,4 +91,12 @@ Server {
 
 记得将ZOOKEEPER_CONF替换为实际的配置文件所在目录的路径。
 
+###重启集群###
+
+在集群中的每个节点上，执行如下（以node21为例）：
+
+	# kinit -k -t /etc/zookeeper.keytab zookeeper/node21@HADOOP
+	# klist                 //查看ticket信息
+	# service zookeeper-server restart 
+
 [link1]: http://www.gfzj.us/series/kerberized_hadoop/2015/03/31/Kerberized_HDFS.html "Kerberized_HDFS"

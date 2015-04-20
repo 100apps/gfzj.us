@@ -72,6 +72,7 @@ permalink: /links/
 - [不会开机的男孩](http://studentdeng.github.io)
 - [淘测试](http://www.taobaotest.com/blogs)
 - [Casa Taloyum](http://casatwy.com/)
+- [Subjective\-C](http://subjc.com/)
 
 #神器
 - [云编程，屌炸天](https://ide.c9.io)

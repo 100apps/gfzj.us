@@ -12,7 +12,7 @@ description: 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷
 
 首先Mac上面是不需要安装android驱动的。但是需要`fastboot`和`adb（可选）`。这个可以通过下载：
 
-	https://dl-ssl.google.com/android/repository/platform-tools_r*22*-macosx.zip
+	https://dl-ssl.google.com/android/repository/platform-tools_r22-macosx.zip
 	#其中r22是API版本号，查版本号：
 	http://source.android.com/source/build-numbers.html
 
@@ -26,11 +26,11 @@ description: 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷
 
 如果已经可以用`adb`连接手机，那么直接运行：
 	
-	adb reboot recovery
+	adb reboot bootloader
 
 > 如果运行adb devices看不到自己的设备，可能是没有开启「开发者选项」。如果在「设置」里面看不到，可以到「关于手机」，点击7下「版本号」，就出来了。
 
-如果不想用adb重启，可以直接关机，按住电源键＋声音下，就进入recovery了。
+如果不想用adb重启，可以直接关机，按住电源键＋声音下，就进入bootloader了。
 
 这时候看看手机上的显示，device是否unlock，如果是locked，就运行：
 

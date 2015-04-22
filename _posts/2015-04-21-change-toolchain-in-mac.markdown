@@ -44,3 +44,15 @@ description: 有的时候我们的mac安装了多个版本的工具链，比如�
 3. 设置DEVELOPER_DIR和JAVA_HOME
 4. config：./configure --enable-debug --with-target-bits=64 --with-freetype=/usr/X11
 5. make JOBS=2
+
+Mac下面还有几个特殊的跟构建工具链有关的变量：
+
+	DEVELOPER_DIR=$(xcode-select -print-path)
+	export PATH=$(/usr/sbin/sysctl -n user.cs_path):${DEVELOPER_DIR}/bin:${DEVELOPER_DIR}/sbin
+	export MACOSX_DEPLOYMENT_TARGET=$(sw_vers -productVersion | cut -d. -f-2)
+	export SDKROOT=$(xcodebuild -version -sdk macosx${MACOSX_DEPLOYMENT_TARGET} | sed -n '/^Path: /s///p')
+	export CC=$(xcrun -find gcc)
+	export CXX=$(xcrun -find g++)
+	export CPPFLAGS="-isysroot ${SDKROOT}"
+	export LDFLAGS="-Wl,-syslibroot,${SDKROOT}"
+

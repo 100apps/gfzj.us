@@ -58,7 +58,6 @@ Mac下面还有几个特殊的跟构建工具链有关的变量：
 
 当然，我们从Xcode的日志中，也能找到一份颇全的环境变量：
 
-```bash
 	export ACTION=build
     export ALTERNATE_GROUP=staff
     export ALTERNATE_MODE=u+w,go-w,a+rX
@@ -382,4 +381,3 @@ Mac下面还有几个特殊的跟构建工具链有关的变量：
     export YACC=yacc
     export arch=x86_64
     export variant=normal
-```

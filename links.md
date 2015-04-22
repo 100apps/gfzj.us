@@ -113,6 +113,7 @@ permalink: /links/
 - [Flurry](https://dev.flurry.com/home.do)
 - [iOS逆向](http://weibo.com/iosre)
 - [Ford developer programe](https://www.developer.ford.com)
+- [中文版 Apple 官方 Swift 教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
 
 #社区
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)

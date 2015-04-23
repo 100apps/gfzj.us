@@ -43,7 +43,7 @@ description: 有的时候我们的mac安装了多个版本的工具链，比如�
 1. 下载XCode 5.1.1(官方地址：<https://developer.apple.com/downloads/index.action> 需要开发者账号)
 2. 下载xquartz 2.7.5(下载地址：<http://xquartz.macosforge.org/trac/wiki/Releases>,注意版本)
 3. 设置DEVELOPER_DIR和JAVA_HOME
-4. config：./configure --enable-debug --with-target-bits=64 --with-freetype=/usr/X11
+4. config：./configure \--enable-debug \--with-target-bits=64 \--with-freetype=/usr/X11
 5. make JOBS=2
 
 Mac下面还有几个特殊的跟构建工具链有关的变量：

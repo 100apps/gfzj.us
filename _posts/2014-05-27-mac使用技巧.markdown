@@ -59,3 +59,16 @@ permalink: /tech/138.html
 ## 在同一个应用中切换 2014年09月17日20:33:06 ##
 
 xcode使用过程中，一个窗口打开一个项目，切换起来比较麻烦，command+~ 可以在同一个应用中切换，非常方便
+
+## 挂载可读写的NTFS分区
+
+	sudo -s
+	cd /sbin
+	mv mount_ntfs mount_ntfs_orig
+	vim mount_ntfs
+	#写入下面的代码
+	#!/bin/sh
+	/sbin/mount_ntfs_orig -o rw,nobrowse "$@"
+	#EOF
+	chmod a+x mount_ntfs
+

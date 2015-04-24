@@ -60,6 +60,7 @@ permalink: /tech/138.html
 
 xcode使用过程中，一个窗口打开一个项目，切换起来比较麻烦，command+~ 可以在同一个应用中切换，非常方便
 
+
 ## 挂载可读写的NTFS分区
 
 	sudo -s

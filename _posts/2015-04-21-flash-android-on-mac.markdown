@@ -63,5 +63,9 @@ description: 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷
 	fastboot flash userdata userdata.img 
 	fastboot flash boot boot.img
 
+<span style='color:red'>或者</span>直接运行
+
+	fastboot -w flashall
+
 然后用音量键，选择"Recoery"，点击电源键，重启。此时会进入一个android小图标，没有其他显示，不要怕，短按 音量键上＋电源键。如果没反应，就松手，继续按几下，不出意外应该就会进入recovery模式了。选择
 `Wipe data/factory data reset"`，然后重启。这次重启可能持续的时候会比较长（我的手机用了大概2分钟）。

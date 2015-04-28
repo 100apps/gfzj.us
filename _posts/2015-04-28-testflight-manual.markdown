@@ -4,9 +4,9 @@ title: "testflight使用"
 date: 2015-04-28 08:42:17
 category: tech
 by: gf
-description: Apple很早就收购了testflight，现在testflight都是继承到iTunes Connect中了，方便内测。
+description: Apple很早就收购了testflight，现在testflight早已集成到iTunes Connect中了，方便内测。
 ---
-Apple很早就收购了testflight，现在testflight都是继承到iTunes Connect中了，方便内测。最近项目用到了testflight，记录一下使用方法。
+description: Apple很早就收购了testflight，现在testflight早已集成到iTunes Connect中了，方便内测。。最近项目用到了testflight，记录一下使用方法。
 
 testflight账号分两大类：
 
@@ -33,5 +33,5 @@ testflight账号分两大类：
 
 testfligth使用还是很方便的，能主动push版本更新，使用简便。testflight还有统计功能，后台可以看看，哪个设备安装了哪个版本。但是testflight目前还不支持安装历史版本，一旦一个新的build上传，原来的老版本就会变得不可用，这个有时候是不科学的。
 
-如果只是公司内部开发和测试用，还是建议用原来的打包ipa内网直接点击下载的方法，如果没有enterprise账号，因为是自己人，所以搜集udid应该也不难。而且放在内网，速度也快，方便自己控制。但是如果要展示给客户／老板看内侧版本，用testfligth的「外部测试员」功能还是很方便的，只需要搜集一个邮箱即可。当然如果有enterprise账号，用testflight就纯属没麻烦给自己制造麻烦了。
+如果只是公司内部开发和测试用，还是建议用原来的打包ipa内网直接点击下载的方法，如果没有enterprise账号，因为是自己人，所以搜集udid应该也不难。而且放在内网，速度也快，方便自己控制。但是如果要展示给客户／老板看内测版本，用testfligth的「外部测试员」功能还是很方便的，只需要搜集一个邮箱即可。当然如果有enterprise账号，用testflight就纯属没麻烦给自己制造麻烦了。
 

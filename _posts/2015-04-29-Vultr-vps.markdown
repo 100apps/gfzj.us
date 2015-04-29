@@ -24,4 +24,4 @@ description: 最近linode vps到期了。合租的人都自己买vps了，最后
 
 另外，vultr的vps是支持virtual box的，比如我买了一个5$/月的vps，安装了ubuntu，然后在上面[安装virtualbox](http://www.gfzj.us/tech/75.html)，可以跑一个xp：
 
-![vbox on vultr](/images/vbox-on-vultr.jpg)
+![vbox on vultr](/images/vbox-on-vultr.png)

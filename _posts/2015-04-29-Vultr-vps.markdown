@@ -13,10 +13,10 @@ description: 最近linode vps到期了。合租的人都自己买vps了，最后
 
 但是首先，msdn原版的windows镜像，是不能安装的，需要集成VirtIO drivers，幸好已经有人做了：
 
-- http://dl03.miefen.com/os/cn_win_srv_2003_r2_enterprise_x64_with_sp2_vl_cd_merger_incl_virtio_X13-140502-homemade-by-Jetso.iso
-- http://dl03.miefen.com/os/cn_win_srv_2003_r2_enterprise_with_sp2_vl_cd_merger_incl_virtio_X13-140502-homemade-by-Jetso.iso
-- http://dl03.miefen.com/os/en_win_xp_pro_x64_with_sp2_vl_incl_virtio_X13-140502-homemade-by-Jetso.iso
-- http://dl03.miefen.com/os/zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_vl_incl_virtio_x14-140508-homemade-by-Jetso.iso
+- <http://dl03.miefen.com/os/cn_win_srv_2003_r2_enterprise_x64_with_sp2_vl_cd_merger_incl_virtio_X13-140502-homemade-by-Jetso.iso>
+- <http://dl03.miefen.com/os/cn_win_srv_2003_r2_enterprise_with_sp2_vl_cd_merger_incl_virtio_X13-140502-homemade-by-Jetso.iso>
+- <http://dl03.miefen.com/os/en_win_xp_pro_x64_with_sp2_vl_incl_virtio_X13-140502-homemade-by-Jetso.iso>
+- <http://dl03.miefen.com/os/zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_vl_incl_virtio_x14-140508-homemade-by-Jetso.iso>
 
 ![Vultr 安装windows 2003](/images/vultr-windows.png)
 
@@ -24,4 +24,4 @@ description: 最近linode vps到期了。合租的人都自己买vps了，最后
 
 另外，vultr的vps是支持virtual box的，比如我买了一个5$/月的vps，安装了ubuntu，然后在上面[安装virtualbox](http://www.gfzj.us/tech/75.html)，可以跑一个xp：
 
-![vbox on vultr](/images/vbox-on-vultr.png)
+![vbox on vultr](/images/vbox-on-vultr.jpg)

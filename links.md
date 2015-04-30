@@ -7,6 +7,7 @@ permalink: /links/
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
 - [Papers We Love](http://paperswelove.org/)
+
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
 

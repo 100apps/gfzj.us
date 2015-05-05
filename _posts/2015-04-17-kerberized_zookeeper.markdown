@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kerberized Hadoop系列(2)-Kerberized ZooKeeper"
+title: "Kerberized Hadoop系列(3)-Kerberized ZooKeeper"
 date: 2015-04-17 15:37:57
 categories: series kerberized_hadoop
 by: zj
@@ -18,7 +18,7 @@ description: 配置ZooKeeper的Kerberos
 
 {% highlight java %}
 
-\# kadmin.local
+# kadmin.local
 addprinc -randkey zookeeper/node21@HADOOP
 addprinc -randkey zookeeper/node22@HADOOP
 addprinc -randkey zookeeper/node23@HADOOP
@@ -34,7 +34,7 @@ listprincs
 
 {% highlight java %}
 
-\# kadmin.local 
+# kadmin.local 
 ktadd -k zookeeper_21.keytab zookeeper/node21@HADOOP
 ktadd -k zookeeper_22.keytab zookeeper/node22@HADOOP
 ktadd -k zookeeper_23.keytab zookeeper/node23@HADOOP

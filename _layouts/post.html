@@ -8,6 +8,7 @@ layout: default
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
 
+
 {% if page.categories[0] == 'series' %}
  <div class="series">
  <h3>本文为系列文章<strong>{{page.categories[1]}}</strong>中的一篇，相关文章：</h3>

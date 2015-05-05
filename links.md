@@ -6,6 +6,7 @@ permalink: /links/
 #news
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
+- [Papers We Love](http://paperswelove.org/)
 
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
@@ -72,6 +73,10 @@ permalink: /links/
 - [不会开机的男孩](http://studentdeng.github.io)
 - [淘测试](http://www.taobaotest.com/blogs)
 - [Casa Taloyum](http://casatwy.com/)
+- [Subjective\-C](http://subjc.com/)
+- ————————————————
+- [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
+
 
 #神器
 - [云编程，屌炸天](https://ide.c9.io)
@@ -109,6 +114,7 @@ permalink: /links/
 - [Flurry](https://dev.flurry.com/home.do)
 - [iOS逆向](http://weibo.com/iosre)
 - [Ford developer programe](https://www.developer.ford.com)
+- [中文版 Apple 官方 Swift 教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
 
 #社区
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)

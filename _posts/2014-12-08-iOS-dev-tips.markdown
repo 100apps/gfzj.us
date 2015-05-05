@@ -329,3 +329,16 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 }
 @end
 {%endhighlight%}
+
+#通过类的categoery简化
+
+比如
+
+    @import UIKit;
+    @interface UIColor (AAPLApplicationSpecific)
+    + (UIColor *)aapl_applicationGreenColor;
+    + (UIColor *)aapl_applicationBlueColor;
+    + (UIColor *)aapl_applicationPurpleColor;
+    @end
+
+这样可以定义全局的颜色

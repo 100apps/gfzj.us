@@ -40,6 +40,7 @@ permalink: /links/
 </ul>
 
 #技术博客
+- [Research at Google](https://research.google.com/)
 - [Phrack Magazine](http://phrack.org)
 - [Jeswang's Blog](http://blog.jeswang.org/)
 - [bang&#8217;s blog](http://blog.cnbang.net/)

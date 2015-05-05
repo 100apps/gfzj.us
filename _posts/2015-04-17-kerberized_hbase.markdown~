@@ -34,7 +34,7 @@ listprincs
 
 {% highlight java %}
 
-\# kadmin.local 
+# kadmin.local 
 ktadd -k hbase_21.keytab hbase/node21@HADOOP
 ktadd -k hbase_22.keytab hbase/node22@HADOOP
 ktadd -k hbase_23.keytab hbase/node23@HADOOP
@@ -187,15 +187,12 @@ HBase是通过ACL对clients进行授权管理的。
 用户hbase就是所谓的superuser，以hbase用户身份使用hbase shell，授权用户zj权限RWC（read、write、create）：
 
 	# kinit -k -t /etc/hbase.keytab hbase/tw-node130@TDH
-
 	hbase(main):001:0> grant 'zj', 'RWC'
 
 再重新以test身份使用hbase shell:
 
 	# kinit zj@TDH
-
 	# hbase shell
-
 	hbase(main):001:0> create 'student','grade','course'
 
 成功。

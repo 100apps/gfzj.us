@@ -34,7 +34,7 @@ listprincs
 
 {% highlight java %}
 
-\# kadmin.local 
+# kadmin.local 
 ktadd -k hbase_21.keytab hbase/node21@HADOOP
 ktadd -k hbase_22.keytab hbase/node22@HADOOP
 ktadd -k hbase_23.keytab hbase/node23@HADOOP
@@ -197,5 +197,7 @@ HBase是通过ACL对clients进行授权管理的。
 
 成功。
 
-hbase权限管理见http://archive.cloudera.com/cdh5/cdh/5/hbase/book/hbase.accesscontrol.configuration.html
+hbase权限管理详见链接
+
+	http://archive.cloudera.com/cdh5/cdh/5/hbase/book/hbase.accesscontrol.configuration.html
 

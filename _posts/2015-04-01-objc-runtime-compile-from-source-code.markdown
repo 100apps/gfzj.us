@@ -30,5 +30,7 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 	OBJC_HELP=1 ./a.out #显示debug 信息
 	NSObjCMessageLoggingEnabled=Yes ./a.out #在/tmp/msgSend-xx生成
 
+对于Xcode，我们可以在project->schema中设置(command+<)：
+![设置iOS模拟器](/images/xcode-schema.png)
 
 <https://github.com/RetVal/objc4-532.2> build on OSX Yosemite 10.10.2 (14C109)

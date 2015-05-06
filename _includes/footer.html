@@ -97,12 +97,11 @@ var duoshuoQuery = {short_name:"gfzjus"};
 <script type="text/javascript">
     BAIDU_CLB_fillSlotAsync('1080633','PAGE_AD_1');
     var aliAd=setInterval(function(){
-      var style=document.getElementById("tk_box_1").style.border;
-      if(style=="none"){
-        clearInterval(aliAd);
-      }else{
-        style="none";
-      }
+      if(document.getElementById("tk_box_1").style.border=="none"){
+       clearInterval(aliAd);
+     }else{
+       document.getElementById("tk_box_1").style.border="none";
+     }
     },1000);
 </script>
 

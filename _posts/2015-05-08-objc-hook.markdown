@@ -10,7 +10,7 @@ description: 最近调试一个程序，需要打印出调用系统方法的时�
 
 在js中。比如下面的代码
 
-{%hightlight js%}
+{%highlight js%}
 var oldgo=history.go;
 history.go=function(i){
 	alert("you're going to "+i);
@@ -28,7 +28,7 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 
 只要我们找到这几个关键方法传入的参数，我们自己也能构造，然后不用微信sdk就能分享了。方法如下：
 
-{%hightlight objc%}
+{%highlight objc%}
 -(void)swizzle{
     [self swizzleOpenUrl];
     [self swizzlePasteboard];

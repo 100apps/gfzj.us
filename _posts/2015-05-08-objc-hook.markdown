@@ -21,8 +21,8 @@ history.go=function(i){
 
 objc runtime提供了很方便的API，也能实现类似的操作。比如最近研究微信分享，微信的sdk至少调用了几个关键的方法：
 
-1. UIApplication的`\- (BOOL)openURL:(NSURL*)url`
-2. UIPasteboard的`\- (void)setData:(NSData *)data forPasteboardType:(NSString *)pasteboardType;`
+1. UIApplication的`- (BOOL)openURL:(NSURL*)url`
+2. UIPasteboard的`- (void)setData:(NSData *)data forPasteboardType:(NSString *)pasteboardType;`
 3. UIPasteboard的`+ (UIPasteboard *)pasteboardWithName:(NSString *)pasteboardName create:(BOOL)create;`
 
 只要我们找到这几个关键方法传入的参数，我们自己也能构造，然后不用微信sdk就能分享了。方法如下：
@@ -68,4 +68,4 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 }
 {%endhighlight%}
 
-可以在`\- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`中调用一下`[self swizzle];`就可以监控了。
+可以在`- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`中调用一下`[self swizzle];`就可以监控了。

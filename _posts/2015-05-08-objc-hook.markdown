@@ -27,6 +27,10 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 
 只要我们找到这几个关键方法传入的参数，我们自己也能构造，然后不用微信sdk就能分享了。方法如下：
 
+首先把 Build Setting--> Apple LLVM 6.0 - Preprocessing--> Enable Strict Checking of objc_msgSend Calls  改为 NO 
+
+然用用下面的方法：
+
 {%highlight objc%}
 #import <objc/runtime.h>
 

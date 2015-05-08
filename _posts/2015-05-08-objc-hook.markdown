@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "objc方法替换hook"
+title: "objc method 监控调用参数"
 date: 2015-05-08 18:41:45
 categories: series openshare的实现
 by: gf

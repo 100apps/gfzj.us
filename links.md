@@ -109,7 +109,6 @@ permalink: /links/
 	- [Masonry](https://github.com/SnapKit/Masonry)
 	- [Classy](http://classy.as/)
 
-
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
 - [WWDC](https://developer.apple.com/videos/wwdc/)
@@ -124,6 +123,9 @@ permalink: /links/
 - [中文版 Apple 官方 Swift 教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
 
 #社区
+- [NounProject](https://thenounproject.com/)
+- [pinterest](https://www.pinterest.com)
+- [iconfont](http://iconfont.cn/)
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)
 - [v2ex](https://v2ex.com)
 - [Ruby China](https://ruby-china.org/)

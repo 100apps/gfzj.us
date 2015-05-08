@@ -1,0 +1,72 @@
+---
+layout: post
+title: "objc方法替换hook"
+date: 2015-05-08 18:41:45
+categories: series openshare的实现
+img: /images/xcode512.png
+by: gf
+description: 最近调试一个程序，需要打印出调用系统方法的时候传入的参数。这个在js中很容易实现，这里分享一下objc版本。
+---
+
+在js中。比如下面的代码
+
+{%hightlight js%}
+var oldgo=history.go;
+history.go=function(i){
+	alert("you're going to "+i);
+	oldgo(i);
+}
+{%endhighlight%}
+
+这样当调用history.go(-1)的时候，回先打印出-1，然后再返回。对于别人写好的程序，用这种方法调试还是很有效的。
+
+objc runtime提供了很方便的API，也能实现类似的操作。比如最近研究微信分享，微信的sdk至少调用了几个关键的方法：
+
+1. UIApplication的`\- (BOOL)openURL:(NSURL*)url`
+2. UIPasteboard的`\- (void)setData:(NSData *)data forPasteboardType:(NSString *)pasteboardType;`
+3. UIPasteboard的`+ (UIPasteboard *)pasteboardWithName:(NSString *)pasteboardName create:(BOOL)create;`
+
+只要我们找到这几个关键方法传入的参数，我们自己也能构造，然后不用微信sdk就能分享了。方法如下：
+
+{%hightlight objc%}
+-(void)swizzle{
+    [self swizzleOpenUrl];
+    [self swizzlePasteboard];
+    [self swizzlePasteboardSetData];
+}
+
+-(void)swizzleOpenUrl{
+    SEL openUrlSEL=@selector(openURL:);
+    IMP openUrlIMP=[UIApplication instanceMethodForSelector:openUrlSEL];
+    static int count=0;
+    BOOL (^myOpenURL)(id SELF,NSURL * url)=^(id SELF,NSURL *url){
+        NSLog(@"\n----------open url: %d----------\n%@\n%@\n",count++,url,@"\n/*[NSThread callStackSymbols]*/");
+        return (BOOL)openUrlIMP(SELF,openUrlSEL,url);
+    };
+    class_replaceMethod([UIApplication class], openUrlSEL, imp_implementationWithBlock(myOpenURL), NULL);
+}
+-(void)swizzlePasteboard{
+    SEL pasteboardWithNameSEL=@selector(pasteboardWithName:create:);
+    IMP pasteboardWithNameIMP=[UIPasteboard methodForSelector:pasteboardWithNameSEL];
+    
+    static int count=0;
+    UIPasteboard* (^mypasteboardWithName)(id SELF,NSString *name,BOOL create)=^(id SELF,NSString *name,BOOL create){
+        NSLog(@"\n----------pasteboardWithName: %d----------\n%@\n%d\n",count++,name,create);
+        return (UIPasteboard*)pasteboardWithNameIMP(SELF,pasteboardWithNameSEL,name,create);
+    };
+    class_replaceMethod(/*类方法hook http://stackoverflow.com/a/3267898/3825920*/object_getClass((id)[UIPasteboard class]), pasteboardWithNameSEL, imp_implementationWithBlock(mypasteboardWithName), NULL);
+}
+-(void)swizzlePasteboardSetData{
+    SEL swizzlePasteboardSetDataSEL=@selector(setData:forPasteboardType:);
+    IMP swizzlePasteboardSetDataIMP=[UIPasteboard instanceMethodForSelector:swizzlePasteboardSetDataSEL];
+    
+    static int count=0;
+    void (^mypasteboardSetData)(id SELF,NSData *data,NSString *type)=^(id SELF,NSData *data,NSString *type){
+        NSLog(@"\n----------swizzlePasteboardSetData: %d----------\n%@\n%@\n",count++,type,data);
+        swizzlePasteboardSetDataIMP(SELF,swizzlePasteboardSetDataSEL,data,type);
+    };
+    class_replaceMethod([UIPasteboard class], swizzlePasteboardSetDataSEL, imp_implementationWithBlock(mypasteboardSetData), NULL);
+}
+{%endhighlight%}
+
+可以在`\- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`中调用一下`[self swizzle];`就可以监控了。

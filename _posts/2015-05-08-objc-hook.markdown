@@ -28,6 +28,9 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 只要我们找到这几个关键方法传入的参数，我们自己也能构造，然后不用微信sdk就能分享了。方法如下：
 
 {%highlight objc%}
+#import <objc/runtime.h>
+
+
 -(void)swizzle{
     [self swizzleOpenUrl];
     [self swizzlePasteboard];

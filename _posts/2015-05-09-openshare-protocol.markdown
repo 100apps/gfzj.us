@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "OpenShare开放协议(5)：protocol"
-date: 2015-05-09 18:41:45
+date: 2015-05-09 18:41:46
 categories: series openshare
 by: gf
 description: 介绍一下开发协议的规划
-permalink: /series/openshare/
 ---
 
 主要定义 app 之间的常用通信协议，如果遵循大家都遵循这个协议，就不需要各自造轮子了，省掉很多sdk。我们参考 url get/post 传参数的方式，对于简单的参数，推荐用 get 传递，二进制数据，如图片，用粘贴板传递。

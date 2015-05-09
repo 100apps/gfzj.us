@@ -63,11 +63,23 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
     };
     class_replaceMethod([UIPasteboard class], swizzlePasteboardSetDataSEL, imp_implementationWithBlock(mypasteboardSetData), NULL);
 }
+
 -(void)swizzle{
     [self swizzleOpenUrl];
     [self swizzlePasteboard];
     [self swizzlePasteboardSetData];
 }
+//被回调的时候的参数。
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"handleOpenURL\n%@\n%@",application,url);
+    return YES;
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    NSLog(@"openURL\n%@\n%@\n%@\n%@\n",application,url,sourceApplication,annotation);
+    return YES;
+}
+
 
 
 {%endhighlight%}

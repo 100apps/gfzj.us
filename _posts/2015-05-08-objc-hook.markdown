@@ -35,25 +35,19 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 #import <objc/runtime.h>
 
 
--(void)swizzle{
-    [self swizzleOpenUrl];
-    [self swizzlePasteboard];
-    [self swizzlePasteboardSetData];
-}
-
 -(void)swizzleOpenUrl{
     SEL openUrlSEL=@selector(openURL:);
-    IMP openUrlIMP=[UIApplication instanceMethodForSelector:openUrlSEL];
+    BOOL (*openUrlIMP)(id,SEL,id) =(BOOL(*)(id,SEL,id))[UIApplication instanceMethodForSelector:openUrlSEL];
     static int count=0;
     BOOL (^myOpenURL)(id SELF,NSURL * url)=^(id SELF,NSURL *url){
-        NSLog(@"\n----------open url: %d----------\n%@\n%@\n",count++,url,@"\n/*[NSThread callStackSymbols]*/");
+        NSLog(@"\n----------open url: %d----------\n%@\n%@\n",count++,url,@"\n"/*[NSThread callStackSymbols]*/);
         return (BOOL)openUrlIMP(SELF,openUrlSEL,url);
     };
     class_replaceMethod([UIApplication class], openUrlSEL, imp_implementationWithBlock(myOpenURL), NULL);
 }
 -(void)swizzlePasteboard{
     SEL pasteboardWithNameSEL=@selector(pasteboardWithName:create:);
-    IMP pasteboardWithNameIMP=[UIPasteboard methodForSelector:pasteboardWithNameSEL];
+    UIPasteboard* (*pasteboardWithNameIMP)(id,SEL,id,BOOL) =(UIPasteboard* (*)(id,SEL,id,BOOL))[UIPasteboard methodForSelector:pasteboardWithNameSEL];
     
     static int count=0;
     UIPasteboard* (^mypasteboardWithName)(id SELF,NSString *name,BOOL create)=^(id SELF,NSString *name,BOOL create){
@@ -64,7 +58,7 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 }
 -(void)swizzlePasteboardSetData{
     SEL swizzlePasteboardSetDataSEL=@selector(setData:forPasteboardType:);
-    IMP swizzlePasteboardSetDataIMP=[UIPasteboard instanceMethodForSelector:swizzlePasteboardSetDataSEL];
+    void (*swizzlePasteboardSetDataIMP)(id,SEL,id,id)=(void(*)(id,SEL,id,id))[UIPasteboard instanceMethodForSelector:swizzlePasteboardSetDataSEL];
     
     static int count=0;
     void (^mypasteboardSetData)(id SELF,NSData *data,NSString *type)=^(id SELF,NSData *data,NSString *type){
@@ -73,6 +67,13 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
     };
     class_replaceMethod([UIPasteboard class], swizzlePasteboardSetDataSEL, imp_implementationWithBlock(mypasteboardSetData), NULL);
 }
+-(void)swizzle{
+    [self swizzleOpenUrl];
+    [self swizzlePasteboard];
+    [self swizzlePasteboardSetData];
+}
+
+
 {%endhighlight%}
 
 可以在`- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`中调用一下`[self swizzle];`就可以监控了。

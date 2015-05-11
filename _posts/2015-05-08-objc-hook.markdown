@@ -58,7 +58,8 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
     
     static int count=0;
     void (^mypasteboardSetData)(id SELF,NSData *data,NSString *type)=^(id SELF,NSData *data,NSString *type){
-        NSLog(@"\n----------swizzlePasteboardSetData: %d----------\n%@\n%@\n",count++,type,data);
+        
+        NSLog(@"\n----------swizzlePasteboardSetData: %d----------\n%@\n%@\n%@\n",count++,[((UIPasteboard *)SELF) name], type,[NSPropertyListSerialization propertyListWithData:data options: 0 format:NULL error:nil]);
         swizzlePasteboardSetDataIMP(SELF,swizzlePasteboardSetDataSEL,data,type);
     };
     class_replaceMethod([UIPasteboard class], swizzlePasteboardSetDataSEL, imp_implementationWithBlock(mypasteboardSetData), NULL);
@@ -69,6 +70,7 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
     [self swizzlePasteboard];
     [self swizzlePasteboardSetData];
 }
+
 //被回调的时候的参数。
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {

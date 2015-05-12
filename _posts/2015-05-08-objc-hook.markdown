@@ -98,3 +98,10 @@ objc runtime提供了很方便的API，也能实现类似的操作。比如最�
 {%endhighlight%}
 
 可以在`- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`中调用一下`[self swizzle];`就可以监控了。
+
+还有一种监控方法执行的办法：用lldb，添加断点：
+
+    breakpoint set -r '\[UIPasteboard .*\]$'
+    br l
+
+这样就能把所有调用`UIPasteboard`的方法都打印出来了。然后按需swizzle。

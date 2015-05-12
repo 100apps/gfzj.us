@@ -39,4 +39,6 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 
 ![真机调试](/images/iphone-debug.png)
 
+但是非常非常地慢，需等待。
+
 <https://github.com/RetVal/objc4-532.2> build on OSX Yosemite 10.10.2 (14C109)

@@ -33,4 +33,10 @@ description: 最近很多人发文章写objc runtime，我们知道runtime是开
 对于Xcode，我们可以在project->schema中设置(command+<)：
 ![设置iOS模拟器](/images/xcode-schema.png)
 
+对于不越狱的真机，可以通过设置`objc_msgSend`断点,来控制：
+	
+	p (void)printf("[%s, %s]\n", (char*)object_getClassName($arg1), $arg2)
+
+![真机调试](/images/iphone-debug.png)
+
 <https://github.com/RetVal/objc4-532.2> build on OSX Yosemite 10.10.2 (14C109)

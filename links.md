@@ -7,6 +7,7 @@ permalink: /links/
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
 - [Papers We Love](http://paperswelove.org/)
+- [WIRED](http://www.wired.com/)
 
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
@@ -14,6 +15,7 @@ permalink: /links/
 #awesome projects
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
 - [GitHub Most Starred](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)
+- [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
 
 #to be covered
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
@@ -40,6 +42,7 @@ permalink: /links/
 </ul>
 
 #技术博客
+- [Research at Google](https://research.google.com/)
 - [Phrack Magazine](http://phrack.org)
 - [Jeswang's Blog](http://blog.jeswang.org/)
 - [bang&#8217;s blog](http://blog.cnbang.net/)
@@ -102,6 +105,9 @@ permalink: /links/
 - [把动画转成代码	]
 	- [coreanimator](http://www.coreanimator.com/)
 	- [quartzcode](http://www.quartzcodeapp.com/)
+- [UI布局]
+	- [Masonry](https://github.com/SnapKit/Masonry)
+	- [Classy](http://classy.as/)
 
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
@@ -117,6 +123,9 @@ permalink: /links/
 - [中文版 Apple 官方 Swift 教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
 
 #社区
+- [NounProject](https://thenounproject.com/)
+- [pinterest](https://www.pinterest.com)
+- [iconfont](http://iconfont.cn/)
 - [OurCoders (我们程序员)](http://ourcoders.com/home/)
 - [v2ex](https://v2ex.com)
 - [Ruby China](https://ruby-china.org/)

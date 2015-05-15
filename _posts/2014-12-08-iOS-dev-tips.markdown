@@ -342,3 +342,25 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
     @end
 
 这样可以定义全局的颜色
+
+#解析url参数和base64编码
+
+```objc
++(NSDictionary *)parseUrl:(NSURL*)url{
+    NSMutableDictionary *queryStringDictionary = [[NSMutableDictionary alloc] init];
+    NSArray *urlComponents = [[url query] componentsSeparatedByString:@"&"];
+    
+    for (NSString *keyValuePair in urlComponents)
+    {
+        NSRange range=[keyValuePair rangeOfString:@"="];
+        [queryStringDictionary setObject:range.length>0?[keyValuePair substringFromIndex:range.location+1]:@"" forKey:(range.length?[keyValuePair substringToIndex:range.location]:keyValuePair)];
+    }
+    NSLog(@"-----\n%@\n%@",url,queryStringDictionary);
+    return queryStringDictionary;
+}
++(NSString*)base64Encode:(NSString *)input{
+    NSString *base64Encoded = [[input
+                                dataUsingEncoding:NSUTF8StringEncoding] base64EncodedStringWithOptions:0];
+    return base64Encoded;
+}
+```

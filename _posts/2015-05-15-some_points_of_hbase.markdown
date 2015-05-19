@@ -20,9 +20,70 @@ description: 记录一些hbase中的小点
 
 ##背后的故事##
 
-###创建表###
+###create table###
+
+client向master发出创建表的请求：
+
+	hbase> create 'test','cf'
+
+Master则干下面的活儿：
+
+- 存储表的schema信息
+- 根据key-splits信息创建regions，若是没有提供splits，则默认创建一个region
+- 将regions分配给Region Servers，即写.META.表
+
+具体流程如下所示：
+
+![create_table][image1]
+
+###write table###
+
+在执行put、delete等写操作时，会发生如下：
+
+- client会向zookeeper询问.META.在哪儿
+- client遍历.META.，根据插入数据的rowkey，获取处理该数据的region server
+- client向region server发出请求，执行相应操作
+- region server处理请求，将其转给该rowkey所属的region进行处理
+	- 写WAL
+	- 添加k/v到MemStore
+
+上述流程如下所示：
+
+![write_table][image2]
+
+###read table###
+
+读取hbase表中的数据流程与write table一致：
+
+- client会向zookeeper询问.META.在哪儿
+- client遍历.META.，根据读取数据的rowkey，获取该数据所在的region server
+- client向region server发出请求，获取数据
+- region server处理请求，将其转给该rowkey所属的region进行处理
+	- 从MemStore和Store Files中获取数据
+
+###hbase index###
+
+####HIndex####
+
+在Server端实现index，在read/write时，处理索引元数据。
+
+HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase的另一张表中；原表在创建时，HMaster端CP创建索引表，表的删除也是如此；在写数据时，CP从写入原表的数据中取出data，从而创建meta data，写入索引表，数据的删除也是如此。
+
+为了保证性能，原表的每个region与其对应的索引表region应该在同一个server上，所以索引表与原表有相同的region数和rowkey范围。原表region的split或者变动都会引起索引表相似的变化，也是通过CP实现。另外，无论原表对多少列建立索引，都只有一个索引表。
+
+#####Write data with index
+
+执行Put向原表插入数据时，从Put中获取信息以生成索引表数据。CP按照如下方式创建索引表rowkey：
+
+	index table rowkey = region startkey + index name + indexed column(S) value(S) + origin table rowkey
+
+以上方式能够使生成的索引表tall、narrow。若索引的列不只一列，则把多列对应的值追加写入index rowkey的indexed column(S) value(S)部分。
+
+#####read data with index
+
+对原表进行scan的话，CP会创建一个索引表的scanner，根据原表的indexed列信息，scanner能够从索引表中获取相应数据，该数据包含原表的rowkey信息，使用该信息就能获取原表相应的数据，即scan结果。
 
 
 
-###插入数据###
-
+[image1]:/images/hbase_create_table.png "create_table"
+[image2]:/images/write_table "write_table"

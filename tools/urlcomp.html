@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>URL解析工具</title>
+	<script>
+function $(id){
+	return document.getElementById(id);
+}
+function go(){
+	var input=decodeURIComponent($("t").value.trim());
+	input=input.substr(input.indexOf("?")+1);
+	input=input.split("&");
+	input.sort();
+	var output="";
+	for(var i=0;i<input.length;i++){
+		output+=input[i]+"\n";
+	}
+	$("r").value=output;
+}
+	</script>
+</head>
+<body>
+	<textarea name="t" id="t" style="width:100%;height:200px" onkeyup="go()"></textarea>
+	<button onclick="go()" style="width:100%;height:50px;">go</button>
+	<textarea name="r" id="r" style="width:100%;height:200px"></textarea>
+</body>
+</html>

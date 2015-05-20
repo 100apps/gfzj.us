@@ -61,9 +61,8 @@ Master则干下面的活儿：
 - region server处理请求，将其转给该rowkey所属的region进行处理
 	- 从MemStore和Store Files中获取数据
 
-###hbase index###
 
-####HIndex####
+###HIndex###
 
 在Server端实现index，在read/write时，处理索引元数据。
 
@@ -71,7 +70,7 @@ HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase�
 
 为了保证性能，原表的每个region与其对应的索引表region应该在同一个server上，所以索引表与原表有相同的region数和rowkey范围。原表region的split或者变动都会引起索引表相似的变化，也是通过CP实现。另外，无论原表对多少列建立索引，都只有一个索引表。
 
-#####Write data with index
+####Write data with index
 
 执行Put向原表插入数据时，从Put中获取信息以生成索引表数据。CP按照如下方式创建索引表rowkey：
 
@@ -79,7 +78,7 @@ HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase�
 
 以上方式能够使生成的索引表tall、narrow。若索引的列不只一列，则把多列对应的值追加写入index rowkey的indexed column(S) value(S)部分。
 
-#####read data with index
+####read data with index
 
 对原表进行scan的话，CP会创建一个索引表的scanner，根据原表的indexed列信息，scanner能够从索引表中获取相应数据，该数据包含原表的rowkey信息，使用该信息就能获取原表相应的数据，即scan结果。
 

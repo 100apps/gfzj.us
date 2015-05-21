@@ -17,6 +17,7 @@ description: 记录一些hbase中的小点
 
 1. delete：非即时操作，仅将删除的数据标记为为“删除”（marker），对用户不可见，数据实际上并没有进行删除，只有在数据所在region发生major compaction时才会真正删除数据。
 2. delete mask put：数据被mark为delete后，数据对应的所有cells对于用户来说都是不可见的。在T时插入一行A，在T+X时，删除该行，那么scan该行\[0, T+1)时间范围插入的数据，结果为空。另外，如果现在重新插入A行，使用的timestamp<T+X，那么仍旧是查不到这条新插入的数据。为解决上述问题，可 HColumnDescriptor.setKeepDeletedCells(true)以使deleted cells像普通的cell一样。这个[链接](http://comments.gmane.org/gmane.comp.java.hadoop.hbase.user/28421)是个不错的例子。
+3. disable：如果disable一个表test，hbase client发出该请求，zookeeper会将释放test上的lock（region server在之前拥有test的lock），HMaster则会获取test的lock，之后其组件AssignmentManager执行diable test的操作（即将test的所有regions在zookeeper上存储的状态从open改为close），使得test的所有regions都被offline，完成test的disable。（该过程为猜测，不确定，待修改）
 
 ##背后的故事##
 
@@ -61,9 +62,8 @@ Master则干下面的活儿：
 - region server处理请求，将其转给该rowkey所属的region进行处理
 	- 从MemStore和Store Files中获取数据
 
-###hbase index###
 
-####HIndex####
+###HIndex###
 
 在Server端实现index，在read/write时，处理索引元数据。
 
@@ -71,7 +71,7 @@ HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase�
 
 为了保证性能，原表的每个region与其对应的索引表region应该在同一个server上，所以索引表与原表有相同的region数和rowkey范围。原表region的split或者变动都会引起索引表相似的变化，也是通过CP实现。另外，无论原表对多少列建立索引，都只有一个索引表。
 
-#####Write data with index
+####Write data with index
 
 执行Put向原表插入数据时，从Put中获取信息以生成索引表数据。CP按照如下方式创建索引表rowkey：
 
@@ -79,11 +79,33 @@ HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase�
 
 以上方式能够使生成的索引表tall、narrow。若索引的列不只一列，则把多列对应的值追加写入index rowkey的indexed column(S) value(S)部分。
 
-#####read data with index
+####read data with index
 
 对原表进行scan的话，CP会创建一个索引表的scanner，根据原表的indexed列信息，scanner能够从索引表中获取相应数据，该数据包含原表的rowkey信息，使用该信息就能获取原表相应的数据，即scan结果。
 
+###GlobalIndex
 
+HIndex本质上是local index，即region级别的索引。GlobalIndex则是table级别的索引，不限制原表region与对应索引表region在同一server上，这样的话，用户请求可能需要多出一次RPC。
+
+###HBase flush strategy
+
+HBase关于flush memstore，到底是如何操作呢？
+
+flush策略包括region级别和列族级别两种。
+
+Region级别的flush策略只有当前memstore的size超过hbase.hregion.memstore.flush.size就会执行flush操作。当然，在一个真实的集群中，一个region server上是有多个表的多个regions的，所以很难有足够的内存让memstore增长到配置的flush size。HBase默认是预留40%的堆内存（hbase.regionserver.global.memstore.upperLimit）给所有表的所有regions的memstore，如果达到该阈值，则某些memstores会开始进行flushing直到内存使用率下降到35%以下（下限）。另一一种情况就是，如果一个列族用于存储lob（large object），那么flush频率就会很高，导致其他列族flush出大量的小文件，这并不是什么好的事情。所以，引入列族级别的flush策略。
+
+启用列族级别的flush策略，配置hbase.hregion.memstore.percolumnfamilyflush.enabled为true，开启此项后需要配合hbase.hregion.memstore.percolumnfamilyflush.flush.size设置flush阈值，该值是对所有的列族都生效的，并不是那么实用，最好根据实际情况修改列族的meta信息，设置合理的flushsize（当然，该值肯定是小于hbase.hregion.memstore.flush.size的值的）。
+
+单独为一个列族设置flushsize，有两种方式：
+1. hbase shell：`alter 'tableA',{NAME=>'cf1',METADATA=>{'flushsize'=>'67108864'}}`
+2. API：
+	HColumnDescriptor cf1 = new HColumnDescriptor("cf1");
+	cf1.setValue(HConstants.HREGION_MEMSTORE_SPECIAL_COLUMN_FAMILY_FLUSHSIZE_KEY, 1024 * 1024 864 + ""); 
+
+
+关于flush更为详细的内容，有个很好的链接，[press here][link1]。
 
 [image1]:/images/hbase_create_table.png "create_table"
 [image2]:/images/write_table "write_table"
+[link1]:http://tech.uc.cn/?p=56 "flush"

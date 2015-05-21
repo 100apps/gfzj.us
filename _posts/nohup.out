@@ -5,3 +5,28 @@ org.eclipse.m2e.logback.configuration: Initializing logback
 [INFO] Setting property: velocimacro.messages.on => 'false'.
 [INFO] Setting property: resource.loader => 'classpath'.
 [INFO] Setting property: resource.manager.logwhenfound => 'false'.
+org.eclipse.m2e.logback.configuration: The org.eclipse.m2e.logback.configuration bundle was activated before the state location was initialized.  Will retry after the state location is initialized.
+org.eclipse.m2e.logback.configuration: Logback config file: /home/jzhou/workspace/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.5.1.20150109-1820.xml
+org.eclipse.m2e.logback.configuration: Initializing logback
+[INFO] Setting property: classpath.resource.loader.class => 'org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader'.
+[INFO] Setting property: velocimacro.messages.on => 'false'.
+[INFO] Setting property: resource.loader => 'classpath'.
+[INFO] Setting property: resource.manager.logwhenfound => 'false'.
+
+main:
+    [mkdir] Created dir: /home/jzhou/git/hbase/hbase-server/target/hbase-webapps
+     [copy] Copying 20 files to /home/jzhou/git/hbase/hbase-server/target/hbase-webapps
+    [mkdir] Created dir: /home/jzhou/git/hbase/hbase-server/target/hbase-webapps/master/WEB-INF
+    [mkdir] Created dir: /home/jzhou/git/hbase/hbase-server/target/hbase-webapps/regionserver/WEB-INF
+
+main:
+     [exec] ~/git/hbase/hbase-common ~/git/hbase/hbase-common
+     [exec] ~/git/hbase/hbase-common
+
+main:
+    [mkdir] Created dir: /home/jzhou/git/hbase/hbase-common/target/nativelib
+     [exec] tar: hadoop-snappy-nativelibs.tar: Cannot open: No such file or directory
+     [exec] tar: Error is not recoverable: exiting now
+     [exec] Result: 2
+
+main:

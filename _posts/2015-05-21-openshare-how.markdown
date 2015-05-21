@@ -2,13 +2,12 @@
 layout: post
 title: "OpenShare实现(2): how"
 date: 2015-05-21 11:08:26
-category: tech
-img: /images/xcode512.png
+categories: series openshare
 by: gf
-description: des
+description: 介绍iOS app之间通信的GET/POST方法，以及openshare监控官方sdk参数传递的方法。
 ---
 
-首先要明白，我们自己的app中集成的官方SDK需要和官方客户端通信，在iOS中，调起其他app，基本上都是用：
+我们自己的app中集成的官方SDK需要和官方客户端通信，在iOS中，调起其他app，基本上都是用：
 
 ```objc
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"weixin:"]];//app中调起微信

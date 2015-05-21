@@ -101,7 +101,7 @@ Region级别的flush策略只有当前memstore的size超过hbase.hregion.memstor
 1. hbase shell：`alter 'tableA',{NAME=>'cf1',METADATA=>{'flushsize'=>'67108864'}}`
 2. API：
 	HColumnDescriptor cf1 = new HColumnDescriptor("cf1");
-	cf1.setValue(HConstants.HREGION_MEMSTORE_SPECIAL_COLUMN_FAMILY_FLUSHSIZE_KEY, 1024 * 1024 864 + ""); 
+	cf1.setValue(HConstants.HREGION_MEMSTORE_SPECIAL_COLUMN_FAMILY_FLUSHSIZE_KEY, 1024 * 1024 * 64 + ""); 
 
 
 关于flush更为详细的内容，有个很好的链接，[press here][link1]。

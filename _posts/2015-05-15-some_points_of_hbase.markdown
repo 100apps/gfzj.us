@@ -98,7 +98,9 @@ Region级别的flush策略只有当前memstore的size超过hbase.hregion.memstor
 启用列族级别的flush策略，配置hbase.hregion.memstore.percolumnfamilyflush.enabled为true，开启此项后需要配合hbase.hregion.memstore.percolumnfamilyflush.flush.size设置flush阈值，该值是对所有的列族都生效的，并不是那么实用，最好根据实际情况修改列族的meta信息，设置合理的flushsize（当然，该值肯定是小于hbase.hregion.memstore.flush.size的值的）。
 
 单独为一个列族设置flushsize，有两种方式：
+
 1. hbase shell：`alter 'tableA',{NAME=>'cf1',METADATA=>{'flushsize'=>'67108864'}}`
+
 2. API：
 	HColumnDescriptor cf1 = new HColumnDescriptor("cf1");
 	cf1.setValue(HConstants.HREGION_MEMSTORE_SPECIAL_COLUMN_FAMILY_FLUSHSIZE_KEY, 1024 * 1024 * 64 + ""); 

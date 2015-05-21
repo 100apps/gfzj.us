@@ -12,13 +12,13 @@ description: 介绍OpenShare的设计理念和实现方法
 2. 必须有全局的保存appKey等变量的地方，可以考虑单例模式或类变量。
 3. 分享、登录完成以后，要方便回调，可以考虑block。
 
-对于objc基本上有两种思路：继承(subclass)和分类(category)
+对于objc基本上有两种思路：继承(subclass)和类别(category)
 
-用继承的话，就是做一个OpenShare的基类，然后各个平台的调用用子类实现，但是这样的话，调用的地方需要先实例化，然后调用对象方法，略有不便，最后我选择了用category，每个平台都去扩展OpenShare的类方法，这样OpenShare就变得越来越完善，支持的平台越来越多。
+用继承的话，就是做一个OpenShare的基类，然后各个平台的调用用子类实现，但是这样的话，调用的地方需要先实例化，然后调用对象方法，或者需要调用不同的类的类方法，略有不便。最后我选择了用category，每个平台都去扩展OpenShare的类方法，这样OpenShare就变得越来越完善，支持的平台越来越多。
 
 另外，还需要封装OpenShare和官方客户端通信的message，也就是OpenShare中的`OSMessage`
 
-`OSMessage`类，保存OpenShare向客户端发送的消息。分享的消息基本上有以下几种情况：
+类，保存OpenShare向客户端发送的消息。分享的消息基本上有以下几种情况：
 
 1. 纯文本
 2. 图片

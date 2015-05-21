@@ -18,7 +18,7 @@ description: 介绍iOS app之间通信的GET/POST方法，以及openshare监控�
 
 这里最重要的是`URLScheme`,可以在`Info.plist`中设置，比如：
 
-{%highlight objc%}
+{%highlight xml%}
 <key>CFBundleURLTypes</key>
 	<array>
 		<dict>

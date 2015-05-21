@@ -126,6 +126,7 @@ permalink: /links/
 
 #大数据Blog
 - [hbase](http://hadoop-hbase.blogspot.com/)
+- [nossql](http://nosql.mypopescu.com/)
 
 #社区
 - [NounProject](https://thenounproject.com/)

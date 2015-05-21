@@ -4,6 +4,7 @@ title: 一些项目
 permalink: /projects/
 ---
 我们发起过一些项目，这里有一些连接：
+
 - [OpenShare](http://openshare.gfzj.us/)
     利用社交软件移动客户端分享(不用官方SDK)
 

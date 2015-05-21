@@ -93,13 +93,16 @@ HBase关于flush memstore，到底是如何操作呢？
 
 flush策略包括region级别和列族级别两种。
 
-Region级别的flush策略只有当前memstore的size超过hbase.hregion.memstore.flush.size就会执行flush操作。当然，在一个真实的集群中，一个region server上是有多个表的多个regions的，所以很难有足够的内存让memstore增长到配置的flush size。HBase默认是预留40%的堆内存（hbase.regionserver.global.memstore.upperLimit）给所有表的所有regions的memstore，如果达到该阈值，则某些memstores会开始进行flushing直到内存使用率下降到35%以下（下限）。另一一种情况就是，如果一个列族用于存储lob（large object），那么flush频率就会很高，导致其他列族flush出大量的小文件，这并不是什么好的事情。所以，引入列族级别的flush策略。
+Region级别的flush策略，只要当前memstore的size超过hbase.hregion.memstore.flush.size就会执行flush操作。当然，在一个真实的集群中，一个region server上是有多个表的多个regions的，所以很难有足够的内存让memstore增长到配置的flush size。HBase默认是预留40%的堆内存（hbase.regionserver.global.memstore.upperLimit）给所有表的所有regions的memstore，如果达到该阈值，则某些memstores会开始进行flushing直到内存使用率下降到35%以下（下限）。另一种情况就是，如果一个列族用于存储lob（large object），那么flush频率就会很高，导致其他列族flush出大量的小文件，这并不是什么好的事情。所以，引入列族级别的flush策略。
 
 启用列族级别的flush策略，配置hbase.hregion.memstore.percolumnfamilyflush.enabled为true，开启此项后需要配合hbase.hregion.memstore.percolumnfamilyflush.flush.size设置flush阈值，该值是对所有的列族都生效的，并不是那么实用，最好根据实际情况修改列族的meta信息，设置合理的flushsize（当然，该值肯定是小于hbase.hregion.memstore.flush.size的值的）。
 
 单独为一个列族设置flushsize，有两种方式：
+
 1. hbase shell：`alter 'tableA',{NAME=>'cf1',METADATA=>{'flushsize'=>'67108864'}}`
+
 2. API：
+
 	HColumnDescriptor cf1 = new HColumnDescriptor("cf1");
 	cf1.setValue(HConstants.HREGION_MEMSTORE_SPECIAL_COLUMN_FAMILY_FLUSHSIZE_KEY, 1024 * 1024 * 64 + ""); 
 

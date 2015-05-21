@@ -6,6 +6,7 @@ permalink: /links/
 #news
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
+- [Memect: Memory Connected](http://memect.com/)
 - [Papers We Love](http://paperswelove.org/)
 - [WIRED](http://www.wired.com/)
 
@@ -82,6 +83,7 @@ permalink: /links/
 
 
 #神器
+- [MTS 阿里移动测试服务](http://mts.aliyun.com/)
 - [云编程，屌炸天](https://ide.c9.io)
 - [录制终端](https://showterm.io/) [ttyrec](http://0xcc.net/ttyrec/index.html.en) [ttyrec2gif](https://github.com/icholy/ttygif)
 - [Tmux](http://tmux.sourceforge.net/)

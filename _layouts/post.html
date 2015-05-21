@@ -11,11 +11,11 @@ layout: default
 {% if page.categories[0] == 'series' %}
  <div class="series">
  <h3>本文为系列文章<strong>{{page.categories[1]}}</strong>中的一篇，相关文章：</h3>
-<ol>
+<ul>
 {% for cat in site.categories %}{%if cat.first == page.categories[1]%}{%for post in cat.last%}	
 <li><a href="{{post.url}}"{%if post.url == page.url%} class="series_current"{%endif%}>{{post.title}}</a></li>
 {%endfor%}{%endif%}{% endfor %}
-</ol>
+</ul>
  </div>
 {%endif%}
 
@@ -23,6 +23,21 @@ layout: default
   <article class="post-content">
     {{ content }}
   </article>
+
+{% if page.categories[0] == 'series' %}
+ <h3>本系列其他文章：</h3>
+ <div class="series">
+<ul>
+{% for cat in site.categories %}{%if cat.first == page.categories[1]%}{%for post in cat.last%}  
+<li><a href="{{post.url}}"{%if post.url == page.url%} class="series_current"{%endif%}>{{post.title}}</a></li>
+{%endfor%}{%endif%}{% endfor %}
+</ul>
+ </div>
+{%endif%}
+
+
+
+
 {% assign author = site.authors[page.by] %}
 <h2>关于作者</h2>
 <div class="at_author" style="background-image:url('/images/face-{{page.by}}.jpg')">

@@ -5,23 +5,33 @@ permalink: /projects/
 ---
 我们发起过一些项目，这里有一些连接：
 
+- [OpenShare](http://openshare.gfzj.us/)
+    利用社交软件移动客户端分享(不用官方SDK)
 
-    AppSense
-        AppSense工作室 － 创意惊艳世界
+- [iPAC](https://github.com/100apps/ipac)
+    PAC(Proxy auto-config)配置文件生成服务器，全平台智能爬墙助手
 
-    slider.js
-        js幻灯片效果类库
+- [DNSd](https://github.com/100apps/DNSd)
+    用java实现DNS服务器，并且提供http管理接口
+    
+- [email tools](https://github.com/100apps/emailtools)
+    java实现smtp/pop3/imap协议，FakeSMTP.java用来做smtp服务器
 
-    BT狗
-        Better than Google When Searching Bittorrent
+- [AppSense](http://www.appsense.me/)
+    AppSense工作室 － 创意惊艳世界
 
-    体重宝
-        扫描体重秤，识别、记录、追踪体重
+- [slider.js](http://www.gfzj.us/slider/)
+    js幻灯片效果类库
 
-    宁静致远
-        无宁静无以致远，不读书不可远行。
+- [BT狗](https://btgle.com/)
+    Better than Google When Searching Bittorrent
 
-    屌丝博客群租
-        现实生活中的蚁族VPS也需要合租
+- [体重宝](https://itunes.apple.com/app/id925697616)
+    扫描体重秤，识别、记录、追踪体重
 
+- [宁静致远](http://peaceworldfound.com/)
+    无宁静无以致远，不读书不可远行。
+
+- [屌丝博客群租](http://www.gfzj.us/ourblogs/)
+    现实生活中的蚁族VPS也需要合租
 

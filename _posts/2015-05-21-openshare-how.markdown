@@ -9,16 +9,16 @@ description: 介绍iOS app之间通信的GET/POST方法，以及openshare监控�
 
 我们自己的app中集成的官方SDK需要和官方客户端通信，在iOS中，调起其他app，基本上都是用：
 
-```objc
+{%highlight objc%}
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"weixin:"]];//app中调起微信
 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.baidu.com"]];//app中调起Safari，并打开百度首页
-```
+{%endhighlight%}
 
 这就类似于http中的GET方法，我们可以在`AppDelegate.m`的`-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation`中接收这个url然后做相应的处理。比如url如果是`weixin://app/wx0fff8fc7685bb2c6/auth/?scope=snsapi_userinfo`，那么微信就知道其他app请求的是auth，scope是snsapi_userinfo，urlschema是wx0fff8fc7685bb2c6，这样微信处理以后，就可以通过打开`wx0fff8fc7685bb2c6://处理结果`来调起我们自己的app，我们自己的app同样处理url，就能得到返回结果了。
 
 这里最重要的是`URLScheme`,可以在`Info.plist`中设置，比如：
 
-```xml
+{%highlight objc%}
 <key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -31,12 +31,12 @@ description: 介绍iOS app之间通信的GET/POST方法，以及openshare监控�
 			</array>
 		</dict>
 	</array>
-```
+{%endhighlight%}
 这样如果其他的应用程序(包括Safari中的html页面中的href)，都可以通过打开`wx0fff8fc7685bb2c6`或`wxd930ea5d5a258f4f`掉起我们的app，比如Safari中给的链接地址是：
 
-```
+{%highlight objc%}
 wx0fff8fc7685bb2c6://view/pid123456
-```
+{%endhighlight%}
 这样我们在
 
 在js中。比如下面的代码`AppDelegate.m`的`-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation`中解析一下，就知道用户想查看pid123456的商品，展现这个就对了。
@@ -49,20 +49,20 @@ wx0fff8fc7685bb2c6://view/pid123456
 
 监控的思路就是hook关键方法。比如在js中，我们想要在alert的时候输出到console再alert，可以：
 
-```js
+{%highlight js%}
 var oldAlert=alert;
 alert=function(msg){
   console.log(msg);
   oldAlert(msg);
 }
-```
+{%endhighlight%}
 这样，如果调用`alert("Hello World");`，就能输出到console再弹窗了。
 
 同样在objc中，我们可以用runtime提供的API进行[Method Swizzling](http://nshipster.com/method-swizzling/)。
 
 我们首先把各种官方提供的Demo运行一下，然后在appdelegate中对我们确定的几个方法进行Swizzling：
 
-```objc
+{%highlight objc%}
 #import <objc/runtime.h>
 
 //对UIApplication的openURL:方法进行hook
@@ -117,21 +117,21 @@ alert=function(msg){
     };
     class_replaceMethod([UIPasteboard class], swizzlePasteboardGetDataSEL, imp_implementationWithBlock(mypasteboardGetData), NULL);
 }
-```
+{%endhighlight%}
 
 这样可以在`- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions`中调用一下`[self swizzle];`就可以监控了。
 
 其中还遇到一些坑，比如研究Sina微博的时候，监控不到粘贴板数据，百思不得其解。于是用lldb添加断点：
 
-```bash
+{%highlight bash%}
     breakpoint set -r '\[UIPasteboard .*\]$'
     br l
-```
+{%endhighlight%}
 这样就能把所有调用`UIPasteboard`的方法都打印出来了。原来Sina微博用的是`[UIPasteboard generalPasteboard].items`方法设置粘贴板。这个方法没有hook当然监控不到啦。
 
 我们知道粘贴板传递的数据了，得到的是一个NSData类型，还需要猜测这个二进制NSData是如何生成和解码的。通过把NSData写入到文件，隐约看到bplist的身影，于是用node.js和`plutil`试一下：
 
-```js
+{%highlight js%}
 #!/usr/bin/env node
 
 /*
@@ -170,15 +170,15 @@ process.stdin.on('end', function() {
 		});
 
 });
-```
+{%endhighlight%}
 果然可以解析出来。最后经过尝试，目前只发现两种序列化方式：
 	
-```objc
+{%highlight objc%}
 NSData *output=[NSKeyedArchiver archivedDataWithRootObject:data];
 NSDictionary *dic=[NSKeyedUnarchiver unarchiveObjectWithData:output;
 
 NSData *output=[NSPropertyListSerialization dataWithPropertyList:data format:NSPropertyListBinaryFormat_v1_0 options:0 error:&err];
 NSDictionary *dic=[NSPropertyListSerialization propertyListWithData:output];
-```
+{%endhighlight%}
 
 这样就能解决app和客户端之间通信的问题了

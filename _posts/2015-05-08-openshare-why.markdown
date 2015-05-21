@@ -12,17 +12,17 @@ permalink: /series/openshare/
 
 于是为什么不封装一下呢？就像iOS `Social` framework。默认已经封装了下面几种社交网络：
 
-```objc
+{%highlight objc%}
 #SLServiceTypes.h
 SOCIAL_EXTERN NSString *const SLServiceTypeTwitter NS_AVAILABLE(10_8, 6_0);
 SOCIAL_EXTERN NSString *const SLServiceTypeFacebook NS_AVAILABLE(10_8, 6_0);
 SOCIAL_EXTERN NSString *const SLServiceTypeSinaWeibo NS_AVAILABLE(10_8, 6_0);
 SOCIAL_EXTERN NSString *const SLServiceTypeTencentWeibo NS_AVAILABLE(10_9, 7_0);
 SOCIAL_EXTERN NSString *const SLServiceTypeLinkedIn NS_AVAILABLE(10_9, NA);
-```
+{%endhighlight%}
 比如我们想分享到新浪微博：
 
-```objc
+{%highlight objc%}
 if([SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo]) {
     SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeSinaWeibo];
     SLComposeViewControllerCompletionHandler myBlock = ^(SLComposeViewControllerResult result){
@@ -43,7 +43,7 @@ if([SLComposeViewController isAvailableForServiceType:SLServiceTypeSinaWeibo]) {
 else{
     NSLog(@"SinaWeibo UnAvailable");
 }
-```
+{%endhighlight%}
 如果想换成twitter，只需要把`SLServiceTypeSinaWeibo`换成`SLServiceTypeTwitter`就可以了。非常简单易用。
 
 `SLComposeViewController`的分享并不用转到响应的社交网络客户端，只需要在系统中配置账号就可以了。对于其他类型的社交网络，比如微信暂时并没有集成，而且不支持「第三方登录」，不能设置appkey从而带个尾巴（也是一件好事，这样不用开发者去各自平台申请key了），也不能实现平台官方支持的分享类型。

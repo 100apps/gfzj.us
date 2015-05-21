@@ -14,7 +14,7 @@ permalink: /projects/
     用java实现DNS服务器，并且提供http管理接口
 - [email tools](https://github.com/100apps/emailtools)
     java实现smtp/pop3/imap协议，FakeSMTP.java用来做smtp服务器
-    
+
 - [AppSense](http://www.appsense.me/)
     AppSense工作室 － 创意惊艳世界
 
@@ -32,5 +32,4 @@ permalink: /projects/
 
 - [屌丝博客群租](http://www.gfzj.us/ourblogs/)
     现实生活中的蚁族VPS也需要合租
-
 

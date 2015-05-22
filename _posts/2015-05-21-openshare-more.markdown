@@ -22,4 +22,3 @@ description: 我们把openshare实现以后，还需要进行托管，分享。�
 
 2015/05/22 11:58 在v2ex上发了一个(帖子)[https://www.v2ex.com/t/192942]，求关注。一个小时收获了9个star。
 
-

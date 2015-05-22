@@ -1,0 +1,28 @@
+---
+layout: post
+title: "一直都弄不懂的hostname和FQDN"
+date: 2015-05-22 11:05:09
+categories: 
+by: zj
+description: 关于/etc/hosts和/etc/sysconfig/network
+---
+
+####/etc/hosts
+
+假设现在有一个集群，有三个节点，对应IP为：
+
+	168.16.3.11
+	168.16.3.12
+	168.16.3.13
+
+从168.16.3.11登录到168.16.3.12，在终端输入`ssh root@168.16.3.12`。一般情况下，人对于数字的记忆总不及具有意义的单词或者词组，所以，给每个节点一个有一定意义的名字还是有必要的。现在修改168.16.3.11的/etc/hosts，内容包括如下：
+
+	168.16.3.11 node1
+	168.16.3.12 node2
+	168.16.3.13 node3
+
+那么从168.16.3.11登录到168.16.3.12，在终端输入`ssh root@node2`即可，该命令执行时，会读取/etc/hosts文件，找到"node2"对应的IP地址，使用该IP地址执行ssh命令。可见，/etc/hosts就是用于本地域名解析。
+
+####/etc/sysconfig/network
+
+

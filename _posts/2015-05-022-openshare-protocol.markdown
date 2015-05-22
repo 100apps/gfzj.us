@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenShare开放协议(5)：protocol"
-date: 2015-05-09 18:41:46
+date: 2015-05-22 18:41:46
 categories: series openshare
 by: gf
 description: 介绍一下开发协议的规划

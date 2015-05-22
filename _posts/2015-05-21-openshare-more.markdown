@@ -14,6 +14,10 @@ description: 我们把openshare实现以后，还需要进行托管，分享。�
 	pod trunk register gf@gfzj.us 'Logan' --description='iMac'
 	pod trunk push
 
-然后静候佳音，等待审核。
+不到一天，发现github上有一个fork，一个star，估计cocoapods审核通过了，去<https://cocoapods.org/>搜索了一下，果然已经收录了：
+
+![cocoapods](/images/openshare-cocoapods.png)
+
+然后去论坛／社交网络发帖推广一下：
 
 

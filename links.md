@@ -80,6 +80,7 @@ permalink: /links/
 - [Subjective\-C](http://subjc.com/)
 - [曾静的技术博客](http://www.devzeng.com/)
 - [bang's blog](http://blog.cnbang.net/)
+- [巴赫在编码](http://bachiscoding.com/)
 - ————————————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 

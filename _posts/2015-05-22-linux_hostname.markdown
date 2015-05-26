@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "一直都弄不懂的hostname和FQDN"
+title: "一直都弄不懂的hostname"
 date: 2015-05-22 11:05:09
 categories: 
 by: zj
@@ -63,4 +63,4 @@ hosts文件有几个妙用：
 	GATEWAYDEV=gw-dev gw-dw	 //表示网关的设备名称，如eth0等等
 	NISDOMAIN=dom-name	 //表示NIS域
 
-操作系统通过这个文件来配置网络。修改这个文件如果想生效，可能需要重启机器。
+操作系统通过这个文件来配置网络。修改这个文件如果想生效，需要重启机器。

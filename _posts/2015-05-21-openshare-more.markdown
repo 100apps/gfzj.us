@@ -22,4 +22,8 @@ description: 我们把openshare实现以后，还需要进行托管，分享。�
 
 2015/05/22 11:58 在v2ex上发了一个[帖子](https://www.v2ex.com/t/192942)，求关注。一个小时收获了9个star。
 
-2015/05/22 13:18 在微博上@了一下iOS圈内的大牛们。求扩散。
+2015/05/22 13:18 在微博上@了一下iOS圈内的大牛们。求扩散。可能是因为我这个账号过于弱，目前（25/5）没有任何效果。
+
+不得不说，v2ex社区的用户素质还是很高的，比oschina强不少，通过v2ex上很多用户点star，OpenShare已经排在了[Github trending objc栏目](https://github.com/trending?l=objective-c)的前五名。这样每天会带来10个左右的star。
+
+2015/05/24 	周日，star已经过百。意外惊喜！

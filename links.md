@@ -79,6 +79,7 @@ permalink: /links/
 - [Casa Taloyum](http://casatwy.com/)
 - [Subjective\-C](http://subjc.com/)
 - [曾静的技术博客](http://www.devzeng.com/)
+- [bang's blog](http://blog.cnbang.net/)
 - ————————————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 

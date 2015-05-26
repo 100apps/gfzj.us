@@ -40,16 +40,17 @@ layout: default
 
 {% assign author = site.authors[page.by] %}
 
-<div class="bdsharebuttonbox" style="margin-bottom:20px;"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
 
 <h2>关于作者</h2>
 <div class="at_author" style="background-image:url('/images/face-{{page.by}}.jpg')">
 <h3>{{author.display_name}} &lt;{{author.email}}&gt; </h3>
 <p>{{author.note}}</p>
-
-<p style="color:#999">
+<div class="bdsharebuttonbox">
+<span style="color:#999">
 本文欢迎转载，但请注明来源。
-</p>
+</span>
+  <a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+
 </div>
 
 <!--

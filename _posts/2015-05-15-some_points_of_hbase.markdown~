@@ -106,9 +106,30 @@ Region级别的flush策略，只要当前memstore的size超过hbase.hregion.mems
 	HColumnDescriptor cf1 = new HColumnDescriptor("cf1");
 	cf1.setValue(HConstants.HREGION_MEMSTORE_SPECIAL_COLUMN_FAMILY_FLUSHSIZE_KEY, 1024 * 1024 * 64 + ""); 
 
-
 关于flush更为详细的内容，有个很好的链接，[press here][link1]。
 
+###Catalog Tables
+
+在hbase 0.96 之前的版本中，hbase catalog包括-ROOT-和.META.两个表，但是在0.96以及之后的hbase版本中，-ROOT-表被废弃，只有hbase:meta（即.META.）。HBase的meta信息存储在表hbase:meta中，该表也是一个hbase表，但是在habase shell下执行list命令时，会将该表过滤掉。
+
+在hbase:meta中，存储着所有regions的信息，且该表的位置记录在zookeeper中，而无需-ROOT-。该表的表结构描述如下：
+
+1. Key：([table_name],[region_start_key],[region_id])
+2. Values：
+
+	info:regioninfo (region的HRegionInfo实例序列化信息)
+	info:server (region所属的RegionServer对应的server:port)
+	info:serverstartcode (region所属的RegionServer进程启动时间)
+
+当一个表发生splitting，会为splitted region在meta表对应的row添加两列，即info:splitA和info:splitB，当成功split后，该row被删除，同时会有两个新的regions添加到meta表中。
+
+###HBase Client
+
+HBase 1.1.0之前的版本使用HTable与hbase集群进行交互，HTable实例不是线程安全的，同一时刻仅能有一个线程使用HTable实例。另外，如果创建多个HTable实例，建议使用同一个HBaseConfiguration实例，以共享Zookeeper和与regionserver建立的socket实例。
+
+
+
+
 [image1]:/images/hbase_create_table.png "create_table"
-[image2]:/images/write_table "write_table"
+[image2]:/images/write_table.png "write_table"
 [link1]:http://tech.uc.cn/?p=56 "flush"

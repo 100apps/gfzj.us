@@ -84,9 +84,10 @@ permalink: /links/
 - [曾静的技术博客](http://www.devzeng.com/)
 - [bang's blog](http://blog.cnbang.net/)
 - [巴赫在编码](http://bachiscoding.com/)
-- ————————————————
+- ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
-
+- ——————Big Data——————————
+- [董的博客](http://dongxicheng.org/)
 
 #神器
 - [MTS 阿里移动测试服务](http://mts.aliyun.com/)

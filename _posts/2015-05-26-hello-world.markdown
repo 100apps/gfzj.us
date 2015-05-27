@@ -7,7 +7,7 @@ by: gf
 description: 介绍iOS进阶的方法
 ---
 
-##两种关键的方法：
+##两种方法：
 
 1. 看官方文档：<https://developer.apple.com/devcenter/ios/index.action>
 2. 看Github：<https://github.com/trending?l=objective-c>

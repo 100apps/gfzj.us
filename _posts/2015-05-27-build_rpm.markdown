@@ -1,0 +1,42 @@
+---
+layout: post
+title: "build rpm包"
+date: 2015-05-27 15:25:43
+categories: 
+by: zj
+description: 如何build rpm包
+---
+
+Build一个包，要有输入、处理单元、输出，对于build rpm包，也是如此。
+
+###输入
+
+Build rpm包，需要的输入包括三个部分：源码、patches、spec文件。
+
+####源码
+
+源码打成tar包，以用于build。
+
+####Patches
+
+主要有两种Patches：
+
+1. 解决跟目标系统有关的问题。如修改makefiles，将应用安装到合适的目录；或者解决跨平台冲突等。
+2. 为编译准备合适的环境，如配置环境变量等。
+
+###Spec文件
+
+Spec文件定义如何build rpm包的步骤。一个spec文件主要分为8个部分：
+
+####Preamble
+
+序言，即关于rpm包的信息，如对该包的功能描述、版本号等，也可以指定源码、patches等。
+
+####Prep Section
+
+预备，即从此处开始build包，主要是在build之前，如果有必要，就在prep这里对源码做一些工作，一般是解压源码的tar包，为其添加patches，该部分的内容为一个shell脚本。但是，RPM也提供了两个宏来简化该部分工作，一个是解压tar包，并cd到源码目录下，另一个是为源码添加patches。
+
+####Build Section
+
+
+

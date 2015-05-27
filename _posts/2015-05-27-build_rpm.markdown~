@@ -7,13 +7,9 @@ by: zj
 description: 如何build rpm包
 ---
 
-Build一个包，要有输入、处理单元、输出，对于build rpm包，也是如此。
-
-###输入
-
 Build rpm包，需要的输入包括三个部分：源码、patches、spec文件。
 
-####源码
+###源码
 
 源码打成tar包，以用于build。
 
@@ -34,9 +30,40 @@ Spec文件定义如何build rpm包的步骤。一个spec文件主要分为8个�
 
 ####Prep Section
 
-预备，即从此处开始build包，主要是在build之前，如果有必要，就在prep这里对源码做一些工作，一般是解压源码的tar包，为其添加patches。为此，RPM提供两个宏，一个是解压tar包，并cd到源码目录下，另一个是为源码添加patches。
+预备，即从此处开始build包，主要是在build之前，如果有必要，就在prep这里对源码做一些工作，一般是解压源码的tar包，为其添加patches，该部分的内容为一个shell脚本。但是，RPM也提供了两个宏来简化该部分工作，一个是解压tar包，并cd到源码目录下，另一个是为源码添加patches。
 
 ####Build Section
 
+Build部分也是由一个shell脚本组成，执行编译源码的命令。该部分也可以只执行make命令编译源码，或者根据需求使用更为复杂的命令去编译。
+
+####Install Section
+
+该部分同样包含一个shell脚本，执行安装软件的命令。如果有对应的makefile文件，该部分包含一个make install命令即可。
+
+####Install and Uninstall Scripts
+
+包在安装与卸载前后可能会需要在用户系统执行一些脚本。RPM支持在包安装前、安装后、卸载前、卸载后执行脚本。例如，如果包中包含一个shell，那么在安装或者卸载包后，就需要更新文件/etc/shells。
+
+####Verify Section
+
+尽管RPM会做很多验证工作，可能仍旧需要验证的脚本来验证超出RPM能力范围的部分。
+
+####Clean Section
+
+该部分很少使用，因为RPM本身就能够将clean工作做的很好，就是删除源码、spec文件等工作。
+
+####File List
+
+该部分由多个文件路径组成，这些文件会放入rpm包中，另外，还有一些宏，用于控制文件属性、哪些文件是文档、哪些文件爱你包含配置信息等。如果没有该部分，就build不出包来。
+
+###总结
+
+上述过程执行过后，会生成一个源码包文件和二进制包文件。
+
+源码包文件就是一个格式化归档，包括如下内容：
+
+1. 源码tar包
+2. spec文件
+3. patches
 
 

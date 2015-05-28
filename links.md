@@ -9,6 +9,9 @@ permalink: /links/
 - [Memect: Memory Connected](http://memect.com/)
 - [Papers We Love](http://paperswelove.org/)
 - [WIRED](http://www.wired.com/)
+- [MindStore - 在这里找到最好的产品与想法](http://mindstore.io/)
+
+
 
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
@@ -79,9 +82,12 @@ permalink: /links/
 - [Casa Taloyum](http://casatwy.com/)
 - [Subjective\-C](http://subjc.com/)
 - [曾静的技术博客](http://www.devzeng.com/)
-- ————————————————
+- [bang's blog](http://blog.cnbang.net/)
+- [巴赫在编码](http://bachiscoding.com/)
+- ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
-
+- ——————Big Data——————————
+- [董的博客](http://dongxicheng.org/)
 
 #神器
 - [MTS 阿里移动测试服务](http://mts.aliyun.com/)
@@ -129,6 +135,7 @@ permalink: /links/
 - [hbase](http://hadoop-hbase.blogspot.com/)
 - [nossql](http://nosql.mypopescu.com/)
 
+
 #社区
 - [NounProject](https://thenounproject.com/)
 - [pinterest](https://www.pinterest.com)
@@ -152,6 +159,7 @@ permalink: /links/
 - [极客标签](http://www.gbtags.com/gb/index.htm)
 - [微盟游戏-游戏头条](http://www.wmyouxi.com/)
 - [APICloud 重新定义移动应用开发](http://www.apicloud.com/)
+- [Free stock photos · Pexels](http://www.pexels.com)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>

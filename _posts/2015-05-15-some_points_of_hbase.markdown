@@ -117,15 +117,21 @@ Region级别的flush策略，只要当前memstore的size超过hbase.hregion.mems
 1. Key：([table_name],[region_start_key],[region_id])
 2. Values：
 
-	info:regioninfo (region的HRegionInfo实例序列化信息)
-	info:server (region所属的RegionServer对应的server:port)
-	info:serverstartcode (region所属的RegionServer进程启动时间)
+{% highlight java %}
+
+info:regioninfo (region的HRegionInfo实例序列化信息)
+info:server (region所属的RegionServer对应的server:port)
+info:serverstartcode (region所属的RegionServer进程启动时间)
+
+{% endhighlight %}
 
 当一个表发生splitting，会为splitted region在meta表对应的row添加两列，即info:splitA和info:splitB，当成功split后，该row被删除，同时会有两个新的regions添加到meta表中。
 
 ###HBase Client
 
 HBase 1.1.0之前的版本使用HTable与hbase集群进行交互，HTable实例不是线程安全的，同一时刻仅能有一个线程使用HTable实例。另外，如果创建多个HTable实例，建议使用同一个HBaseConfiguration实例，以共享Zookeeper和与regionserver建立的socket实例。
+
+###RegionServer Splitting
 
 
 

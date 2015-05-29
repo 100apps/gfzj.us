@@ -13,7 +13,7 @@ Build rpm包，需要的输入包括三个部分：源码、patches、spec文件
 
 源码打成tar包，以用于build。
 
-####Patches
+###Patches
 
 主要有两种Patches：
 
@@ -86,7 +86,7 @@ RPM需要多个目录来执行build，这些目录在一个top-level目录，如
 
 ####创建Spec文件
 
-**Preamble部分：**
+#####Preamble
 
 {% highlight java %}
 
@@ -114,7 +114,7 @@ cannot be equaled with more mundane software...
 
 {% endhighlight %}
 
-**%prep**
+#####%prep
 
 {% highlight java %}
 
@@ -135,7 +135,7 @@ zcat $RPM_SOURCE_DIR/cdp-0.33.tar.gz | tar -xvf -
 
 {% endhighlight %}
 
-**%build**
+#####%build
 
 {% highlight java %}
 

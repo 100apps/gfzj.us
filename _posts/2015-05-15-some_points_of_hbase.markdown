@@ -133,9 +133,32 @@ HBase 1.1.0之前的版本使用HTable与hbase集群进行交互，HTable实例�
 
 ###RegionServer Splitting
 
+RegionServer收到写请求时，将数据存放在memstore中，当memstore数据达到指定阈值时，就会被写入磁盘，生成storefiles，该过程就是memestore flush。随着storefiles数量的增加，RegionServer会将这些文件合并为更大的storefiles，以减少文件数量。每次flush后，对应region中的数据量就会增加，RegionServer此时会根据split策略决定是否需要将这个region分裂。
+
+逻辑上来说，一个region分裂为两个，就是从自己的数据中找到一个合适的point，在此处分裂为两个region。当一个region分裂时，创建两个子regions，这两个regions并不会立即将父region中属于自己的数据拷贝过来，而是创建引用文件(reference files，类似于软链接)，指向父region的对应数据范围。当有新的数据写入时，子region的数据量也会增长，并发生合并操作，此时才真正从父region那里获取数据，并删除引用文件，就此，子region不再有引用文件，那么就能够在以后执行split操作了。
+
+在split过程中，RegionServer需要与多方协调。在split前后，RegionServer都需要与Master报告，以更新.META.表，保证clients能够访问子regions，同时，调整HDFS中的目录结构和数据文件。另外，对于split这种多任务过程，RegionServer在内存中维护一个日志，保留执行状态，以防发生错误需要回滚。Split的详细过程描述如下图所示：
+
+![split-process][image3]
+
+上图每一个步骤描述如下：
+
+1. RegionServer决定split region，并做相应的准备工作。首先，RegionServer获取region所属的表的共享读琐，以防在split过程中有人修改表的schema。然后，RegionServer在zookeeper创建一个znode，即/hbase/region-in-transition/region-name，并将其状态设置为splitting。
+2. Master监控zookeeper的/hbase/region-in-transition，所以会获悉/hbase/region-in-transition/region-name的存在。
+3. RegionServer在父region的HDFS目录下创建子目录.splits
+4. RegionServer关闭父region，在本地将其标记为offline。如果此时有client请求该region中的数据，会收到NotServingRegionException。
+5. RegionServer为子regions A和B在.splits目录下创建相应的目录和必要的数据结构，然后为父region中的storefiles创建相应的引用文件。
+6. RegionServer为A和B在HDFS创建实际的region目录，并将第5步中创建的引用文件拿过来。
+7. RegionServer发送一个Put请求到.META.表中，将父region设置为offline，并添加子region信息。此时，每个子region在.META.表中并没有相应的记录。
+8. RegionServer打开A和B。
+9. RegionServer将A和B两个子regions信息加入.META.表，处于online状态，能够为clients提供服务。
+10. RegionServer修改zookeeper的/hbase/region-in-transition/region-name状态为split，Master获悉后，能够做一些负载均衡的事情。
+11. 关于A和B的引用文件会在region发生合并时被删除，引用的数据也会转移到A和B下的相应文件中。
 
 
+ 
 
 [image1]:/images/hbase_create_table.png "create_table"
 [image2]:/images/write_table.png "write_table"
+[image3]:/images/split_process.png "split region process"
 [link1]:http://tech.uc.cn/?p=56 "flush"

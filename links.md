@@ -119,7 +119,8 @@ permalink: /links/
 - [UI布局]
 	- [Masonry](https://github.com/SnapKit/Masonry)
 	- [Classy](http://classy.as/)
--[NIPPON COLORS \- 日本の伝統色](http://nipponcolors.com)
+- [NIPPON COLORS \- 日本の伝統色](http://nipponcolors.com)
+- [learnGitBranching](http://pcottle.github.io/learnGitBranching/)
 
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)

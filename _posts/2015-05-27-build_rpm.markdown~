@@ -13,7 +13,7 @@ Build rpm包，需要的输入包括三个部分：源码、patches、spec文件
 
 源码打成tar包，以用于build。
 
-####Patches
+###Patches
 
 主要有两种Patches：
 
@@ -145,4 +145,5 @@ make
 
 {% endhighlight %}
 
+编辑好spec文件，执行rpmbuild -ba cdp.spec，执行过程中会出现很多问题，需要一一解决，最后在build make这一步出错，源码有问题，我也解决不了了。但是，对rpm包的build有一定的了解了，之后再多次尝试。
 

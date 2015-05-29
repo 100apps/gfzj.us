@@ -88,6 +88,8 @@ permalink: /links/
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————
 - [董的博客](http://dongxicheng.org/)
+- ——————Others——————————
+- [廖雪峰的官方网站](http://www.liaoxuefeng.com/)
 
 #神器
 - [MTS 阿里移动测试服务](http://mts.aliyun.com/)
@@ -117,6 +119,7 @@ permalink: /links/
 - [UI布局]
 	- [Masonry](https://github.com/SnapKit/Masonry)
 	- [Classy](http://classy.as/)
+-[NIPPON COLORS \- 日本の伝統色](http://nipponcolors.com)
 
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)

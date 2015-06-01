@@ -84,6 +84,7 @@ permalink: /links/
 - [曾静的技术博客](http://www.devzeng.com/)
 - [bang's blog](http://blog.cnbang.net/)
 - [巴赫在编码](http://bachiscoding.com/)
+- [Garan no dou \| 一只魔法师的工坊](http://blog.ibireme.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

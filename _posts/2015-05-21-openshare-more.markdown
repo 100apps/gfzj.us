@@ -43,3 +43,12 @@ description: 我们把openshare实现以后，还需要进行托管，分享。�
 这是因为xcode的autoschema导致的。需要修改xcode设置：
 
 ![xcode-travis](/images/xcode-travis.png)
+
+openshare在[trending](https://github.com/trending?l=objective-c)上排了几天以后还是掉下来了，因为逛trending的人还是有限，不能持续增长。所以还需要手动推广一下。
+
+于是在6月1号，发布到了：
+
+1. <http://geek.csdn.net/>
+2. <http://toutiao.io/>
+
+到了6月2号，大概又收到了30个左右的star，再次登上trending。

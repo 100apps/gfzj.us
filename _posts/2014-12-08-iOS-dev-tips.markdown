@@ -364,3 +364,5 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
     return base64Encoded;
 }
 ```
+#Code Sign error: Provisioning profile XXXX can't be found
+切换了账号以后，切换provisioning profile，无论怎么刷新都不行。vi project.pbxproj 找到提示找不到的那个profile，删除那一行即可。

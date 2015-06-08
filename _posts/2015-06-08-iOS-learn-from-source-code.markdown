@@ -2,7 +2,7 @@
 layout: post
 title: "读源代码学习iOS开发"
 date: 2015-06-08 17:13:12
-categories: series openshare
+categories: series 读源代码学习iOS开发
 img: /images/source-code.jpg
 by: gf
 permalink: /series/learn-iOS-from-source-code/

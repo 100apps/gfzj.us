@@ -2,7 +2,7 @@
 layout: post
 title: "Custom iOS AlertView"
 date: 2015-06-09 10:56:53
-category: series 读源代码学习iOS开发
+categories: series 读源代码学习iOS开发
 img: https://github.com/wimagguc/ios-custom-alertview/raw/master/Docs/screen.png
 by: gf
 description: Custom iOS AlertView  源码分析

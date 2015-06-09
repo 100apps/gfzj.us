@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ios-custom-alertview"
+title: "Custom iOS AlertView"
 date: 2015-06-09 10:56:53
 category: series 读源代码学习iOS开发
 img: https://github.com/wimagguc/ios-custom-alertview/raw/master/Docs/screen.png

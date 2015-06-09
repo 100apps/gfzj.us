@@ -14,26 +14,26 @@ description: Custom iOS AlertView  源码分析
 ##使用：
 
 {%highlight objc%}
-  // Here we need to pass a full frame
-    CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
+// Here we need to pass a full frame
+CustomIOSAlertView *alertView = [[CustomIOSAlertView alloc] init];
 
-    // Add some custom content to the alert view
-    [alertView setContainerView:  [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"demo"]] ];
+// Add some custom content to the alert view
+[alertView setContainerView:  [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"demo"]] ];
 
-    // Modify the parameters
-    [alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Close1", @"Close2", @"Close3", nil]];
-    [alertView setDelegate:self];
-    
-    // You may use a Block, rather than a delegate.
-    [alertView setOnButtonTouchUpInside:^(CustomIOSAlertView *alertView, int buttonIndex) {
-        NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, (int)[alertView tag]);
-        [alertView close];
-    }];
-    
-    [alertView setUseMotionEffects:true];
+// Modify the parameters
+[alertView setButtonTitles:[NSMutableArray arrayWithObjects:@"Close1", @"Close2", @"Close3", nil]];
+[alertView setDelegate:self];
 
-    // And launch the dialog
-    [alertView show];
+// You may use a Block, rather than a delegate.
+[alertView setOnButtonTouchUpInside:^(CustomIOSAlertView *alertView, int buttonIndex) {
+NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, (int)[alertView tag]);
+[alertView close];
+}];
+
+[alertView setUseMotionEffects:true];
+
+// And launch the dialog
+[alertView show];
 {%endhighlight%}
 
 ##按钮点击回调的实现
@@ -52,32 +52,33 @@ description: Custom iOS AlertView  源码分析
 ##屏幕旋转和键盘推出事件
 
 {%highlight objc%}
-		[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
 
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationDidChange:) name:UIDeviceOrientationDidChangeNotification object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 {%endhighlight%}
 
 ##MotionEffects
+`MotionEffects`是iOS7以后对view添加的一种随着设备水平移动而移动的效果。iOS7+的springboard就用这种效果。
 
 {%highlight objc%}
 if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
-        return;
-    }
+return;
+}
 
-    UIInterpolatingMotionEffect *horizontalEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x"
-                                                                                                    type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
-    horizontalEffect.minimumRelativeValue = @(-kCustomIOS7MotionEffectExtent);
-    horizontalEffect.maximumRelativeValue = @( kCustomIOS7MotionEffectExtent);
+UIInterpolatingMotionEffect *horizontalEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x"
+type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+horizontalEffect.minimumRelativeValue = @(-kCustomIOS7MotionEffectExtent);
+horizontalEffect.maximumRelativeValue = @( kCustomIOS7MotionEffectExtent);
 
-    UIInterpolatingMotionEffect *verticalEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
-                                                                                                  type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
-    verticalEffect.minimumRelativeValue = @(-kCustomIOS7MotionEffectExtent);
-    verticalEffect.maximumRelativeValue = @( kCustomIOS7MotionEffectExtent);
+UIInterpolatingMotionEffect *verticalEffect = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y"
+type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+verticalEffect.minimumRelativeValue = @(-kCustomIOS7MotionEffectExtent);
+verticalEffect.maximumRelativeValue = @( kCustomIOS7MotionEffectExtent);
 
-    UIMotionEffectGroup *motionEffectGroup = [[UIMotionEffectGroup alloc] init];
-    motionEffectGroup.motionEffects = @[horizontalEffect, verticalEffect];
+UIMotionEffectGroup *motionEffectGroup = [[UIMotionEffectGroup alloc] init];
+motionEffectGroup.motionEffects = @[horizontalEffect, verticalEffect];
 
-    [dialogView addMotionEffect:motionEffectGroup];
+[dialogView addMotionEffect:motionEffectGroup];
 {%endhighlight%}

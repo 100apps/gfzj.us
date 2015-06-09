@@ -84,6 +84,8 @@ permalink: /links/
 - [曾静的技术博客](http://www.devzeng.com/)
 - [bang's blog](http://blog.cnbang.net/)
 - [巴赫在编码](http://bachiscoding.com/)
+- [Garan no dou \| 一只魔法师的工坊](http://blog.ibireme.com/)
+- [Mgen 刘圆圆的博客](http://www.mgenware.com/blog/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————
@@ -119,7 +121,9 @@ permalink: /links/
 - [UI布局]
 	- [Masonry](https://github.com/SnapKit/Masonry)
 	- [Classy](http://classy.as/)
--[NIPPON COLORS \- 日本の伝統色](http://nipponcolors.com)
+- [NIPPON COLORS \- 日本の伝統色](http://nipponcolors.com)
+- [learnGitBranching](http://pcottle.github.io/learnGitBranching/)
+
 
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
@@ -147,6 +151,12 @@ permalink: /links/
 - [v2ex](https://v2ex.com)
 - [Ruby China](https://ruby-china.org/)
 - [Dribbble *设计交互*](https://dribbble.com)
+- [Behance](https://www.behance.net)
+- [Siiimple](http://www.siiimple.com/)
+- [Reeoo \| web design inspiration and website gallery](http://reeoo.com/)
+- [Land Book](http://land-book.com/)
+- [Call to Idea - Get inspired!](http://www.calltoidea.com/)
+- [Designer News](https://news.layervault.com)
 - [Github *代码*](https://github.com)
 - [Custom Controls for iOS and OS X](https://www.cocoacontrols.com/)
 - [Code4App-iOS开发](http://code4app.com/)
@@ -169,6 +179,7 @@ permalink: /links/
 - [Limboy：自学 iOS 开发的一些经验](http://www.cocoachina.com/ios/20150104/10823.html)
 - [NEXT - 不错过任何一个新产品](http://next.36kr.com/posts)
 - [中文 iOS/Mac 开发博客列表](https://github.com/tangqiaoboy/iOSBlogCN)
+- [Github-iOS备忘](http://github.ibireme.com/github/list/ios/)
 
 #iOS逆向相关
 - [theos](http://theos.howett.net/nic/)

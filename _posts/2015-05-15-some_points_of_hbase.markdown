@@ -148,7 +148,7 @@ RegionServer收到写请求时，将数据存放在memstore中，当memstore数�
 3. RegionServer在父region的HDFS目录下创建子目录.splits
 4. RegionServer关闭父region，在本地将其标记为offline。如果此时有client请求该region中的数据，会收到NotServingRegionException。
 5. RegionServer为子regions A和B在.splits目录下创建相应的目录和必要的数据结构，然后为父region中的storefiles创建相应的引用文件。
-6. RegionServer为A和B在HDFS创建实际的region目录，并将第5步中创建的引用文件拿过来。
+6. RegionServer为A和B在HDFS创建实际的region目录，与父region的目录在同一目录下，并将第5步中创建的引用文件拿过来。
 7. RegionServer发送一个Put请求到.META.表中，将父region设置为offline，并添加子region信息。此时，每个子region在.META.表中并没有相应的记录。
 8. RegionServer打开A和B。
 9. RegionServer将A和B两个子regions信息加入.META.表，处于online状态，能够为clients提供服务。

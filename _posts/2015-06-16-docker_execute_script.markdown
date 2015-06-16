@@ -7,10 +7,10 @@ by: zj
 description: 如何用docker执行自己定义的脚本
 ---
 
-在生成的image时，在Dockerfile中将脚本test放到/bin下，并为其添加执行权限：
+在生成的image时，在Dockerfile中将脚本test放到/root(任何合理的路径都可)下，并为其添加执行权限：
 
-	ADD test /bin
-	RUN chmod +x /bin/test
+	ADD test /root/
+	RUN chmod +x /root/test
 
 test内容如下：
 
@@ -18,7 +18,7 @@ test内容如下：
 
 用该Dockerfile创建的新image假设名为new_image，执行如下命令可运行脚本：
 	
-	docker run new_image /bin/test
+	docker run new_image /root/test
 
 但是会报错如下：
 

@@ -87,6 +87,8 @@ permalink: /links/
 - [Garan no dou \| 一只魔法师的工坊](http://blog.ibireme.com/)
 - [Mgen 刘圆圆的博客](http://www.mgenware.com/blog/)
 - [Yin&#x27;s Dream Talk](http://yin-xu.com/)
+- [Kitten&#x27;s 时间胶囊](http://kittenyang.com/)
+
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

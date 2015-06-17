@@ -379,3 +379,12 @@ AFNetworkReachabilityStatusBlock callback = ^(AFNetworkReachabilityStatus status
     }
 };
 {%endhighlight%}
+
+#设置背景图片
+对于不提供view.backgroundimage的类，可以用:
+
+{%highlight objc%}
+cell.layer.contents = (id)[UIImage imageNamed:@"space_bg.jpg"].CGImage;//fill模式
+cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"space_bg.jpg"]];//平铺模式
+{%endhighlight%}
+

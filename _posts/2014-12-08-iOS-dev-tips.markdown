@@ -366,3 +366,16 @@ NSLog(@"apps: %@", [workspace performSelector:@selector(allApplications)]);
 ```
 #Code Sign error: Provisioning profile XXXX can't be found
 切换了账号以后，切换provisioning profile，无论怎么刷新都不行。vi project.pbxproj 找到提示找不到的那个profile，删除那一行即可。
+
+#weak–strong dance
+
+{%highlight objc%}
+__weak __typeof(self)weakSelf = self;
+AFNetworkReachabilityStatusBlock callback = ^(AFNetworkReachabilityStatus status) {
+    __strong __typeof(weakSelf)strongSelf = weakSelf;
+    strongSelf.networkReachabilityStatus = status;
+    if (strongSelf.networkReachabilityStatusBlock) {
+        strongSelf.networkReachabilityStatusBlock(status);
+    }
+};
+{%endhighlight%}

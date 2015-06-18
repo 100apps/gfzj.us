@@ -6,6 +6,9 @@ category: tech
 by: gf
 description: IB的界面中有提供了「User Defined Runtime Attributes」可以设置很多属性，但是界面中key path的value类型有限，不能设置CGColor，通过扩展CALayer来实现设置UIView的borderColor和背景图片
 ---
+
+update: 现在可以用<https://github.com/shaojiankui/iOS-Categories>
+
 如下效果：
 
 ![效果](/images/calayer-uicolor-demo.png)

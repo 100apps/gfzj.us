@@ -31,6 +31,7 @@ permalink: /links/
 
 #朋友们的博客
 <ul class="list-unstyled">
+<li><a href="http://www.skyfox.org/" rel="friend" target="_blank">天狐博客</a></li>	
 <li><a href="http://www.sunweina.com/" rel="friend" target="_blank">Florentina – WOW in our life</a></li>
 <li><a href="http://www.jiadingqiang.com/" target="_blank">google seo</a></li>
 <li><a href="http://holeboat.com/" rel="friend" target="_blank">Holeboat</a></li>
@@ -90,7 +91,6 @@ permalink: /links/
 - [Yin&#x27;s Dream Talk](http://yin-xu.com/)
 - [Kitten&#x27;s 时间胶囊](http://kittenyang.com/)
 - [Cee&#x27;s Home](https://blog.cee.moe/)
-- [天狐博客一生烟雨一场梦，一世红尘一阙歌](http://www.skyfox.org/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

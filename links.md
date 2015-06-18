@@ -6,6 +6,7 @@ permalink: /links/
 #news
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
+- [前端乱炖, 最专业的前端技术内容社区](http://www.html-js.com/)
 - [Memect: Memory Connected](http://memect.com/)
 - [Papers We Love](http://paperswelove.org/)
 - [WIRED](http://www.wired.com/)
@@ -30,6 +31,7 @@ permalink: /links/
 
 #朋友们的博客
 <ul class="list-unstyled">
+<li><a href="http://www.skyfox.org/" rel="friend" target="_blank">天狐博客</a></li>	
 <li><a href="http://www.sunweina.com/" rel="friend" target="_blank">Florentina – WOW in our life</a></li>
 <li><a href="http://www.jiadingqiang.com/" target="_blank">google seo</a></li>
 <li><a href="http://holeboat.com/" rel="friend" target="_blank">Holeboat</a></li>
@@ -86,6 +88,9 @@ permalink: /links/
 - [巴赫在编码](http://bachiscoding.com/)
 - [Garan no dou \| 一只魔法师的工坊](http://blog.ibireme.com/)
 - [Mgen 刘圆圆的博客](http://www.mgenware.com/blog/)
+- [Yin&#x27;s Dream Talk](http://yin-xu.com/)
+- [Kitten&#x27;s 时间胶囊](http://kittenyang.com/)
+- [Cee&#x27;s Home](https://blog.cee.moe/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————
@@ -197,4 +202,3 @@ permalink: /links/
 - [任毅飞](http://blog.sina.com.cn/u/1262345964)
 - [胡正](http://www.huzheng.org/)
 - [高学勇](http://www.thesct.net/sct.html)
-

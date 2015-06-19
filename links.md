@@ -178,6 +178,7 @@ permalink: /links/
 - [微盟游戏-游戏头条](http://www.wmyouxi.com/)
 - [APICloud 重新定义移动应用开发](http://www.apicloud.com/)
 - [Free stock photos · Pexels](http://www.pexels.com)
+- [触乐-高品质、有价值、有趣的移动游戏资讯](http://www.chuapp.com/)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>

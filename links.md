@@ -23,6 +23,7 @@ permalink: /links/
 - [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
 
 #to be covered
+- [码农设计初体验](http://sike.io/courses/design101/)
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 - [iOS常见问题](http://stackoverflow.com/questions/tagged/ios?sort=frequent)

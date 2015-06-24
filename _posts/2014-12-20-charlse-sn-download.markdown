@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "charles 3.9.3/3.9.2 sn 注册码"
+title: "charles破解 sn 注册码"
 date: 2014-12-20 13:32:08
 by: gf
 description: charles是一个非常好用的跨平台代理工具，比fiddler功能更多，支持socks代理。
 ---
 
+#update 2015.06.24
 for charles 3.10.1, please go to <http://www.gfzj.us/tech/2015/06/24/charles-hacking.html>
 
 [charles](http://www.charlesproxy.com/)是一个非常好用的跨平台代理工具，比fiddler功能更多，支持socks代理。

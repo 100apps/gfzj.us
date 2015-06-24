@@ -6,7 +6,7 @@ category: tech
 by: gf
 description: 破解Charles Web Debugging Proxy
 ---
-[Charles Web Debugging Proxy](http://www.charlesproxy.com/)可能是最好用的调试工具，用Java写的，跨平台。用起来比Fiddler顺手很多，而且更强大。由于是Java写的，所以更容易「破解」。
+[Charles Web Debugging Proxy](http://www.charlesproxy.com/)可能是最好用的网络代理，用Java写的，跨平台。用起来比Fiddler顺手很多，而且更强大。由于是Java写的，所以更容易「破解」。
 
 对于Java反编译，[jad](https://en.wikipedia.org/wiki/JAD_%28JAva_Decompiler%29)已经过时了。强烈推荐[jadx](https://github.com/skylot/jadx)，设置好参数，几乎可以完美反编译Charles的Licence.class。
 

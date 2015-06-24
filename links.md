@@ -23,6 +23,7 @@ permalink: /links/
 - [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
 
 #to be covered
+- [码农设计初体验](http://sike.io/courses/design101/)
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 - [iOS常见问题](http://stackoverflow.com/questions/tagged/ios?sort=frequent)
@@ -178,6 +179,7 @@ permalink: /links/
 - [微盟游戏-游戏头条](http://www.wmyouxi.com/)
 - [APICloud 重新定义移动应用开发](http://www.apicloud.com/)
 - [Free stock photos · Pexels](http://www.pexels.com)
+- [触乐-高品质、有价值、有趣的移动游戏资讯](http://www.chuapp.com/)
 
 #其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>
@@ -202,3 +204,4 @@ permalink: /links/
 - [任毅飞](http://blog.sina.com.cn/u/1262345964)
 - [胡正](http://www.huzheng.org/)
 - [高学勇](http://www.thesct.net/sct.html)
+

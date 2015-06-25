@@ -63,5 +63,27 @@ description: manage data in containers
 
 ### Creating and mounting a data volume container
 
-待续...
+如果需要在containers之间共享持久化数据，或者使用非持久化containers的持久化数据，可以考虑创建数据卷container，并将其中数据挂载到其他containers。
+
+创建数据卷containers如下：
+
+	docker create -v /data --name dbdata training/postgres /bin/true
+
+Container dbdata并不执行任何应用。
+
+可以使用参数--volumes-from将/data挂载到别的containers中：
+
+	docker run -d --volumes-from dbdata --name db1 training/postgres
+	docker run -d --volumes-from dbdata --name db2 training/postgres
+
+db1和db2共享数据。
+
+数据卷挂载具有传递性，可通过db1或者db2将/data挂载到另一个container：
+
+	docker run -d --name db3 --volumes-from db1 training/postgres
+
+如果此时删除dbdata、db1、db2，数据卷是不会被删除的，一定要在删除数据卷挂载的最后一个container时将其删除，如：
+
+	docker rm -v db3
+
 

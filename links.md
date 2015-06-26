@@ -12,8 +12,6 @@ permalink: /links/
 - [WIRED](http://www.wired.com/)
 - [MindStore - 在这里找到最好的产品与想法](http://mindstore.io/)
 
-
-
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
 

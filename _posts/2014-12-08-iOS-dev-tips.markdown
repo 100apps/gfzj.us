@@ -388,3 +388,10 @@ cell.layer.contents = (id)[UIImage imageNamed:@"space_bg.jpg"].CGImage;//fill模
 cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"space_bg.jpg"]];//平铺模式
 {%endhighlight%}
 
+#越狱设备查看bundle id
+
+{%highlight bash%}
+find /private/var/mobile/Containers/Data/Application/ -name Info.plist
+{%endhighlight%}
+
+

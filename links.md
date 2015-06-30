@@ -195,6 +195,7 @@ permalink: /links/
 - [dyld_decache](https://github.com/kennytm/Miscellaneous) &nbsp;[下载](https://github.com/kennytm/Miscellaneous/downloads)
 - iOS上常用工具: `SBSettings` `MobileSubstrate` `OpenSSH` `GDB` [Cycript](http://www.cycript.org/) `BigBoss Recommended Tools` `App Crackr` `iFile` `Mobile Terminal` `Vi IMproved` `Sqlite` [Clutch](https://github.com/KJCracks/Clutch/)
 - [libimobiledevice](http://www.libimobiledevice.org/)
+- [付费app破解](http://cydia.xsellize.com/)
 
 #算法与数据结构
 - [VisuAlgo \- visualising data structures and algorithms through animation](http://www.comp.nus.edu.sg/~stevenha/visualization/)

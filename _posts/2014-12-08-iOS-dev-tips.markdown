@@ -394,4 +394,10 @@ cell.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"spac
 find /private/var/mobile/Containers/Data/Application/ -name Info.plist
 {%endhighlight%}
 
+#cycript获取app的document目录
+
+{%highlight objc%}
+cycript -p TargetApp
+[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0]
+{%endhighlight%}
 

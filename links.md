@@ -93,6 +93,7 @@ permalink: /links/
 - [brycezhang](http://www.cnblogs.com/brycezhang)
 - [linxiangyu](http://www.jianshu.com/users/B7jBJx/latest_articles)
 - [iTimothy](http://www.xiaozhou.net/)
+- [王中周的技术博客](http://foggry.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

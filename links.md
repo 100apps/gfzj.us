@@ -90,6 +90,7 @@ permalink: /links/
 - [Yin&#x27;s Dream Talk](http://yin-xu.com/)
 - [Kitten&#x27;s 时间胶囊](http://kittenyang.com/)
 - [Cee&#x27;s Home](https://blog.cee.moe/)
+- [brycezhang](http://www.cnblogs.com/brycezhang)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

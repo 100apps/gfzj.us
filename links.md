@@ -12,8 +12,6 @@ permalink: /links/
 - [WIRED](http://www.wired.com/)
 - [MindStore - 在这里找到最好的产品与想法](http://mindstore.io/)
 
-
-
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
 
@@ -92,6 +90,10 @@ permalink: /links/
 - [Yin&#x27;s Dream Talk](http://yin-xu.com/)
 - [Kitten&#x27;s 时间胶囊](http://kittenyang.com/)
 - [Cee&#x27;s Home](https://blog.cee.moe/)
+- [brycezhang](http://www.cnblogs.com/brycezhang)
+- [linxiangyu](http://www.jianshu.com/users/B7jBJx/latest_articles)
+- [iTimothy](http://www.xiaozhou.net/)
+- [王中周的技术博客](http://foggry.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————
@@ -100,6 +102,7 @@ permalink: /links/
 - [廖雪峰的官方网站](http://www.liaoxuefeng.com/)
 
 #神器
+- [Modular Scale](http://www.modularscale.com)
 - [MTS 阿里移动测试服务](http://mts.aliyun.com/)
 - [云编程，屌炸天](https://ide.c9.io)
 - [录制终端](https://showterm.io/) [ttyrec](http://0xcc.net/ttyrec/index.html.en) [ttyrec2gif](https://github.com/icholy/ttygif)
@@ -194,8 +197,9 @@ permalink: /links/
 - [IDA](https://www.hex-rays.com/products/ida/support/download_demo.shtml)
 - [ldid](https://github.com/rpetrich/ldid) &nbsp;[下载](https://cloud.github.com/downloads/rpetrich/ldid/ldid.zip)
 - [dyld_decache](https://github.com/kennytm/Miscellaneous) &nbsp;[下载](https://github.com/kennytm/Miscellaneous/downloads)
-- iOS上常用工具: `SBSettings` `MobileSubstrate` `OpenSSH` `GDB` [Cycript](http://www.cycript.org/) `BigBoss Recommended Tools` `App Crackr` `iFile` `Mobile Terminal` `Vi IMproved` `Sqlite`
+- iOS上常用工具: `SBSettings` `MobileSubstrate` `OpenSSH` `GDB` [Cycript](http://www.cycript.org/) `BigBoss Recommended Tools` `App Crackr` `iFile` `Mobile Terminal` `Vi IMproved` `Sqlite` [Clutch](https://github.com/KJCracks/Clutch/)
 - [libimobiledevice](http://www.libimobiledevice.org/)
+- [付费app破解](http://cydia.xsellize.com/)
 
 #算法与数据结构
 - [VisuAlgo \- visualising data structures and algorithms through animation](http://www.comp.nus.edu.sg/~stevenha/visualization/)

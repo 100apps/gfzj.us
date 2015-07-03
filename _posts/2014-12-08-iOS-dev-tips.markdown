@@ -401,3 +401,11 @@ cycript -p TargetApp
 [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0]
 {%endhighlight%}
 
+#LLDB技巧
+
+{%highlight bash%}
+bt all
+breakpoint set -n "-[UIView setFrame:]"
+po [[[[UIApplication sharedApplication] delegate] window] recursiveDescription]
+po yourDataObject
+{%endhighlight%}

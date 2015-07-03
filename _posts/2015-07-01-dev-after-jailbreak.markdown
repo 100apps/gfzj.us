@@ -11,8 +11,7 @@ description: 作为一名普通的iOS开发者，手里的测试机器必须是�
 
 1. 安装openssh-server（通过Cydia「主页」的链接安装）
 2. 安装 `BigBoss Recommended Tools`，这样常用的命令都可以通过ssh运行了。现在你的iPhone已经和普通的vps差不多了。有人甚至用iPad当Git服务器，作为待机之王，iPad终于有了新的用处。
-3. 安装Reveal Loader、clutch、[dumpdecrypted](https://github.com/stefanesser/dumpdecrypted)、[FLEXLoader
-](https://github.com/qiaoxueshi/FLEXLoader)。reveal可以查看其他app的UI，这样如果产品跟你说，就做成xxx的效果，通过reveal可以实现像素级复制，就像firebug一样；clutch和dumpdecrypted主要用来砸壳，看其他app的头文件，用过class-dump的应该都知道。dumpdecrypted砸壳例子：
+3. 安装Reveal Loader、clutch、[dumpdecrypted](https://github.com/stefanesser/dumpdecrypted)、[FLEXLoader](https://github.com/qiaoxueshi/FLEXLoader)。reveal可以查看其他app的UI，这样如果产品跟你说，就做成xxx的效果，通过reveal可以实现像素级复制，就像firebug一样；clutch和dumpdecrypted主要用来砸壳，看其他app的头文件，用过class-dump的应该都知道；FLEXLoader就更方便了，都继承了。dumpdecrypted砸壳例子：
 {%highlight bash%}
 cd /usr/lib 
 DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib /var/mobile/Containers/Bundle/Application/8C1AB88B-5AB3-4F28-8CDC-C08A3A39BA43/imeituan.app/imeituan mach-o decryption dumper

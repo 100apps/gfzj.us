@@ -94,6 +94,7 @@ permalink: /links/
 - [linxiangyu](http://www.jianshu.com/users/B7jBJx/latest_articles)
 - [iTimothy](http://www.xiaozhou.net/)
 - [王中周的技术博客](http://foggry.com/)
+- [南峰子的技术博客](http://southpeak.github.io/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

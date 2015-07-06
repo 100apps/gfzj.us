@@ -101,6 +101,7 @@ permalink: /links/
 - [董的博客](http://dongxicheng.org/)
 - ——————Others——————————
 - [廖雪峰的官方网站](http://www.liaoxuefeng.com/)
+- [Jasey Wang](http://jaseywang.me/)
 
 #神器
 - [Modular Scale](http://www.modularscale.com)

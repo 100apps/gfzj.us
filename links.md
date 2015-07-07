@@ -102,6 +102,7 @@ permalink: /links/
 - ——————Others——————————
 - [廖雪峰的官方网站](http://www.liaoxuefeng.com/)
 - [Jasey Wang](http://jaseywang.me/)
+- [Do Great Things \-  叶玎玎](http://yedingding.com/)
 
 #神器
 - [Modular Scale](http://www.modularscale.com)

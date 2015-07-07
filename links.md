@@ -94,12 +94,15 @@ permalink: /links/
 - [linxiangyu](http://www.jianshu.com/users/B7jBJx/latest_articles)
 - [iTimothy](http://www.xiaozhou.net/)
 - [王中周的技术博客](http://foggry.com/)
+- [南峰子的技术博客](http://southpeak.github.io/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————
 - [董的博客](http://dongxicheng.org/)
 - ——————Others——————————
 - [廖雪峰的官方网站](http://www.liaoxuefeng.com/)
+- [Jasey Wang](http://jaseywang.me/)
+- [Do Great Things \-  叶玎玎](http://yedingding.com/)
 
 #神器
 - [Modular Scale](http://www.modularscale.com)
@@ -132,7 +135,7 @@ permalink: /links/
 	- [Classy](http://classy.as/)
 - [NIPPON COLORS \- 日本の伝統色](http://nipponcolors.com)
 - [learnGitBranching](http://pcottle.github.io/learnGitBranching/)
-
+- [tcptunnel](http://www.vakuumverpackt.de/tcptunnel/)
 
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)

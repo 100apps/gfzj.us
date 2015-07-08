@@ -139,6 +139,7 @@ permalink: /links/
 
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
+- [Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 - [WWDC](https://developer.apple.com/videos/wwdc/)
 - [App Store Distribution](https://developer.apple.com/support/appstore/)
 - [Google Design](http://www.google.com/design/)

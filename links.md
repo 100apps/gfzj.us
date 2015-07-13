@@ -97,6 +97,7 @@ permalink: /links/
 - [南峰子的技术博客](http://southpeak.github.io/)
 - [xkong \| ocean-coding-family](https://xkong123.wordpress.com)
 - [庞海礁的个人空间 \- 十里樱花十里尘](http://www.olinone.com/)
+- [小红的测试生涯](http://www.dzwanli.com.cn/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

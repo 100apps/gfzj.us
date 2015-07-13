@@ -95,6 +95,7 @@ permalink: /links/
 - [iTimothy](http://www.xiaozhou.net/)
 - [王中周的技术博客](http://foggry.com/)
 - [南峰子的技术博客](http://southpeak.github.io/)
+- [xkong \| ocean-coding-family](https://xkong123.wordpress.com)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

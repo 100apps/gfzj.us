@@ -12,7 +12,7 @@ description: JLRoutes是一个很简单很方便的URL映射工具，本文分�
 
 点击左侧菜单的每个链接都可以到一个单独的功能里面，非常适合拆分，然后用JLRoutes组合。
 
-JLRoutes本质是保存一个全局的Map，key是url，value是对应的block。这样在下面的代码中:
+JLRoutes本质可以理解为:保存一个全局的Map，key是url，value是对应的block。这样在下面的代码中:
 
 {%highlight objc%}
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
@@ -31,10 +31,10 @@ JLRoutes就可以遍历这个全局的map，通过url来执行对应的block。
 像这种全局的变量，首先想到肯定要用Singleton模式吧。不过和普通的单利稍有区别，这个property不是self，而是一个成员变量。注意`dispatch_once`的使用。
 
 {%highlight objc%}
-	static dispatch_once_t onceToken;
-	dispatch_once(&onceToken, ^{
-		routeControllersMap = [[NSMutableDictionary alloc] init];
-	});
+static dispatch_once_t onceToken;
+dispatch_once(&onceToken, ^{
+	routeControllersMap = [[NSMutableDictionary alloc] init];
+});
 {%endhighlight%}
 
 但是注意，JLRoutes中的routeControllersMap可不是刚才提到的全局map，而是namespace。这样，JLRoutes找对应url的block的时候，首先要找namespace，默认的全局namespace是：
@@ -62,8 +62,9 @@ static NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace"
 
 {%endhighlight%}
 
-`_JLRoute`插入到routeControllersMap[kJLRoutesGlobalNamespaceKey]这个list中的时候，用到了`插入排序`的思想，priority高的在前面。这样enum这个_JLRoute List的时候，如果match pattern，就break，自然就解决了「路径匹配优先级」的问题。
+`_JLRoute`插入到routeControllersMap[kJLRoutesGlobalNamespaceKey]这个list中的时候，用到了`插入排序`的思想，priority高的在前面。这样enum这个_JLRoute List的时候，如果match pattern，就return，自然就解决了「路径匹配优先级」的问题。
 
 在我们的项目中，即使不用JLRoutes来组合sub app，也建议引入，因为：
+
 1. 本身很小，可以直接拖进来，不用cocoapods。
 2. 很方便扩展自己的app，比如从触屏版的产品页面打开，或者扫描二维码进来，这样都是一个url，可以很方便的处理这些请求。

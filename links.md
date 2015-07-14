@@ -27,6 +27,7 @@ permalink: /links/
 - [iOS常见问题](http://stackoverflow.com/questions/tagged/ios?sort=frequent)
 - [Motion Design for iOS](https://dn-motion-design.qbox.me/)
 - [官网指导必看](https://developer.apple.com/videos/wwdc/2014/?id=229)
+- [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 
 #朋友们的博客
 <ul class="list-unstyled">

@@ -68,3 +68,23 @@ static NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace"
 
 1. 本身很小，可以直接拖进来，不用cocoapods。
 2. 很方便扩展自己的app，比如从触屏版的产品页面打开，或者扫描二维码进来，这样都是一个url，可以很方便的处理这些请求。
+
+JLRoutes不适合的场景：(正在发邮件问limboy)
+
+比如我现在是在产品单页上，点击进入店铺跳转到店铺。这时候很显然是
+
+{%highlight objc%}
+ [self.navController pushViewController:<#(UIViewController *)#> animated:YES];
+{%endhighlight%}
+因为可以很方便的返回。如果这时候用了:
+
+{%highlight objc%}
+[[UIApplication sharedApplication] openURL:@"myapp://shop/123"];
+{%endhighlight%}
+
+跳转到对应的shop问题不大，这时候返回就不好处理了。如果当前页面保留了复杂的用户用户输入、改变，在返回问题更大。
+
+------
+参考文档:
+
+1. [开发新版花瓣iPhone客户端](http://limboy.me/ios/2014/03/23/huaban-app-redesign.html)

@@ -7,7 +7,8 @@ by: gf
 description: JLRoutes是一个很简单很方便的URL映射工具，本文分析其实现
 ---
 [JLRoutes](https://github.com/joeldev/JLRoutes)是一个非常简单（还是只有两个文件）好用的URL map库。对于功能区分比较明显的app，比如：[HubSpot](http://product.hubspot.com/blog/architecting-a-large-ios-app-with-cocoapods)
-![HubSpot][/images/jlroutes-app-example.png]
+
+![HubSpot](/images/jlroutes-app-example.png)
 
 点击左侧菜单的每个链接都可以到一个单独的功能里面，非常适合拆分，然后用JLRoutes组合。
 

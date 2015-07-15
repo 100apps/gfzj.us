@@ -48,6 +48,7 @@ permalink: /links/
 </ul>
 
 #技术博客
+- [豌豆家 \| 豌豆实验室 Blog](http://www.wandoujia.com/blog)
 - [Research at Google](https://research.google.com/)
 - [Phrack Magazine](http://phrack.org)
 - [Jeswang's Blog](http://blog.jeswang.org/)

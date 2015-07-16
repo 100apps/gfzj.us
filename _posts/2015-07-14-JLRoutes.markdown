@@ -84,7 +84,7 @@ static NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace"
 	//此处代码省略
 }
 {%endhighlight%}
-为什么要对block进行copy呢？具体原因可以参考[http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/](正确使用Block避免Cycle Retain和Crash)。简单的说一下，由于block可能引入block外部的变量(比如int a吧)，但是a是有作用域的，但是传递block的时候，可能在block引用的地方，超过了a的作用域。所以程序虽然能通过编译，但是运行的时候会提示
+为什么要对block进行copy呢？具体原因可以参考[正确使用Block避免Cycle Retain和Crash](http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/)。简单的说一下，由于block可能引入block外部的变量(比如int a吧)，但是a是有作用域的，但是传递block的时候，可能在block引用的地方，超过了a的作用域。所以程序虽然能通过编译，但是运行的时候会提示
 
 	Segmentation fault: 11
 
@@ -144,4 +144,4 @@ JLRoutes不适合的场景：(正在发邮件问limboy)
 参考文档:
 
 1. [开发新版花瓣iPhone客户端](http://limboy.me/ios/2014/03/23/huaban-app-redesign.html)
-2. [http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/](正确使用Block避免Cycle Retain和Crash)
+2. [正确使用Block避免Cycle Retain和Crash](http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/)

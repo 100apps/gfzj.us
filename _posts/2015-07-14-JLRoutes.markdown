@@ -144,3 +144,4 @@ JLRoutes不适合的场景：(正在发邮件问limboy)
 参考文档:
 
 1. [开发新版花瓣iPhone客户端](http://limboy.me/ios/2014/03/23/huaban-app-redesign.html)
+2. [http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/](正确使用Block避免Cycle Retain和Crash)

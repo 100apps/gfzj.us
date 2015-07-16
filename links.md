@@ -101,6 +101,7 @@ permalink: /links/
 - [xkong \| ocean-coding-family](https://xkong123.wordpress.com)
 - [庞海礁的个人空间 \- 十里樱花十里尘](http://www.olinone.com/)
 - [小红的测试生涯](http://www.dzwanli.com.cn/)
+- [Tony's blog](http://itony.me/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

@@ -116,9 +116,9 @@ int main(int argc,const char *argv[]){
 2. NSStackBlock：位于栈内存，函数返回后Block将无效；
 3. NSMallocBlock：位于堆内存。
 
-其中`NSGlobalBlock`类型的block和普通函数一样，不饮用外部变量，不需要copy。第二种`NSStackBlock`引用外部变量，会收到外部变量的作用域限制，所以需要copy成`NSMallocBlock`。
+其中`NSGlobalBlock`类型的block和普通函数一样，不引用外部变量，不需要copy。第二种`NSStackBlock`引用外部变量，会收到外部变量的作用域限制，所以需要copy成`NSMallocBlock`。
 
-###是用JLRoutes
+###使用JLRoutes
 
 在我们的项目中，即使不用JLRoutes来组合sub app，也建议引入，因为：
 

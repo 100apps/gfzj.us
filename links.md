@@ -69,6 +69,7 @@ permalink: /links/
 - [叶孤城___](http://www.jianshu.com/users/b82d2721ba07)
 - [Luke's Homepage - 卢克](http://geeklu.com/)
 - [Why's Blog](http://blog.callmewhy.com/)
+- [Vincent Sit](http://xuexuefeng.com/)
 - <span style="color:red">♥</span>[mikeash.com: NSBlog](https://www.mikeash.com/pyblog/)
 - <span style="color:red">♥</span>[NSHipster](http://nshipster.com/) &nbsp; [中文版](http://nshipster.cn/)
 - <span style="color:red">♥</span>[iPhone Tutorials - Ray Wenderlich](http://www.raywenderlich.com/tutorials)

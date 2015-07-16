@@ -64,6 +64,62 @@ static NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace"
 
 `_JLRoute`插入到routeControllersMap[kJLRoutesGlobalNamespaceKey]这个list中的时候，用到了`插入排序`的思想，priority高的在前面。这样enum这个_JLRoute List的时候，如果match pattern，就return，自然就解决了「路径匹配优先级」的问题。
 
+###block的copy
+
+在插入新的规则的时候：
+
+{%highlight objc%}
+- (void)addRoute:(NSString *)routePattern priority:(NSUInteger)priority handler:(BOOL (^)(NSDictionary *parameters))handlerBlock {
+	_JLRoute *route = [[_JLRoute alloc] init];
+	route.pattern = routePattern;
+	route.priority = priority;
+	route.block = [handlerBlock copy];//注意这里的copy
+	route.parentRoutesController = self;
+	
+	if (!route.block) {
+		route.block = [^BOOL (NSDictionary *params) {
+			return YES;
+		} copy];//注意这里的copy
+	}
+	//此处代码省略
+}
+{%endhighlight%}
+为什么要对block进行copy呢？具体原因可以参考[http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/](正确使用Block避免Cycle Retain和Crash)。简单的说一下，由于block可能引入block外部的变量(比如int a吧)，但是a是有作用域的，但是传递block的时候，可能在block引用的地方，超过了a的作用域。所以程序虽然能通过编译，但是运行的时候会提示
+
+	Segmentation fault: 11
+
+举个例子：
+
+{%highlight objc%}
+#import <Foundation/Foundation.h>
+typedef long (^BlkSum)(int, int);
+NSArray *test;
+
+void setBlock(){
+	int base = 100;
+	BlkSum blk2 = ^ long (int a, int b) {
+		return base + a + b;
+	};
+	NSLog(@"blk2 = %@", blk2); // blk2 = <__NSStackBlock__: 0xbfffddf8>
+	// test=@[[blk2 copy]];
+	test=@[blk2 ];
+}
+int main(int argc,const char *argv[]){
+	setBlock();
+	NSLog(@"%ld",((BlkSum)(test[0]))(1,2));
+}
+//运行：gcc -ObjC -framework Foundation test.m && ./a.out
+{%endhighlight%}
+相反，如果用copy的话，就没问题，因为copy会把block引用的外部变量一块copy出去。科学一点的解释是，block有三种位置：
+
+1. NSGlobalBlock：类似函数，位于text段；
+2. NSStackBlock：位于栈内存，函数返回后Block将无效；
+3. NSMallocBlock：位于堆内存。
+
+其中`NSGlobalBlock`类型的block和普通函数一样，不饮用外部变量，不需要copy。第二种`NSStackBlock`引用外部变量，会收到外部变量的作用域限制，所以需要copy成`NSMallocBlock`。
+
+###是用JLRoutes
+
 在我们的项目中，即使不用JLRoutes来组合sub app，也建议引入，因为：
 
 1. 本身很小，可以直接拖进来，不用cocoapods。

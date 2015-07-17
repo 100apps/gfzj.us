@@ -106,6 +106,7 @@ permalink: /links/
 - [Think Different](http://jkyin.me/)
 - [Why's Blog](http://blog.callmewhy.com/)
 - [Snow Memory](http://andrewliu.tk/)
+- [Jianzong - an iOS and web developer](http://www.haojianzong.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

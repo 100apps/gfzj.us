@@ -143,6 +143,7 @@ void instrumentObjcMessageSends();
 {%endhighlight%}
 
 这样在/tmp/下目录就能生成`/tmp/msgSends-1234`类似的文件了。可以用`tail -f`查看。非常方便。加上[从源代码编译objc runtime](http://www.gfzj.us/tech/2015/04/01/objc-runtime-compile-from-source-code.html)中提到的方法，现在都有两种监控消息发送的方法了。另外还听说`Dtrace`的方法。
+
 ------
 
 我们知道粘贴板传递的数据了，得到的是一个NSData类型，还需要猜测这个二进制NSData是如何生成和解码的。通过把NSData写入到文件，隐约看到bplist的身影，于是用node.js和`plutil`试一下：

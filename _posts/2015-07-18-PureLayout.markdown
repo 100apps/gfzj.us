@@ -3,7 +3,6 @@ layout: post
 title: "PureLayout源代码分析"
 date: 2015-07-18 15:09:48
 categories: series 读源代码学习iOS开发
-img: /images/xcode512.png
 by: gf
 description: PureLayout源码分析，更好地理解autolayout。
 ---

@@ -108,6 +108,8 @@ permalink: /links/
 - [Why's Blog](http://blog.callmewhy.com/)
 - [Snow Memory](http://andrewliu.tk/)
 - [Jianzong - an iOS and web developer](http://www.haojianzong.com/)
+- [叶纯俊的博客](http://chun.tips/)
+- [Abel's Den](http://www.beyondabel.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

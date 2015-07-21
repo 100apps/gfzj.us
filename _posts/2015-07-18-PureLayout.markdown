@@ -142,7 +142,20 @@ btn.translatesAutoresizingMaskIntoConstraints=NO;
 {%highlight objc%}
 [[UIButton buttonWithType:UIButtonTypeInfoDark]initForAutoLayout]
 {%endhighlight%}
-已经向作者提交了一个[Pull requests](https://github.com/smileyborg/PureLayout/pull/75)，不知道能否通过。
+已经向作者提交了一个[Pull requests](https://github.com/smileyborg/PureLayout/pull/75)，最后@smileyborg增加了一个新的方法：
+
+{%highlight bash%}
+Add -[configureForAutoLayout] for initialized view …
+
+This new API method allows you to set translatesAutoresizingMaskIntoConstraints to NO with a chainable method call (as self is returned). It is convenient when you want to use a specific factory method or initializer, and configure the view for use with auto layout on the same line.
+
+For example:
+UIButton *button = [[UIButton buttonWithType:UIButtonTypeSystem] configureForAutoLayout];
+
+Closes #75
+
+{%endhighlight%}
+
 
 ###一个例子
 使用UIScrollView，可以尝试一下，当屏幕旋转的时候，autolayout的威力就显示出来了。

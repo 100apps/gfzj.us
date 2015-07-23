@@ -21,6 +21,7 @@ permalink: /links/
 - [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
 
 #to be covered
+- [CS193P Developing iOS 8 Apps with Swift](https://github.com/X140Yu/Developing_iOS_8_Apps_With_Swift)
 - [码农设计初体验](http://sike.io/courses/design101/)
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
@@ -114,6 +115,7 @@ permalink: /links/
 - [nixzhu  on scriptogr.am](http://nixzhu.me/)
 - [高見龍](http://blog.eddie.com.tw/)
 - [manio \| a blog](http://www.manio.org/)
+- [MicroCai 的博客](https://www.zybuluo.com/MicroCai/note/51120)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

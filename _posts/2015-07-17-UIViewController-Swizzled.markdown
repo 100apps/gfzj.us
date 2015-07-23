@@ -6,6 +6,8 @@ categories: series 读源代码学习iOS开发
 by: gf
 description: 分析UIViewController-Swizzled的源代码，以及这种思路的其他应用
 ---
+>update 2015.7.23 今天看了《Effective Objective-C 2.0》第13条： 用“方法调配技术”调试“黑盒方法”中提到的和UIViewController-Swizzled一样。
+
 [UIViewController-Swizzled](https://github.com/RuiAAPeres/UIViewController-Swizzled)是一个非常简单的类库，大概只有100多行代码，实现的功能也比较简单：显示一个UIViewController的时候，log一下。
 
 看了一下源代码，原理是hook `UIViewController`的`viewDidAppear:`方法：

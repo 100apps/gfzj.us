@@ -13,5 +13,7 @@ description: 纪录一些调试的时候常用到的方法
 
 ---
 
+//TODO 未完成。
 
+JetSamEvents are low RAM notifications
 

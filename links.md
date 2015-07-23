@@ -111,7 +111,9 @@ permalink: /links/
 - [Jianzong - an iOS and web developer](http://www.haojianzong.com/)
 - [叶纯俊的博客](http://chun.tips/)
 - [Abel's Den](http://www.beyondabel.com/)
+- [nixzhu  on scriptogr.am](http://nixzhu.me/)
 - [高見龍](http://blog.eddie.com.tw/)
+- [manio \| a blog](http://www.manio.org/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

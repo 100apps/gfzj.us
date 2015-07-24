@@ -239,5 +239,8 @@ permalink: /links/
 - [任毅飞](http://blog.sina.com.cn/u/1262345964)
 - [胡正](http://www.huzheng.org/)
 - [高学勇](http://www.thesct.net/sct.html)
+- [徐宥](http://blog.youxu.info/)
+- [刘未鹏](http://mindhacks.cn/)
+- [Fenng](http://dbanotes.net/)
 
 

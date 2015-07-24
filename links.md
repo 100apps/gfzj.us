@@ -240,7 +240,11 @@ permalink: /links/
 - [胡正](http://www.huzheng.org/)
 - [高学勇](http://www.thesct.net/sct.html)
 - [徐宥](http://blog.youxu.info/)
+- [王俊煜](http://blog.wangjunyu.net/)
 - [刘未鹏](http://mindhacks.cn/)
 - [Fenng](http://dbanotes.net/)
+- [王小峰](http://www.wangxiaofeng.me/)
+- [王垠](http://www.yinwang.org/)
+
 
 

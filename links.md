@@ -14,6 +14,7 @@ permalink: /links/
 
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
+- [Stevey's Blog Rants](http://steve-yegge.blogspot.com/)
 
 #awesome projects
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)

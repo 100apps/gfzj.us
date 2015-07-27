@@ -412,3 +412,6 @@ po yourDataObject
 
 #NSAssert的使用
 开发中对于内部的代码进行自检。推荐用NSAssert，在Release版本中，设置`Preprocessor Macros`->Release(NS_BLOCK_ASSERTIONS)可以关闭。另外通过修改schema(cmd+shift+.)，可以让运行的schema用Release配置。
+
+#duplicate symbol _OBJC_METACLASS_$_ClassName
+\#import的时候引入了`.m`文件，而不是`.h`文件。

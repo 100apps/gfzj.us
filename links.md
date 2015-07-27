@@ -72,6 +72,7 @@ permalink: /links/
 - [Luke's Homepage - 卢克](http://geeklu.com/)
 - [Why's Blog](http://blog.callmewhy.com/)
 - [Vincent Sit](http://xuexuefeng.com/)
+- [Hermes Pique \| I make digital things.](http://www.hpique.com/)
 - <span style="color:red">♥</span>[mikeash.com: NSBlog](https://www.mikeash.com/pyblog/)
 - <span style="color:red">♥</span>[Mac OS X and iOS Internals: To the Apple's Core - Welcome!](http://www.newosxbook.com/index.php)
 - <span style="color:red">♥</span>[MKBlog](http://blog.mugunthkumar.com/)

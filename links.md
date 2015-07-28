@@ -119,6 +119,7 @@ permalink: /links/
 - [manio \| a blog](http://www.manio.org/)
 - [MicroCai 的博客](https://www.zybuluo.com/MicroCai/note/51120)
 - [Ryan's Zone](http://ryantang.me/)
+- [Martin Fowler](http://martinfowler.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

@@ -417,7 +417,7 @@ po yourDataObject
 \#import的时候引入了`.m`文件，而不是`.h`文件。
 
 #NSNotification必须配对出现
-NSNotification有add，必须在dealloc中remove，否则会造成循环引用
+NSNotification有add，必须在dealloc中remove，否则会造成循环引用。另外注意 NSNotification 中的target是阻塞执行的。执行的线程和poster一致，如果想更新UI，注意应在main_thread中执行。
 
 #NSTimer定时任务必须invalidate
 dealloc中必须把NSTimer清楚，否则造成循环引用

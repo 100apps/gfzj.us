@@ -415,3 +415,9 @@ po yourDataObject
 
 #duplicate symbol _OBJC_METACLASS_$_ClassName
 \#import的时候引入了`.m`文件，而不是`.h`文件。
+
+#NSNotification必须配对出现
+NSNotification有add，必须在dealloc中remove，否则会造成循环引用
+
+#NSTimer定时任务必须invalidate
+dealloc中必须把NSTimer清楚，否则造成循环引用

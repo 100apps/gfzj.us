@@ -237,3 +237,16 @@
 .alimama,#PAGE_AD_1 {
     margin-bottom: 20px;
 }
+.post-content hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #dededc -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: solid none none;
+    border-width: 3px 0 0;
+    display: block;
+    margin: 40px auto 34px;
+    width: 14%;
+}

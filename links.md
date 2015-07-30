@@ -14,6 +14,7 @@ permalink: /links/
 
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)
+- [Stevey's Blog Rants](http://steve-yegge.blogspot.com/)
 
 #awesome projects
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
@@ -21,12 +22,14 @@ permalink: /links/
 - [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
 
 #to be covered
+- [CS193P Developing iOS 8 Apps with Swift](https://github.com/X140Yu/Developing_iOS_8_Apps_With_Swift)
 - [码农设计初体验](http://sike.io/courses/design101/)
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
 - [iOS-Core-Animation-Advanced-Techniques](https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques)
 - [iOS常见问题](http://stackoverflow.com/questions/tagged/ios?sort=frequent)
 - [Motion Design for iOS](https://dn-motion-design.qbox.me/)
 - [官网指导必看](https://developer.apple.com/videos/wwdc/2014/?id=229)
+- [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 
 #朋友们的博客
 <ul class="list-unstyled">
@@ -47,6 +50,7 @@ permalink: /links/
 </ul>
 
 #技术博客
+- [豌豆家 \| 豌豆实验室 Blog](http://www.wandoujia.com/blog)
 - [Research at Google](https://research.google.com/)
 - [Phrack Magazine](http://phrack.org)
 - [Jeswang's Blog](http://blog.jeswang.org/)
@@ -67,6 +71,11 @@ permalink: /links/
 - [叶孤城___](http://www.jianshu.com/users/b82d2721ba07)
 - [Luke's Homepage - 卢克](http://geeklu.com/)
 - [Why's Blog](http://blog.callmewhy.com/)
+- [Vincent Sit](http://xuexuefeng.com/)
+- [Hermes Pique \| I make digital things.](http://www.hpique.com/)
+- <span style="color:red">♥</span>[mikeash.com: NSBlog](https://www.mikeash.com/pyblog/)
+- <span style="color:red">♥</span>[Mac OS X and iOS Internals: To the Apple's Core - Welcome!](http://www.newosxbook.com/index.php)
+- <span style="color:red">♥</span>[MKBlog](http://blog.mugunthkumar.com/)
 - <span style="color:red">♥</span>[NSHipster](http://nshipster.com/) &nbsp; [中文版](http://nshipster.cn/)
 - <span style="color:red">♥</span>[iPhone Tutorials - Ray Wenderlich](http://www.raywenderlich.com/tutorials)
 - <span style="color:red">♥</span>[objc.io](http://www.objc.io/) &nbsp; [中文版](http://www.objccn.io/)
@@ -95,6 +104,22 @@ permalink: /links/
 - [iTimothy](http://www.xiaozhou.net/)
 - [王中周的技术博客](http://foggry.com/)
 - [南峰子的技术博客](http://southpeak.github.io/)
+- [xkong \| ocean-coding-family](https://xkong123.wordpress.com)
+- [庞海礁的个人空间 \- 十里樱花十里尘](http://www.olinone.com/)
+- [小红的测试生涯](http://www.dzwanli.com.cn/)
+- [Tony's blog](http://itony.me/)
+- [Think Different](http://jkyin.me/)
+- [Why's Blog](http://blog.callmewhy.com/)
+- [Snow Memory](http://andrewliu.tk/)
+- [Jianzong - an iOS and web developer](http://www.haojianzong.com/)
+- [叶纯俊的博客](http://chun.tips/)
+- [Abel's Den](http://www.beyondabel.com/)
+- [nixzhu  on scriptogr.am](http://nixzhu.me/)
+- [高見龍](http://blog.eddie.com.tw/)
+- [manio \| a blog](http://www.manio.org/)
+- [MicroCai 的博客](https://www.zybuluo.com/MicroCai/note/51120)
+- [Ryan's Zone](http://ryantang.me/)
+- [Martin Fowler](http://martinfowler.com/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————
@@ -137,8 +162,10 @@ permalink: /links/
 - [learnGitBranching](http://pcottle.github.io/learnGitBranching/)
 - [tcptunnel](http://www.vakuumverpackt.de/tcptunnel/)
 
+
 #官网和文档
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
+- [Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 - [WWDC](https://developer.apple.com/videos/wwdc/)
 - [App Store Distribution](https://developer.apple.com/support/appstore/)
 - [Google Design](http://www.google.com/design/)
@@ -154,8 +181,12 @@ permalink: /links/
 - [hbase](http://hadoop-hbase.blogspot.com/)
 - [nossql](http://nosql.mypopescu.com/)
 
+#前端
+- [Material Design Lite Components](https://github.com/google/material-design-lite)
+
 
 #社区
+- [TesterHome](https://testerhome.com/)
 - [NounProject](https://thenounproject.com/)
 - [pinterest](https://www.pinterest.com)
 - [iconfont](http://iconfont.cn/)
@@ -211,4 +242,12 @@ permalink: /links/
 - [任毅飞](http://blog.sina.com.cn/u/1262345964)
 - [胡正](http://www.huzheng.org/)
 - [高学勇](http://www.thesct.net/sct.html)
+- [徐宥](http://blog.youxu.info/)
+- [王俊煜](http://blog.wangjunyu.net/)
+- [刘未鹏](http://mindhacks.cn/)
+- [Fenng](http://dbanotes.net/)
+- [王小峰](http://www.wangxiaofeng.me/)
+- [王垠](http://www.yinwang.org/)
+
+
 

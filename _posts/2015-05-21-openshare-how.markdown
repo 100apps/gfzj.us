@@ -124,10 +124,27 @@ alert=function(msg){
 其中还遇到一些坑，比如研究Sina微博的时候，监控不到粘贴板数据，百思不得其解。于是用lldb添加断点：
 
 {%highlight bash%}
-    breakpoint set -r '\[UIPasteboard .*\]$'
-    br l
+breakpoint set -r '\[UIPasteboard .*\]$'
+br l
 {%endhighlight%}
 这样就能把所有调用`UIPasteboard`的方法都打印出来了。原来Sina微博用的是`[UIPasteboard generalPasteboard].items`方法设置粘贴板。这个方法没有hook当然监控不到啦。
+
+*update 20150717*
+今天又学到一种监控mac/iOS模拟器中runtime message的方法：
+
+{%highlight objc%}
+#import <objc/runtime.h>
+void instrumentObjcMessageSends();
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    instrumentObjcMessageSends(YES);//设置为NO可以关闭。
+}
+{%endhighlight%}
+
+这样在/tmp/下目录就能生成`/tmp/msgSends-1234`类似的文件了。可以用`tail -f`查看。非常方便。加上[从源代码编译objc runtime](http://www.gfzj.us/tech/2015/04/01/objc-runtime-compile-from-source-code.html)中提到的方法，现在都有两种监控消息发送的方法了。另外还听说`Dtrace`的方法。
+
+------
 
 我们知道粘贴板传递的数据了，得到的是一个NSData类型，还需要猜测这个二进制NSData是如何生成和解码的。通过把NSData写入到文件，隐约看到bplist的身影，于是用node.js和`plutil`试一下：
 

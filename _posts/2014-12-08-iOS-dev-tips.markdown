@@ -409,3 +409,15 @@ breakpoint set -n "-[UIView setFrame:]"
 po [[[[UIApplication sharedApplication] delegate] window] recursiveDescription]
 po yourDataObject
 {%endhighlight%}
+
+#NSAssert的使用
+开发中对于内部的代码进行自检。推荐用NSAssert，在Release版本中，设置`Preprocessor Macros`->Release(NS_BLOCK_ASSERTIONS)可以关闭。另外通过修改schema(cmd+shift+.)，可以让运行的schema用Release配置。
+
+#duplicate symbol _OBJC_METACLASS_$_ClassName
+\#import的时候引入了`.m`文件，而不是`.h`文件。
+
+#NSNotification必须配对出现
+NSNotification有add，必须在dealloc中remove，否则会造成循环引用。另外注意 NSNotification 中的target是阻塞执行的。执行的线程和poster一致，如果想更新UI，注意应在main_thread中执行。
+
+#NSTimer定时任务必须invalidate
+dealloc中必须把NSTimer清楚，否则造成循环引用

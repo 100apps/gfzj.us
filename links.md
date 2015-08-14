@@ -120,6 +120,7 @@ permalink: /links/
 - [MicroCai 的博客](https://www.zybuluo.com/MicroCai/note/51120)
 - [Ryan's Zone](http://ryantang.me/)
 - [Martin Fowler](http://martinfowler.com/)
+- [WangJian](http://wj1s.github.io/)
 - ——————Android——————————
 - [老罗的Android之旅](http://blog.csdn.net/luoshengyang)
 - ——————Big Data——————————

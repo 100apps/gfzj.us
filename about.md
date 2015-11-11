@@ -8,7 +8,7 @@ permalink: /about/
 
 GF和ZJ都毕业于[山东大学](http://www.sdu.edu.cn/)，已婚，俱为码农，真是一个悲伤的故事。
 
-GF目前在一家跨境电商平台做iOS开发，ZJ在某公司做大数据平台研发。工作方面的事情，欢迎发邮件交流。
+GF目前在一家创业公司负责前端开发，ZJ在某公司做大数据平台研发。工作方面的事情，欢迎发邮件交流。
 
 <p><img src="/images/body-gf.jpg" alt="GF的照片" /></p>
 <p><img src="/images/body-zj.jpg" alt="ZJ的照片" /></p>

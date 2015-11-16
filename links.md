@@ -11,6 +11,8 @@ permalink: /links/
 - [Papers We Love](http://paperswelove.org/)
 - [WIRED](http://www.wired.com/)
 - [MindStore - 在这里找到最好的产品与想法](http://mindstore.io/)
+- [新芽NewSeed：寻找下一个独角兽](http://newseed.pedaily.cn/)
+- [伯乐在线](http://blog.jobbole.com/all-posts/)
 
 #industry leaders
 - [Paul Graham](http://paulgraham.com/articles.html)

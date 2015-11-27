@@ -1,0 +1,19 @@
+---
+layout: post
+title: "工作中遇到的问题记录"
+date: 2015-11-27 10:04:36
+categories: 
+by: zj
+description: 问题记录
+---
+
+1. 脚本除了注释是必须的，还有什么是必需的？
+
+我这两天在迁移别人整理的测试cases，在调用这些cases中的脚本时，经常会报错说找不到数据文件。查看脚本发现，脚本使用与其在同一目录下的数据文件，且脚本只能在当前目录执行，可是，实际上，我并不是在当前目录执行脚本，而是在这个case本身所在的目录调用脚本，所以，就在脚本的开始加入了以下两句：
+
+	basedir=`dirname $0`
+	cd $basedir
+
+2. timestamp数据类型带来的疑惑
+
+有一个测试case，测试jdbc sql执行，准备的标准结果集中timestamp对应的列是到秒级的，如2008-03-18 06:46:48，但是case执行结果中的timestamp查询结果是2008-03-18 06:46:48.0，多出“.0”。经过检查发现，这个case是通过调用jdbc进行查询，查到的timestamp类型为java.sql.Timestamp，它的toString方法是会带 .0。

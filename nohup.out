@@ -1,0 +1,6 @@
+2015-11-27 11:11:28 WARNING  warning: local set to listen on 0.0.0.0, it's not safe
+2015-11-27 11:11:28 INFO     loading libcrypto from /usr/lib/libcrypto.dylib
+2015-11-27 11:11:28 INFO     starting local at 0.0.0.0:33060
+2015-11-27 11:11:32 INFO     connecting www.google.com:443 from 127.0.0.1:59858
+2015-11-27 11:11:58 ERROR    [Errno 32] Broken pipe
+2015-11-27 11:11:58 INFO     connecting www.google.com:443 from 127.0.0.1:59860

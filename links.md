@@ -52,6 +52,7 @@ permalink: /links/
 </ul>
 
 #技术博客
+- [leancloud blog](https://blog.leancloud.cn/)
 - [豌豆家 \| 豌豆实验室 Blog](http://www.wandoujia.com/blog)
 - [Research at Google](https://research.google.com/)
 - [Phrack Magazine](http://phrack.org)

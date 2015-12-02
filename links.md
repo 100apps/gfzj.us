@@ -170,6 +170,7 @@ permalink: /links/
 #官网和文档
 - [LeanCloud 开放资源](http://open.leancloud.cn/)
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
+- [Contact the App Review Team 加急审核](https://developer.apple.com/contact/app-store/?topic=expedite)
 - [Guidelines for Cocoa](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGuidelines/CodingGuidelines.html)
 - [WWDC](https://developer.apple.com/videos/wwdc/)
 - [App Store Distribution](https://developer.apple.com/support/appstore/)

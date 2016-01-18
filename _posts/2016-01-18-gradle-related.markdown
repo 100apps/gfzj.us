@@ -33,7 +33,7 @@ description: gradle
 
 ####Point 3####
 
-假设工程中有些资源是在调试时使用，打包时并需要将其包含在内，只需在build.gradle文件中需要做如下配置：
+假设工程中有些资源是在调试时使用，打包时并需要将其包含在内，只需在build.gradle文件中需要做如下配置(假设不要jar包根目录下的xml文件)：
 
 	task packageExclude(type: Jar) {
    		 exclude("*.xml")

@@ -17,3 +17,11 @@ description: 问题记录
 2. timestamp数据类型带来的疑惑
 
 有一个测试case，测试jdbc sql执行，准备的标准结果集中timestamp对应的列是到秒级的，如2008-03-18 06:46:48，但是case执行结果中的timestamp查询结果是2008-03-18 06:46:48.0，多出“.0”。经过检查发现，这个case是通过调用jdbc进行查询，查到的timestamp类型为java.sql.Timestamp，它的toString方法是会带 .0。
+
+3. maven or gradle
+
+task packageAll(type: Jar) {
+    exclude("*.xml")
+    from sourceSets.main.output
+    from sourceSets.test.output
+}

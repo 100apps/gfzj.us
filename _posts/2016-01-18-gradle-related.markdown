@@ -24,6 +24,7 @@ description: gradle
 ####Point 2####
 
 假设工程当前使用junit写了一些测试类，需要打包到工程的jar包中（默认exclude test classes），在build.gradle文件中需要做如下配置：
+
 	task packageAll(type: Jar) {
     		from sourceSets.main.output
     		from sourceSets.test.output

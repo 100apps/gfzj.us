@@ -18,10 +18,47 @@ description: 问题记录
 
 有一个测试case，测试jdbc sql执行，准备的标准结果集中timestamp对应的列是到秒级的，如2008-03-18 06:46:48，但是case执行结果中的timestamp查询结果是2008-03-18 06:46:48.0，多出“.0”。经过检查发现，这个case是通过调用jdbc进行查询，查到的timestamp类型为java.sql.Timestamp，它的toString方法是会带 .0。
 
-3. maven or gradle
+3. 关于mysql权限的问题
 
-task packageAll(type: Jar) {
-    exclude("*.xml")
-    from sourceSets.main.output
-    from sourceSets.test.output
-}
+在使用jdbc连接mysql时，执行如下创建connection：
+
+	DriverManager.getConnection(url, USERNAME, PASSWORD)
+
+总是报错
+
+	`java.sql.SQLException: Access denied for user ''@'X.X.X.X'`
+
+其中 X.X.X.X 为程序所在机器的IP地址。很显然，是权限问题，但是用户名和密码并没有错。在mysql server所在节点登录mysql，执行如下语句：
+
+{% highlight java %}
+
+mysql> use mysql;
+mysql> SELECT host, user FROM user;
++------------+----------+
+| host       | user     |
++------------+----------+
+| %          | aaa      |
+| 127.0.0.1  | root     |
+| localhost  | root     |
++------------+----------+
+
+{% endhighlight %}
+
+就是说我使用的root帐号，只能从mysql server所在的节点登录，因为匹配的host只有 127.0.0.1 和 localhost，而不能在网络上其他任何一个节点连接mysql。但是，我必须要从别的节点连接mysql，那么执行如下语句：
+
+{% highlight java %}
+
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+mysql> SELECT host, user FROM user;
++------------+----------+
+| host       | user     |
++------------+----------+
+| %          | aaa      |
+| %          | root     |
+| 127.0.0.1  | root     |
+| localhost  | root     |
++------------+----------+
+
+{% endhighlight %}
+
+此时root帐号就能通过'%'保证接受来自任一节点的连接请求。

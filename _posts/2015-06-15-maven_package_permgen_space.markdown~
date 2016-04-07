@@ -13,5 +13,7 @@ description: des
 
 在执行上述命令之前，执行如下命令：
 
-	
+	export MAVEN_OPTS="-Xms1024m -Xmx2048m -XX:PermSize=256m -XX:MaxPermSize=512m"
+
+再执行maven，通过。
 

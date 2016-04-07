@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Gradle使用记录"
+title: "gradle小系列(5)--Gradle使用记录"
 date: 2016-01-18 19:39:21
-categories: 
+categories: series gradle
 by: zj
-description: gradle
+description: gradle dependency exclude
 ---
 
 在build.gradle文件中，如何满足如下需求：

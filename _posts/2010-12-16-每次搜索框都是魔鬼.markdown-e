@@ -1,0 +1,25 @@
+---
+layout: post
+title: "每次搜索框都是魔鬼"
+date: 2010-12-16 10:45:00
+category: tech
+by: gf
+description: 一个经典xss问题，本身够不该出现了。但是在中国这些老站上面以很大概率存在。搜索框跨站攻击，分两步：第一：搜索：&lt;script&gt;alert(newDate())&lt;/script&gt;第二：如果弹出搜索框，像这样：o
+permalink: /tech/165.html
+---
+一个经典xss问题，本身够不该出现了。但是在中国这些老站上面以很大概率存在。搜索框跨站攻击，分两步：
+
+第一：搜索：<script>alert(new Date())</script>
+
+第二：如果弹出搜索框，像这样：ok，那就发挥你的想想吧。
+
+![4697cc9df589f3df4ea8ad4a478b184e.jpg][]
+
+我一般用来跳转，有什么呢？要是找个牛逼的站跳转可以骗过一些SB过滤系统。不多说了，你懂得。
+
+如何发掘呢？google hack！搜索[intext:产品搜索][intext] [intitle:产品搜索][intitle]
+
+
+[4697cc9df589f3df4ea8ad4a478b184e.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4697cc9df589f3df4ea8ad4a478b184e.jpg
+[intext]: https://encrypted.google.com/search?hl=en&biw=1440&bih=682&q=intext%3A%E4%BA%A7%E5%93%81%E6%90%9C%E7%B4%A2&aq=f&aqi=&aql=&oq=&gs_rfai=
+[intitle]: https://encrypted.google.com/search?hl=en&source=hp&biw=1440&bih=682&q=intitle%3A%E4%BA%A7%E5%93%81%E6%90%9C%E7%B4%A2&aq=f&aqi=&aql=&oq=&gs_rfai=

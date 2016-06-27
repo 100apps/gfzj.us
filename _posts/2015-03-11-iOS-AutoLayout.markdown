@@ -10,7 +10,7 @@ description: AutoLayout确实非常方便，比起刀耕火种的手写frame要�
 
 AutoLayout确实非常方便，比起刀耕火种的手写frame要强大很多。体会一下下面的经典例子，就知道了。
 
-#旋转后自动布局
+# 旋转后自动布局
 
 ![autolayout demo](/images/autolayout-demo.gif)
 
@@ -46,7 +46,7 @@ AutoLayout确实非常方便，比起刀耕火种的手写frame要强大很多�
     
 {%endhighlight%}
 
-#自动计算兄弟元素位置
+# 自动计算兄弟元素位置
 
 ![demo2](/images/autolayout-demo-2.gif)
 
@@ -91,13 +91,13 @@ AutoLayout确实非常方便，比起刀耕火种的手写frame要强大很多�
     }
 {%endhighlight%}
 
-#Autolayout和UIScrollView
+# Autolayout和UIScrollView
 
 根据[官方文档](https://developer.apple.com/library/ios/technotes/tn2154/_index.html)，UIScrollView使用AutoLayout有两种方法。考虑下面的例子：
 
 ![demo-3](/images/autolayout-demo-3.gif)
 
-##方法1,纯autolayout，注意边界。
+# #方法1,纯autolayout，注意边界。
 
 {%highlight objc%}
     self.view.backgroundColor=[UIColor whiteColor];
@@ -131,7 +131,7 @@ AutoLayout确实非常方便，比起刀耕火种的手写frame要强大很多�
 {%endhighlight%}
 
 
-##方法2，使用中间view,利用systemLayoutSizeFittingSize设置contentsize
+# #方法2，使用中间view,利用systemLayoutSizeFittingSize设置contentsize
 
 {%highlight objc%}
 

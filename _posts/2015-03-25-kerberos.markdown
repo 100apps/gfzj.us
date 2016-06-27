@@ -8,7 +8,7 @@ keyword: kerberos
 description: kerberos简介
 ---
 
-##What is kerberos##
+# #What is kerberos##
 
 最近身陷kerberos，有一点点了解，且这一点点了解也是为了配置secure hadoop，并不深入，但暂可用。
 
@@ -18,7 +18,7 @@ Kerberos则是提供一个第三方的认证，无论是用户、服务等，对
 
 上述过程描述的较为简单，实际上认证过程涉及较多。
 
-###Kerberos Components###
+# ##Kerberos Components###
 
 ![kerberos_components][image1]
 

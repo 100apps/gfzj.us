@@ -21,7 +21,7 @@ description: 命令行打包到ipa，是持续集成的第一步，iOS应用现�
 
 在当前目录的build/Build/Products/Release-iphoneos/会生成app文件
 
-#自动更新build-version
+# 自动更新build-version
 选中某个target->build phases->左上角+->New Run Script Phases，填入：
 
 	#!/bin/bash

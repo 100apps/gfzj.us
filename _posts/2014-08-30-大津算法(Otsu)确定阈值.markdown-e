@@ -1,0 +1,51 @@
+---
+layout: post
+title: "大津算法(Otsu)确定阈值"
+date: 2014-08-30 18:54:47
+category: tech
+by: gf
+keyword: cv,数字图像处理,机器视觉,大津算法,otsu
+description: 二值化是去噪的一种常见方法，最近做了一个应用，需要从纷繁的背景中获取想要的内容。因为在这个应用中背景和前景一般差距较大，所以很自然地想到用大津算法。关于大津算法，具体内
+permalink: /tech/156.html
+---
+二值化是去噪的一种常见方法，最近做了一个应用，需要从纷繁的背景中获取想要的内容。因为在这个应用中背景和前景一般差距较大，所以很自然地想到用大津算法。
+
+关于大津算法，具体内容见 [维基百科：大津算法][Link 1]，以下是java实现：
+
+    public int Otsu(byte[] sourceData) {
+      // STEP 1 计算灰度直方图
+      int[] pixelCount = new int[256];
+      for (int i = 0; i < sourceData.length; i++)
+       pixelCount[sourceData[i] & 0xff]++;
+      // STEP2 计算灰度值总和，用来计算平均灰度值
+      long graySum = 0;
+      for (int i = 0; i < pixelCount.length; i++)
+       graySum += pixelCount[i] * i;
+    
+      // STEP 3 尝试用每一个灰度[0-255]来区分，看看哪个区分效果最好。
+      int backgroundCount = 0, foregroundCount = 0, threshold = 0;
+      double backgroundGraySum = 0, foregroundGraySum = 0;
+      double maxDiff = 0;
+      for (int i = 0; i < 255; i++) {
+       backgroundCount += pixelCount[i];
+       if (backgroundCount == 0)
+        continue;
+       foregroundCount = sourceData.length - backgroundCount;
+       if (foregroundCount == 0)
+        continue;
+       backgroundGraySum += i * pixelCount[i];
+       foregroundGraySum = graySum - backgroundGraySum;
+       double backgroundMeanGray = backgroundGraySum / backgroundCount;
+       double foregroundMeanGray = foregroundGraySum / foregroundCount;
+       double diff = foregroundMeanGray - backgroundMeanGray;
+       diff *= diff * backgroundCount * foregroundCount;
+       if (diff > maxDiff) {
+        threshold = i;
+        maxDiff = diff;
+       }
+      }
+      return threshold;
+     }
+
+
+[Link 1]: http://zh.wikipedia.org/zh/%E5%A4%A7%E6%B4%A5%E7%AE%97%E6%B3%95

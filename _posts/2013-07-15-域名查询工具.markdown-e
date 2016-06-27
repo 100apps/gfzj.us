@@ -1,0 +1,109 @@
+---
+layout: post
+title: "域名查询工具"
+date: 2013-07-15 11:26:50
+category: tech
+by: gf
+keyword: whois,过期域名,百度收录查询
+description: 今天打算去淘宝买几个已备案域名，卖家发给我一个列表。想先查查收录，再看看域名过期时间。用curl+pcregrep完全能搞定，但是有个鸡肋就是不能控制多线程。所以用java来实现吧。
+permalink: /tech/86.html
+---
+今天打算去淘宝买几个已备案域名，卖家发给我一个列表。想先查查收录，再看看域名过期时间。用curl+pcregrep完全能搞定，但是有个鸡肋就是不能控制多线程。所以用java来实现吧。
+
+功能：查询百度收录、域名注册、过期、更新时间。
+
+原理：get 百度搜索结果页和whois.chinaz.com查询页，然后正则一下。
+
+    import java.io.ByteArrayOutputStream;
+    import java.io.IOException;
+    import java.io.InputStream;
+    import java.net.URL;
+    import java.net.URLConnection;
+    import java.util.Scanner;
+    import java.util.concurrent.ExecutorService;
+    import java.util.concurrent.Executors;
+    import java.util.concurrent.TimeUnit;
+    import java.util.regex.Matcher;
+    import java.util.regex.Pattern;
+    
+    public class SiteBaidu {
+     static String get(String url, String... _encoding) {
+      String encoding = _encoding.length > 0 ? _encoding[0] : "UTF-8";
+      String ret = "";
+      try {
+       URLConnection con = new URL(url).openConnection();
+       con.addRequestProperty(
+         "User-Agent",
+         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36");
+       InputStream in = con.getInputStream();
+       byte[] buf = new byte[2048];
+       int len = 0;
+       ByteArrayOutputStream bo = new ByteArrayOutputStream();
+       while ((len = in.read(buf)) > 0) {
+        bo.write(buf, 0, len);
+       }
+       ret = new String(bo.toByteArray(), encoding);
+       bo.close();
+       in.close();
+      } catch (IOException e) {
+       e.printStackTrace();
+      }
+      return ret;
+     }
+    
+     static Pattern baiduPattern = Pattern.compile("找到相关结果数(.*?)个");
+     static Pattern updatePattern = Pattern.compile("更新时间：(.*?)<br/>");
+     static Pattern createPattern = Pattern.compile("创建时间：(.*?)<br/>");
+     static Pattern expPattern = Pattern.compile("过期时间：(.*?)<br/>");
+    
+     public static void main(String[] args) {
+      try {
+       int nThread = args.length > 0 ? Integer.parseInt(args[0]) : 10;
+       ExecutorService ser = Executors.newFixedThreadPool(nThread);
+       Scanner scan = new Scanner(System.in);
+       System.out.println("域名\\t过期时间\\t注册时间\\t更新时间");
+       while (scan.hasNextLine()) {
+        String line = scan.nextLine().trim();
+        if (line.length() > 0 && line.indexOf('.') > -1) {
+         int index = -1;
+         if ((index = line.indexOf("//")) > -1)
+          line = line.substring(index + 2);
+         if ((index = line.indexOf('/')) > -1)
+          line = line.substring(0, index);
+         final String site = line;
+         ser.execute(new Runnable() {
+          @Override
+          public void run() {
+           String ret = get("http://www.baidu.com/s?wd=site:"
+             + site);
+           Matcher m = baiduPattern.matcher(ret);
+           String baiduSite = "0", update = "0", create = "0", exp = "0";
+           if (m.find()) {
+            baiduSite = m.group(1).replace(",", "");
+           }
+    
+           ret = get("http://whois.chinaz.com/" + site);
+           m = expPattern.matcher(ret);
+           if (m.find())
+            exp = m.group(1);
+           m = createPattern.matcher(ret);
+           if (m.find())
+            create = m.group(1);
+           m = updatePattern.matcher(ret);
+           if (m.find())
+            update = m.group(1);
+           System.out.println(site + "\\t" + baiduSite + "\\t"
+             + exp + "\\t" + create + "\\t" + update);
+          }
+         });
+        }
+       }
+       scan.close();
+       ser.shutdown();
+       ser.awaitTermination(10, TimeUnit.DAYS);
+       ser.shutdownNow();
+      } catch (Exception e) {
+       e.printStackTrace();
+      }
+     }
+    }

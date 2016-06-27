@@ -1,0 +1,317 @@
+---
+layout: post
+title: "lampp1.8.0 VS nginx1.3.3+APC-3.1.11+php5.4.5 VS httpserver on JDK 1.7.0_05"
+date: 2012-07-31 13:55:00
+category: tech
+by: gf
+description: 测试内容容随机产生100个随机数，然后返回。php代码：&lt;?php$ret=\"\";for($i=0;$i
+permalink: /tech/40.html
+---
+测试内容容随机产生100个随机数，然后返回。 php代码：
+
+    <?php
+    $ret="";
+    for($i=0;$i<100;$i++)$ret.=rand();
+    echo $ret;
+
+java代码：
+
+    import java.io.IOException;
+    import java.net.InetSocketAddress;
+    import java.util.Random;
+    
+    import com.sun.net.httpserver.HttpExchange;
+    import com.sun.net.httpserver.HttpHandler;
+    import com.sun.net.httpserver.HttpServer;
+    
+    public class Server {
+     public static void main(String[] args) {
+      try {
+       HttpServer server = HttpServer.create(new InetSocketAddress(8000),
+         0);
+       final Random r = new Random();
+       server.createContext("/", new HttpHandler() {
+    
+        @Override
+        public void handle(HttpExchange h) throws IOException {
+         StringBuffer sb = new StringBuffer();
+         for (int i = 0; i < 100; i++) {
+          sb.append(r.nextInt());
+         }
+         byte[] r = sb.toString().getBytes("UTF-8");
+         h.sendResponseHeaders(200, r.length);
+         h.getResponseBody().write(r);
+         h.close();
+        }
+       });
+       server.setExecutor(null); 
+       server.start();
+      } catch (Exception e) {
+       e.printStackTrace();
+      }
+     }
+    
+    }
+
+用apache ab测试结果
+
+<table> 
+ <tbody>
+  <tr>
+   <th colspan="2">Server Software:</th>
+   <td colspan="2">lampp1.8.0</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Server Hostname:</th>
+   <td colspan="2">key.eagle-project.org</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Server Port:</th>
+   <td colspan="2">80</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Document Path:</th>
+   <td colspan="2">/</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Document Length:</th>
+   <td colspan="2">486 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Concurrency Level:</th>
+   <td colspan="2">1000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Time taken for tests:</th>
+   <td colspan="2">31.229 seconds</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Complete requests:</th>
+   <td colspan="2">10000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Failed requests:</th>
+   <td colspan="2">9984</td>
+  </tr> 
+  <tr>
+   <td colspan="4"> (Connect: 0, Length: 9660, Exceptions: 162)</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Total transferred:</th>
+   <td colspan="2">7266194 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">HTML transferred:</th>
+   <td colspan="2">4835714 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Requests per second:</th>
+   <td colspan="2">320215.07</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Transfer rate:</th>
+   <td colspan="2">232674.48 kb/s received</td>
+  </tr> 
+  <tr>
+   <th colspan="4">Connnection Times (ms)</th>
+  </tr> 
+  <tr>
+   <th>&nbsp;</th> 
+   <th>min</th> 
+   <th>avg</th> 
+   <th>max</th>
+  </tr> 
+  <tr>
+   <th>Connect:</th>
+   <td> 139</td>
+   <td> 276</td>
+   <td> 7169</td>
+  </tr> 
+  <tr>
+   <th>Processing:</th>
+   <td> 180</td>
+   <td> 985</td>
+   <td>24046</td>
+  </tr> 
+  <tr>
+   <th>Total:</th>
+   <td> 319</td>
+   <td> 1261</td>
+   <td>31215</td>
+  </tr> 
+ </tbody>
+</table>
+
+<table> 
+ <tbody>
+  <tr>
+   <th colspan="2">Server Software:</th>
+   <td colspan="2">nginx1.3.3+APC-3.1.11+php5.4.5</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Server Hostname:</th>
+   <td colspan="2">key.eagle-project.org</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Server Port:</th>
+   <td colspan="2">80</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Document Path:</th>
+   <td colspan="2">/</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Document Length:</th>
+   <td colspan="2">949 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Concurrency Level:</th>
+   <td colspan="2">1000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Time taken for tests:</th>
+   <td colspan="2">12.247 seconds</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Complete requests:</th>
+   <td colspan="2">10000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Failed requests:</th>
+   <td colspan="2">9372</td>
+  </tr> 
+  <tr>
+   <td colspan="4"> (Connect: 0, Length: 9372, Exceptions: 0)</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Total transferred:</th>
+   <td colspan="2">10633670 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">HTML transferred:</th>
+   <td colspan="2">9483670 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Requests per second:</th>
+   <td colspan="2">816508.23</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Transfer rate:</th>
+   <td colspan="2">868247.91 kb/s received</td>
+  </tr> 
+  <tr>
+   <th colspan="4">Connnection Times (ms)</th>
+  </tr> 
+  <tr>
+   <th>&nbsp;</th> 
+   <th>min</th> 
+   <th>avg</th> 
+   <th>max</th>
+  </tr> 
+  <tr>
+   <th>Connect:</th>
+   <td> 163</td>
+   <td> 460</td>
+   <td> 3388</td>
+  </tr> 
+  <tr>
+   <th>Processing:</th>
+   <td> 203</td>
+   <td> 641</td>
+   <td> 5854</td>
+  </tr> 
+  <tr>
+   <th>Total:</th>
+   <td> 366</td>
+   <td> 1101</td>
+   <td> 9242</td>
+  </tr> 
+ </tbody>
+</table>
+
+<table> 
+ <tbody>
+  <tr>
+   <th colspan="2">Server Software:</th>
+   <td colspan="2"> JDK 1.7.0_05</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Server Hostname:</th>
+   <td colspan="2">key.eagle-project.org</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Server Port:</th>
+   <td colspan="2">8000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Document Path:</th>
+   <td colspan="2">/</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Document Length:</th>
+   <td colspan="2">996 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Concurrency Level:</th>
+   <td colspan="2">1000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Time taken for tests:</th>
+   <td colspan="2">15.387 seconds</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Complete requests:</th>
+   <td colspan="2">10000</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Failed requests:</th>
+   <td colspan="2">9479</td>
+  </tr> 
+  <tr>
+   <td colspan="4"> (Connect: 0, Length: 9479, Exceptions: 0)</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Total transferred:</th>
+   <td colspan="2">10947712 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">HTML transferred:</th>
+   <td colspan="2">9983100 bytes</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Requests per second:</th>
+   <td colspan="2">649902.52</td>
+  </tr> 
+  <tr>
+   <th colspan="2">Transfer rate:</th>
+   <td colspan="2">711494.56 kb/s received</td>
+  </tr> 
+  <tr>
+   <th colspan="4">Connnection Times (ms)</th>
+  </tr> 
+  <tr>
+   <th>&nbsp;</th> 
+   <th>min</th> 
+   <th>avg</th> 
+   <th>max</th>
+  </tr> 
+  <tr>
+   <th>Connect:</th>
+   <td> 144</td>
+   <td> 580</td>
+   <td> 7393</td>
+  </tr> 
+  <tr>
+   <th>Processing:</th>
+   <td> 261</td>
+   <td> 802</td>
+   <td> 5943</td>
+  </tr> 
+  <tr>
+   <th>Total:</th>
+   <td> 405</td>
+   <td> 1382</td>
+   <td>13336</td>
+  </tr> 
+ </tbody>
+</table>

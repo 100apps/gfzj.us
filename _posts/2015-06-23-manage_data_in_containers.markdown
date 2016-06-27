@@ -12,7 +12,7 @@ description: manage data in containers
 1. Data volumes
 2. Data volume containers
 
-### Data volumes
+# ## Data volumes
 
 一个数据卷是指container中的一个特殊目录，具有以下特点：
 
@@ -22,7 +22,7 @@ description: manage data in containers
 4. 在更新image时，不会更新数据卷中的数据变化。
 5. 即使删除container，其数据卷也不会被删除。
 
-#### Add a data volume
+# ### Add a data volume
 
 在执行命令docker create或者docker run时加入参数-v即可为一个container添加一个数据卷，可以多次使用-v以添加多个数据卷。简单示例如下：
 
@@ -61,7 +61,7 @@ description: manage data in containers
 
 如上，在container中使用的命令都会记录下来，当离开container后，仍旧可以查看历史记录。
 
-### Creating and mounting a data volume container
+# ## Creating and mounting a data volume container
 
 如果需要在containers之间共享持久化数据，或者使用非持久化containers的持久化数据，可以考虑创建数据卷container，并将其中数据挂载到其他containers。
 

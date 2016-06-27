@@ -1,0 +1,36 @@
+---
+layout: post
+title: "不能依赖编译器初始化数组"
+date: 2014-09-03 15:10:12
+category: tech
+by: gf
+keyword: C,oc
+description: 今天遇到了一个百思不得其解的问题。c语言代码：#include&lt;stdio.h&gt;intmain(){intlength=10;intarr(length);for(inti=0;i&lt;length;i++)printf(&quot;arr(%d)=%d\\n&quot;,i,ar
+permalink: /tech/158.html
+---
+今天遇到了一个 **百思不得其解**的问题。
+
+**c语言代码：**
+
+    #include <stdio.h>
+    int main(){
+     int length=10;
+     int arr[length] ;
+     for(int i=0;i<length;i++)
+      printf("arr[%d]=%d\\n",i,arr[i]);
+    }
+
+**Java代码**
+
+    public class Test{
+     public static void main(String[] args){
+      int length=10;
+      int arr[]=new int[length];
+      for(int i=0;i<length;i++)
+       System.out.printf("arr[%d]=%d\\n",i,arr[i]);
+     }
+    }
+
+运行一下。就看到结果了：
+
+java编辑器，会给数组赋默认值。boolean默认false，数字类型的0，对象null。但是c语言并不会初始化赋值。因为c是指针，分配了指针空间，但是并不会对这块内存赋值。所以在c(objective-c)中，一定别忘了给数组初始化。

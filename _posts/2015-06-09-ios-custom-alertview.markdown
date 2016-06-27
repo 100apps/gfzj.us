@@ -11,7 +11,7 @@ description: Custom iOS AlertView  源码分析
 
 ![Custom iOS AlertView Demo gif](https://github.com/wimagguc/ios-custom-alertview/raw/master/Docs/screen.png)
 
-##使用：
+# #使用：
 
 {%highlight objc%}
 // Here we need to pass a full frame
@@ -36,7 +36,7 @@ NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, 
 [alertView show];
 {%endhighlight%}
 
-##按钮点击回调的实现
+# #按钮点击回调的实现
 
 和普通的AlertView差不多。`CustomIOSAlertView`通过两个特殊的`property`实现：
 
@@ -49,7 +49,7 @@ NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, 
 
 这样，既可以通过delegate回调按钮点击事件，又能用block回调了。
 
-##屏幕旋转和键盘推出事件
+# #屏幕旋转和键盘推出事件
 
 {%highlight objc%}
 [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -59,7 +59,7 @@ NSLog(@"Block: Button at position %d is clicked on alertView %d.", buttonIndex, 
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 {%endhighlight%}
 
-##MotionEffects
+# #MotionEffects
 `MotionEffects`是iOS7以后对view添加的一种随着设备水平移动而移动的效果。iOS7+的springboard就用这种效果。
 
 {%highlight objc%}

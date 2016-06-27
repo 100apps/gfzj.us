@@ -1,0 +1,10 @@
+---
+layout: post
+title: "百度文库上传API"
+date: 2012-04-18 16:45:11
+category: tech
+by: gf
+description: 没什么难点。关键是那个加密：(this._itemList(param1)asUploadItem).upload(Config.uploadurl+&quot;?ct=20001&amp;bduss=&quot;+Config.bduss+&quot;&amp;flag=&quot;+_loc_2+&quot;&amp;smart=&quot;+
+permalink: /tech/29.html
+---
+没什么难点。关键是那个加密： (this.\_itemList\[param1\] as UploadItem).upload(Config.uploadurl + "?ct=20001&bduss=" + Config.bduss + "&flag=" + \_loc\_2 + "&smart=" + MD5.encrypt((this.\_itemList\[param1\] as UploadItem).fileSize + Config.smart)); smart不是网页JS中的那个，而是经过处理了。就是文件大小+原先的smart值，然后做个MD5摘要。

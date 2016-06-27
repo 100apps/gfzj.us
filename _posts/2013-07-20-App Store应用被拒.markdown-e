@@ -1,0 +1,65 @@
+---
+layout: post
+title: "App Store应用被拒"
+date: 2013-07-20 18:31:37
+category: tech
+by: gf
+keyword: app,store,应用审核
+description: 真是悲剧，传了3个App到appstore，全军覆没，都挂了。颇为不爽。看看被拒的原因：这个是一个网站的壳，看来这种东西，是通不过审核的：p.body{margin:13px000;font-size:13px;colo
+permalink: /tech/88.html
+---
+真是悲剧，传了3个App到app store，全军覆没，都挂了。颇为不爽。看看被拒的原因：
+
+这个是一个网站的壳，看来这种东西，是通不过审核的：
+
+2.12  
+  
+We found that the experience your app provides is not sufficiently different from a web browsing experience, as it would be by incorporating native iOS functionality to provide a more robust user experience.  
+  
+While your app content may differ from your web site or other existing sites, the experience it provides does not differ significantly from the general experience of using Safari, as required by the [App Store Review Guidelines][].  
+  
+You may wish to provide convenient access to a web property for a select or niche group of users - and may have enhanced that experience with features such as Push Notifications, Core Location, and/or sharing features. However, these features do not provide a robust enough user experience to be appropriate for the App Store.  
+  
+If you wish to provide quick access to a web property, you may wish instead to provide instructions to your users on how to [create a Safari web clip][] to add to their iOS device Home Screen. Or, if you would like to share the app with a select group of users, we recommend the Ad Hoc distribution method. See the [iOS Provisioning Portal][] for details on Ad Hoc Distribution.  
+  
+We encourage you to review your app concept and evaluate whether you can incorporate additional features to enhance the user experience.  
+If you cannot - or choose not to - revise your app to be in compliance with the App Store Review Guidelines, you may wish to build an HTML5 web app instead. You can distribute web apps directly on your web site; **the App Store does not accept or distribute web apps.**  
+  
+HTML5 is the major new version of HTML and enables audio and video to play natively in the browser without requiring proprietary plug-ins. Using HTML5, web apps can look and behave like native iPhone and iPad apps, and using HTML5's Offline Application Cache, a web app can work even when the device is offline. With web apps, you have flexibility to deliver as much or as little functionality as you desire.  
+  
+To get started with iPhone or iPad web apps, please review [Getting Started with iPhone Web Apps][].  
+  
+For a description of the HTML elements and attributes you can use in Safari on iPhone, check out [Safari HTML Reference: Introduction][Safari HTML Reference_ Introduction].
+
+这个用了一个在状态栏显示状态的框架。看来这种设计已经彻底被apple否决了。原因如下：
+
+10.1  
+  
+We found that your app does not comply with the Apple [iOS Human Interface Guidelines][], as required by the [App Store Review Guidelines][].  
+  
+The app provides an overlay that entirely blocks the status bar.  
+  
+It may be helpful to review the [iOS Human Interface Guidelines][iOS Human Interface Guidelines 1] to help ensure your app is in compliance with these terms and conditions.  
+10.3  
+  
+We found your app uses system-provided items in a non-standard manner, which is not in compliance with the [App Store Review Guidelines][].  
+  
+The app provides an overlay that entirely blocks the status bar. A screenshot has been provided for your reference.  
+  
+Learn more about system-provided items in the [iOS Human Interface Guidelines][iOS Human Interface Guidelines 1], sections: "System-Provided Buttons and Icons" and "iOS UI Element Usage Guidelines."  
+  
+
+
+![被app store拒绝的应用截屏][app store]
+
+看来下周一有活儿干了。
+
+
+[App Store Review Guidelines]: https://developer.apple.com/appstore/resources/approval/guidelines.html
+[create a Safari web clip]: http://www.apple.com/iphone/tips/
+[iOS Provisioning Portal]: http://developer.apple.com/ios/my/overview/index.action
+[Getting Started with iPhone Web Apps]: http://developer.apple.com/safari/library/referencelibrary/GettingStarted/GS_iPhoneWebApp/index.html#//apple_ref/doc/uid/TP40008134
+[Safari HTML Reference_ Introduction]: http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html#//apple_ref/doc/uid/TP40002049
+[iOS Human Interface Guidelines]: https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html
+[iOS Human Interface Guidelines 1]: http://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/MobileHIG.pdf
+[app store]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a481ea227ed7dbd9514a7c3c33c6c8e6.png

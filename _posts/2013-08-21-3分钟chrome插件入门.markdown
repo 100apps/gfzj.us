@@ -17,7 +17,7 @@ chrome插件开发确实比firefox简单多了,而且不用重启浏览器。现
 
 通过google，搜索到了方法。
 
-## STEP1 建立manifest.json里面的内容： ##
+# # STEP1 建立manifest.json里面的内容： ##
 
     {
       "manifest_version": 2,
@@ -46,7 +46,7 @@ chrome插件开发确实比firefox简单多了,而且不用重启浏览器。现
       ]
     }
 
-## STEP2 编写script.js ##
+# # STEP2 编写script.js ##
 
 上面得mainfest标明，在相应的url上，页面加载完了以后运行script.js。里面写上要运行的js代码就行了。
 
@@ -102,11 +102,11 @@ chrome插件开发确实比firefox简单多了,而且不用重启浏览器。现
 
 需要注意的是，google有个instant search，在这种情况下，翻页和重新搜索，都不会出发document.onload。所以要写一个方法判断一下。即：onhashchange。
 
-## STEP3 搞个png图标 ##
+# # STEP3 搞个png图标 ##
 
 随便搜索一个，放到对应的文件夹里面就行了。
 
-## 其他 ##
+# # 其他 ##
 
 熟悉了开发流程，其实像firefox下油猴的功能，chrome就相当好实现了。但是更底层的api，估计需要查看官方文档了: http://developer.chrome.com/extensions/‎
 

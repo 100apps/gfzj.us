@@ -37,7 +37,7 @@ mac连接也是用 [ppp][]这个改造过的开源程序，[apple公布了源代
 
     osascript -e 'tell application id "com.apple.ScreenSaver.Engine" to launch'
 
-## 写一个小脚本，可以在命令行里面链接和断开 ##
+# # 写一个小脚本，可以在命令行里面链接和断开 ##
 
     #!/bin/bash
     if [ x$1 = "xdis" ] 

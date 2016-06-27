@@ -1,0 +1,50 @@
+---
+layout: post
+title: "c语言(oc)传递动态长度的二维数组"
+date: 2014-09-02 14:40:28
+category: tech
+by: gf
+keyword: C
+description: c语言不能直接传递不确定长度的二维数组，一般常用的方法是转为一维数组，或者确定宽度。比如:voidfunction(int()(10)input){}但是幸亏有万能的指针，我们可以把二维数组的指针
+permalink: /tech/157.html
+---
+c语言不能直接传递不确定长度的二维数组，一般常用的方法是转为一维数组，或者确定宽度。比如:
+
+    void function(int[][10] input){}
+
+但是幸亏有万能的指针，我们可以把二维数组的指针传过去，这样就可以传递动态长度的二维数组了，现在似乎可以理解，即使以前的C语言不能传递动长的数组也没关系，因为有指针啊。
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    int width=10,height=15;
+    
+    void test(int ** array){
+     for(int i=0;i<width;i++){
+      for(int j=0;j<height;j++) 
+       printf("%dx%d=%d\\t",i,j,array[i][j]);
+      printf("\\n");
+     }
+    }
+    
+    int main(){
+     int **array=malloc(sizeof(int*)*width); 
+     for(int i=0;i<width;i++)
+      *(array+i)=malloc(sizeof(int)*height);
+    
+     //指针比int[width][height]多了一个malloc的过程。
+     for(int i=0;i<width;i++)
+      for(int j=0;j<height;j++)
+       array[i][j]=i*j;
+     test(array);
+     return 0; 
+    }
+
+PS:  
+
+
+ *  这个问题本来在原来班级群里问了一下，感谢@张博士 在深夜给出解答
+ *  张博士手误，写错了一个地方，感谢[stackoverflow][]给出解释
+
+
+[stackoverflow]: http://stackoverflow.com/questions/25616411/segmentation-fault-11-in-c-when-two-dimension-arrays-width-length

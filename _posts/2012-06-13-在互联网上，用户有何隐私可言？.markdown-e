@@ -1,0 +1,14 @@
+---
+layout: post
+title: "在互联网上，用户有何隐私可言？"
+date: 2012-06-13 15:58:36
+category: life
+by: gf
+description: 今天测试com.sun.httpserver，无意间开启了8088端口，过了一会发现很多请求，估计是别人的代理扫描软件，把我的机器当成代理了。过了一会，请求越来越多，估计是这个人通过软件扫描到，然
+permalink: /tech/37.html
+---
+今天测试com.sun.httpserver，无意间开启了8088端口，过了一会发现很多请求，估计是别人的代理扫描软件，把我的机器当成代理了。过了一会，请求越来越多，估计是这个人通过软件扫描到，然后又发布给别人。索性当一次代理，监控了一下别人的请求。 [![Screenshot from 2012-06-13 16:25:05][Screenshot from 2012-06-13 16_25_05]][Screenshot from 2012-06-13 16_25_05_Screenshot from 2012-06-13 16_25_05] 还截获了一些cookie。 突然想起了wikileak，和这个道理一样，我搭建了代理服务器，别人通过我上网，那我我就可以监控这些人了。 电信、联通这些大代理呢？ 还有我们买的vpn，估计也会有访问日志。重要的数据千万不要通过vpn访问。 目前为止，可能比较靠谱的解决方案就是HTTPS吧。
+
+
+[Screenshot from 2012-06-13 16_25_05]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/ad7c76f4ef7e921abcb57d8b7026e678.png
+[Screenshot from 2012-06-13 16_25_05_Screenshot from 2012-06-13 16_25_05]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/06/Screenshot-from-2012-06-13-162505.png

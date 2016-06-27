@@ -11,7 +11,7 @@ description: 今天在vps上写了一个脚本，本来要清除缓存目录下�
 
 核心是rm只删除索引，并没有删除磁盘上的文件，所以我们可以用dd直接复制出来，但是我们首先需要知道被删除的文件的位置。可以用debugfs获取。
 
-#查看被删除文件在哪个磁盘上：
+# 查看被删除文件在哪个磁盘上：
 
 	root@localhost:/tmp/book# df -h
 	Filesystem      Size  Used Avail Use% Mounted on
@@ -22,7 +22,7 @@ description: 今天在vps上写了一个脚本，本来要清除缓存目录下�
 	none            100M     0  100M   0% /run/user
 	/dev/xvda        47G   40G  5.2G  89% /
 
-#找到inode, 尖括号里面的就是inode号
+# 找到inode, 尖括号里面的就是inode号
 
 
 	debugfs:  ls -d /tmp/book
@@ -31,7 +31,7 @@ description: 今天在vps上写了一个脚本，本来要清除缓存目录下�
 	<4275939> (4004) .go.sh.swx
 
 
-#找到offset, 其中12029952就是offset
+# 找到offset, 其中12029952就是offset
 
 
 	debugfs:  logdump -i <5179106>
@@ -52,7 +52,7 @@ description: 今天在vps上写了一个脚本，本来要清除缓存目录下�
 
 执行`quit`退出debugfs
 
-#dd出来
+# dd出来
 
 注意bs是文件长度。估计4096比较大了，但是可以vi编辑一下就可以了。
 

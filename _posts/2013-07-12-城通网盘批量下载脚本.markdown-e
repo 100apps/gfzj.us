@@ -1,0 +1,169 @@
+---
+layout: post
+title: "城通网盘批量下载脚本"
+date: 2013-07-12 11:36:26
+category: tech
+by: gf
+description: 昨日发现某黑阔用了城通网盘(http://www.400gb.com/)，遂欲下之，去淘宝买了一个账号，发现不能批量。卖家说批量的都卖完了。不错，这个包月vip虽然不能批量，但是却没有验证码。所以
+permalink: /tech/85.html
+---
+昨日发现某黑阔用了城通网盘(http://www.400gb.com/)，遂欲下之，去淘宝买了一个账号，发现不能批量。卖家说批量的都卖完了。不错，这个包月vip虽然不能批量，但是却没有验证码。所以应该可以用油猴搞定。
+
+批量的时候注意不能请求太快，否则容易503.测试发现电信地址和迅雷地址差别不大，所以用迅雷地址就好了。
+
+下面是油猴脚本。不要问我怎么用,我只能告诉你，亲测可用。喜欢就拿去吧。
+
+    // ==UserScript==
+    // @name        400gb.com
+    // @namespace   guangfeng
+    // @description 城通网盘批量下载工具
+    // @include     http://www.400gb.com/*
+    // @version     1
+    // @grant       none
+    // ==/UserScript==
+    jQuery.base64 = (function($) {
+     var _PADCHAR = "=",
+     _ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/",
+     _VERSION = "1.0";
+     function _getbyte64(s, i) {
+      var idx = _ALPHA.indexOf(s.charAt(i));
+      if (idx === -1) {
+       throw "Cannot decode base64"
+      }
+      return idx
+     }
+     function _decode(s) {
+      var pads = 0,
+      i, b10, imax = s.length,
+      x = [];
+      s = String(s);
+      if (imax === 0) {
+       return s
+      }
+      if (imax % 4 !== 0) {
+       throw "Cannot decode base64"
+      }
+      if (s.charAt(imax - 1) === _PADCHAR) {
+       pads = 1;
+       if (s.charAt(imax - 2) === _PADCHAR) {
+        pads = 2
+       }
+       imax -= 4
+      }
+      for (i = 0; i < imax; i += 4) {
+       b10 = (_getbyte64(s, i) << 18) | (_getbyte64(s, i + 1) << 12) | (_getbyte64(s, i + 2) << 6) | _getbyte64(s, i + 3);
+       x.push(String.fromCharCode(b10 >> 16, (b10 >> 8) & 255, b10 & 255))
+      }
+      switch (pads) {
+      case 1:
+       b10 = (_getbyte64(s, i) << 18) | (_getbyte64(s, i + 1) << 12) | (_getbyte64(s, i + 2) << 6);
+       x.push(String.fromCharCode(b10 >> 16, (b10 >> 8) & 255));
+       break;
+      case 2:
+       b10 = (_getbyte64(s, i) << 18) | (_getbyte64(s, i + 1) << 12);
+       x.push(String.fromCharCode(b10 >> 16));
+       break
+      }
+      return x.join("")
+     }
+     function _getbyte(s, i) {
+      var x = s.charCodeAt(i);
+      if (x > 255) {
+       throw "INVALID_CHARACTER_ERR: DOM Exception 5"
+      }
+      return x
+     }
+     function _encode(s) {
+      if (arguments.length !== 1) {
+       throw "SyntaxError: exactly one argument required"
+      }
+      s = String(s);
+      var i, b10, x = [],
+      imax = s.length - s.length % 3;
+      if (s.length === 0) {
+       return s
+      }
+      for (i = 0; i < imax; i += 3) {
+       b10 = (_getbyte(s, i) << 16) | (_getbyte(s, i + 1) << 8) | _getbyte(s, i + 2);
+       x.push(_ALPHA.charAt(b10 >> 18));
+       x.push(_ALPHA.charAt((b10 >> 12) & 63));
+       x.push(_ALPHA.charAt((b10 >> 6) & 63));
+       x.push(_ALPHA.charAt(b10 & 63))
+      }
+      switch (s.length - imax) {
+      case 1:
+       b10 = _getbyte(s, i) << 16;
+       x.push(_ALPHA.charAt(b10 >> 18) + _ALPHA.charAt((b10 >> 12) & 63) + _PADCHAR + _PADCHAR);
+       break;
+      case 2:
+       b10 = (_getbyte(s, i) << 16) | (_getbyte(s, i + 1) << 8);
+       x.push(_ALPHA.charAt(b10 >> 18) + _ALPHA.charAt((b10 >> 12) & 63) + _ALPHA.charAt((b10 >> 6) & 63) + _PADCHAR);
+       break
+      }
+      return x.join("")
+     }
+     return {
+      decode: _decode,
+      encode: _encode,
+      VERSION: _VERSION
+     }
+    } (jQuery));
+    
+    jQuery(function(){
+          function sleep(n)
+          {
+            var start=new Date().getTime();
+            while(true) if(new Date().getTime()-start>n) break;
+          }
+          jQuery("#f_tab .td_line a[href^=http]").click(
+                function(){
+                    jQuery.get(jQuery(this).attr("href"),function(data){
+                    var res=/\\/downhtml(.*?)\\.html/.exec(data);
+                    jQuery.get(res[0],function(data){
+                        var res=/thunder:\\/\\/(.*?)\\"/.exec(data);
+                        res="thunder://"+res[1];
+                        location.href=(res)
+                        
+                    })
+                    })
+                    jQuery(this).css("color","red");
+                    return false;
+                }
+            )
+        window.onDownload=function (){
+            jQuery(".content>div").first().html("正在下载地址...");
+            var urls="";
+            var input=jQuery("#f_tab input:checked");
+            var len=input.length;
+            var count=0;
+            input.each(
+                function(){
+                    var id=jQuery(this).val();
+                    jQuery(".content>div").first().html("正在下载:"+id);
+                    sleep(2000);
+                    jQuery.ajax({
+                        url:"/file/"+id,
+                        success:function(data){
+                             var res=/\\/downhtml(.*?)\\.html/.exec(data);
+                             jQuery.ajax({
+                                url:res[0],
+                                success:function(data){
+                                   // var res=/href=\\"(.*?)\\" id=\\"telcom_vip/.exec(data);
+                                   // res=jQuery.base64.decode(res[1])+"\\n";
+                                    var res=/thunder:\\/\\/(.*?)\\"/.exec(data);
+                                    res="thunder://"+res[1]+"\\n";
+                                    console.log(res);
+                                    urls+=res;
+                                    if(++count==len)
+                                        jQuery(".content>div").first().html("<textarea style='width:958px;height:200px'>"+urls+"</textarea>");
+                                },
+                                async:false
+                            })
+                        },
+                        async:false
+                    })
+                    
+                }
+            )
+        }
+    })

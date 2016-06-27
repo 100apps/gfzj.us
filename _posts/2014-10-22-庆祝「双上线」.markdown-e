@@ -1,0 +1,26 @@
+---
+layout: post
+title: "庆祝「双上线」"
+date: 2014-10-22 15:16:34
+category: life
+img: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
+by: gf
+description: 我做的iOS应用「体重宝」今天通过审核上架了。我的博客也改版了，并且迁移到了帝国CMS，卡卡的Wordpress，goodbye!
+permalink: /life/202.html
+---
+![b08a5173a3e793ebae2ba4b66886080b.jpg][]
+
+很久以前就想把博客给改版了，但是一直没有下定决心，一个是这事儿不急，另外一个是本身工作的事情就很多，懒得弄。现在已经离职了，终于有时间鼓捣一下自己的东西，花了3天时间，重新设计了博客模板。我的审美观点这么多年来一直没变，看看现在的模板，和07年的时候的设计，几乎一样。看来审美这东西，真不是一天两天能练成的，就这样丑下去了，反正不会丑死。不过，即使再难看，也是原创模板了。线程的有好看的，但是不是自己亲手做的，总归是没有感情。
+
+新博客完全静态化，都是html页面。这都得力于强大的帝国CMS。
+
+另外，今天上午收到apple发来的邮件，说我的app 正在「in review」状态，过了10分钟以后，又收到邮件，说已经「ready for sale」了，真是不错。幸亏我录了demo视频，看来真的很重要啊。
+
+体重宝下载地址：[https://itunes.apple.com/app/id925697616][https_itunes.apple.com_app_id925697616]或者扫描下面的二维码下载：
+
+![体重宝下载地址][ea6c93cab8edbff0fec0d812c9439883.jpg]
+
+
+[b08a5173a3e793ebae2ba4b66886080b.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
+[https_itunes.apple.com_app_id925697616]: https://itunes.apple.com/app/id925697616
+[ea6c93cab8edbff0fec0d812c9439883.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/ea6c93cab8edbff0fec0d812c9439883.jpg

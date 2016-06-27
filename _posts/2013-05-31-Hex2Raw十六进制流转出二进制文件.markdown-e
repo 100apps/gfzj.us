@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Hex2Raw:十六进制流转出二进制文件"
+date: 2013-05-31 22:15:22
+category: tech
+by: gf
+keyword: nc,hex,wireshark
+description: 用wireshark抓包，如果想用nc重现网络流，就要把package保留下来。wireshark提供了copytohex的功能。但是不能直接存储成文件，所以写个java文件，转换一下importjava.io.ByteArr
+permalink: /tech/78.html
+---
+用wireshark抓包，如果想用nc重现网络流，就要把package保留下来。wireshark提供了copy to hex的功能。但是不能直接存储成文件，所以写个java文件，转换一下
+
+    import java.io.ByteArrayOutputStream;
+    import java.io.IOException;
+    import java.nio.file.Files;
+    import java.nio.file.Paths;
+    import java.util.Scanner;
+    
+    public class Hex2Raw {
+     public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+      String line = null;
+      while (scan.hasNextLine()) {
+       line = scan.nextLine();
+      }
+      scan.close();
+      ByteArrayOutputStream bo = new ByteArrayOutputStream();
+      for (int i = 0, len = line.length(); i < len; i += 2) {
+       int b = Integer.parseInt(line.substring(i, i + 2), 16);
+       bo.write(b);
+      }
+      try {
+       Files.write(Paths.get("raw"), bo.toByteArray());
+       bo.close();
+       System.out.println("write to raw.");
+      } catch (IOException e) {
+       e.printStackTrace();
+      }
+    
+     }
+    
+    }
+
+因为我都是配合pbpaste使用，所以直接从system.in读取数据就可以了。比如
+
+    pbpaste | java Hex2Raw
+
+这样就保存成当前目录下的raw文件。如何验证正确呢？
+
+    xxd raw
+
+看看和wireshark抓到的是否一样就可以了。经验证，这个是正确的。
+
+剩下的用nc和重定向就可以了。

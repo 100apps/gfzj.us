@@ -8,7 +8,7 @@ description: 介绍iOS推送服务，提供step by step使用方法。
 ---
 Apple Push Notification service (APNs)是苹果的推送服务，本身使用挺简单，但是由于步骤比较繁琐，下面纪录一下的具体步骤。
 
-#第一步，新建App IDs／获取推送证书
+# 第一步，新建App IDs／获取推送证书
 首先登陆<https://developer.apple.com/account/ios/identifiers/bundle/bundleCreate.action>注册一个App ID，带push功能的app，必须是Explicit App ID，填入你的项目Bundle ID，*App Services*的地方一定要勾选`Push Notifications`。Xcode的项目Bundler Identifier一定要和这里填入的Bundle ID相同，对于已经建好的项目，如果想新加入push功能，需要在Xcode的设置中（快捷键`Command+.`）的Accounts－View Details点击左下角刷新按钮。重新build项目就可以了。
 
 转到<https://developer.apple.com/account/ios/certificate/certificateCreate.action>，新建一个推送证书。需要用到keychain工具
@@ -17,7 +17,7 @@ Apple Push Notification service (APNs)是苹果的推送服务，本身使用挺
 
 然后把申请的证书下载下来，双击打开，在keychain中，右键导出为p12格式，一定要记住密码（可以留空）。假设我们到处的文件为：`/ramdisk/server_certificates_bundle_sandbox.p12`。留到第三步用。
 
-#第二步，获取设备token
+# 第二步，获取设备token
 需要修改AppDelegate.m：
 {%highlight objc%}
 
@@ -78,7 +78,7 @@ Apple Push Notification service (APNs)是苹果的推送服务，本身使用挺
 
 {%endhighlight%}
 
-#第三步，向Apple的服务器发送消息，以便Apple转发给设备
+# 第三步，向Apple的服务器发送消息，以便Apple转发给设备
 
 APNs格式在apple官网：<https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/CommunicatingWIthAPS.html> 其实就是和apple的服务器建立一个socket连接，然后发送数据。关键是，不能一个设备／一条消息建立一次连接，这样成本太高，而且太慢，还会让apple认为是DDOS攻击，所以推送消息的时候，最好一次推送完，再close socket。java版的示例代码：
 {%highlight java%}

@@ -1,0 +1,52 @@
+---
+layout: post
+title: "php+nginx直接输出"
+date: 2014-04-21 09:50:38
+category: tech
+by: gf
+keyword: php,nginx
+description: 最近做一个脚本，通过php运行:echo`test.sh`;这个脚本比较耗时，所以想在浏览器里面给出提示，现在到哪一步了。一个比较简单的方法是，直接输出状态，但是由于各种cache和浏览器实现
+permalink: /tech/130.html
+---
+最近做一个脚本，通过php运行:
+
+    echo `test.sh`;
+
+这个脚本比较耗时，所以想在浏览器里面给出提示，现在到哪一步了。一个比较简单的方法是，直接输出状态，但是由于各种cache和浏览器实现，要实现分步输出，需要改一下默认配置：
+
+## nginx修改 ##
+
+    location = /sync {
+                    #这里是配置nginx的cache
+                    fastcgi_keep_conn on;
+                    proxy_buffering off;
+                    gzip off;
+      #END 配置nginx的cache
+                    include fastcgi.conf;
+                    fastcgi_intercept_errors on;
+                    fastcgi_param   SCRIPT_FILENAME /www/guangfeng/sync.php;
+                    fastcgi_pass php;
+            }
+
+## php脚本 ##
+
+    @ini_set('zlib.output_compression',0);
+    @ini_set('output_buffering',0);
+    @ini_set('implicit_flush',1);
+    @ob_end_clean();
+    @set_time_limit(0);
+    @ob_implicit_flush(1);
+    
+    $dir=$_SERVER["DOCUMENT_ROOT"];
+    if(is_dir($dir)){
+            echo "sync ".$dir."<br>";
+            $sh=$dir.'/sync.sh';
+            if(file_exists($sh)){
+                    echo "use ".$sh."<br>脚本正在运行，请稍后<hr>";
+                    echo str_repeat(' ',1024*64);
+                    chdir($dir);//非常关键，cd命令
+                    echo "<pre>".`$sh`."</pre>";
+            }
+    
+    }else
+            die("<strong>".$dir."</strong> is not directory!check it");

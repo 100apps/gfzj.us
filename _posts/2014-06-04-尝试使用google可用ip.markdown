@@ -10,7 +10,7 @@ permalink: /tech/139.html
 ---
 最近防火墙多google增加了审查力度，很多google的ip直接被封了，我们使用google一般是用来搜索一些技术问题，绝对跟政治无关，而且，用国内的百度，对于技术问题，搜索质量确实不尽人意，所以google必须用。感谢[https://raw.githubusercontent.com/greatfire/wiki/master/README.md][https_raw.githubusercontent.com_greatfire_wiki_master_README.md]为我们整理了大量可用ip，但是感觉用起来还不是很方便，于是写了一个php脚本，让大家更方便的使用google。
 
-# # 使用 ##
+#  # 使用 ##
 
 根据提供的ip列表，我们自动抓取可用ip，自动更新，然后随机301到其中的一个，这样就能以不变应万变了。搜索url形如：
 

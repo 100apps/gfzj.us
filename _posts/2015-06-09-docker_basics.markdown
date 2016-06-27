@@ -7,7 +7,7 @@ by: zj
 description: basic knowledge about docker
 ---
 
-# #Docker架构
+#  #Docker架构
 
 Docker使用client-server架构，Docker client与Docker daemon进行交互，daemon负责构建、执行、发布Docker containers。client和daemon可以在同一个节点上，也可以在不同的节点上。Docker架构图如下：
 

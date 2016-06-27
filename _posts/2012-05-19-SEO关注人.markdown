@@ -7,9 +7,9 @@ by: gf
 description: SEO博客：极力推荐的SEO博客包括：MattCutts的博客–重要性就不必再说了，最好每篇都仔细阅读。SERoundtable–及时总结与SEO有关的论坛和博客里有价值的帖子，内容挑选非
 permalink: /tech/35.html
 ---
-# # SEO博客： ##
+#  # SEO博客： ##
 
-# # 极力推荐的SEO博客 ##
+#  # 极力推荐的SEO博客 ##
 
 包括：   
 [Matt Cutts的博客][Matt Cutts] – 重要性就不必再说了，最好每篇都仔细阅读。   
@@ -22,7 +22,7 @@ permalink: /tech/35.html
 [Shoemoney][] – 在SEO业界有点另类特色的人物，经常提出标新立异的观点。   
 下面是几个必须看，但比较少实质内容的博客，都是搜索引擎自己的
 
-# # 官方博客 ##
+#  # 官方博客 ##
 
 。   
 [Google官方Blog][Google_Blog]   
@@ -33,7 +33,7 @@ permalink: /tech/35.html
 [Yahoo! Publisher Network][Yahoo_ Publisher Network]   
 
 
-# # SEO论坛 ##
+#  # SEO论坛 ##
 
    
 [站长世界WebmasterWorld.com][WebmasterWorld.com]   
@@ -46,7 +46,7 @@ permalink: /tech/35.html
 有时间也建议看看。   
 下面这些博客也
 
-# # 值得推荐 ##
+#  # 值得推荐 ##
 
 。   
 [Link Building Blog][] – 专谈建立链接。   

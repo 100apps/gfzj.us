@@ -8,7 +8,7 @@ keyword: kerberos,hdfs
 description: 配置HDFS的Kerberos
 ---
 
-##集群配置##
+# #集群配置##
 
 Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
@@ -18,9 +18,9 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 必须配置集群hosts。Namenode在节点node21上，Datanode在三个节点都有安装。
 
-##安装Kerberos##
+# #安装Kerberos##
 
-###安装###
+# ##安装###
 
 将KDC server安装到node21，集群中所有的节点都要安装krb5-workstation，因为每个节点都是一个workstation，即kerberos的client。
 
@@ -32,10 +32,10 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 	#yum install krb5-devel krb5-workstation -y
 
-###配置###
+# ##配置###
 我的realm名为HADOOP，在配置kerberos时使用。
 
-####配置KDC####
+# ###配置KDC####
 
 在node21上修改文件/etc/krb5.conf，内容如下：
 
@@ -90,7 +90,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 之前提到过可以在admin_server所在节点以root身份直接进入kerberos shell进行admin操作，但是，并不是所有的管理员都具有root权限，所以配置ACL文件，给予格式为*/admin@HADOOP的principals管理权限，即使不在admin_server节点，也能够远程登录KDC执行授权的admin操作。
 
-####配置workstation####
+# ###配置workstation####
 
 将在KDC server配置的文件/etc/krb5.conf 拷贝到集群中所有的workstations即可。
 	
@@ -99,7 +99,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 	# scp /etc/krb5.conf node22:/etc/krb5.conf
 	# scp /etc/krb5.conf node23:/etc/krb5.conf
 
-###初始化###
+# ##初始化###
 
 为realm HADOOP创建相应的数据库，在node21上执行命令
 
@@ -107,7 +107,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 该命令默认创建一个名为principal的数据库，当然也可以指定要创建的数据库名，使用-d。如果遇到数据库已经存在的情况，直接删除掉 /var/kerberos/krb5kdc/下与数据库名相关的文件。
 
-###启动Kerberos###
+# ##启动Kerberos###
 
 在node21上执行如下命令启动kerberos服务：
 
@@ -117,7 +117,7 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 	# service kadmin start
 
 
-###创建管理员###
+# ##创建管理员###
 
 管理kerberose，可以使用kadmin.local或kadmin。如果有访问 kdc 服务器的 root 权限，但是没有 kerberos admin 账户，使用 kadmin.local。如果没有访问 kdc 服务器的 root 权限，但是用 kerberos admin 账户，使用 kadmin。
 
@@ -127,17 +127,17 @@ Hadoop集群中有三个节点，/etc/hosts文件内容如下：
 
 手动输入两次密码即可。
 
-###Java相关###
+# ##Java相关###
 
 在配置kdc.conf时，支持的加密方式有AES-256，对于使用 centos5. 6及以上的系统，默认使用 AES-256 来加密的，java默认不支持，需换jar包。到oracle官网下载相应版本的JCE jar（点击下载[java7 JCE](http://www.oracle.com/technetwork/java/embedded/embedded-se/downloads/jce-7-download-432124.html "java7 JCE")），解压zip文件后，将jar文件拷贝到目录$JAVA_HOME/jre/lib/security。
 
-##配置Kerberized HDFS##
+# #配置Kerberized HDFS##
 
 主要分为两个部分：在KDC为HDFS添加相关信息，如principal；修改HDFS配置文件，启用安全模式，并设置kerberos相关信息。
 
-###Kerberos端的工作###
+# ##Kerberos端的工作###
 
-####创建HDFS principals####
+# ###创建HDFS principals####
 
 NameNode 和 DataNode 是通过用户hdfs启动的，故为集群中每个服务器节点添加hdfs的principal；另外为每个节点添加HTTP的principal。
 
@@ -156,7 +156,7 @@ NameNode 和 DataNode 是通过用户hdfs启动的，故为集群中每个服务
 	addprinc -randkey hdfs/node23@HADOOP
 
 
-####生成keytab文件####
+# ###生成keytab文件####
 
 每个节点上只存储自己对应的principals的keytab文件。 keytab文件名必须是生成principals对应的服务名称，如果你为 HDFS 生成一个 keytab文件，则文件名必须为 hdfs.keytab 。
 
@@ -173,7 +173,7 @@ NameNode 和 DataNode 是通过用户hdfs启动的，故为集群中每个服务
 
 生成的keytab文件就在 /tmp/hdfs_keytabs下。
 
-####部署keytab文件####
+# ###部署keytab文件####
 
 将每个keytab文件拷贝到相应的节点的/etc下，并命名为hdfs.keytab文件：
 
@@ -185,11 +185,11 @@ keytab文件内容敏感，在每个节点上将其owner改为hdfs:hadoop，权�
 
 	# chown hdfs:hadoop /etc/hdfs.keytab; chmod 400 /etc/hdfs.keytab
 
-###HDFS端的工作###
+# ##HDFS端的工作###
 
 停掉集群。
 
-####启动安全模式####
+# ###启动安全模式####
 
 修改集群中所有节点的core-site.xml，添加如下内容：
 
@@ -205,7 +205,7 @@ keytab文件内容敏感，在每个节点上将其owner改为hdfs:hadoop，权�
 {% endhighlight %}
 
 
-####配置hdfs-site.xml####
+# ###配置hdfs-site.xml####
 
 分别为NameNode、JounalNode、Secondary NameNode、DataNode等配置principal及其keytab文件的路径。
 
@@ -290,11 +290,11 @@ _HOST会在HDFS启动登录KDC时替换为hostname。在以上配置中看到，
 
 dfs.datanode.address表示 data transceiver RPC server 所绑定的 hostname 或 IP 地址，如果开启 security，端口号必须小于 1024(privileged port)，否则的话启动 datanode 时候会报 Cannot start secure cluster without privileged resources 错误。
 
-####启动集群####
+# ###启动集群####
 
 重启已经停掉的集群
 
-#####启动NameNode#####
+# ####启动NameNode#####
 
 在node21上启动，启动前先获取所需要的ticket，即用户hdfs的principal hdfs/node21@HADOOP的TGT： 
 
@@ -303,7 +303,7 @@ dfs.datanode.address表示 data transceiver RPC server 所绑定的 hostname 或
 	# service hadoop-hdfs-namenode start     //启动NameNode
 	# service hadoop-hdfs-namenode status    //看一下是否启动成功。
 
-#####启动DataNode#####
+# ####启动DataNode#####
 
 启动node21 DataNode：
 
@@ -317,7 +317,7 @@ dfs.datanode.address表示 data transceiver RPC server 所绑定的 hostname 或
 
 node23 DataNode的启动如node22一样.
 
-###测试###
+# ##测试###
 
 执行：
 	# klist

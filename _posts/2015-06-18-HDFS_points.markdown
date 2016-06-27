@@ -7,7 +7,7 @@ by: zj
 description: 关于HDFS安全模式和HA
 ---
 
-# ## HDFS安全模式
+#  ## HDFS安全模式
 
 HDFS进入安全模式的原因一般包括如下几个：
 
@@ -17,7 +17,7 @@ HDFS进入安全模式的原因一般包括如下几个：
 
 离开安全模式前一定要保证HDFS已经恢复正常。
 
-# ## HDFS HA
+#  ## HDFS HA
 
 Hadoop2引入HA，用于解决NameNode单点故障问题。
 

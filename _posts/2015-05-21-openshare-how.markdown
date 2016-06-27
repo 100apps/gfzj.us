@@ -63,7 +63,7 @@ alert=function(msg){
 我们首先把各种官方提供的Demo运行一下，然后在appdelegate中对我们确定的几个方法进行Swizzling：
 
 {%highlight objc%}
-# import <objc/runtime.h>
+#  import <objc/runtime.h>
 
 //对UIApplication的openURL:方法进行hook
 -(void)swizzleOpenUrl{
@@ -133,7 +133,7 @@ br l
 今天又学到一种监控mac/iOS模拟器中runtime message的方法：
 
 {%highlight objc%}
-# import <objc/runtime.h>
+#  import <objc/runtime.h>
 void instrumentObjcMessageSends();
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -149,7 +149,7 @@ void instrumentObjcMessageSends();
 我们知道粘贴板传递的数据了，得到的是一个NSData类型，还需要猜测这个二进制NSData是如何生成和解码的。通过把NSData写入到文件，隐约看到bplist的身影，于是用node.js和`plutil`试一下：
 
 {%highlight js%}
-# !/usr/bin/env node
+#  !/usr/bin/env node
 
 /*
 pbpaste |./decodeBplist.js

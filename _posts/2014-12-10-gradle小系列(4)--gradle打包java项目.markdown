@@ -9,7 +9,7 @@ description: 对于一个具有maven目录结构的java项目打包发布
 ---
 以gradle小系列所举例子为示例，在此处介绍两种gradle发布java项目的方法：
 
-# ##fat jar方式###
+#  ##fat jar方式###
 
 该种方法将工程所依赖的jar包等资源都会打到一个可执行jar包中，生成的jar包很大。
 
@@ -32,7 +32,7 @@ description: 对于一个具有maven目录结构的java项目打包发布
 
 在项目GradleTest的根目录下执行命令`gradle build`，即可生成jar包
 
-# ##使用gradle的application插件###
+#  ##使用gradle的application插件###
 
 fat jar并不总是一个合适的选择，比如需要依赖跟jar分离、软件能在*nix和windows下都有启动的script等。
 那么使用gradle的application插件就可以做到了。

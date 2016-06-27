@@ -6,22 +6,22 @@ categories: hbase basics
 by: zj
 description: 记录一些hbase中的小点
 ---
-# #table schema设计##
+#  #table schema设计##
 
 1. column families（cf）数：越少越好。hbase中的flush和compaction操作基于region进行，若某个cf的数据较大，会频繁引起flush，其他cfs同时也要flush，但是其他cfs可能数据量较小；所以，若cf数很大，频繁flush，导致频繁compaction，最终导致很大且不必要的i/o开销。
 2. rowkey设计：避免热点；salt，提高write的吞吐量，但是read开销增大；Hashing；Reversing the Key；row和column名的size尽量小，因为每个cell都有一个meta信息，由rowkey、column名组成，若太大，会造成hfile indexes占据大量内存；block size可以设置到一个较大的合理的值（理由？？？？）。
 3. pre-splitting：合理预划分regions。
 
 
-# #表操作##
+#  #表操作##
 
 1. delete：非即时操作，仅将删除的数据标记为为“删除”（marker），对用户不可见，数据实际上并没有进行删除，只有在数据所在region发生major compaction时才会真正删除数据。
 2. delete mask put：数据被mark为delete后，数据对应的所有cells对于用户来说都是不可见的。在T时插入一行A，在T+X时，删除该行，那么scan该行\[0, T+1)时间范围插入的数据，结果为空。另外，如果现在重新插入A行，使用的timestamp<T+X，那么仍旧是查不到这条新插入的数据。为解决上述问题，可 HColumnDescriptor.setKeepDeletedCells(true)以使deleted cells像普通的cell一样。这个[链接](http://comments.gmane.org/gmane.comp.java.hadoop.hbase.user/28421)是个不错的例子。
 3. disable：如果disable一个表test，hbase client发出该请求，zookeeper会将释放test上的lock（region server在之前拥有test的lock），HMaster则会获取test的lock，之后其组件AssignmentManager执行diable test的操作（即将test的所有regions在zookeeper上存储的状态从open改为close），使得test的所有regions都被offline，完成test的disable。（该过程为猜测，不确定，待修改）
 
-# #背后的故事##
+#  #背后的故事##
 
-# ##create table###
+#  ##create table###
 
 client向master发出创建表的请求：
 
@@ -37,7 +37,7 @@ Master则干下面的活儿：
 
 ![create_table][image1]
 
-# ##write table###
+#  ##write table###
 
 在执行put、delete等写操作时，会发生如下：
 
@@ -52,7 +52,7 @@ Master则干下面的活儿：
 
 ![write_table][image2]
 
-# ##read table###
+#  ##read table###
 
 读取hbase表中的数据流程与write table一致：
 
@@ -63,7 +63,7 @@ Master则干下面的活儿：
 	- 从MemStore和Store Files中获取数据
 
 
-# ##HIndex###
+#  ##HIndex###
 
 在Server端实现index，在read/write时，处理索引元数据。
 
@@ -71,7 +71,7 @@ HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase�
 
 为了保证性能，原表的每个region与其对应的索引表region应该在同一个server上，所以索引表与原表有相同的region数和rowkey范围。原表region的split或者变动都会引起索引表相似的变化，也是通过CP实现。另外，无论原表对多少列建立索引，都只有一个索引表。
 
-# ###Write data with index
+#  ###Write data with index
 
 执行Put向原表插入数据时，从Put中获取信息以生成索引表数据。CP按照如下方式创建索引表rowkey：
 
@@ -79,15 +79,15 @@ HIndex利用coprocessor（CP）实现。原表的索引元数据存储在HBase�
 
 以上方式能够使生成的索引表tall、narrow。若索引的列不只一列，则把多列对应的值追加写入index rowkey的indexed column(S) value(S)部分。
 
-# ###read data with index
+#  ###read data with index
 
 对原表进行scan的话，CP会创建一个索引表的scanner，根据原表的indexed列信息，scanner能够从索引表中获取相应数据，该数据包含原表的rowkey信息，使用该信息就能获取原表相应的数据，即scan结果。
 
-# ##GlobalIndex
+#  ##GlobalIndex
 
 HIndex本质上是local index，即region级别的索引。GlobalIndex则是table级别的索引，不限制原表region与对应索引表region在同一server上，这样的话，用户请求可能需要多出一次RPC。
 
-# ##HBase flush strategy
+#  ##HBase flush strategy
 
 HBase关于flush memstore，到底是如何操作呢？
 
@@ -108,7 +108,7 @@ Region级别的flush策略，只要当前memstore的size超过hbase.hregion.mems
 
 关于flush更为详细的内容，有个很好的链接，[press here][link1]。
 
-# ##Catalog Tables
+#  ##Catalog Tables
 
 在hbase 0.96 之前的版本中，hbase catalog包括-ROOT-和.META.两个表，但是在0.96以及之后的hbase版本中，-ROOT-表被废弃，只有hbase:meta（即.META.）。HBase的meta信息存储在表hbase:meta中，该表也是一个hbase表，但是在habase shell下执行list命令时，会将该表过滤掉。
 
@@ -127,11 +127,11 @@ info:serverstartcode (region所属的RegionServer进程启动时间)
 
 当一个表发生splitting，会为splitted region在meta表对应的row添加两列，即info:splitA和info:splitB，当成功split后，该row被删除，同时会有两个新的regions添加到meta表中。
 
-# ##HBase Client
+#  ##HBase Client
 
 HBase 1.1.0之前的版本使用HTable与hbase集群进行交互，HTable实例不是线程安全的，同一时刻仅能有一个线程使用HTable实例。另外，如果创建多个HTable实例，建议使用同一个HBaseConfiguration实例，以共享Zookeeper和与regionserver建立的socket实例。
 
-# ##RegionServer Splitting
+#  ##RegionServer Splitting
 
 RegionServer收到写请求时，将数据存放在memstore中，当memstore数据达到指定阈值时，就会被写入磁盘，生成storefiles，该过程就是memestore flush。随着storefiles数量的增加，RegionServer会将这些文件合并为更大的storefiles，以减少文件数量。每次flush后，对应region中的数据量就会增加，RegionServer此时会根据split策略决定是否需要将这个region分裂。
 

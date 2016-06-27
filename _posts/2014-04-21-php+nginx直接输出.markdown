@@ -14,7 +14,7 @@ permalink: /tech/130.html
 
 这个脚本比较耗时，所以想在浏览器里面给出提示，现在到哪一步了。一个比较简单的方法是，直接输出状态，但是由于各种cache和浏览器实现，要实现分步输出，需要改一下默认配置：
 
-# # nginx修改 ##
+#  # nginx修改 ##
 
     location = /sync {
                     #这里是配置nginx的cache
@@ -28,7 +28,7 @@ permalink: /tech/130.html
                     fastcgi_pass php;
             }
 
-# # php脚本 ##
+#  # php脚本 ##
 
     @ini_set('zlib.output_compression',0);
     @ini_set('output_buffering',0);

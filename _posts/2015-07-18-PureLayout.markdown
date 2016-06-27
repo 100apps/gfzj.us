@@ -20,7 +20,7 @@ description: PureLayout源码分析，更好地理解autolayout。
 
 PureLayout主要对`ALView`(UIView for iOS/NSView for mac)、`NSArray`(可以是ALView或者NSLayoutConstraint)、`NSLayoutConstraint`进行扩展，核心是把自己的语法翻译成NSLayoutConstraint，然后addConstraint。除了翻译语法以外，还提供了autoInstall功能(声称Constraints当时可以不active)，并且还可以设置Priority（避免冲突）和Identifier（方便调试）。
 
-# ##翻译语法
+#  ##翻译语法
 
 Masonry的Layout设置确实非常方便：
 
@@ -64,7 +64,7 @@ API大体分三类：设置长／宽(可以是具体数值或者相对于其他v
 
 对于`Constraint`，提供了autoInstall/Remove的API来应用(取消)这个(些)Constraint
 
-# ##如何实现autoInstall/Remove
+#  ##如何实现autoInstall/Remove
 上面的API，比如
 
 {%highlight objc%}
@@ -113,19 +113,19 @@ NSArray *constraints = [UIView autoCreateConstraintsWithoutInstalling:^{
     if ([ALView al_isExecutingPriorityConstraintsBlock]) {//是否应用priority
         constraint.priority = [ALView al_currentGlobalConstraintPriority];
     }
-# if __PureLayout_MinBaseSDK_iOS_8_0
+#  if __PureLayout_MinBaseSDK_iOS_8_0
     NSString *globalConstraintIdentifier = [ALView al_currentGlobalConstraintIdentifier];
     if (globalConstraintIdentifier) {//是否应用Identifier
         [constraint autoIdentify:globalConstraintIdentifier];
     }
-# endif /* __PureLayout_MinBaseSDK_iOS_8_0 */
+#  endif /* __PureLayout_MinBaseSDK_iOS_8_0 */
 }
 {%endhighlight%}
 
-# ##API内部／外部调用的方法
+#  ##API内部／外部调用的方法
 PureLayout有一个`PureLayout+Internal.h`文件。这个文件都在`.m`中引入，所以对于我们自己的项目只引入了`PureLayout.h`，是不会有Internal中的方法的。实现了类似于private的功能。
 
-# ##改进
+#  ##改进
 使用过程中，对于UIView的初始化，可以用：
 
 {%highlight objc%}
@@ -157,12 +157,12 @@ Closes #75
 {%endhighlight%}
 
 
-# ##一个例子
+#  ##一个例子
 使用UIScrollView，可以尝试一下，当屏幕旋转的时候，autolayout的威力就显示出来了。
 {%highlight objc%}
 
-# import "ALiOSDemo11ViewController.h"
-# import <PureLayout/PureLayout.h>
+#  import "ALiOSDemo11ViewController.h"
+#  import <PureLayout/PureLayout.h>
 
 
 @interface ALiOSDemo11ViewController ()
@@ -274,7 +274,7 @@ Closes #75
 }
 
 /*
-# pragma mark - Navigation
+#  pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

@@ -13,7 +13,7 @@ permalink: /series/openshare/
 于是为什么不封装一下呢？就像iOS `Social` framework。默认已经封装了下面几种社交网络：
 
 {%highlight objc%}
-# SLServiceTypes.h
+#  SLServiceTypes.h
 SOCIAL_EXTERN NSString *const SLServiceTypeTwitter NS_AVAILABLE(10_8, 6_0);
 SOCIAL_EXTERN NSString *const SLServiceTypeFacebook NS_AVAILABLE(10_8, 6_0);
 SOCIAL_EXTERN NSString *const SLServiceTypeSinaWeibo NS_AVAILABLE(10_8, 6_0);

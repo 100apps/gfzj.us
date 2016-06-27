@@ -8,7 +8,7 @@ description: 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷
 ---
 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷机，但是遇到一些问题，纪录一下。
 
-# 准备工具
+#  准备工具
 
 首先Mac上面是不需要安装android驱动的。但是需要`fastboot`和`adb（可选）`。这个可以通过下载：
 
@@ -22,7 +22,7 @@ description: 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷
 
 所以刷机是不需要下载android sdk的。
 
-# 解锁bootloader
+#  解锁bootloader
 
 如果已经可以用`adb`连接手机，那么直接运行：
 	
@@ -37,7 +37,7 @@ description: 前两天在淘宝上买了个nexus 6，下载了官方Rom，想刷
 	fastboot oem unlock
 	#终于用上这货了。
 
-# 刷系统
+#  刷系统
 从[Google官方Factory Images for Nexus Devices](https://developers.google.com/android/nexus/images)下载最新的系统，然后解压。按照传统方法，直接运
 
 	./flash-all.sh

@@ -13,7 +13,7 @@ description: gradle dependency exclude
 	2. build出来的jar包中包含junit相关测试类
 	3. build出来的jar包中不包含某个类型的资源文件
 
-# ###Point 1####
+#  ###Point 1####
 
 假设当前工程根目录下有一子目录libs，其中包含编译时需要依赖的一堆jar包，在build.gradle文件中需要做如下配置：
 
@@ -21,7 +21,7 @@ description: gradle dependency exclude
 		compile fileTree(dir: 'libs', include: '*.jar')
 	}
 
-# ###Point 2####
+#  ###Point 2####
 
 假设工程当前使用junit写了一些测试类，需要打包到工程的jar包中（默认exclude test classes），在build.gradle文件中需要做如下配置：
 
@@ -32,7 +32,7 @@ description: gradle dependency exclude
 
 执行命令 `gradle packageAll` 即可。
 
-# ###Point 3####
+#  ###Point 3####
 
 假设工程中有些资源是在调试时使用，打包时并需要将其包含在内，只需在build.gradle文件中需要做如下配置(假设不要jar包根目录下的xml文件)：
 

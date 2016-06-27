@@ -42,7 +42,7 @@ permalink: /tech/144.html
 
 ![tts-client][] ![tts-server][]
 
-# # 希望qq加入TTS功能 ##
+#  # 希望qq加入TTS功能 ##
 
 这个功能有时候还挺方便的，在自己不方便说话的时候，TTS一下，代替自己说话。不知道腾讯的同学能否考虑？
 

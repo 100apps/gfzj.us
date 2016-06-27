@@ -10,7 +10,7 @@ description: 在Dockerfile中如何设置PATH
 
 假设需要将java bin添加到PATH中，尝试如下方式：
 
-# ###ENV
+#  ###ENV
 
 在Dockerfile中添加如下
 
@@ -18,7 +18,7 @@ description: 在Dockerfile中如何设置PATH
 
 生成image，执行`/usr/sbin/sshd -D`启动container，因为jenkins是通过ssh与container进行通信的。再重开一个终端，ssh到该container，`echo $PATH`，执行结果也没有java。
 
-# ###使用参数-e
+#  ###使用参数-e
 
 在Dockerfile不作任何PATH相关的设置，在生成image后，使用参数`-e`设置，如下：
 
@@ -26,7 +26,7 @@ description: 在Dockerfile中如何设置PATH
 
 再重开一个终端，ssh到该container，`echo $PATH`，执行结果并不是所设置那样。但是，这种方式如果是执行/bin/bash，PATH则如设置那样。
 
-# ###/etc/profile
+#  ###/etc/profile
 
 在Dockerfile中，在合适的位置添加如下：
 

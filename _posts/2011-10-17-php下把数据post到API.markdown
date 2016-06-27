@@ -7,7 +7,7 @@ by: gf
 description: 前面内容可忽略，直接看示例API如此强大，不论是什么风格的API，restfull,rmi或者soap，也不论返回的结果是xml，json或者plaintext。要调用基于httpapi，首先要向服务器发出请求，这里有
 permalink: /tech/20.html
 ---
-# # 前面内容可忽略，直接看[示例][Link 1] ##
+#  # 前面内容可忽略，直接看[示例][Link 1] ##
 
 API如此强大，不论是什么风格的API，restfull,rmi或者soap，也不论返回的结果是xml，json或者plaintext。要调用**基于http**api，首先要向服务器发出请求，这里有个示例。我们需要向http://$SERVER/insert.php这个地址post一些数据，就像通过浏览器提交一个html表单一样。用php的话，简单一点，可以用curl。
 
@@ -37,7 +37,7 @@ API如此强大，不论是什么风格的API，restfull,rmi或者soap，也不�
 
 **简单的说，就是把原来那个textarea的文本赋值给$post。**
 
-# # 示例 ##
+#  # 示例 ##
 
 用php添加一个问题：
 

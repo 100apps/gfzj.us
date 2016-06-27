@@ -56,36 +56,36 @@ vboxmanage命令比较强大。当然，可以直接编辑.vbox文件，但是�
 
 现在运行的是安装好一个系统，然后保存着，需要的话，直接vmclone出来一个新的，使用。很方便，跟ec2或者linode vps效果差不多。
 
-# # FAQ ##
+#  # FAQ ##
 
-# ## 安装完系统,如何移除虚拟机光驱? ###
+#  ## 安装完系统,如何移除虚拟机光驱? ###
 
     vboxmanage showvminfo xp1
     找到光驱的位置，比如IDE Controller (0, 1):
     vboxmanage storageattach "windows xp" --storagectl "IDE Controller" --port 1 --device 0 --medium none
 
-# ## vboxheadless -s 启动以后，用远程桌面链接，感觉鼠标不同步，怎么解决? ###
+#  ## vboxheadless -s 启动以后，用远程桌面链接，感觉鼠标不同步，怎么解决? ###
 
 没有安装扩展包。先去官网下载对应操作系统的扩展包，比如 **VBoxGuestAdditions\_4.2.12.iso**，然后挂载，进入客户机，安装，重启。
 
-# ## 如何更改客户机BIOS启动logo? ###
+#  ## 如何更改客户机BIOS启动logo? ###
 
 vboxmange确实提供了这个设置。搜索bioslogoimagepath。
 
-# ## 远程桌面连接，黏贴板不同步 ###
+#  ## 远程桌面连接，黏贴板不同步 ###
 
 vmboxmange设置:
 
     [--clipboard disabled|hosttoguest|guesttohost|bidirectional]
 
-# # update2014年04月28日17:36:11 ##
+#  # update2014年04月28日17:36:11 ##
 
 virutalbox可以挂在整个物理硬盘，配合usb转hdd的工具，装系统之类的就会方便很多。注意苹果下面sudo。还有别让mac自动挂载。
 
     VBoxManage internalcommands createrawvmdk -filename /path/to/file.vmdk
          -rawdisk /dev/sdf
 
-# ## vboxmanage命令的help ###
+#  ## vboxmanage命令的help ###
 
     Oracle VM VirtualBox Command Line Management Interface Version 4.2.12
     (C) 2005-2013 Oracle Corporation

@@ -17,8 +17,8 @@ update: 现在可以用<https://github.com/shaojiankui/iOS-Categories>
 
 `CALayer+UIColor.h`
 {%highlight objc%}
-# import <QuartzCore/QuartzCore.h>
-# import <UIKit/UIKit.h>
+#  import <QuartzCore/QuartzCore.h>
+#  import <UIKit/UIKit.h>
 @interface CALayer (UIColor)
 @property(nonatomic, assign) UIColor* borderUIColor;
 
@@ -31,7 +31,7 @@ update: 现在可以用<https://github.com/shaojiankui/iOS-Categories>
 
 {%highlight objc%}
 
-# import "CALayer+UIColor.h"
+#  import "CALayer+UIColor.h"
 
 @implementation CALayer (UIColor)
 

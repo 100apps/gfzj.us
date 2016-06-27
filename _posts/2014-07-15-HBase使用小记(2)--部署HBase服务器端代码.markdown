@@ -13,12 +13,12 @@ description: 如何部署编写的HBase服务器端代码，如自定义的Compa
 
 当然，首先将代码打包，假设为MyComparator.jar。
 
-# #第一种方法##
+#  #第一种方法##
 
 将MyComparator.jar拷贝到HBase集群中每个服务器下的$HBASE_HOME/lib目录下，并
 重启HBase集群。
 
-# #第二种方法##
+#  #第二种方法##
 
 将MyComparator.jar放在HBase集群中每个服务器下的指定路径（每个服务器都相同），然后修改hbase-env.sh中变量HBASE_CLASSPATH的
 值，添加MyComparator.jar的路径，将该修改拷贝到集群中所有的服务器上，并重启HBase集群。

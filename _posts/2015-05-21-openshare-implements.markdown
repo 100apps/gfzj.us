@@ -65,7 +65,7 @@ msg.title=@"Hello World";
 
 
 
-# #如何使用
+#  #如何使用
 
 *第零步*: 修改`Info.plist`添加`URLSchemes`，让客户端可以回调app
 
@@ -134,6 +134,6 @@ msg.title=@"Hello msg.title";
 }];
 {%endhighlight%}
 
-# #扩展支持更多平台
+#  #扩展支持更多平台
 
 现在的社交网络各种各样，如何把这些平台集成到OpenShare中呢？就像插件一样，可以把自己实现的`OpenShare+foobar.h`和`OpenShare+foobar.m`添加进来就可以了。[这里](http://openshare.gfzj.us/#plugins)提供了一个模板工具，只需要输入你想扩展的平台的名称，就会自动生成`.h`和`.m`文件，然后基于这个模板修改即可。

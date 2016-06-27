@@ -9,38 +9,38 @@ description: 分析学习MBProgressHUD的源代码
 
 [MBProgressHUD](https://github.com/jdg/MBProgressHUD)是一个非常常用的iOS库，用于显示提示文字。作者实现得也非常精简，只有两个文件`MBProgressHUD.m`和`MBProgressHUD.h`，再不用cocoapods的情况下，也非常容易集成到自己的项目。
 
-# 兼容性处理
+#  兼容性处理
 
 首先因为`MBProgressHUD`支持ARC和非ARC，所以用了几个宏：
 
 {%highlight objc%}
-# if __has_feature(objc_arc)
+#  if __has_feature(objc_arc)
 	#define MB_AUTORELEASE(exp) exp
 	#define MB_RELEASE(exp) exp
 	#define MB_RETAIN(exp) exp
-# else
+#  else
 	#define MB_AUTORELEASE(exp) [exp autorelease]
 	#define MB_RELEASE(exp) [exp release]
 	#define MB_RETAIN(exp) [exp retain]
-# endif
+#  endif
 {%endhighlight%}
 
 另外，为了兼容iOS老版本的API，用到了：
 
 {%highlight objc%}
 
-# if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
+#  if __IPHONE_OS_VERSION_MIN_REQUIRED >= 60000
     #define MBLabelAlignmentCenter NSTextAlignmentCenter
-# else
+#  else
     #define MBLabelAlignmentCenter UITextAlignmentCenter
-# endif
+#  endif
 
-# if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
+#  if __IPHONE_OS_VERSION_MIN_REQUIRED >= 70000
 	#define MB_TEXTSIZE(text, font) [text length] > 0 ? [text \
 		sizeWithAttributes:@{NSFontAttributeName:font}] : CGSizeZero;
-# else
+#  else
 	#define MB_TEXTSIZE(text, font) [text length] > 0 ? [text sizeWithFont:font] : CGSizeZero;
-# endif
+#  endif
 {%endhighlight%}
 这样就可以：
 
@@ -55,7 +55,7 @@ description: 分析学习MBProgressHUD的源代码
 {%endhighlight%}
 这样我们也可以用宏，在NSString(Custom)中扩展containsString，来保持API一致。
 
-# 在drawRect中画UI，通过kvo更新
+#  在drawRect中画UI，通过kvo更新
 比如`MBBarProgressView:UIView`整个UI是通过`- (void)drawRect:(CGRect)rect`中的`CGContextFillPath`类似方法画出来的。进度通过`@property (nonatomic, assign) float progres`来设置。而在drawRect中通过progres来控制画出来的样子。如果只有一个progres参数控制，我们可以在setter中：
 
 {%highlight objc%}
@@ -122,7 +122,7 @@ description: 分析学习MBProgressHUD的源代码
 {%endhighlight%}
 这样hook setter方法，更方便。在`MBProgressHUD.m`中`MBProgressHUD : UIView`、`MBRoundProgressView : UIView `、`MBBarProgressView : UIView`中更新UI全是用的KVO的方法。
 
-# 屏幕旋转
+#  屏幕旋转
 因为drawRect的时候已经考虑到宽度和高度了，所以屏幕旋转之后，只需要`[self setNeedsDisplay]`即可。
 
 {%highlight objc%}
@@ -159,7 +159,7 @@ description: 分析学习MBProgressHUD的源代码
 
     // Not needed on iOS 8+, compile out when the deployment target allows,
     // to avoid sharedApplication problems on extension targets
-# if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
+#  if __IPHONE_OS_VERSION_MIN_REQUIRED < 80000
     // Only needed pre iOS 7 when added to a window
     BOOL iOS8OrLater = kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0;
     if (iOS8OrLater || ![self.superview isKindOfClass:[UIWindow class]]) return;
@@ -185,15 +185,15 @@ description: 分析学习MBProgressHUD的源代码
 	if (animated) {
 		[UIView commitAnimations];
 	}
-# endif
+#  endif
 }
 {%endhighlight%}
 
-# 执行block的时候显示
+#  执行block的时候显示
 
 {%highlight objc%}
 - (IBAction)showUsingBlocks:(id)sender {
-# if NS_BLOCKS_AVAILABLE
+#  if NS_BLOCKS_AVAILABLE
 	MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
 	[self.navigationController.view addSubview:hud];
 	hud.labelText = @"With a block";
@@ -204,7 +204,7 @@ description: 分析学习MBProgressHUD的源代码
 		[hud removeFromSuperview];
 		[hud release];
 	}];
-# endif
+#  endif
 }
 - (IBAction)showOnWindow:(id)sender {
 	// The hud will dispable all input on the window
@@ -246,7 +246,7 @@ description: 分析学习MBProgressHUD的源代码
 {%endhighlight%}
 不得不说，把block当参数，程序设计方便很多。
 
-# MBProgressHUD使用
+#  MBProgressHUD使用
 为了方便，MBProgressHUD提供了两类API：
 1. 类方法
 2. 实例是方法

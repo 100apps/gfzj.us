@@ -7,7 +7,7 @@ by: zj
 description: 关于/etc/hosts和/etc/sysconfig/network
 ---
 
-##/etc/hosts
+# #/etc/hosts
 
 hosts文件是一个本地DNS服务，比如我们用浏览器直接访问www.baidu.com的时候，浏览器最终会吧www.baidu.com转化为ip:80的形式和服务器建立socket连接。这个域名到ip的转换就是域名解析。域名解析要用到DNS，但是操作系统还有一个优先级最高的NDS服务，那就是hosts文件，如果域名在hosts文件中有记录，那就不用请求DNS服务器了。在＊nix系的操作系统中，hosts文件在/etc/hosts，windows中在c:/windows/system32/drives/etc/hosts。
 
@@ -19,7 +19,7 @@ hosts文件是一个本地DNS服务，比如我们用浏览器直接访问www.ba
 
 hosts文件有几个妙用：
 
-####1. 别名
+# ###1. 别名
 
 假设现在有一个集群，有三个节点，对应IP为：
 
@@ -35,7 +35,7 @@ hosts文件有几个妙用：
 
 那么从168.16.3.11登录到168.16.3.12，在终端输入`ssh root@node2`即可，该命令执行时，会读取/etc/hosts文件，找到"node2"对应的IP地址，使用该IP地址执行ssh命令。可见，/etc/hosts就是用于本地域名解析。
 
-####2. 翻墙
+# ###2. 翻墙
 
 国家防火墙通过DNS污染来封杀网站，比如我们正常请求www.google.com的ip，被返回一个不正确的ip，这样就不能访问Google了。但是如果在hosts里面添加一条：
 
@@ -43,7 +43,7 @@ hosts文件有几个妙用：
 
 这时候google又可以正常打开了。那么其他被封的域名呢？可以通过类似于[smarthosts](https://code.google.com/p/smarthosts/)、[smartladder](https://code.google.com/p/smartladder/)之类的「云hosts」解决
 
-####3. 防毒
+# ###3. 防毒
 
 比如有些钓鱼欺诈类的网站，我们知道他们的域名，这是可以「手动污染」他们，比如
 
@@ -52,7 +52,7 @@ hosts文件有几个妙用：
 这样当我们被引导打开www.ccb-1.com.cn的时候，根本就打不开。同样我们也可以使用「云hosts」[ MWSL-hosts](http://www.mwsl.org.cn/)来更新。
 
 
-##/etc/sysconfig/network
+# #/etc/sysconfig/network
 
 这个文件本身是一个网络配置文件，有几个可选项（可以[参考文档](https://www.centos.org/docs/5/html/5.2/Deployment_Guide/s2-sysconfig-network.html)）：
 

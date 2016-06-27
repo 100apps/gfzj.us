@@ -4,7 +4,7 @@ title: 友情链接
 permalink: /links/
 ---
 
-# news
+#  news
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)
 - [前端乱炖, 最专业的前端技术内容社区](http://www.html-js.com/)
@@ -15,17 +15,17 @@ permalink: /links/
 - [新芽NewSeed：寻找下一个独角兽](http://newseed.pedaily.cn/)
 - [伯乐在线](http://blog.jobbole.com/all-posts/)
 
-#industry leaders
+# industry leaders
 
 - [Paul Graham](http://paulgraham.com/articles.html)
 - [Stevey's Blog Rants](http://steve-yegge.blogspot.com/)
 
-#awesome projects
+# awesome projects
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
 - [GitHub Most Starred](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)
 - [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
 
-#to be covered
+# to be covered
 - [CS193P Developing iOS 8 Apps with Swift](https://github.com/X140Yu/Developing_iOS_8_Apps_With_Swift)
 - [码农设计初体验](http://sike.io/courses/design101/)
 - [斯坦福大学公开课：iOS 7应用开发](http://v.163.com/special/opencourse/ios7.html)
@@ -35,7 +35,7 @@ permalink: /links/
 - [官网指导必看](https://developer.apple.com/videos/wwdc/2014/?id=229)
 - [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/intl/zh_cn/)
 
-#朋友们的博客
+# 朋友们的博客
 <ul class="list-unstyled">
 <li><a href="http://www.skyfox.org/" rel="friend" target="_blank">天狐博客</a></li>	
 <li><a href="http://www.sunweina.com/" rel="friend" target="_blank">Florentina – WOW in our life</a></li>
@@ -53,7 +53,7 @@ permalink: /links/
 <li><a href="http://blog.cnbluebox.com/">刘坤的技术博客</a></li>
 </ul>
 
-#技术博客
+# 技术博客
 - [leancloud blog](https://blog.leancloud.cn/)
 - [豌豆家 \| 豌豆实验室 Blog](http://www.wandoujia.com/blog)
 - [Research at Google](https://research.google.com/)
@@ -135,7 +135,7 @@ permalink: /links/
 - [Jasey Wang](http://jaseywang.me/)
 - [Do Great Things \-  叶玎玎](http://yedingding.com/)
 
-#神器
+# 神器
 - [Modular Scale](http://www.modularscale.com)
 - [MTS 阿里移动测试服务](http://mts.aliyun.com/)
 - [云编程，屌炸天](https://ide.c9.io)
@@ -169,7 +169,7 @@ permalink: /links/
 - [tcptunnel](http://www.vakuumverpackt.de/tcptunnel/)
 
 
-#官网和文档
+# 官网和文档
 - [LeanCloud 开放资源](http://open.leancloud.cn/)
 - [iOS Developer Library](https://developer.apple.com/library/ios/navigation/)
 - [Contact the App Review Team 加急审核](https://developer.apple.com/contact/app-store/?topic=expedite)
@@ -185,15 +185,15 @@ permalink: /links/
 - [Ford developer programe](https://www.developer.ford.com)
 - [中文版 Apple 官方 Swift 教程](https://github.com/numbbbbb/the-swift-programming-language-in-chinese)
 
-#大数据Blog
+# 大数据Blog
 - [hbase](http://hadoop-hbase.blogspot.com/)
 - [nossql](http://nosql.mypopescu.com/)
 
-#前端
+# 前端
 - [Material Design Lite Components](https://github.com/google/material-design-lite)
 
 
-#社区
+# 社区
 - [TesterHome](https://testerhome.com/)
 - [NounProject](https://thenounproject.com/)
 - [pinterest](https://www.pinterest.com)
@@ -226,14 +226,14 @@ permalink: /links/
 - [Free stock photos · Pexels](http://www.pexels.com)
 - [触乐-高品质、有价值、有趣的移动游戏资讯](http://www.chuapp.com/)
 
-#其他链接
+# 其他链接
 - <http://www.jianshu.com/p/e5353a1a752c>
 - [Limboy：自学 iOS 开发的一些经验](http://www.cocoachina.com/ios/20150104/10823.html)
 - [NEXT - 不错过任何一个新产品](http://next.36kr.com/posts)
 - [中文 iOS/Mac 开发博客列表](https://github.com/tangqiaoboy/iOSBlogCN)
 - [Github-iOS备忘](http://github.ibireme.com/github/list/ios/)
 
-#iOS逆向相关
+# iOS逆向相关
 - [theos](http://theos.howett.net/nic/)
 - [Hopper](http://www.hopperapp.com/download.html)
 - [IDA](https://www.hex-rays.com/products/ida/support/download_demo.shtml)
@@ -243,10 +243,10 @@ permalink: /links/
 - [libimobiledevice](http://www.libimobiledevice.org/)
 - [付费app破解](http://cydia.xsellize.com/)
 
-#算法与数据结构
+# 算法与数据结构
 - [VisuAlgo \- visualising data structures and algorithms through animation](http://www.comp.nus.edu.sg/~stevenha/visualization/)
 
-#大千世界
+# 大千世界
 
 - [任毅飞](http://blog.sina.com.cn/u/1262345964)
 - [胡正](http://www.huzheng.org/)

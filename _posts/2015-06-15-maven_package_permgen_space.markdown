@@ -2,7 +2,7 @@
 layout: post
 title: "maven打包报出permgen space"
 date: 2015-06-15 15:38:15
-categories: 
+categories: series maven
 by: zj
 description: des
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "maven编译jar包"
+title: "maven编译包含指定meta信息的jar包"
 date: 2015-07-30 16:54:21
-categories: 
+categories: series maven
 by: zj
 description: 在使用maven编译源码获取的jar包中，其meta信息如何才能包含很多有用的信息，如svn revision、build time等等。
 ---

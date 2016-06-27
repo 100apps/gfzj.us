@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "maven编译jar包"
+title: "maven编译包含指定meta信息的jar包"
 date: 2015-07-30 16:54:21
 categories: 
 by: zj
@@ -100,4 +100,4 @@ description: 在使用maven编译源码获取的jar包中，其meta信息如何�
 		</configuration>
 	</plugin>
 
-该插件使用变量buildRev、timestamp，以及scmBranch
+该插件使用变量buildRev、timestamp，以及scmBranch。scmBranch的值即为所编译的源码来自的branch。

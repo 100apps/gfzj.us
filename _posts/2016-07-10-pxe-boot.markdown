@@ -1,0 +1,88 @@
+---
+layout: post
+title: "PXE启动"
+date: 2016-07-10 19:18:24
+categories: 
+by: gf
+description: 详细介绍从PXE启动的原理和配置方法，任何人只需要看这一篇文章就可以了。
+---
+
+[Preboot eXecution Environment](https://zh.wikipedia.org/wiki/%E9%A2%84%E5%90%AF%E5%8A%A8%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83)提供了一种使用网络接口（Network Interface）启动计算机的机制。这种机制让计算机的启动可以不依赖本地数据存储设备（如硬盘）或本地已安装的操作系统。更详细的介绍直接移步到维基百科的这片介绍即可。
+
+我们机房有20几台服务器，都配置好了远程控制卡，现在需要安装系统，基本上最靠谱的方案就是PXE。另外我们办公室局域网内还有开发测试集群，本身有DHCP服务器，但是也是想从PXE启动。
+
+# PXE原理
+带有PXE rom的主机启动的时候，通过HDCP协议，广播获得IP地址，通过HDCP扩展字段(next server,boot servere,boot file)，可以指定通过tfp协议从哪里下载哪个文件。这里有两种情况，如果你可以直接配置DHCP server，那就简单了，比我们办公室的网络，我直接在juniper防火墙（dhcp服务）上设置：
+![防火墙设置pxe](/images/juniper-pxe.png)
+
+但是并不是所有人都可以设置他所在网络的dhcp服务器，比如你家的百元以内的家用路由器。pxe估计也考虑到这一点了，所以发明了ProxyDHCP，当pxe client广播dhcp发现的时候，大家都可以回复他，除了真正的dhcp服务器以外，他还可以接受ProxyDHCP服务器的返回，并且两这两个回复组合起来，这样ProxyDHCP只需要返回boot server相关的几个Option就可以了。
+
+通过DHCP server，PXE的client可以从tftp server上请求下来一个文件。这里我们用的是[PXELINUX](http://www.syslinux.org/wiki/index.php?title=PXELINUX)，这里我们用的是[lpxelinux.0](http://www.syslinux.org/wiki/index.php?title=PXELINUX#HTTP_and_FTP)，这样kernel可以从http服务器直接下载，稳定且方便。
+
+从tftp server下载下来的lpxelinux文件，它有自己的规则加载配置文件。一般的规则是：
+
+	/mybootdir/pxelinux.cfg/b8945908-d6a6-41a9-611d-74a6ab80b83d
+ 	/mybootdir/pxelinux.cfg/01-88-99-aa-bb-cc-dd
+ 	/mybootdir/pxelinux.cfg/C0A8025B
+ 	/mybootdir/pxelinux.cfg/C0A8025
+ 	/mybootdir/pxelinux.cfg/C0A802
+ 	/mybootdir/pxelinux.cfg/C0A80
+ 	/mybootdir/pxelinux.cfg/C0A8
+ 	/mybootdir/pxelinux.cfg/C0A
+ 	/mybootdir/pxelinux.cfg/C0
+ 	/mybootdir/pxelinux.cfg/C
+ 	/mybootdir/pxelinux.cfg/default
+
+这个规则很重要，这样我们可以根据不同的mac地址或者网段自动加载不通的系统。下载下来kernel和initrd，再加上相应的参数，就可以启动了。
+
+PXE必备的三样东西：
+
+1. DHCP（ProxyDHCP）
+2. tftp server
+3. http server
+
+对于3，http server，没有什么可选的，直接用nginx，简单明了，性能又好，分分钟搞定，不用多少。tfp服务器可以用in.tftp，配合xinet.d非常方便。dhcp服务器也有一大堆，配置也OK，只是ProxyDHCP一直没搞定，通过Google，找到[Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)，Dnsmasq非常强大，功能很多。可以用来做dns代理服务器，也可以用来做dhcp服务器和ProxyDHCP服务器，还内置了tftp服务器。所以我们用Dnsmasq＋nginx就可以搞定所有了。
+
+# Demo
+
+1. 配置/etc/dnsmasq.conf	
+	#关闭dns服务器（其实也可以开启，缓存起来比用外网dns服务器快很多，不过存在单点问题，需要做高可用，原来我们局域网内也有一个windows的dns服务器，但是经常卡，需要重启，所以最后弃用了）
+	port=0
+	#用dnsmasq -d命令启动，看log，调试用
+	log-dhcp
+	#开始tftp
+	enable-tftp
+	tftp-root=/data/pxe/pxelinux
+	#ProxyDHCP
+	dhcp-range=192.168.99.1,proxy
+	#如果局域网内用dnsmasq当dhcp服务器的话，可以直接配置
+	#dhcp-range=192.168.1.50,192.168.1.100,12h
+	#根据不同的pxe客户端返回不同的启动文件。
+	#pxe-prompt="Choose:"
+	pxe-service=x86PC, "PXE-Linux", "lpxelinux"
+	#pxe-service=x86PC, "Boot from local disk", 64
+	#pxe-service=x86PC, "PXE-Linux on 192.168.0.100", "pxelinux", 192.168.0.100
+	#pxe-service=x86PC, "ACME Deployment server", "acme", 192.168.0.101
+然后通过命令`dnsmasq -d`启动
+
+2. 配置pxelinux.cfg/default
+	default vesamenu.c32
+	timeout 600
+	MENU TITLE Houpix PXE BOOT
+
+	LABEL CentOS-7-x86_64-Minimal-1511
+	LINUX http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/vmlinuz
+	APPEND initrd=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/initrd.img method=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511 devfs=nomount ip=dhcp
+
+3. 配置nginx
+	events{}
+	http{
+		server{
+			root /data/pxe;
+			autoindex on;
+		}
+	}
+通过`nginx -c /data/pxe/nginx.conf`启动nginx
+
+注意，我们是直接把`CentOS-7-x86_64-Minimal-1511.iso`mount到`CentOS-7-x86_64-Minimal-1511`目录的，所以整个过程中ISO文件是不需要解压的，如果想支持ubuntu，也可以直接添加，无需解压，如果用tftp恐怕就比较麻烦一些了。
+

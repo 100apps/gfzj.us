@@ -41,11 +41,12 @@ PXE必备的三样东西：
 2. tftp server
 3. http server
 
-对于3，http server，没有什么可选的，直接用nginx，简单明了，性能又好，分分钟搞定，不用多少。tfp服务器可以用in.tftp，配合xinet.d非常方便。dhcp服务器也有一大堆，配置也OK，只是ProxyDHCP一直没搞定，通过Google，找到[Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)，Dnsmasq非常强大，功能很多。可以用来做dns代理服务器，也可以用来做dhcp服务器和ProxyDHCP服务器，还内置了tftp服务器。所以我们用Dnsmasq＋nginx就可以搞定所有了。
+对于3，http server，没有什么可选的，直接用nginx，简单明了，性能又好，分分钟搞定，不用多说。tftp服务器可以用in.tftp，配合xinet.d非常方便。dhcp服务器也有一大堆，配置也OK，只是ProxyDHCP一直没搞定，通过Google，找到[Dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html)，Dnsmasq非常强大，功能很多。可以用来做dns代理服务器，也可以用来做dhcp服务器和ProxyDHCP服务器，还内置了tftp服务器。所以我们用Dnsmasq＋nginx就可以搞定所有了。
 
 # Demo
 
 1. 配置/etc/dnsmasq.conf	
+
 	#关闭dns服务器（其实也可以开启，缓存起来比用外网dns服务器快很多，不过存在单点问题，需要做高可用，原来我们局域网内也有一个windows的dns服务器，但是经常卡，需要重启，所以最后弃用了）
 	port=0
 	#用dnsmasq -d命令启动，看log，调试用
@@ -63,9 +64,11 @@ PXE必备的三样东西：
 	#pxe-service=x86PC, "Boot from local disk", 64
 	#pxe-service=x86PC, "PXE-Linux on 192.168.0.100", "pxelinux", 192.168.0.100
 	#pxe-service=x86PC, "ACME Deployment server", "acme", 192.168.0.101
+
 然后通过命令`dnsmasq -d`启动
 
 2. 配置pxelinux.cfg/default
+
 	default vesamenu.c32
 	timeout 600
 	MENU TITLE Houpix PXE BOOT
@@ -75,6 +78,7 @@ PXE必备的三样东西：
 	APPEND initrd=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/initrd.img method=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511 devfs=nomount ip=dhcp
 
 3. 配置nginx
+
 	events{}
 	http{
 		server{
@@ -82,6 +86,7 @@ PXE必备的三样东西：
 			autoindex on;
 		}
 	}
+	
 通过`nginx -c /data/pxe/nginx.conf`启动nginx
 
 注意，我们是直接把`CentOS-7-x86_64-Minimal-1511.iso`mount到`CentOS-7-x86_64-Minimal-1511`目录的，所以整个过程中ISO文件是不需要解压的，如果想支持ubuntu，也可以直接添加，无需解压，如果用tftp恐怕就比较麻烦一些了。

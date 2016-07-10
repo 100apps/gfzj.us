@@ -9,7 +9,7 @@ description: linux rename username
 
 （如果是要修改当前用户的用户名，在修改之前要切换到其他用户，且这个“其他用户”是root用户或者是sudoer，再执行如下）
 
-```
+```bash
 exec sudo -i
 killall -u oldname
 id oldname       

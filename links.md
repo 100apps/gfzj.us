@@ -28,6 +28,7 @@ permalink: /links/
 - [聚合API](https://www.juhe.cn/)
 - [APIStore](http://apistore.baidu.com/)
 - [apicloud](http://www.apicloud.com/)
+- [万象 京东云](http://wxlink.jd.com/)
 
 # to be covered
 - [CS193P Developing iOS 8 Apps with Swift](https://github.com/X140Yu/Developing_iOS_8_Apps_With_Swift)

@@ -24,6 +24,7 @@ permalink: /links/
 - [GitHub Most Forks](https://github.com/search?o=desc&q=stars:%3E1&s=forks&type=Repositories)
 - [GitHub Most Starred](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)
 - [IOS-Categories](https://github.com/shaojiankui/IOS-Categories)
+- [Trending on StackShare](http://stackshare.io/trending/tools)
 
 # to be covered
 - [CS193P Developing iOS 8 Apps with Swift](https://github.com/X140Yu/Developing_iOS_8_Apps_With_Swift)

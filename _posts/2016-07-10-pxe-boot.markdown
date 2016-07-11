@@ -86,7 +86,7 @@ PXE必备的三样东西：
 			autoindex on;
 		}
 	}
-	
+
 通过`nginx -c /data/pxe/nginx.conf`启动nginx
 
 注意，我们是直接把`CentOS-7-x86_64-Minimal-1511.iso`mount到`CentOS-7-x86_64-Minimal-1511`目录的，所以整个过程中ISO文件是不需要解压的，如果想支持ubuntu，也可以直接添加，无需解压，如果用tftp恐怕就比较麻烦一些了。

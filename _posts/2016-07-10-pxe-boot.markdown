@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PXE启动"
-date: 2016-07-10 19:18:24
+date: 2016-07-10 19:18:24 +800
 categories: 
 by: gf
 description: 详细介绍从PXE启动的原理和配置方法，任何人只需要看这一篇文章就可以了。

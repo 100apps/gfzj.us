@@ -22,17 +22,17 @@ description: 详细介绍从PXE启动的原理和配置方法，任何人只需�
 从tftp server下载下来的lpxelinux文件，它有自己的规则加载配置文件。一般的规则是：
 
 ```
-	/mybootdir/pxelinux.cfg/b8945908-d6a6-41a9-611d-74a6ab80b83d
- 	/mybootdir/pxelinux.cfg/01-88-99-aa-bb-cc-dd
- 	/mybootdir/pxelinux.cfg/C0A8025B
- 	/mybootdir/pxelinux.cfg/C0A8025
- 	/mybootdir/pxelinux.cfg/C0A802
- 	/mybootdir/pxelinux.cfg/C0A80
- 	/mybootdir/pxelinux.cfg/C0A8
- 	/mybootdir/pxelinux.cfg/C0A
- 	/mybootdir/pxelinux.cfg/C0
- 	/mybootdir/pxelinux.cfg/C
- 	/mybootdir/pxelinux.cfg/default
+/mybootdir/pxelinux.cfg/b8945908-d6a6-41a9-611d-74a6ab80b83d
+/mybootdir/pxelinux.cfg/01-88-99-aa-bb-cc-dd
+/mybootdir/pxelinux.cfg/C0A8025B
+/mybootdir/pxelinux.cfg/C0A8025
+/mybootdir/pxelinux.cfg/C0A802
+/mybootdir/pxelinux.cfg/C0A80
+/mybootdir/pxelinux.cfg/C0A8
+/mybootdir/pxelinux.cfg/C0A
+/mybootdir/pxelinux.cfg/C0
+/mybootdir/pxelinux.cfg/C
+/mybootdir/pxelinux.cfg/default
 ```
 这个规则很重要，这样我们可以根据不同的mac地址或者网段自动加载不通的系统。下载下来kernel和initrd，再加上相应的参数，就可以启动了。
 
@@ -49,23 +49,23 @@ PXE必备的三样东西：
 1. 配置/etc/dnsmasq.conf	
 
 ```
-	#关闭dns服务器（其实也可以开启，缓存起来比用外网dns服务器快很多，不过存在单点问题，需要做高可用，原来我们局域网内也有一个windows的dns服务器，但是经常卡，需要重启，所以最后弃用了）
-	port=0
-	#用dnsmasq -d命令启动，看log，调试用
-	log-dhcp
-	#开始tftp
-	enable-tftp
-	tftp-root=/data/pxe/pxelinux
-	#ProxyDHCP
-	dhcp-range=192.168.99.1,proxy
-	#如果局域网内用dnsmasq当dhcp服务器的话，可以直接配置
-	#dhcp-range=192.168.1.50,192.168.1.100,12h
-	#根据不同的pxe客户端返回不同的启动文件。
-	#pxe-prompt="Choose:"
-	pxe-service=x86PC, "PXE-Linux", "lpxelinux"
-	#pxe-service=x86PC, "Boot from local disk", 64
-	#pxe-service=x86PC, "PXE-Linux on 192.168.0.100", "pxelinux", 192.168.0.100
-	#pxe-service=x86PC, "ACME Deployment server", "acme", 192.168.0.101
+#关闭dns服务器（其实也可以开启，缓存起来比用外网dns服务器快很多，不过存在单点问题，需要做高可用，原来我们局域网内也有一个windows的dns服务器，但是经常卡，需要重启，所以最后弃用了）
+port=0
+#用dnsmasq -d命令启动，看log，调试用
+log-dhcp
+#开始tftp
+enable-tftp
+tftp-root=/data/pxe/pxelinux
+#ProxyDHCP
+dhcp-range=192.168.99.1,proxy
+#如果局域网内用dnsmasq当dhcp服务器的话，可以直接配置
+#dhcp-range=192.168.1.50,192.168.1.100,12h
+#根据不同的pxe客户端返回不同的启动文件。
+#pxe-prompt="Choose:"
+pxe-service=x86PC, "PXE-Linux", "lpxelinux"
+#pxe-service=x86PC, "Boot from local disk", 64
+#pxe-service=x86PC, "PXE-Linux on 192.168.0.100", "pxelinux", 192.168.0.100
+#pxe-service=x86PC, "ACME Deployment server", "acme", 192.168.0.101
 ```
 
 然后通过命令`dnsmasq -d`启动
@@ -73,25 +73,25 @@ PXE必备的三样东西：
 2. 配置pxelinux.cfg/default
 
 ```
-	default vesamenu.c32
-	timeout 600
-	MENU TITLE Houpix PXE BOOT
+default vesamenu.c32
+timeout 600
+MENU TITLE Houpix PXE BOOT
 
-	LABEL CentOS-7-x86_64-Minimal-1511
-	LINUX http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/vmlinuz
-	APPEND initrd=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/initrd.img method=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511 devfs=nomount ip=dhcp
+LABEL CentOS-7-x86_64-Minimal-1511
+LINUX http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/vmlinuz
+APPEND initrd=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511/images/pxeboot/initrd.img method=http://192.168.99.181/CentOS-7-x86_64-Minimal-1511 devfs=nomount ip=dhcp
 ```
 
 3. 配置nginx
 
 ```
-	events{}
-	http{
-		server{
-			root /data/pxe;
-			autoindex on;
-		}
+events{}
+http{
+	server{
+		root /data/pxe;
+		autoindex on;
 	}
+}
 ```
 
 通过`nginx -c /data/pxe/nginx.conf`启动nginx

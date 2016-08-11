@@ -35,7 +35,7 @@ permalink: /tech/117.html
 
 ![新建虚拟机][624d16617874092c6299fdd4b2eaf66a.jpg]
 
-## vdi打包文件下载地址： ##
+#  # vdi打包文件下载地址： ##
 
     http://pan.baidu.com/s/1o66V3nk
 

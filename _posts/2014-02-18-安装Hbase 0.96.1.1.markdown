@@ -7,16 +7,16 @@ by: zj
 description: 1、配置环境变量（1）打开conf/hbase-env.sh,添加exportJAVA_HOME=/System/Library/Frameworks/JavaVM.framework/HomeexportHBASE_MANAGES_ZK=true （使用内置zookeeper）（2）修
 permalink: /tech/121.html
 ---
-# 1、配置环境变量 #
+#   1、配置环境变量 #
 
-## （1）打开conf/hbase-env.sh,添加 ##
+#  # （1）打开conf/hbase-env.sh,添加 ##
 
 export JAVA\_HOME=/System/Library/Frameworks/JavaVM.framework/Home export HBASE\_MANAGES\_ZK=true   （使用内置zookeeper）
 
-## （2）修改hbase-site.xml，添加： ##
+#  # （2）修改hbase-site.xml，添加： ##
 
 <property> <name>hbase.cluster.distributed</name> <value>true</value> </property> <property> <name>hbase.rootdir</name> <value>hdfs://localhost:9000/hbase</value> </property> <property> <name>dfs.replication</name> <value>1</value> </property> <property> <name>hbase.zookeeper.quorum</name> <value>localhost</value> </property> </configuration>
 
-# 2、启动hbase： #
+#   2、启动hbase： #
 
 先启动hadoop，再启动hbase. jps 输出： 11986 NodeManager 12198 HMaster 11806 SecondaryNameNode 11907 ResourceManager 11642 NameNode 12156 HQuorumPeer 11714 DataNode 12649 Jps 12285 HRegionServer 输入命令./bin/hbase shell，进入hbase的shell，测试各种命令。 最后先关闭hbase，再关闭hadoop

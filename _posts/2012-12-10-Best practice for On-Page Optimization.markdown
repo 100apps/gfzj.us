@@ -8,7 +8,7 @@ keyword: seo,On-Page
 description: CriticalFactorsAccessibletoEnginesPagesthatcan&#039;tbecrawledorindexedhavenoopportunitytorankintheresults.Beforetweakingkeywordtargetingorlev
 permalink: /tech/61.html
 ---
-## Critical Factors ##
+#  # Critical Factors ##
 
 Accessible to Engines
 
@@ -30,7 +30,7 @@ Appropriate Use of Rel Canonical
 
 If the canonical tag is pointing to a different URL, engines will not count this page as the reference resource and thus, it won't have an opportunity to rank. Make sure you're targeting the right page (if this isn't it, you can reset the target above) and then change the canonical tag to reference that URL.
 
-## High Importance Factors ##
+#  # High Importance Factors ##
 
 Appropriate Keyword Usage in Document
 
@@ -66,7 +66,7 @@ No More Than One Canonical URL Tag
 
 The canonical URL tag is meant to be employed only a single time on an individual URL (much like the title element or meta description). To ensure the search engines properly parse the canonical source, employ only a single version of this tag.
 
-## Moderate Importance Factors ##
+#  # Moderate Importance Factors ##
 
 Exact Keyword Usage in Document
 
@@ -114,7 +114,7 @@ Static URL
 
 URLs with dynamic parameters have been shown in SEOmoz's correlation research to have dramatically worse performance in search engine rankings than static URLs.
 
-## Low Importance Factors ##
+#  # Low Importance Factors ##
 
 Appropriate Keyword Usage in H1 Tag
 
@@ -170,7 +170,7 @@ Minimal Subfolders in the URL
 
 The quantity of subfolders in a URL appears to correlate to rankings. URLs with fewer trailing slashes perform better than those with more. Additionally, search engine representatives have recommended that excessive, subfolders in a URL string may be a signal that the page is very deep in a site's structure and may be less valuable/worthwhile to crawl, index and rank.
 
-## Optional Factors ##
+#  # Optional Factors ##
 
 Appropriate Meta Description Length
 

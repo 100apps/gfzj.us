@@ -11,7 +11,7 @@ keywords: java
 
 海量小文件对于Hadoop来说是一个灾难。如果不可避免的要使用Hadoop处理小文件，此处提供一些方案。
 
-###Problems with small files and HDFS###
+#  ##Problems with small files and HDFS###
 
 小文件是指那些文件大小比HDFS block size（默认64M）小很多的文件。每个小文件即使size很小，仍旧会占用一个block，不会多个小文件共用一个block。如果你在使用Hadoop时需要存储小文件，那么就意味着你可能有很多小文件，否则不会选择使用Hadoop。但是，问题就在于HDFS不能处理大量的文件。
 
@@ -19,7 +19,7 @@ HDFS中每一个文件、目录或是block在namenode的内存中都对应一个
 
 另外，HDFS并不是为了有效地访问小文件而设计的：其初衷是为了流式访问大文件。如果访问大量小文件，需要执行大量的seeks操作，并需要不断地从一个datanode跳到另一个datanode，从而获取每个小文件，然而，上述每个操作都是低效的数据访问方式。
 
-###Problems with small files and MapReduce###
+#  ##Problems with small files and MapReduce###
 
 Map tasks通常是以block为单位进行数据的处理。如果文件非常小且文件数量极大，那么每个map task处理的数据就非常少，且需要启动大量的map tasks，而记录每个map task信息（**bookkeeping**）也需要一定的开销。举个例子：一个是单独的1GB的文件，在HDFS中存储到16个64MB blocks；另一个是10000个100KB的小文件，大约共1GB。这10000个文件每个都用一个map task处理，那么处理这些文件所需的时间要比第一种情况慢上十倍甚至百倍。
 
@@ -27,11 +27,11 @@ Hadoop提供了一些方法用于减少bookkeeping带来的开销：设置mapred
 
 **PS:** bookkeeping是指在一个job的初始化阶段记录每个task的状态和进度。
 
-###One Example###
+#  ##One Example###
 
 一个非常典型的小文件案例就是存储海量图片，每个图片是一个单独的小文件，这种情况就需要使用一个容器把图片进行分组打包存储。
 
-###HAR files###
+#  ##HAR files###
 
 为了缓解大量小文件带给namenode内存的压力，Hadoop 0.18.0引入了[Hadoop Archives][link2](HAR files)，其本质就是在HDFS之上构建一个分层文件系统。通过执行`hadoop archive`命令就可以创建一个HAR文件。在命令行下，用户可使用一个以`har://`开头的URL就可以访问HAR文件中的小文件。使用HAR files可以减少HDFS中的文件数量。
 
@@ -39,7 +39,7 @@ Hadoop提供了一些方法用于减少bookkeeping带来的开销：设置mapred
 
 ![HAR File Layout][image1]
 
-###Sequence Files###
+#  ##Sequence Files###
 
 除了HAR files，另一种可选是SequenceFile，其核心是以文件名为key、文件内容为value组织小文件。回到之前提到的10000个100KB大小的文件，你可以编写程序将这些文件放到一个SequenceFile文件，然后就以数据流的方式处理这些文件，也可以使用MapReduce进行处理。一个SequenceFile是可分割的，所以MapReduce可将文件切分成块，每一块独立操作。不像HARs，SequenceFile支持压缩。在大多数情况下，以block为单位进行压缩是最好的选择，因为一个block包含多条记录，压缩作用在block之上，比Record压缩方式（一条一条记录进行压缩）的压缩比高。
 
@@ -49,11 +49,11 @@ Hadoop提供了一些方法用于减少bookkeeping带来的开销：设置mapred
 
 ![SequenceFile File Layout][image2]
 
-###HBase###
+#  ##HBase###
 
 HBase也可用于存储小文件，前提是文件真的很小。
 
-###个人总结###
+#  ##个人总结###
 
 对于海量小文件，该如何处理：
 

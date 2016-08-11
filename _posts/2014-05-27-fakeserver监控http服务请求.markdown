@@ -10,7 +10,7 @@ permalink: /tech/137.html
 ---
 最近有同事，vps流量过大，被vps提供商强行停止服务。我们可以通过apache或者nginx的log去看看到底是哪些请求用去了比较大的流量，但是log比较分散，因为不同的域名，设置了不同的log路径，想起php现在已经提供了build-in server，我们可以用这个功能，替代http服务器，监控请求。
 
-## 使用方法 ##
+#  # 使用方法 ##
 
 首先停止原先的http服务器，比如sudo /opt/lampp/lampp stopapache 或者sudo nginx -s stop。然后启动fakeserver：
 
@@ -19,14 +19,14 @@ permalink: /tech/137.html
 
 现在就可以随时统计了：php fakeserver.php
 
-## 禁用蜘蛛 ##
+#  # 禁用蜘蛛 ##
 
 有的蜘蛛就是垃圾，比如阿里云的、bing的，没多少流量，但是胃口不小，尤其是在宕机恢复以后，我们可以通过iptables把这些蜘蛛ip禁用掉，通过上面的分析我们已经得到常用的这些ip。还有一种方法，通过http服务器判断useragent，比如apache，在Directory里添加：
 
     BrowserMatchNoCase "bingbot" badguy
     deny from env=badguy
 
-## 下载 ##
+#  # 下载 ##
 
 [fakeserver][]
 

@@ -5,14 +5,14 @@ date: 2014-12-20 13:32:08
 by: gf
 description: charles是一个非常好用的跨平台代理工具，比fiddler功能更多，支持socks代理。
 ---
-#update 2015.10.29
+#  update 2015.10.29
 
 for charles 3.11.1, just download [charlse](http://www.charlesproxy.com/assets/release/3.11.1/charles-proxy-3.11.1.dmg) and drag Charles to /Application. replace `charles.jar` with:
 	
 	curl -Lv "https://github.com/100apps/charles-hacking/blob/master/charles.jar?raw=true" -o /Applications/Charles.app/Contents/Java/charles.jar
 
 
-#update 2015.06.24
+#  update 2015.06.24
 for charles 3.10.1, please go to <http://www.gfzj.us/tech/2015/06/24/charles-hacking.html>
 
 [charles](http://www.charlesproxy.com/)是一个非常好用的跨平台代理工具，比fiddler功能更多，支持socks代理。

@@ -64,7 +64,7 @@ static NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace"
 
 `_JLRoute`插入到routeControllersMap[kJLRoutesGlobalNamespaceKey]这个list中的时候，用到了`插入排序`的思想，priority高的在前面。这样enum这个_JLRoute List的时候，如果match pattern，就return，自然就解决了「路径匹配优先级」的问题。
 
-###block的copy
+#  ##block的copy
 
 在插入新的规则的时候：
 
@@ -91,7 +91,7 @@ static NSString *const kJLRoutesGlobalNamespaceKey = @"JLRoutesGlobalNamespace"
 举个例子：
 
 {%highlight objc%}
-#import <Foundation/Foundation.h>
+#  import <Foundation/Foundation.h>
 typedef long (^BlkSum)(int, int);
 NSArray *test;
 
@@ -118,7 +118,7 @@ int main(int argc,const char *argv[]){
 
 其中`NSGlobalBlock`类型的block和普通函数一样，不引用外部变量，不需要copy。第二种`NSStackBlock`引用外部变量，会收到外部变量的作用域限制，所以需要copy成`NSMallocBlock`。
 
-###使用JLRoutes
+#  ##使用JLRoutes
 
 在我们的项目中，即使不用JLRoutes来组合sub app，也建议引入，因为：
 

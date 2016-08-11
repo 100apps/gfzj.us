@@ -17,7 +17,7 @@ description: iOS开发者账号有两类：99$的App Store上架发布的账号�
 
 company和enterprise都可以建立子账号，在<https://developer.apple.com/membercenter/index.action#allpeople>通过邮箱邀请就可以，还是很方便的。另外，一个apple id只能绑定这三种账号中的一种。比如你需要company和enterprise账号，那么就需要两个apple id（也就是两个邮箱）。
 
-#Personal账号注册
+#  Personal账号注册
 
 只要有一张支持visa／master card的信用卡即可。一般一天之内就能搞定了。下面是申请日志：
 
@@ -30,7 +30,7 @@ company和enterprise都可以建立子账号，在<https://developer.apple.com/m
 
 至此，个人版的开发者账号就申请下来了，以前的时候付款还要传真确认单，现在都不需要了，信用卡扣款就搞定了。顺利的话，24小时之内账号到手。
 
-#company账号和enterprise账号申请
+#  company账号和enterprise账号申请
 
 company和enterprise申请都需要[邓白氏编码（D-U-N-S® Number）](http://zh.wikipedia.org/wiki/%E9%82%93%E7%99%BD%E6%B0%8F),这个如果单独申请时需要付费的。如果我们没有邓白氏编码，可以通过Apple提供的链接直接申请，是免费的。我们公司当时并没有邓白氏编码，所以一切从头开始。而且是同时申请的，如下图
 
@@ -52,5 +52,5 @@ company和enterprise申请都需要[邓白氏编码（D-U-N-S® Number）](http:
 |2014-12-18 08:34:50|Apple Support发来邮件`您的_Apple_Developer_Program_Support_体验`。至此，账号申请完毕，可以用了。|
 |2014-12-18 12:19:18|APPLE STORE发来邮件E-invoice for your order #254509xxxx，可以把这个电子发票交给财物了|
 
-#总结
+#  总结
 现在申请开发者账号还是很快的，如果想更快的话，就要不停地发邮件／打电话催。个人版的话24小时，企业版的话，加上邓白氏申请，加上周末两天，一共用去6天时间，所以一周应该足够了。如果有邓白氏编码，估计2天之内也能搞定。

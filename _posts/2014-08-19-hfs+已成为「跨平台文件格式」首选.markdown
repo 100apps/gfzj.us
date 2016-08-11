@@ -12,7 +12,7 @@ permalink: /tech/154.html
 
 争论hfs+是否过时意义不大，毕竟mac现在默认的文件格式还是它。如果把移动硬盘，查到mac上，肯定就会格式化成hfs+了。那么在别的平台上，怎么用呢？
 
-## linux ##
+#  # linux ##
 
 首先需要把日志停掉，要不linux可能会不识别：
 
@@ -41,7 +41,7 @@ permalink: /tech/154.html
     #fsck.
     sudo fsck.hfsplus -f /dev/sda2
 
-## windows ##
+#  # windows ##
 
 可以用商业软件 [HFS+ for Windows][HFS_ for Windows]，序列号你懂得。 当然，还有很多开源实现，可以Google。
 

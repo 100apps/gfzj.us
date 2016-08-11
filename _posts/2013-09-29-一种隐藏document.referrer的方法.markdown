@@ -37,7 +37,7 @@ permalink: /tech/100.html
 
 这样就没有了任何依赖。对于支持data:的非ie浏览器，创建了一个临时页面，这个临时页面也是通过meta跳转的，chrome发送的时候，发送的是这个临时页面的地址，为空，所以就避开了。
 
-## 测试 ##
+#  # 测试 ##
 
  *  隐藏referrer
  *  [发送referrer][referrer]
@@ -48,7 +48,7 @@ permalink: /tech/100.html
 2.  Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:23.0) Gecko/20100101 Firefox/23.0
 3.  Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727)
 
-## 关于referrer的拼写问题 ##
+#  # 关于referrer的拼写问题 ##
 
 查看浏览器发送的头部信息，用的是Referer: http://xxxx/yy。然后在js中只有document.referrer变量。中间有个"r"。到底是怎么拼写的？ 详情见：[http://english.stackexchange.com/questions/42630/referer-or-referrer][http_english.stackexchange.com_questions_42630_referer-or-referrer]
 

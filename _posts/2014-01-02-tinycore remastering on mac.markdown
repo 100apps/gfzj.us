@@ -12,7 +12,7 @@ permalink: /tech/112.html
 
 我们需要ssh和nginx，于是拿最小版本Core-current.iso来改造
 
-## STEP 0:前期准备 ##
+#  # STEP 0:前期准备 ##
 
 linux系统可以参考[官方文档(wiki:remastering)][wiki_remastering],用到的几个工具一般linux发行版都自带了。但是mac没有mkisofs，首先需要：
 
@@ -20,7 +20,7 @@ linux系统可以参考[官方文档(wiki:remastering)][wiki_remastering],用到
 
 另外，要注意，mac的非系统盘分区，chown不好用。所以最好解压到系统分区的某个文件夹，解压到RAMDisk可能有问题。比如我是用的工作目录是/tmp/
 
-## STEP 1:解压 ##
+#  # STEP 1:解压 ##
 
     hdiutil mount Core-current.iso
     cp -a /Volumes/Core/boot .
@@ -28,7 +28,7 @@ linux系统可以参考[官方文档(wiki:remastering)][wiki_remastering],用到
     cd extract
     sudo tar xzfv ../boot/core.gz
 
-## STEP 2: 修改 ##
+#  # STEP 2: 修改 ##
 
 现在整个文件系统就已经显示在extract文件夹里面了，一般的扩展，只需从系统里面的/tmp/tcloop目录复制出来，修复一下权限即可。
 
@@ -40,7 +40,7 @@ linux系统可以参考[官方文档(wiki:remastering)][wiki_remastering],用到
 
 修改opt/bootlocal.sh，把nginx和openssh都添加到启动项即可。
 
-## STEP 3:打包 ##
+#  # STEP 3:打包 ##
 
 现在可以重新打包core了。新建一个文件夹newiso
 

@@ -78,7 +78,7 @@ permalink: /tech/204.html
      //第四步，链接：生成a.out，或者通过-o改变输出文件名
      gcc -ObjC -framework Foundation b.o
 
-## update 2014-11-25 ##
+#  # update 2014-11-25 ##
 
 把objc代码翻译成Cpp
 

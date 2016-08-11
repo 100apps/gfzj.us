@@ -18,18 +18,18 @@ description: 破解Charles Web Debugging Proxy
 
 
 {%highlight bash%}
-#0 如果已经安装了其他版本，请先移除
+#  0 如果已经安装了其他版本，请先移除
 rm -rf /Applications/Charles.app
 
-#1. 下载3.10.1并安装
+#  1. 下载3.10.1并安装
 wget http://www.charlesproxy.com/assets/release/3.10.1/charles-proxy-3.10.1-applejava.dmg
 open charles-proxy-3.10.1-applejava.dmg
 cp -r /Volumes/Charles\ Proxy\ v3.10.1/Charles.app /Applications/
-#测试一下，打开试用版，确认可以打开(必选步骤)
+#  测试一下，打开试用版，确认可以打开(必选步骤)
 open /Applications/Charles.app
-#现在可以退出Charles了。
+#  现在可以退出Charles了。
 
-#2 替换Licence
+#  2 替换Licence
 cd /Applications/Charles.app/Contents/Resources/Java/
 wget https://raw.githubusercontent.com/100apps/charles-hacking/master/Licence.java
 javac -source 1.6 -target 1.6 -d . Licence.java
@@ -37,7 +37,7 @@ jar -uvf charles.jar com/xk72/charles/gui/Licence*
 rm -rf com
 rm Licence.java
 open /Applications/Charles.app
-#此时启动的是已经注册过的版本了。
+#  此时启动的是已经注册过的版本了。
 
 {%endhighlight%}
 
@@ -47,7 +47,7 @@ open /Applications/Charles.app
 wget https://raw.githubusercontent.com/100apps/charles-hacking/master/charles.jar -O /Applications/Charles.app/Contents/Resources/Java/charles.jar
 {%endhighlight%}
 
-#额外收获
+#  额外收获
 
 研究Charles破解的过程中，学习了java的`-agentpath`参数。并且体会到了[btrace](https://github.com/jbachorik/btrace)的强大功能。
 

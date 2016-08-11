@@ -10,7 +10,7 @@ permalink: /tech/76.html
 ---
 很常用的功能，这样基本上就能替代ftp了。网上教程一大堆，但是还是遇到了问题。经过实践，在ubuntu server 13.04上运行成功。
 
-## STEP 1 ##
+#  # STEP 1 ##
 
 首选建立用户和组
 
@@ -19,7 +19,7 @@ permalink: /tech/76.html
     给用户设定密码
     passwd xxoouser1
 
-## STEP 2 ##
+#  # STEP 2 ##
 
 修改/etc/ssh/sshd\_config文件。这一步一定谨慎。实在不行，弄个nc shell，万一ssh没有启动，又把当前session关了，那就麻烦了，对于远程vps，搞不好只能**重装**了。
 
@@ -36,7 +36,7 @@ permalink: /tech/76.html
     AllowTcpForwarding no
     X11Forwarding no
 
-## STEP 3 ##
+#  # STEP 3 ##
 
 然后就是修改对应文件夹的权限。这一步非常重要，否则用sftp客户端登陆，显示不出来，会很懊恼的。
 
@@ -51,6 +51,6 @@ permalink: /tech/76.html
 
 这样，就可以向upload目录上传东西了。
 
-## And Then? ##
+#  # And Then? ##
 
 可用用ngxin或者apache root到这个目录。autoindex一下，就可以下载了，别忘了，还可以用basic auth设置一个密码。

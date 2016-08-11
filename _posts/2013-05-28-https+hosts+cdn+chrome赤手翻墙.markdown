@@ -27,7 +27,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 明白了被封的基本原理，做一个例子。比如：[https://code.google.com/apis/ajax/playground/?type=visualization\#geo\_map][https_code.google.com_apis_ajax_playground_type_visualization_geo_map]这个打不开。解决方法如下：
 
-## STEP 1:添加hosts记录 ##
+#  # STEP 1:添加hosts记录 ##
 
 我们用chrome开发工具发现，有一个域名savedbythegoog.appspot.com打不开了。所以添加记录
 
@@ -35,7 +35,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 但是比较杯具的是，173.194.70.141 savedbythegoog.appspot.com在原网页中引用的时候，居然是http协议，这样会被第二种方法封掉。所以要强制改成https。
 
-## STEP 2:chrome强制https ##
+#  # STEP 2:chrome强制https ##
 
 用**chrome浏览器**打开chrome://net-internals/。找到左侧导航中的HSTS，点击，在"Add domain"中添加一个domain: savedbythegoog.appspot.com 。然后点击"Add"
 
@@ -45,7 +45,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 这是由于chrome的安全策略，Blocking insecure content from http://。所以需要：
 
-### STEP 3:更改chrome安全策略。 ###
+#  ## STEP 3:更改chrome安全策略。 ###
 
 右键chrome的快捷方式，点击属性。然后在把目标改成类似：
 
@@ -59,7 +59,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 ![google-playground][]
 
-## What's more ##
+#  # What's more ##
 
 用同样的思路，我们可以搞定这些奇葩网站：
 
@@ -69,7 +69,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 再另外，你知道吗？当代年轻人的四项必备技能：外语、驾车、计算机、翻墙。
 
-## update 2013年6月1日20:45:37 ##
+#  # update 2013年6月1日20:45:37 ##
 
 昨天听说wikipedia，http可以打开，https则显示连接被重置，应该是封了端口吧，太赤裸裸了。不能过滤，索性不能打开。
 

@@ -10,7 +10,7 @@ permalink: /tech/129.html
 ---
 帝国cms是一个很强大的系统，非常适于当静态页面引擎，通过最近的使用，发现以下问题，以后用的时候，记得修改。
 
-## 替换编辑器 ##
+#  # 替换编辑器 ##
 
 帝国的可视化编辑器并不适合直接写html代码，我们当然要把它替换成emmet！emmet js版本在[https://github.com/emmetio/textarea][https_github.com_emmetio_textarea]。修改修改e/admin/ecmseditor/infoeditor/fckeditor.php第9行ECMS\_ShowEditorVar函数：
 
@@ -18,7 +18,7 @@ permalink: /tech/129.html
 
 内容添加页面的html静态模板在：**e/data/html/1.php** 。我们可以通过修改这个文件，来修改后台添加内容页面。
 
-## 下载远程图片不建立日期文件夹 ##
+#  # 下载远程图片不建立日期文件夹 ##
 
 帝国可以设置，这个目录的附件是否建立文件夹，但是不能在发布文章的时候设置。比我我们用火车头发布的时候，一下子发布很多，但是图片都在某个日期下面，不大好；而我们手工发的，每天一个目录，挺正常，我们可以通过修改e/class/connect.php第2892行:
 
@@ -26,15 +26,15 @@ permalink: /tech/129.html
 
 通过火车头DoNotCreateDateDir字段可以控制是否创建目录。
 
-## 新闻模型字段类型修改 ##
+#  # 新闻模型字段类型修改 ##
 
 默认新闻类型的smalltext字段是char(255)类型的，超过这个长度的会被自动截断，就像discuz portal文章一样，这个问题最坑爹了。所以我们 **一定**要修改！在系统→数据表和系统模型里面，修改字段，smalltext和title都改成text即可。
 
-## 分页模板修改 ##
+#  # 分页模板修改 ##
 
 如果对默认的分页模板不满意，可以修改生成方法。分两种情况：静态页面，修改e/class/connect.php 中的sys\_ShowListMorePage；动态页面，修改e/class/connect.php function page1方法。
 
-## 模板技巧 ##
+#  # 模板技巧 ##
 
 \[e:loop\]绝对是一招鲜吃遍天，基本上用着一个标签就够了。比如，生成导航栏：
 
@@ -61,16 +61,16 @@ permalink: /tech/129.html
     </li>
     [/e:loop]
 
-## 特别注意 ##
+#  # 特别注意 ##
 
  *  SEO最重要的时title和description，所以做模板，尤其是二级目录的模板的时候，title至少也是\[!--class.name--\]，保证是个不同的title。
  *  上线之前一定要检查，包括sitemap、死链接、栏目title等
 
-## sitemap ##
+#  # sitemap ##
 
 根据官方的插件修改而来。生成静态的sitemap.xml。[sitemap.php][]
 
-## 每个目录一个独立站点update 2014年10月20日13:14:00 ##
+#  # 每个目录一个独立站点update 2014年10月20日13:14:00 ##
 
 就像docker，一个帝国cms，可以管理N个站点。只需要把对应的目录绑定到域名即可。为了增加可移植性，不要在「绑定域名」那里填写http:// 而应该直接是目录名，比如/study,或者直接是study,这样生成的titleurl，就是prefix+"/目录名/",而相应的根目录，绑定域名是/
 
@@ -79,14 +79,14 @@ permalink: /tech/129.html
  *  系统参数→附件地址，改成/
  *  修改class/connect.php 1135行 $mk=@mkdir($path,0777,`true`);//修改权限。(如果在根目录建立之前ln，则无需修改。)
 
-## 清空所有文章 在PHPmyadmin里面操作比帝国后台快多了 ##
+#  # 清空所有文章 在PHPmyadmin里面操作比帝国后台快多了 ##
 
     truncate table `gfzj_ecms_news`;
     truncate table `gfzj_ecms_news_index`;
     truncate table `gfzj_ecms_news_data_1` ;
     update gfzj_enewsclass set allinfos=0,infos=0；
 
-## 帝国模板调试 ##
+#  # 帝国模板调试 ##
 
 dump出来所有的变量，是做模板的好方法：
 
@@ -94,13 +94,13 @@ dump出来所有的变量，是做模板的好方法：
     var_dump(get_defined_vars());
     $result = ob_get_clean();
 
-## 绑定域名「/」之后的修改 ##
+#  # 绑定域名「/」之后的修改 ##
 
 class/t\_functions.php101行 `sys_ShowListMorePage`函数
 
     if(substr($dolink,0,2)=="//")$dolink=substr($dolink,1);
 
-## 「远程保存图片」的url中有中文 ##
+#  # 「远程保存图片」的url中有中文 ##
 
 php直接file\_get\_content($url)试试，如果不能下载，帝国肯定也不能保存。因为url编码的问题。修改class/connect.php 中的`ReadFiletext`函数，1190行
 

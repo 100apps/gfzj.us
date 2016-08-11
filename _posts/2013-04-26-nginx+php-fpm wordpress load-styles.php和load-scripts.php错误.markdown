@@ -25,7 +25,7 @@ wordpress 后台js和style有个合并机制，减少服务器请求次数。但
 
 世界清净多了
 
-### 关于fastcgi\_buffer ###
+#  ## 关于fastcgi\_buffer ###
 
 浏览器和nginx建立连接，nginx发现请求的不是静态文件，而是php脚本，于是把请求转给php-fpm,php-fpm生成内容，转给nginx，nginx再转给浏览器。php返回的东西可能很长，甚至不是一下子返回的，nginx 缓存起来，处理一下(替换/gzip等)再返给浏览器。过大的话，经常会出现502 bad gateway。大概就是这个原因。
 

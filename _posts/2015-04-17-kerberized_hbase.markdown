@@ -10,15 +10,15 @@ description: 配置HBase的Kerberos
 
 集群配置和Kerberos安装配置如[Kerberized_HDFS][link1].HBase的Kerberos配置过程如下所示。
 
-##Kerberos parts##
+#  #Kerberos parts##
 
-###添加principals###
+#  ##添加principals###
 
 在KDC上创建HBase principals，并随机生成密钥：
 
 {% highlight java %}
 
-# kadmin.local
+#   kadmin.local
 addprinc -randkey hbase/node21@HADOOP
 addprinc -randkey hbase/node22@HADOOP
 addprinc -randkey hbase/node23@HADOOP
@@ -26,7 +26,7 @@ listprincs
 
 {% endhighlight %}
 
-###生成keytab文件###
+#  ##生成keytab文件###
 
 为集群中每个节点生成相应的hbase.keytab文件。
 
@@ -34,14 +34,14 @@ listprincs
 
 {% highlight java %}
 
-# kadmin.local 
+#   kadmin.local 
 ktadd -k hbase_21.keytab hbase/node21@HADOOP
 ktadd -k hbase_22.keytab hbase/node22@HADOOP
 ktadd -k hbase_23.keytab hbase/node23@HADOOP
 
 {% endhighlight %}
 
-###部署keytab文件###
+#  ##部署keytab文件###
 
 将每个keytab文件拷贝到相应的节点的/etc下，并重命名为hbase.keytab：
 
@@ -53,13 +53,13 @@ ktadd -k hbase_23.keytab hbase/node23@HADOOP
 
 	# chown hbase:hadoop /etc/hbase.keytab; chmod 400 /etc/hbase.keytab
 
-##HBase Part##
+#  #HBase Part##
 
-###修改hbase-site.xml###
+#  ##修改hbase-site.xml###
 
 在HBase的配置目录下修改hbase-site.xml，具体修改如下：
 
-####启动HBase认证####
+#  ###启动HBase认证####
 
 添加：
 
@@ -74,7 +74,7 @@ ktadd -k hbase_23.keytab hbase/node23@HADOOP
   </property>
 {% endhighlight %}
 
-####启动HBase授权####
+#  ###启动HBase授权####
 
 HBase 授权是建立在Coprocessors框架之上的，尤其是AccessController Coprocessor。在hbase-site.xml添加：
 
@@ -93,7 +93,7 @@ HBase 授权是建立在Coprocessors框架之上的，尤其是AccessController 
   </property>
 {% endhighlight %}
 
-####配置principal####
+#  ###配置principal####
 
 {% highlight java %}
 <property>
@@ -128,11 +128,11 @@ HBase 授权是建立在Coprocessors框架之上的，尤其是AccessController 
 
 将修改好的hbase-site.xml拷贝到集群所有的机器上。
 
-###配置hbase认证一个Secure Zookeeper###
+#  ##配置hbase认证一个Secure Zookeeper###
 
 配置HBase JVMs（所有的masters、region servers、clients）使用JAAS（Java Authentication and Authorization Service）。
 
-####zk-jaas.conf####
+#  ###zk-jaas.conf####
 
 在HBase的配置目录下创建文件zk-jaas.conf，内容如下：
 
@@ -154,14 +154,14 @@ principal="hbase/node21@HADOOP";
 
 {% endhighlight %}
 
-####修改hbase-env.sh####
+#  ###修改hbase-env.sh####
 
 在hbase的配置目录下，修改hbase-env.sh，添加如下内容：
 
 	export HBASE_OPTS="$HBASE_OPTS -Djava.security.auth.login.config=$HBASE_HOME/conf/zk-jaas.conf"
 	export HBASE_MANAGES_ZK=false
 
-####修改zoo.cfg####
+#  ###修改zoo.cfg####
 
 在zookeeper的配置目录下，修改zoo.cfg，添加如下：
 
@@ -172,7 +172,7 @@ principal="hbase/node21@HADOOP";
 
 重启Zookeeper、Hyperbase，启动成功，则配置成功。
 
-##授权管理##
+#  #授权管理##
 
 HBase是通过ACL对clients进行授权管理的。
 

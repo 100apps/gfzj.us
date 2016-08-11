@@ -7,7 +7,7 @@ by: zj
 description: paperpaper(a4|letter)(xdvi|pdftex|dvips|dvipdfmx|dvipdfm|context)paper(papersize|--list)Withnoarguments(tlmgrpaper),showsthedefaultpapersizesetting
 permalink: /tech/115.html
 ---
-## paper ##
+#  # paper ##
 
 **paper \[a4|letter\]**
 

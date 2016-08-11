@@ -264,10 +264,12 @@ permalink: /links/
 - [王小峰](http://www.wangxiaofeng.me/)
 - [王垠](http://www.yinwang.org/)
 
-#EBooks Resources
+# EBooks Resources
+
 - [IT](http://www.allitebooks.com/)
 
-#Scala
+# Scala
+
 - [Learning Resources](https://www.coursera.org/learn/progfun1/supplement/D9pm0/learning-resources)
 - [Open course: Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1)
 - [Open course: Functional Program Design in Scala[(https://www.coursera.org/learn/progfun2)

@@ -106,6 +106,7 @@ LVM中有几个需要仔细理解的感念：
 我们的服务器上新增加了两块硬盘，希望可以在线给/dev/mapper/centos-home扩容。
 
 ```
+#查看一下现在的情况
 df -hT
 文件系统                类型      容量  已用  可用 已用% 挂载点
 /dev/mapper/centos-root xfs        50G  2.7G   48G    6% /
@@ -116,9 +117,7 @@ tmpfs                   tmpfs      16G     0   16G    0% /sys/fs/cgroup
 /dev/mapper/centos-home xfs       866G  275G  591G   32% /home
 /dev/sda1               xfs       497M  167M  330M   34% /boot
 tmpfs                   tmpfs     3.2G     0  3.2G    0% /run/user/0
-```
 
-```bash
 #创建物理分区
 fdisk /dev/sdb
 t

@@ -95,8 +95,7 @@ LVM中有几个需要仔细理解的感念：
   vgscan          Search for all volume groups
   vgsplit         Move physical volumes into a new or existing volume group
   version         Display software and driver version information
-
- ```
+```
 
 无非就是对pv、lv、vg的增删改查而已。对于查看，可以用pvs、lvs、vgs，或者pvdisplay、lvdisplay、vgdisplay，增加用exten，删除用remove。所以命令很好理解。
 
@@ -134,5 +133,4 @@ lvextend -l +100%FREE /dev/mapper/centos-home
 xfs_growfs /dev/mapper/centos-home
 #如果是ext4分区可以用
 resize2fs
-
 ```

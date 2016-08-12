@@ -10,7 +10,7 @@ img: /images/lvm.jpg
 
 还是那句老话：
 
->> Any problem in computer science can be solved by another layer of indirection.
+> Any problem in computer science can be solved by another layer of indirection.
 
 对于我们平时使用的文件系统，都不知道下面封装了多少层，硬盘（或者ssd）本身都内置了芯片，用来屏蔽柱面、磁道、扇区的差异。我们的服务器上还有RAID Controller，用来屏蔽物理磁盘。操作系统看到的是一个大硬盘，速度很快，其实它可能不知道下面有多少个物理磁盘，中间的写入和缓存算法，操作系统也不用关心。
 
@@ -18,11 +18,11 @@ img: /images/lvm.jpg
 
 raid有个不好的地方就是，动静太大，一个raid一旦建立好以后，再修改大小可能会比较复杂。在不停机的情况下，LVM可能是一个管理磁盘的好方法。
 
-#LVM介绍
+# LVM介绍
 
 Logical Volume Manager (LVM) 利用Linux内核的device-mapper来实现存储系统的虚拟化（系统分区独立于底层硬件）。 通过LVM，你可以实现存储空间的抽象化并在上面建立虚拟分区（virtual partitions），可以更简便地扩大和缩小分区，可以增删分区时无需担心某个硬盘上没有足够的连续空间。
 
-[LVM示意图](/images/lvm.jpg)
+![LVM示意图](/images/lvm.jpg)
 
 LVM中有几个需要仔细理解的感念：
 
@@ -33,7 +33,7 @@ LVM中有几个需要仔细理解的感念：
 5. 物理块（Physical Extent，PE）：每一个物理卷PV被划分为称为PE（Physical Extents）的基本单元，具有唯一编号的PE是可以被LVM寻址的最小单元。PE的大小是可配置的，默认为4MB。所以物理卷（PV）由大小等同的基本单元PE组成。
 6. 逻辑块（Logical Extent，LE）：逻辑卷LV也被划分为可被寻址的基本单位，称为LE。在同一个卷组中，LE的大小和PE是相同的，并且一一对应。
 
-他们的关系如图：[LVM示意图](/images/lvm2.jpg)
+他们的关系如图：![LVM示意图](/images/lvm2.jpg)
 
 理解了上面的几个名词（记住英文），运行`lvm help`看一下：
 
@@ -99,7 +99,7 @@ LVM中有几个需要仔细理解的感念：
 
 无非就是对pv、lv、vg的增删改查而已。对于查看，可以用pvs、lvs、vgs，或者pvdisplay、lvdisplay、vgdisplay，增加用exten，删除用remove。所以命令很好理解。
 
-##示例
+# 示例
 
 给/dev/mapper/centos-home 扩容
 

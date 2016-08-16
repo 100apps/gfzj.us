@@ -49,7 +49,7 @@ vi ./apps/gitlab/htdocs/config/gitlab.yml
 另外，首页也需要更新一下。隐藏用户名登录，只显示ldap登录。
 
 # 备份
-一旦用了gitlab，运维同事的工作又多了一项：保证代码安全。我们的gitlab部署到了virtual box里面（使用phpvirtualbox管理），定时快找，然后同步到备份服务器上。这样虽然有单点问题。但是好呆恢复的时候非常快。
+一旦用了gitlab，运维同事的工作又多了一项：保证代码安全。我们的gitlab部署到了virtual box里面（使用phpvirtualbox管理），定时快照，然后同步到备份服务器上。这样虽然有单点问题，但是好呆恢复的时候非常快。
 
 # ci
 gitlab ci还是挺不错的，完全够用。gitlab ci首先要安装`gitlab-ci-multi-runner`：
@@ -70,10 +70,11 @@ brew install gitlab-ci-multi-runner
 ```bash
 gitlab-ci-multi-runner register
 ```
-核心是token问题，可以为每个项目指定一个runner，用管理员登录gitlab，可以设置全局的runner。我们设置了一个全局runner，用来部署php、web这些项目，像iOS这种项目，肯定是一个单独的mac机器上面的runner（mac也是运行在虚拟机中的）。
+核心是token问题，可以为每个项目指定一个runner。用管理员登录gitlab，可以设置全局的runner。我们设置了一个全局runner，用来部署php、web这些项目。像iOS这种项目，肯定是一个单独的mac机器上面的runner（mac也是运行在虚拟机中的）。
 
 对于简单的通用项目，我们现在只用来部署（提测）。比如我们的php项目，其` .gitlab-ci.yml `文件：
-```yml
+
+```bash
 #合并到TEST分支以后执行
 deploy_test:
   stage: deploy
@@ -96,7 +97,9 @@ common:
   script:
    - bash deploy.sh common
 ```
+
 其中`deploy.sh`为：
+
 ```bash
 #!/usr/bin/env bash
 if [ "x$1" = "xtest" ];then
@@ -124,7 +127,7 @@ deploy(){
 # flow
 我们尝试过git flow，感觉还是比较抽象，因为并没有把code review强行加进去。gitlab flow做得不错，merge request的时候强制引入一个点击Accept的人，对部署（持续集成）负责。并且结合gitlab的code review功能，非常方便。总体上说，我们的项目有2个稳定分支（master和dev），和一个进行中的开发分支，比如v2.8.0。拿到产品文档以后，我们都会在2.8.0上面干，最后所有人都提交到2.8.0，提测的时候，大家进行code review，和视效核对UI，和产品核对需求。team leader去发起merge request，测试leader去accept，部署完成之后大家会收到邮件，xxx提测了，开始测试。
 
-测试过程中不断进行2.8.0向dev的合并，每次合并都会自动部署打包。最终确认没问题，测试经理从dev发起到master的merge request，运维去accept，部署到线上（灰度），或者通过命令行上传到App Store（客户端的话还是测试经理accept，需要进行testflight测试）。
+测试过程中不断进行2.8.0向dev的合并，每次合并都会自动部署打包。最终确认没问题，测试经理从dev发起到master的merge request，运维去accept，部署到线上（灰度），或者通过命令行上传到App Store（客户端的话还是测试经理accept，需要进行testflight测试）。当发布的时候别忘了在master上面打tag。
 
 借助gitlab flow整个开发上线流程就清晰了。并且正常情况下，没有人去碰服务器，都是脚本自动做了。
 

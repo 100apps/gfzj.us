@@ -267,6 +267,7 @@ permalink: /links/
 # EBooks Resources
 
 - [IT](http://www.allitebooks.com/)
+- [The elements of statistical learning](http://statweb.stanford.edu/~tibs/ElemStatLearn/)
 
 # Scala
 

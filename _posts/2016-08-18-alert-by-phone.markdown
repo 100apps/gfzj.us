@@ -11,6 +11,11 @@ description: zabbix打电话、发短信报警的方法
 
 我们这里用的[云通讯](http://www.yuntongxun.com/)。`php -S 0.0.0.0:9999 index.php`
 
+调用：
+```
+http://127.0.0.1:9999/?to=12232222&msg=ERR-API1
+```
+
 ```php
 <?php
 /*

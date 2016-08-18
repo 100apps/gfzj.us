@@ -6,8 +6,13 @@ categories:
 by: gf
 description: zabbix打电话、发短信报警的方法
 ---
+[OneAlert](http://www.110monitor.com/)是一个很不错的告警分发工具。有一个API可以把事件post过去，OneAlert接受到以后，可以指定分发策略，分发人，还能排班，非常不错，想要的功能都有。非常方便。
 
-无非就是一个触发器。自定义模版挺麻烦的，所以想到一种方法，可以用语音验证码。语音验证码一般会有4-8个可以自定义的字符。我们把这些字符定义成error code就可以了。
+文档在：<http://wiki.110monitor.com/api/event_api.html>
+
+所以我们的API就变成了事件发送，具体怎么分配，怎么报警，可以在OneAlert上面设置。
+
+当然，还有另外一种方法：可以用语音验证码。语音验证码一般会有4-8个可以自定义的字符。我们把这些字符定义成error code就可以了。
 
 我们这里用的[云通讯](http://www.yuntongxun.com/)。`php -S 0.0.0.0:9999 index.php`
 

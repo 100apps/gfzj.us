@@ -275,5 +275,9 @@ permalink: /links/
 - [Open course: Functional Programming Principles in Scala](https://www.coursera.org/learn/progfun1)
 - [Open course: Functional Program Design in Scala[(https://www.coursera.org/learn/progfun2)
 
+# Machine Learning Web
+
+- [Analytic](https://www.analyticsvidhya.com/)
+
 # 付费工具
 - [神策数据](https://sensorsdata.cn/blog/)

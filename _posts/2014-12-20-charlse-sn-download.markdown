@@ -5,6 +5,33 @@ date: 2014-12-20 13:32:08
 by: gf
 description: charles是一个非常好用的跨平台代理工具，比fiddler功能更多，支持socks代理。
 ---
+# update 2016年 8月24日 星期三 21时51分04秒 CST
+for charles 4.0, just download [charlse](https://charles-52f.kxcdn.com//release/4.0/charles-proxy-4.0.dmg) and drag Charles to /Application. replace `charles.jar` with:
+	
+	curl -Lv "https://github.com/100apps/charles-hacking/blob/master/charles.jar?raw=true" -o /Applications/Charles.app/Contents/Java/charles.jar
+
+if you're running charles on windows or linux, just download [charles.jar](https://github.com/100apps/charles-hacking/blob/master/charles.jar?raw=true) and replace the original *charles.jar*.
+
+Or, you can hack it by:
+``bash
+charles=/Applications/Charles.app/Contents/Java/charles.jar
+dir=charleshack
+
+mkdir $dir
+cd $dir
+cat >> License.java <<EOF
+package com.xk72.charles;
+public final class License {
+	public static boolean a() { return true; }
+	public static String b() { return "http://www.gfzj.us"; }
+	public static String a(String name, String key) { return null; }
+}
+EOF
+javac -encoding UTF-8 License.java -d .&& jar -uvf $charles com/xk72/charles/License.class
+cd .. && rm -rf $dir
+
+```
+
 #  update 2015.10.29
 
 for charles 3.11.1, just download [charlse](http://www.charlesproxy.com/assets/release/3.11.1/charles-proxy-3.11.1.dmg) and drag Charles to /Application. replace `charles.jar` with:

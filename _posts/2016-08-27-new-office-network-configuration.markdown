@@ -4,6 +4,7 @@ title: "办公室网络配置"
 date: 2016-08-27 15:16:29 +800
 categories: 
 by: gf
+img: /images/office-server.jpg
 description: 最近办公室搬家，记录网络迁移过程。
 ---
 
@@ -79,4 +80,5 @@ NAT分为source NAT、destination NAT、static NAT，内网电脑通过juniper�
 
 对于我来说，只要能上Google，基本上没有任何恐惧可言。
 
+![images/office-server.jpg](images/office-server.jpg)
 

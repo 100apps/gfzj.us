@@ -82,7 +82,5 @@ NAT分为source NAT、destination NAT、static NAT，内网电脑通过juniper�
 
 在创业公司，永远都有各种从未遇到过的问题，这时候你是兴奋还是恐惧？
 
-对于我来说，只要能上Google，基本上没有任何恐惧可言。
-
 ![images/office-server.jpg](/images/office-server.jpg)
 

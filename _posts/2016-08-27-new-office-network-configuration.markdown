@@ -2,9 +2,9 @@
 layout: post
 title: "办公室网络配置"
 date: 2016-08-27 15:16:29 +800
+img: /images/office-server.jpg
 categories: 
 by: gf
-img: /images/office-server.jpg
 description: 最近办公室搬家，记录网络迁移过程。
 ---
 
@@ -34,7 +34,7 @@ description: 最近办公室搬家，记录网络迁移过程。
 #commit and-quit
 ```
 
-默认情况下，把网线连接到除了ge-0/0/0以外的任何端口。电脑会自动获得IP，然后浏览器访问https://192.168.1.1 就可以进入设置界面了。这时候启用一个向导。一步步设置。我们用的最简单的网络连接方式，把1-7这7个端口放到一个子网里(掩码是255.255.0.0)面，这样办公室、服务器各出去一根线，他们可以很方便的互通。按照向导设置完以后，路由器就算是配置完了。
+默认情况下，把网线连接到除了ge-0/0/0以外的任何端口。电脑会自动获得IP，然后浏览器访问<https://192.168.1.1> 就可以进入设置界面了。这时候启用一个向导。一步步设置。我们用的最简单的网络连接方式，把1-7这7个端口放到一个子网里(掩码是255.255.0.0)面，这样办公室、服务器各出去一根线，他们可以很方便的互通。按照向导设置完以后，路由器就算是配置完了。
 
 一个很坑的地方是，dhcp服务器非常慢，一开始我们根本无法获取到IP，这时候，实在没辙了，重启了一下dhcp服务器：
 
@@ -43,21 +43,25 @@ description: 最近办公室搬家，记录网络迁移过程。
 ```
 
 有时候web管理界面很卡，这时候也可以重启一下：
+
 ```bash
 >run restart web-management 
 ```
 或者重启电源：
+
 ```bash
 >request system (halt | power-off | reboot) 
 ```
 
 # cisco配置
 通过console线控制，首先初始化设置：
+
 ```bash
 >enable
 #write erase
 #reload
 ```
+
 默认就是傻瓜式的交换机，任何一个口插入网络进线，其他口出就可以了。
 
 # sundary配置
@@ -80,5 +84,5 @@ NAT分为source NAT、destination NAT、static NAT，内网电脑通过juniper�
 
 对于我来说，只要能上Google，基本上没有任何恐惧可言。
 
-![images/office-server.jpg](images/office-server.jpg)
+![images/office-server.jpg](/images/office-server.jpg)
 

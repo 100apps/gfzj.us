@@ -134,4 +134,151 @@ deploy(){
 以前看过一个twitter工程师的演讲，说应该把一流的人才拉去做“工具”。每一个团队都需要一个很好的开发流程和工具。一个团队在没有流畅的流程和工具的时候，千万不要猛招人，不要扩大规模。
 
 
+# iOS ci脚本
+
+```
+#合并到TEST分支以后执行
+deploy_test:
+  stage: deploy
+  script:
+    - bash gitlab_ci.sh test
+  only:
+    - dev
+
+#合并到master上面以后执行
+deploy_prod:
+  stage: test
+  script:
+    - bash gitlab_ci.sh prod
+  only:
+    - master
+
+#所有提交都必须执行的代码
+common:
+  stage: build
+  script:
+   - bash gitlab_ci.sh common
+```
+
+```bash
+#!/usr/bin/env bash
+
+WORKSPACE_PATH=`pwd`/YuYueiPhone
+WORKSPACE_NAME="YuYueiPhone"
+SCHEME="YuYueiPhone"
+
+#生成的APP名称，根据xcode项目 plist来定
+APPNAME="YuYueiPhone"
+
+#输出ipa文件的路径, 最好是绝对路径
+OUTDIR="${WORKSPACE_PATH}/output"
+
+buildnum=`/usr/libexec/PlistBuddy -c "Print CFBundleVersion" YuYueiPhone/YuYueiPhone/Info.plist`
+version=`/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" YuYueiPhone/YuYueiPhone/Info.plist`
+
+#发送邮件参数主题
+sendMail(){
+    curl -v http://git.yuyue.work:8000/ -d "to[]=kaifa" -d "subject=$1 version=${version} build=${buildnum}" -d 'html=<p>下载地址：<a href="http://fir.im/houpix">http://fir.im/houpix</a></p><p>扫码安装：<img src="http://qr.liantu.com/api.php?text=http://fir.im/houpix"></p>'
+}
+#打包 参数分别是 Release Debug AdHoc
+packaging(){
+    rm -f "${OUTDIR}/${APPNAME}.ipa"
+    if [ ! -f $PROVISIONING_PROFILE ]; then
+    echo "Please download the provision file for " ${PROVISIONING_PROFILE}
+    exit 1;
+    fi
+    echo "~~~~~~~~~~~~~~~~清理工程~~~~~~~~~~~~~~~~编译工程~~~~~~~"
+    echo "${OUTDIR}${APPNAME}.ipa"
+    echo "xcodebuild -workspace ${WORKSPACE_NAME}.xcworkspace -scheme ${SCHEME} -configuration  $1 clean build -sdk iphoneos CONFIGURATION_BUILD_DIR=${OUTDIR}"
+    xcodebuild -workspace "${WORKSPACE_PATH}/${WORKSPACE_NAME}.xcworkspace" -scheme "${SCHEME}" -configuration $1 clean build -sdk iphoneos CONFIGURATION_BUILD_DIR=${OUTDIR} 1> build.log 2>&1
+    #打包成 .ipa
+    echo "~~~~~~~~~~~${APPNAME}.ipa}~~~scuess"
+    echo "xcrun -sdk iphoneos PackageApplication -v ${OUTDIR}/${APPNAME}.app -o ${OUTDIR}/${APPNAME}.ipa --sign ${IDENTITY} --embed ${PROVISIONING_PROFILE}"
+    xcrun -sdk iphoneos PackageApplication -v "${OUTDIR}/${APPNAME}.app" -o "${OUTDIR}/${APPNAME}.ipa"
+    # --sign "${IDENTITY}" --embed "${PROVISIONING_PROFILE}"
+    if [ -e "${OUTDIR}/${APPNAME}.app" ]; then
+        return 0
+    fi
+    return 1
+}
+
+uploadFir(){
+    #FIR 秘钥
+    FIRTOKEN="876f7b1f2e692dab888d5813fb3ceda0"
+    #上传到测试平台 -> fir.im
+    echo "-------->fir.im---------"
+    fir p "${OUTDIR}/${SCHEME}.ipa" -T "${FIRTOKEN}"
+}
+upload2AppStore(){
+    USER=dev@houpix.com
+    PASS=Houpix98
+
+    # App id as in itunes store create, not in your developer account
+    APP_ID='1053336048'
+
+    IPA_FILE=$1
+    IPA_FILENAME=$(basename $IPA_FILE)
+
+    MD5=$(md5 -q $IPA_FILE)
+    BYTESIZE=$(stat -f "%z" $IPA_FILE)
+
+    TEMPDIR=/tmp/itsmp
+    # Remove previous temp
+    test -d ${TEMPDIR} && rm -rf ${TEMPDIR}
+    mkdir ${TEMPDIR}
+    mkdir -pv ${TEMPDIR}/mybundle.itmsp
+
+    # You can see this debug info when you manually do an app upload with the Application Loader
+    # It's when you click activity
+
+    cat <<EOM > ${TEMPDIR}/mybundle.itmsp/metadata.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="software4.7" xmlns="http://apple.com/itunes/importer">
+    <software_assets apple_id="$APP_ID">
+        <asset type="bundle">
+            <data_file>
+                <file_name>$IPA_FILENAME</file_name>
+                <checksum type="md5">$MD5</checksum>
+                <size>$BYTESIZE</size>
+            </data_file>
+        </asset>
+    </software_assets>
+</package>
+EOM
+
+    cp ${IPA_FILE} $TEMPDIR/mybundle.itmsp/${IPA_FILENAME}
+    cd "/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/itms"
+    java -cp lib/itmstransporter-launcher.jar com.apple.transporter.Application -m upload -f ${TEMPDIR} -u "$USER" -p "$PASS" -v detailed
+
+}
+
+if [ "x$1" = "xcommon" ];then
+  echo "任何包都需要做的事情，比如语法检查，看看能否build成功之类的。"
+elif [ "x$1" = "xtest" ];then
+  echo "给测试出的包"
+
+    if packaging Debug ; then
+        uploadFir
+        sendMail "dev iOS打包完成已经上传到fir"
+    else
+        sendMail "dev iOS打包出错"
+    fi
+    
+elif [ "x$1" = "xprod" ];then
+  echo "上线，编译并且提交到App Store"
+    
+    if packaging Release ; then
+        upload2AppStore "${OUTDIR}/${SCHEME}.ipa"
+        sendMail "master iOS包已经提交到AppStore"
+        if packaging AdHoc ; then
+            uploadFir
+            sendMail "Release iOS打包完成已经上传到fir"
+        else
+            sendMail "Release iOS打包出错"
+        fi
+    else
+        sendMail "master iOS打包出错"
+    fi
+fi
+```
 

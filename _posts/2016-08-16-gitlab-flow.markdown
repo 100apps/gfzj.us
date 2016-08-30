@@ -204,14 +204,14 @@ packaging(){
 
 uploadFir(){
     #FIR 秘钥
-    FIRTOKEN="876f7b1f2e692dab888d5813fb3ceda0"
+    FIRTOKEN="DEMOTOKEN"
     #上传到测试平台 -> fir.im
     echo "-------->fir.im---------"
     fir p "${OUTDIR}/${SCHEME}.ipa" -T "${FIRTOKEN}"
 }
 upload2AppStore(){
-    USER=dev@houpix.com
-    PASS=Houpix98
+    USER=appstore@account.com
+    PASS=ThisPass
 
     # App id as in itunes store create, not in your developer account
     APP_ID='1053336048'

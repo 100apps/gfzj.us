@@ -7,7 +7,6 @@ by: zj
 description: Global ExecutionContext and future example
 ---
 
-### ++==Scala Future==++
 
 #### 默认Global Execution Context
 

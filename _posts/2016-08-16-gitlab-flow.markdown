@@ -282,3 +282,52 @@ elif [ "x$1" = "xprod" ];then
 fi
 ```
 
+php项目的脚本
+
+```
+#!/usr/bin/env bash
+
+#可以自定义成自己的目录。如果是按照域名来定的，可以按照下面的方式自动获得。
+dir=`basename "$PWD"`
+
+#发送邮件函数
+sendMail(){
+    curl -v http://git.yuyue.work:8000/ -d "to[]=kaifa" -d "subject=$1" -d "html=http://$dir";
+}
+
+#部署
+deployTo(){
+  if [ "x$1" = "x" ]; then
+    echo "no deploy directory specified";
+    exit 1;
+  fi
+  host=`echo $1|cut -d ":" -f1`
+  path=`echo $1|cut -d ":" -f2`
+  if ssh houstack@${host} "tar czf `dirname $path`/${dir}-`date +%s`.tar.gz ${path}" ; then
+    echo "备份成功" 
+  else
+    sendMail "${dir}备份失败"
+    return;
+  fi
+
+  if rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude "*.swp" --exclude ".git*" --exclude "*.sh" . houstack@$1 ;then
+    sendMail "${dir}已经部署到了$2"
+  else
+    sendMail "${dir}部署到$2失败了"
+  fi
+
+}
+
+if [ "x$1" = "xcommon" ];then
+  echo "任何包都需要做的事情，比如语法检查，看看能否build成功之类的。"
+
+elif [ "x$1" = "xtest" ];then
+  echo "开始部署到测试环境"
+  deployTo 192.168.50.150:/opt/houstack/data/nginx/${dir}/ "测试环境"
+    
+elif [ "x$1" = "xprod" ];then
+  echo "部署到线上环境"
+  deployTo 202.101.1.118:/opt/houstack/data/nginx/${dir}/ "线上环境"
+fi
+
+```

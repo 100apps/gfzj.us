@@ -331,3 +331,22 @@ elif [ "x$1" = "xprod" ];then
 fi
 
 ```
+
+
+### update 2016年 9月 1日 星期四 16时11分11秒 CST
+
+有同学提到merge request冲突的问题。这个解决方案有两种，要不发起者解决，要不接收者解决。解决方案一样。就是把对方的代码拉下拉，合并，然后提交。比如，发起者解决(我们项目里全部是发起者解决，接收者只管点击Accept按钮)
+
+```bash
+#把远程项目的某个分支拉下来
+git fetch git://git.yuyue.work/原作者的项目.git master
+# 切换分支
+git checkout -b xxx FETCH_HEAD
+
+# 这时候可以看看具体哪些修改之类的。或者通过IDE运行一下。
+#然后回到原来的分支
+git checkout master
+#合并
+git merge xxx
+#然后提交push，这时候再去gitlab上看对应的merge request，就已经可以自动合并了
+```

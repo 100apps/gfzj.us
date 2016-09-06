@@ -282,3 +282,71 @@ elif [ "x$1" = "xprod" ];then
 fi
 ```
 
+php项目的脚本
+
+```
+#!/usr/bin/env bash
+
+#可以自定义成自己的目录。如果是按照域名来定的，可以按照下面的方式自动获得。
+dir=`basename "$PWD"`
+
+#发送邮件函数
+sendMail(){
+    curl -v http://git.yuyue.work:8000/ -d "to[]=kaifa" -d "subject=$1" -d "html=http://$dir";
+}
+
+#部署
+deployTo(){
+  if [ "x$1" = "x" ]; then
+    echo "no deploy directory specified";
+    exit 1;
+  fi
+  host=`echo $1|cut -d ":" -f1`
+  path=`echo $1|cut -d ":" -f2`
+  if ssh houstack@${host} "tar czf `dirname $path`/${dir}-`date +%s`.tar.gz ${path}" ; then
+    echo "备份成功" 
+  else
+    sendMail "${dir}备份失败"
+    return;
+  fi
+
+  if rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude "*.swp" --exclude ".git*" --exclude "*.sh" . houstack@$1 ;then
+    sendMail "${dir}已经部署到了$2"
+  else
+    sendMail "${dir}部署到$2失败了"
+  fi
+
+}
+
+if [ "x$1" = "xcommon" ];then
+  echo "任何包都需要做的事情，比如语法检查，看看能否build成功之类的。"
+
+elif [ "x$1" = "xtest" ];then
+  echo "开始部署到测试环境"
+  deployTo 192.168.50.150:/opt/houstack/data/nginx/${dir}/ "测试环境"
+    
+elif [ "x$1" = "xprod" ];then
+  echo "部署到线上环境"
+  deployTo 202.101.1.118:/opt/houstack/data/nginx/${dir}/ "线上环境"
+fi
+
+```
+
+
+### update 2016年 9月 1日 星期四 16时11分11秒 CST
+
+有同学提到merge request冲突的问题。这个解决方案有两种，要不发起者解决，要不接收者解决。解决方案一样。就是把对方的代码拉下拉，合并，然后提交。比如，发起者解决(我们项目里全部是发起者解决，接收者只管点击Accept按钮)
+
+```bash
+#把远程项目的某个分支拉下来
+git fetch git://git.yuyue.work/原作者的项目.git master
+# 切换分支
+git checkout -b xxx FETCH_HEAD
+
+# 这时候可以看看具体哪些修改之类的。或者通过IDE运行一下。
+#然后回到原来的分支
+git checkout master
+#合并
+git merge xxx
+#然后提交push，这时候再去gitlab上看对应的merge request，就已经可以自动合并了
+```

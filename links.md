@@ -279,6 +279,7 @@ permalink: /links/
 
 - [Analytic](https://www.analyticsvidhya.com/)
 - [自學之路](https://ask.hellobi.com/blog/DataMiner/4879)
+- [KDnuggets](http://www.kdnuggets.com/)
 
 # 付费工具
 - [神策数据](https://sensorsdata.cn/blog/)

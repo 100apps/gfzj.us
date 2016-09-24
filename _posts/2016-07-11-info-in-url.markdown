@@ -89,3 +89,67 @@ api-test.houpix.com
 
 服务器端还有一个第三方回调的问题，通过上面的讨论，我们最终用/evn-xxx/来解决的。
 
+# date 2016/09/24
+
+nginx配置demo：
+
+```
+server {
+       	server_name  api.houpix.com;
+       	include common_server.conf;
+       	include ssl/houpix.com.conf;
+       	include log_rotate.conf;
+
+       	location ~ ^/env-(.*?)/(.*)$ {
+       		proxy_pass https://内网IP/$2;
+       		proxy_set_header Env   	$1;
+       		proxy_set_header Host api-proxy.houpix.com;
+       	}
+
+       	set $request_url $request_uri;
+       	set $request_ver 2.2;
+
+       	if ($http_user_agent ~ "houpixapp/(\d+)\.(\d+)\."){
+       		set $request_ver $1.$2;
+       	}
+
+       	if ($request_url ~ "^/v(\d+)\.(\d+)/(.*)$"){
+       		set $request_ver $1.$2;
+       		set $request_url /$3;
+       		rewrite ^/v(\d+)\.(\d+)/(.*)$ /$3;
+       	}
+
+       	root /opt/houstack/data/nginx/api.houpix.com/$request_ver/web;
+       	location / {
+       		try_files $uri $uri/ /index.php?$args;
+       	}
+       	location ~ \.php$ {
+       		fastcgi_pass   unix:/opt/houstack/tmp/php-fpm-houpix.com.sock;
+       		fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+       		include        fastcgi_params;
+       		fastcgi_param  REQUEST_URI        $request_url;
+       	}
+}
+
+#内网接收线上转发过来请求的的api-proxy.houpix.com
+#测试环境来分发不通的来自线上的请求。
+map $http_env $env {
+       	default false;
+       	"env1" 150;
+       	"env2" 24;
+       	"env3" 24;
+}
+
+server {
+       	server_name  api-proxy.houpix.com;
+       	include ssl/houpix.com.conf;
+       	include common_server.conf;
+
+       	location / {
+       		proxy_pass http://192.168.50.$env;
+       		proxy_set_header Host api.houpix.com;
+       	}
+}
+
+
+```

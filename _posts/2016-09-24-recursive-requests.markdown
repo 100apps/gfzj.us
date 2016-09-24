@@ -42,8 +42,8 @@ import com.sun.net.httpserver.HttpServer;
 /**
  * @author guangfeng
  * 服务器启动两个api：
- * /time: 但会当前时间戳
- * /date: 调用time api，根据time生成date。依赖/time api
+ * /time: 返回当前时间戳
+ * /date: 依赖/time api。调用time api，根据time生成date。
  *
  */
 public class Server {

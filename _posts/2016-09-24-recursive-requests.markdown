@@ -37,7 +37,15 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
+/**
+ * @author guangfeng
+ * 服务器启动两个api：
+ * /time: 但会当前时间戳
+ * /date: 调用time api，根据time生成date。依赖/time api
+ *
+ */
 public class Server {
+	
 	static String fileGetContents(String url) throws IOException {
 		return new Scanner(new URL(url).openStream(), "UTF-8").useDelimiter("\\A").next();
 	}
@@ -77,6 +85,7 @@ public class Server {
 	}
 
 }
+
 
 ```
 

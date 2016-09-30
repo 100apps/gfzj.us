@@ -31,6 +31,7 @@ val tableName = "table"
 df.registerTempTable(tableName)
 
 val dfWithZeroLengthStringAsNull = sqlContext.sql(s"select $selectCondition from $table")
+```
 
 #### Spark 1.6 递归读取给定目录下的所有csv文件
 

@@ -5,6 +5,9 @@ permalink: /projects/
 ---
 我们发起过一些项目，这里有一些连接：
 
+- [ServerSpy](https://github.com/100apps/ServerSpy)
+    [chrome](https://chrome.google.com/webstore/detail/server-spy/mcgbfbichapcffmamnmgcobomdpgeagf)／[firefox](https://addons.mozilla.org/zh-cn/firefox/addon/server-spy2/) 插件，用来显示服务器返回header字段，附送一个二维码。
+
 - [OpenShare](https://github.com/100apps/openshare)
     利用社交软件移动客户端分享(不用官方SDK)
 

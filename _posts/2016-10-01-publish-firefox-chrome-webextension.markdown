@@ -33,7 +33,7 @@ more_set_headers "Server: openresty";
 
 开发过程非常简单。我非就是hook一下当服务器返回数据以后，获取header、ip、更新UI。真正的代码肯定在100行以内。
 
-有一个地方非常坑，js不能和html写在一个文件里面。chrome的官网给了解释: (https://developer.chrome.com/extensions/contentSecurityPolicy#JSExecution)，这里浪费了一些时间，踩坑了。
+有一个地方非常坑，js不能和html写在一个文件里面。chrome的[官网给了解释](https://developer.chrome.com/extensions/contentSecurityPolicy#JSExecution)，这里浪费了一些时间，踩坑了。
 
 最后实现的效果类似：
 ![ServerSpy](/images/server-spy.png)
@@ -52,7 +52,9 @@ zip -r /ramdisk/server-spy.zip *
 然后按照要求一步步填写即可。
 
 接着上架到Chrome Web Store，官方有一篇[指导文档](https://developer.chrome.com/webstore/publish)。由于我没有开通chrome开发者帐号，所以填完所有信息以后，最后一步是需要一张信用卡支付5美金。master card的信用卡不能用，于是用了老婆的visa卡，连续点击了6次，每次扣款1美金：
-![扣钱](/images/IMG_2017.jpg)，联系了Google客服，客服说解决不了需要联系她们的专家。不得不吐槽，Google客服在线聊天界面只能发纯文本，太弱了啊。最后改了一下账单地址到新加坡，成功付款。
+![扣钱](/images/IMG_2017.jpg)
+
+联系了Google客服，客服说解决不了需要联系她们的专家。不得不吐槽，Google客服在线聊天界面只能发纯文本，太弱了啊。最后改了一下账单地址到新加坡，成功付款。
 
 Chrome Web Store的审核应该是自动的，因为很快就上架了。
 

@@ -4,6 +4,10 @@ title: 友情链接
 permalink: /links/
 ---
 
+# 前端
+- [Web technology For developers](https://developer.mozilla.org/en-US/docs/Web)
+- [CSS Tricks](https://css-tricks.com/)
+
 #  news
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)
 - [前端头条 \| 领略前端技术，搜罗前端开发最具价值的资讯、文章与项目](http://top.css88.com/)

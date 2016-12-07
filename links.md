@@ -7,6 +7,7 @@ permalink: /links/
 # 前端
 - [Web technology For developers](https://developer.mozilla.org/en-US/docs/Web)
 - [CSS Tricks](https://css-tricks.com/)
+- [图翼网(TUYIYI.COM)  优秀UI设计师互动平台](http://www.tuyiyi.com/)
 
 #  news
 - [TechCrunch 中国 \- 最新科技新闻和创业公司信息](http://techcrunch.cn/)

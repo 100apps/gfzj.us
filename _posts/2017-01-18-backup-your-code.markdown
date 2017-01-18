@@ -54,3 +54,4 @@ fi
 2. merge到develop的时候注意增加 [--squash 参数](http://stackoverflow.com/questions/2427238/in-git-what-is-the-difference-between-merge-squash-and-rebase)。要不然会对同一个项目的同学造成更大的困扰。(develop分支增加N多无意义的commit)。
 
 费了这么多周折，用了一个很笨的方法，只是想定(实)时备份一下劳动成果。不知道大家有没有更高端的方法？求指导。
+

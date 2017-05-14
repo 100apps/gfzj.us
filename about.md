@@ -14,7 +14,7 @@ GF和ZJ都毕业于[山东大学](http://www.sdu.edu.cn/)，已婚，俱为码�
 
 # 我们的工作
 
-GF目前在上海漕河泾一家移动互联网创业公司负责研发工作，ZJ在静安寺附近某公司做大数据平台开发。工作方面的事情，欢迎发邮件交流。
+GF目前就职于[阿里星球](https://www.alibabaplanet.com/)，花名广峰；ZJ就职于[国双科技](http://www.gridsum.com/)，工作方面的事情，欢迎[发邮件](mailto://gf@gfzj.us)交流。
 
 <p><img src="/images/body-gf.jpg" alt="GF的照片" /></p>
 <p><img src="/images/body-zj.jpg" alt="ZJ的照片" /></p>

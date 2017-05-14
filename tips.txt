@@ -1,0 +1,6 @@
+# android 模拟器设置网络代理
+
+adb shell
+getprop
+setprop net.dns1 192.168.1.1
+setprop net.gprs.http-proxy 192.168.1.1:8080

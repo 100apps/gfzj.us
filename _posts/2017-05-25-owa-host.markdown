@@ -1,0 +1,63 @@
+---
+layout: post
+title: "WOPI Host 实现"
+date: 2017-05-25 09:49:45 +800
+categories: 
+by: gf
+description: 本地部署代替 Google Docs 的产品。
+---
+
+集团一直都是禁止使用友商产品，Google Docs 当然是在禁止名单里面。很多场景需要多人共同编辑一个文档，目前集团又没有提供相应的工具，所以很不方便。
+
+经过同事提醒，说可以使用 [SharePoint](https://products.office.com/zh-cn/sharepoint/collaboration)，一开始并不了解这是一个什么东西，Google 了一下，发现如果要实现文档在线编辑还需要 [Office Online Server](https://technet.microsoft.com/zh-cn/library/jj219456(v=office.16).aspx)（原 Office Web Apps Server ），于是开始了漫长而痛苦的部署过程。
+
+# 安装
+
+我首先安装 Office Online Server。微软的东西，当然使用迅雷去 <http://msdn.itellyou.cn/> 下载。我下载了：
+
+1. mu_windows_server_2012_r2_language_pack_with_update_x64_dvd_6066969.iso
+
+```
+ed2k://|file|mu_windows_server_2012_r2_language_pack_with_update_x64_dvd_6066969.iso|3918141440|102DE2D2EDEECB48EC50390592C854A4|/
+
+```
+
+2. cn_office_online_server_last_updated_march_2017_x64_dvd_10245068.iso
+
+```
+ed2k://|file|cn_office_online_server_last_updated_march_2017_x64_dvd_10245068.iso|730759168|DA70F58CB8FFAF37C02302F2501CE635|/
+
+```
+
+然后发现需要更新，微软的更新真是巨坑，自己不会分析依赖，需要用 Google 解决，依次安装：
+
+1. 
+2. 
+
+接着，发现需要把 server 加入到一个域，而且本机还不能是 域控服务器，所以只好再搞一个虚拟机，然后安装域控服务，这个没什么难点，半个小时搞定。然后把 OOS 服务器加入到域中 。按照文档安装 [文档](https://technet.microsoft.com/zh-cn/library/jj219455.aspx)。顺利的话，应该可以打开：
+
+<http://localhost/hosting/discovery>
+
+此时，可以实现“预览” office 文档的功能：
+
+<http://localhost/op/generate.aspx>
+
+但是还不能编辑。
+
+# 实现编辑
+
+如果要编辑的话，可以安装 SharePoint，但是这个东西安装比较麻烦，各种依赖。如果想轻便，可以找一个 WopiHost ，让 OOS 作为 WopiClient。就可以实现编辑了。
+
+WopiHost 可以参考：
+1. <https://github.com/marx-yu/WopiHost>
+2. <https://blogs.msdn.microsoft.com/scicoria/2013/07/22/building-an-office-web-apps-owa-wopi-host/>
+3. <https://github.com/OfficeDev/PnP-WOPI>
+
+我用的是 WopiHost。可以实现多人编辑 office 文档。但是还不能保存，需要优化。
+
+# 结论
+
+最好直接安装 SharePoint，如果需要定制，比如和自己的用户系统打通，权限控制，可以实现一个 WopiHost，把在线编辑、预览功能交给 OOS。
+
+
+

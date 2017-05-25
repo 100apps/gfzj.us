@@ -31,8 +31,17 @@ ed2k://|file|cn_office_online_server_last_updated_march_2017_x64_dvd_10245068.is
 
 然后发现需要更新，微软的更新真是巨坑，自己不会分析依赖，需要用 Google 解决，依次安装：
 
-1. 
-2. 
+0. clearcompressionflag.exe
+1. [KB2919442](https://www.microsoft.com/zh-cn/download/details.aspx?id=42153) 
+2. KB2919355
+3. KB2932046
+4. KB2959977
+5. KB2937592
+6. KB2938439
+7. KB2934018
+
+
+不得不吐槽，微软这么大的公司竟然没有一个类似 apt-get 或者 yum、homebrew 之类的依赖管理的东西，太弱了。
 
 接着，发现需要把 server 加入到一个域，而且本机还不能是 域控服务器，所以只好再搞一个虚拟机，然后安装域控服务，这个没什么难点，半个小时搞定。然后把 OOS 服务器加入到域中 。按照文档安装 [文档](https://technet.microsoft.com/zh-cn/library/jj219455.aspx)。顺利的话，应该可以打开：
 

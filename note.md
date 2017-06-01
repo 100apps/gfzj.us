@@ -14,6 +14,7 @@ http://nullice.com/archives/1665
 http://nullice.com/archives/1822
 
 # macOS 连接VPN
+<https://github.com/openconnect/openconnect-gui/releases>
 <https://gist.github.com/moklett/3170636>
 ```
 brew install openconnect

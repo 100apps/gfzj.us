@@ -25,3 +25,6 @@ sudo openconnect -u xxxx --script=/etc/vpnc/vpnc-script --no-dtls vpn.alibaba-in
 ```
 
 
+# android 无源码 debug
+
+adb -s ZX1G22CGRH shell am start -D -S -W com.superlib/com.fanzhou.ui.MainActivity;adb -s ZX1G22CGRH forward tcp:5005 jdwp:`adb -s ZX1G22CGRH shell ps | grep com.superlib|awk '{print $2}'`

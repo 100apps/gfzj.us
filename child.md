@@ -4,9 +4,8 @@ title: 关于娃
 permalink: /child/
 ---
 
-# 目的
 
-虽然还没娃，但是还是可以先记录点育娃经。
+![既安](/images/ji'an.jpg)
 
 # 日常
 

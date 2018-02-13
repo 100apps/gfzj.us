@@ -22,6 +22,6 @@ authors:
  gf:
   display_name: Guangfeng Liu
   email: gf@gfzj.us
-  note: 一枚普通的开发工程师@阿里音乐
+  note: 一枚普通的码农@阿里巴巴
 
 plugins: [jekyll-paginate]

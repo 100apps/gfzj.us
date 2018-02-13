@@ -41,7 +41,7 @@
         var iconClasses=["weui-icon-success weui-icon_msg","weui-icon-info weui-icon_msg","weui-icon-warn weui-icon_msg-primary","weui-icon-warn weui-icon_msg"];
         for (var i = 0; i <data.length - 1; i++) {
             var line=data[i];
-            html+='<a class="weui-cell weui-cell_access" href="./detail.html?id='+i+'"><i class="'+iconClasses[line["difficulty"]]+'" style="font-size:16px">&nbsp;</i><div class="weui-cell__bd"><p>'+line["title"]+'</p></div><div class="weui-cell__ft"></div></a>';
+            html+='<a class="weui-cell weui-cell_access" href="./detail.html?id='+line["id"]+'"><i class="'+iconClasses[line["difficulty"]]+'" style="font-size:16px">&nbsp;</i><div class="weui-cell__bd"><p>'+line["title"]+'</p></div><div class="weui-cell__ft"></div></a>';
             // console.log(line);
         }
         $("#list").html(html);

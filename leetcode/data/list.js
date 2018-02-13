@@ -1,0 +1,7371 @@
+[{
+	"id": "1",
+	"show_id": "1",
+	"leetcode_id": "1",
+	"title": "Two Sum",
+	"frequency": "631",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "775823",
+	"submit_num": "2098068"
+}, {
+	"id": "2",
+	"show_id": "2",
+	"leetcode_id": "2",
+	"title": "Add Two Numbers",
+	"frequency": "630",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "427097",
+	"submit_num": "1505652"
+}, {
+	"id": "3",
+	"show_id": "3",
+	"leetcode_id": "3",
+	"title": "Longest Substring Without Repeating Characters",
+	"frequency": "614",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "423312",
+	"submit_num": "1721469"
+}, {
+	"id": "4",
+	"show_id": "4",
+	"leetcode_id": "4",
+	"title": "Median of Two Sorted Arrays",
+	"frequency": "624",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "227325",
+	"submit_num": "1003467"
+}, {
+	"id": "5",
+	"show_id": "5",
+	"leetcode_id": "5",
+	"title": "Longest Palindromic Substring",
+	"frequency": "601",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "277204",
+	"submit_num": "1102004"
+}, {
+	"id": "6",
+	"show_id": "6",
+	"leetcode_id": "6",
+	"title": "ZigZag Conversion",
+	"frequency": "620",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "191073",
+	"submit_num": "703983"
+}, {
+	"id": "7",
+	"show_id": "7",
+	"leetcode_id": "7",
+	"title": "Reverse Integer",
+	"frequency": "608",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "352654",
+	"submit_num": "1444403"
+}, {
+	"id": "8",
+	"show_id": "8",
+	"leetcode_id": "8",
+	"title": "String to Integer (atoi)",
+	"frequency": "538",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "208980",
+	"submit_num": "1498704"
+}, {
+	"id": "9",
+	"show_id": "9",
+	"leetcode_id": "9",
+	"title": "Palindrome Number",
+	"frequency": "615",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "290890",
+	"submit_num": "815644"
+}, {
+	"id": "10",
+	"show_id": "10",
+	"leetcode_id": "10",
+	"title": "Regular Expression Matching",
+	"frequency": "567",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "179797",
+	"submit_num": "738778"
+}, {
+	"id": "11",
+	"show_id": "11",
+	"leetcode_id": "11",
+	"title": "Container With Most Water",
+	"frequency": "616",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "177121",
+	"submit_num": "478752"
+}, {
+	"id": "12",
+	"show_id": "12",
+	"leetcode_id": "12",
+	"title": "Integer to Roman",
+	"frequency": "613",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "130134",
+	"submit_num": "283790"
+}, {
+	"id": "13",
+	"show_id": "13",
+	"leetcode_id": "13",
+	"title": "Roman to Integer",
+	"frequency": "628",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "203751",
+	"submit_num": "429767"
+}, {
+	"id": "14",
+	"show_id": "14",
+	"leetcode_id": "14",
+	"title": "Longest Common Prefix",
+	"frequency": "619",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "240339",
+	"submit_num": "760800"
+}, {
+	"id": "15",
+	"show_id": "15",
+	"leetcode_id": "15",
+	"title": "3Sum",
+	"frequency": "570",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "287011",
+	"submit_num": "1315495"
+}, {
+	"id": "16",
+	"show_id": "16",
+	"leetcode_id": "16",
+	"title": "3Sum Closest",
+	"frequency": "495",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "160152",
+	"submit_num": "508015"
+}, {
+	"id": "17",
+	"show_id": "17",
+	"leetcode_id": "17",
+	"title": "Letter Combinations of a Phone Number",
+	"frequency": "565",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "208425",
+	"submit_num": "580763"
+}, {
+	"id": "18",
+	"show_id": "18",
+	"leetcode_id": "18",
+	"title": "4Sum",
+	"frequency": "401",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "144187",
+	"submit_num": "527156"
+}, {
+	"id": "19",
+	"show_id": "19",
+	"leetcode_id": "19",
+	"title": "Remove Nth Node From End of List",
+	"frequency": "462",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "222412",
+	"submit_num": "650762"
+}, {
+	"id": "20",
+	"show_id": "20",
+	"leetcode_id": "20",
+	"title": "Valid Parentheses",
+	"frequency": "605",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "290340",
+	"submit_num": "857314"
+}, {
+	"id": "21",
+	"show_id": "21",
+	"leetcode_id": "21",
+	"title": "Merge Two Sorted Lists",
+	"frequency": "604",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "303811",
+	"submit_num": "757015"
+}, {
+	"id": "22",
+	"show_id": "22",
+	"leetcode_id": "22",
+	"title": "Generate Parentheses",
+	"frequency": "549",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "189443",
+	"submit_num": "401763"
+}, {
+	"id": "23",
+	"show_id": "23",
+	"leetcode_id": "23",
+	"title": "Merge k Sorted Lists",
+	"frequency": "577",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "197770",
+	"submit_num": "706905"
+}, {
+	"id": "24",
+	"show_id": "24",
+	"leetcode_id": "24",
+	"title": "Swap Nodes in Pairs",
+	"frequency": "468",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "198709",
+	"submit_num": "510365"
+}, {
+	"id": "25",
+	"show_id": "25",
+	"leetcode_id": "25",
+	"title": "Reverse Nodes in k-Group",
+	"frequency": "369",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "116440",
+	"submit_num": "372797"
+}, {
+	"id": "26",
+	"show_id": "26",
+	"leetcode_id": "26",
+	"title": "Remove Duplicates from Sorted Array",
+	"frequency": "553",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "309473",
+	"submit_num": "861304"
+}, {
+	"id": "27",
+	"show_id": "27",
+	"leetcode_id": "27",
+	"title": "Remove Element",
+	"frequency": "556",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "252852",
+	"submit_num": "627529"
+}, {
+	"id": "28",
+	"show_id": "28",
+	"leetcode_id": "28",
+	"title": "Implement strStr()",
+	"frequency": "515",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "241717",
+	"submit_num": "839461"
+}, {
+	"id": "29",
+	"show_id": "29",
+	"leetcode_id": "29",
+	"title": "Divide Two Integers",
+	"frequency": "501",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "122944",
+	"submit_num": "775757"
+}, {
+	"id": "30",
+	"show_id": "30",
+	"leetcode_id": "30",
+	"title": "Substring with Concatenation of All Words",
+	"frequency": "388",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "91907",
+	"submit_num": "413899"
+}, {
+	"id": "31",
+	"show_id": "31",
+	"leetcode_id": "31",
+	"title": "Next Permutation",
+	"frequency": "457",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "138263",
+	"submit_num": "476953"
+}, {
+	"id": "32",
+	"show_id": "32",
+	"leetcode_id": "32",
+	"title": "Longest Valid Parentheses",
+	"frequency": "407",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "116076",
+	"submit_num": "500574"
+}, {
+	"id": "33",
+	"show_id": "33",
+	"leetcode_id": "33",
+	"title": "Search in Rotated Sorted Array",
+	"frequency": "526",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "228614",
+	"submit_num": "712889"
+}, {
+	"id": "34",
+	"show_id": "34",
+	"leetcode_id": "34",
+	"title": "Search for a Range",
+	"frequency": "375",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "172981",
+	"submit_num": "547616"
+}, {
+	"id": "35",
+	"show_id": "35",
+	"leetcode_id": "35",
+	"title": "Search Insert Position",
+	"frequency": "391",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "228943",
+	"submit_num": "571996"
+}, {
+	"id": "36",
+	"show_id": "36",
+	"leetcode_id": "36",
+	"title": "Valid Sudoku",
+	"frequency": "510",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "142189",
+	"submit_num": "383862"
+}, {
+	"id": "37",
+	"show_id": "37",
+	"leetcode_id": "37",
+	"title": "Sudoku Solver",
+	"frequency": "430",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "86834",
+	"submit_num": "275066"
+}, {
+	"id": "38",
+	"show_id": "38",
+	"leetcode_id": "38",
+	"title": "Count and Say",
+	"frequency": "583",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "174237",
+	"submit_num": "480987"
+}, {
+	"id": "39",
+	"show_id": "39",
+	"leetcode_id": "39",
+	"title": "Combination Sum",
+	"frequency": "445",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "199675",
+	"submit_num": "491855"
+}, {
+	"id": "40",
+	"show_id": "40",
+	"leetcode_id": "40",
+	"title": "Combination Sum II",
+	"frequency": "216",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "140606",
+	"submit_num": "397909"
+}, {
+	"id": "41",
+	"show_id": "41",
+	"leetcode_id": "41",
+	"title": "First Missing Positive",
+	"frequency": "499",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "121589",
+	"submit_num": "471417"
+}, {
+	"id": "42",
+	"show_id": "42",
+	"leetcode_id": "42",
+	"title": "Trapping Rain Water",
+	"frequency": "580",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "148154",
+	"submit_num": "395907"
+}, {
+	"id": "43",
+	"show_id": "43",
+	"leetcode_id": "43",
+	"title": "Multiply Strings",
+	"frequency": "476",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "127741",
+	"submit_num": "458694"
+}, {
+	"id": "44",
+	"show_id": "44",
+	"leetcode_id": "44",
+	"title": "Wildcard Matching",
+	"frequency": "363",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "114587",
+	"submit_num": "550625"
+}, {
+	"id": "45",
+	"show_id": "45",
+	"leetcode_id": "45",
+	"title": "Jump Game II",
+	"frequency": "394",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "108380",
+	"submit_num": "414426"
+}, {
+	"id": "46",
+	"show_id": "46",
+	"leetcode_id": "46",
+	"title": "Permutations",
+	"frequency": "513",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "212700",
+	"submit_num": "459935"
+}, {
+	"id": "47",
+	"show_id": "47",
+	"leetcode_id": "47",
+	"title": "Permutations II",
+	"frequency": "311",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "149732",
+	"submit_num": "435081"
+}, {
+	"id": "48",
+	"show_id": "48",
+	"leetcode_id": "48",
+	"title": "Rotate Image",
+	"frequency": "537",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "145789",
+	"submit_num": "357171"
+}, {
+	"id": "49",
+	"show_id": "49",
+	"leetcode_id": "49",
+	"title": "Group Anagrams",
+	"frequency": "542",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "178194",
+	"submit_num": "476599"
+}, {
+	"id": "50",
+	"show_id": "50",
+	"leetcode_id": "50",
+	"title": "Pow(x, n)",
+	"frequency": "559",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "193344",
+	"submit_num": "742580"
+}, {
+	"id": "51",
+	"show_id": "51",
+	"leetcode_id": "51",
+	"title": "N-Queens",
+	"frequency": "418",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "93400",
+	"submit_num": "286168"
+}, {
+	"id": "52",
+	"show_id": "52",
+	"leetcode_id": "52",
+	"title": "N-Queens II",
+	"frequency": "372",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "71582",
+	"submit_num": "154601"
+}, {
+	"id": "53",
+	"show_id": "53",
+	"leetcode_id": "53",
+	"title": "Maximum Subarray",
+	"frequency": "591",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "274277",
+	"submit_num": "683238"
+}, {
+	"id": "54",
+	"show_id": "54",
+	"leetcode_id": "54",
+	"title": "Spiral Matrix",
+	"frequency": "504",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "128588",
+	"submit_num": "477410"
+}, {
+	"id": "55",
+	"show_id": "55",
+	"leetcode_id": "55",
+	"title": "Jump Game",
+	"frequency": "414",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "150910",
+	"submit_num": "509694"
+}, {
+	"id": "56",
+	"show_id": "56",
+	"leetcode_id": "56",
+	"title": "Merge Intervals",
+	"frequency": "543",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "175834",
+	"submit_num": "557695"
+}, {
+	"id": "57",
+	"show_id": "57",
+	"leetcode_id": "57",
+	"title": "Insert Interval",
+	"frequency": "320",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "117027",
+	"submit_num": "408134"
+}, {
+	"id": "58",
+	"show_id": "58",
+	"leetcode_id": "58",
+	"title": "Length of Last Word",
+	"frequency": "379",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "176336",
+	"submit_num": "550309"
+}, {
+	"id": "59",
+	"show_id": "59",
+	"leetcode_id": "59",
+	"title": "Spiral Matrix II",
+	"frequency": "412",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "94867",
+	"submit_num": "233424"
+}, {
+	"id": "60",
+	"show_id": "60",
+	"leetcode_id": "60",
+	"title": "Permutation Sequence",
+	"frequency": "336",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "96759",
+	"submit_num": "330908"
+}, {
+	"id": "61",
+	"show_id": "61",
+	"leetcode_id": "61",
+	"title": "Rotate List",
+	"frequency": "345",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "128389",
+	"submit_num": "525557"
+}, {
+	"id": "62",
+	"show_id": "62",
+	"leetcode_id": "62",
+	"title": "Unique Paths",
+	"frequency": "447",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "174538",
+	"submit_num": "412091"
+}, {
+	"id": "63",
+	"show_id": "63",
+	"leetcode_id": "63",
+	"title": "Unique Paths II",
+	"frequency": "225",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "125181",
+	"submit_num": "390230"
+}, {
+	"id": "64",
+	"show_id": "64",
+	"leetcode_id": "64",
+	"title": "Minimum Path Sum",
+	"frequency": "449",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "136354",
+	"submit_num": "341421"
+}, {
+	"id": "65",
+	"show_id": "65",
+	"leetcode_id": "65",
+	"title": "Valid Number",
+	"frequency": "438",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "79531",
+	"submit_num": "614811"
+}, {
+	"id": "66",
+	"show_id": "66",
+	"leetcode_id": "66",
+	"title": "Plus One",
+	"frequency": "600",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "215267",
+	"submit_num": "545774"
+}, {
+	"id": "67",
+	"show_id": "67",
+	"leetcode_id": "67",
+	"title": "Add Binary",
+	"frequency": "550",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "183071",
+	"submit_num": "543807"
+}, {
+	"id": "68",
+	"show_id": "68",
+	"leetcode_id": "68",
+	"title": "Text Justification",
+	"frequency": "343",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "66507",
+	"submit_num": "335436"
+}, {
+	"id": "69",
+	"show_id": "69",
+	"leetcode_id": "69",
+	"title": "Sqrt(x)",
+	"frequency": "477",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "204976",
+	"submit_num": "716632"
+}, {
+	"id": "70",
+	"show_id": "70",
+	"leetcode_id": "70",
+	"title": "Climbing Stairs",
+	"frequency": "586",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "224204",
+	"submit_num": "548803"
+}, {
+	"id": "71",
+	"show_id": "71",
+	"leetcode_id": "71",
+	"title": "Simplify Path",
+	"frequency": "354",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "105949",
+	"submit_num": "405934"
+}, {
+	"id": "72",
+	"show_id": "72",
+	"leetcode_id": "72",
+	"title": "Edit Distance",
+	"frequency": "521",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "107348",
+	"submit_num": "331622"
+}, {
+	"id": "73",
+	"show_id": "73",
+	"leetcode_id": "73",
+	"title": "Set Matrix Zeroes",
+	"frequency": "472",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "127192",
+	"submit_num": "349552"
+}, {
+	"id": "74",
+	"show_id": "74",
+	"leetcode_id": "74",
+	"title": "Search a 2D Matrix",
+	"frequency": "335",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "147479",
+	"submit_num": "423737"
+}, {
+	"id": "75",
+	"show_id": "75",
+	"leetcode_id": "75",
+	"title": "Sort Colors",
+	"frequency": "400",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "203096",
+	"submit_num": "524642"
+}, {
+	"id": "76",
+	"show_id": "76",
+	"leetcode_id": "76",
+	"title": "Minimum Window Substring",
+	"frequency": "432",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "133688",
+	"submit_num": "504257"
+}, {
+	"id": "77",
+	"show_id": "77",
+	"leetcode_id": "77",
+	"title": "Combinations",
+	"frequency": "372",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "135118",
+	"submit_num": "331342"
+}, {
+	"id": "78",
+	"show_id": "78",
+	"leetcode_id": "78",
+	"title": "Subsets",
+	"frequency": "419",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "211652",
+	"submit_num": "485772"
+}, {
+	"id": "79",
+	"show_id": "79",
+	"leetcode_id": "79",
+	"title": "Word Search",
+	"frequency": "467",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "161590",
+	"submit_num": "581404"
+}, {
+	"id": "80",
+	"show_id": "80",
+	"leetcode_id": "80",
+	"title": "Remove Duplicates from Sorted Array II",
+	"frequency": "351",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "139775",
+	"submit_num": "381702"
+}, {
+	"id": "81",
+	"show_id": "81",
+	"leetcode_id": "81",
+	"title": "Search in Rotated Sorted Array II",
+	"frequency": "344",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "111855",
+	"submit_num": "341947"
+}, {
+	"id": "82",
+	"show_id": "82",
+	"leetcode_id": "82",
+	"title": "Remove Duplicates from Sorted List II",
+	"frequency": "284",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "126510",
+	"submit_num": "423982"
+}, {
+	"id": "83",
+	"show_id": "83",
+	"leetcode_id": "83",
+	"title": "Remove Duplicates from Sorted List",
+	"frequency": "422",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "218905",
+	"submit_num": "544958"
+}, {
+	"id": "84",
+	"show_id": "84",
+	"leetcode_id": "84",
+	"title": "Largest Rectangle in Histogram",
+	"frequency": "386",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "109615",
+	"submit_num": "400472"
+}, {
+	"id": "85",
+	"show_id": "85",
+	"leetcode_id": "85",
+	"title": "Maximal Rectangle",
+	"frequency": "516",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "80436",
+	"submit_num": "275384"
+}, {
+	"id": "86",
+	"show_id": "86",
+	"leetcode_id": "86",
+	"title": "Partition List",
+	"frequency": "353",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "116172",
+	"submit_num": "349252"
+}, {
+	"id": "87",
+	"show_id": "87",
+	"leetcode_id": "87",
+	"title": "Scramble String",
+	"frequency": "355",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "70941",
+	"submit_num": "239841"
+}, {
+	"id": "88",
+	"show_id": "88",
+	"leetcode_id": "88",
+	"title": "Merge Sorted Array",
+	"frequency": "559",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "211146",
+	"submit_num": "656467"
+}, {
+	"id": "89",
+	"show_id": "89",
+	"leetcode_id": "89",
+	"title": "Gray Code",
+	"frequency": "474",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "102097",
+	"submit_num": "242398"
+}, {
+	"id": "90",
+	"show_id": "90",
+	"leetcode_id": "90",
+	"title": "Subsets II",
+	"frequency": "268",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "136058",
+	"submit_num": "360699"
+}, {
+	"id": "91",
+	"show_id": "91",
+	"leetcode_id": "91",
+	"title": "Decode Ways",
+	"frequency": "392",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "156806",
+	"submit_num": "777038"
+}, {
+	"id": "92",
+	"show_id": "92",
+	"leetcode_id": "92",
+	"title": "Reverse Linked List II",
+	"frequency": "365",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "129909",
+	"submit_num": "416647"
+}, {
+	"id": "93",
+	"show_id": "93",
+	"leetcode_id": "93",
+	"title": "Restore IP Addresses",
+	"frequency": "376",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "98032",
+	"submit_num": "348039"
+}, {
+	"id": "94",
+	"show_id": "94",
+	"leetcode_id": "94",
+	"title": "Binary Tree Inorder Traversal",
+	"frequency": "346",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "250164",
+	"submit_num": "514444"
+}, {
+	"id": "95",
+	"show_id": "95",
+	"leetcode_id": "95",
+	"title": "Unique Binary Search Trees II",
+	"frequency": "347",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "95778",
+	"submit_num": "299360"
+}, {
+	"id": "96",
+	"show_id": "96",
+	"leetcode_id": "96",
+	"title": "Unique Binary Search Trees",
+	"frequency": "509",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "141263",
+	"submit_num": "338650"
+}, {
+	"id": "97",
+	"show_id": "97",
+	"leetcode_id": "97",
+	"title": "Interleaving String",
+	"frequency": "365",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "79465",
+	"submit_num": "317306"
+}, {
+	"id": "98",
+	"show_id": "98",
+	"leetcode_id": "98",
+	"title": "Validate Binary Search Tree",
+	"frequency": "317",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "213893",
+	"submit_num": "892689"
+}, {
+	"id": "99",
+	"show_id": "99",
+	"leetcode_id": "99",
+	"title": "Recover Binary Search Tree",
+	"frequency": "402",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "83982",
+	"submit_num": "273440"
+}, {
+	"id": "100",
+	"show_id": "100",
+	"leetcode_id": "100",
+	"title": "Same Tree",
+	"frequency": "525",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "245996",
+	"submit_num": "519045"
+}, {
+	"id": "101",
+	"show_id": "101",
+	"leetcode_id": "101",
+	"title": "Symmetric Tree",
+	"frequency": "446",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "224557",
+	"submit_num": "562156"
+}, {
+	"id": "102",
+	"show_id": "102",
+	"leetcode_id": "102",
+	"title": "Binary Tree Level Order Traversal",
+	"frequency": "413",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "214734",
+	"submit_num": "515074"
+}, {
+	"id": "103",
+	"show_id": "103",
+	"leetcode_id": "103",
+	"title": "Binary Tree Zigzag Level Order Traversal",
+	"frequency": "289",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "125318",
+	"submit_num": "346325"
+}, {
+	"id": "104",
+	"show_id": "104",
+	"leetcode_id": "104",
+	"title": "Maximum Depth of Binary Tree",
+	"frequency": "603",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "300009",
+	"submit_num": "556735"
+}, {
+	"id": "105",
+	"show_id": "105",
+	"leetcode_id": "105",
+	"title": "Construct Binary Tree from Preorder and Inorder Traversal",
+	"frequency": "433",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "126358",
+	"submit_num": "380854"
+}, {
+	"id": "106",
+	"show_id": "106",
+	"leetcode_id": "106",
+	"title": "Construct Binary Tree from Inorder and Postorder Traversal",
+	"frequency": "324",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "99948",
+	"submit_num": "304362"
+}, {
+	"id": "107",
+	"show_id": "107",
+	"leetcode_id": "107",
+	"title": "Binary Tree Level Order Traversal II",
+	"frequency": "338",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "152985",
+	"submit_num": "368241"
+}, {
+	"id": "108",
+	"show_id": "108",
+	"leetcode_id": "108",
+	"title": "Convert Sorted Array to Binary Search Tree",
+	"frequency": "493",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "158674",
+	"submit_num": "364303"
+}, {
+	"id": "109",
+	"show_id": "109",
+	"leetcode_id": "109",
+	"title": "Convert Sorted List to Binary Search Tree",
+	"frequency": "396",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "124594",
+	"submit_num": "354967"
+}, {
+	"id": "110",
+	"show_id": "110",
+	"leetcode_id": "110",
+	"title": "Balanced Binary Tree",
+	"frequency": "502",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "209741",
+	"submit_num": "550181"
+}, {
+	"id": "111",
+	"show_id": "111",
+	"leetcode_id": "111",
+	"title": "Minimum Depth of Binary Tree",
+	"frequency": "361",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "199608",
+	"submit_num": "596125"
+}, {
+	"id": "112",
+	"show_id": "112",
+	"leetcode_id": "112",
+	"title": "Path Sum",
+	"frequency": "378",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "198603",
+	"submit_num": "574815"
+}, {
+	"id": "113",
+	"show_id": "113",
+	"leetcode_id": "113",
+	"title": "Path Sum II",
+	"frequency": "274",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "152426",
+	"submit_num": "434893"
+}, {
+	"id": "114",
+	"show_id": "114",
+	"leetcode_id": "114",
+	"title": "Flatten Binary Tree to Linked List",
+	"frequency": "373",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "152938",
+	"submit_num": "423123"
+}, {
+	"id": "115",
+	"show_id": "115",
+	"leetcode_id": "115",
+	"title": "Distinct Subsequences",
+	"frequency": "453",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "79410",
+	"submit_num": "247649"
+}, {
+	"id": "116",
+	"show_id": "116",
+	"leetcode_id": "116",
+	"title": "Populating Next Right Pointers in Each Node",
+	"frequency": "433",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "160184",
+	"submit_num": "433557"
+}, {
+	"id": "117",
+	"show_id": "117",
+	"leetcode_id": "117",
+	"title": "Populating Next Right Pointers in Each Node II",
+	"frequency": "294",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "119610",
+	"submit_num": "352232"
+}, {
+	"id": "118",
+	"show_id": "118",
+	"leetcode_id": "118",
+	"title": "Pascal's Triangle",
+	"frequency": "530",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "158467",
+	"submit_num": "399706"
+}, {
+	"id": "119",
+	"show_id": "119",
+	"leetcode_id": "119",
+	"title": "Pascal's Triangle II",
+	"frequency": "398",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "136772",
+	"submit_num": "361576"
+}, {
+	"id": "120",
+	"show_id": "120",
+	"leetcode_id": "120",
+	"title": "Triangle",
+	"frequency": "451",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "124379",
+	"submit_num": "359066"
+}, {
+	"id": "121",
+	"show_id": "121",
+	"leetcode_id": "121",
+	"title": "Best Time to Buy and Sell Stock",
+	"frequency": "581",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "259915",
+	"submit_num": "611632"
+}, {
+	"id": "122",
+	"show_id": "122",
+	"leetcode_id": "122",
+	"title": "Best Time to Buy and Sell Stock II",
+	"frequency": "595",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "182705",
+	"submit_num": "382368"
+}, {
+	"id": "123",
+	"show_id": "123",
+	"leetcode_id": "123",
+	"title": "Best Time to Buy and Sell Stock III",
+	"frequency": "439",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "101454",
+	"submit_num": "336592"
+}, {
+	"id": "124",
+	"show_id": "124",
+	"leetcode_id": "124",
+	"title": "Binary Tree Maximum Path Sum",
+	"frequency": "447",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "117631",
+	"submit_num": "437423"
+}, {
+	"id": "125",
+	"show_id": "125",
+	"leetcode_id": "125",
+	"title": "Valid Palindrome",
+	"frequency": "433",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "203189",
+	"submit_num": "757402"
+}, {
+	"id": "126",
+	"show_id": "126",
+	"leetcode_id": "126",
+	"title": "Word Ladder II",
+	"frequency": "346",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "78050",
+	"submit_num": "531728"
+}, {
+	"id": "127",
+	"show_id": "127",
+	"leetcode_id": "127",
+	"title": "Word Ladder",
+	"frequency": "436",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "151563",
+	"submit_num": "763708"
+}, {
+	"id": "128",
+	"show_id": "128",
+	"leetcode_id": "128",
+	"title": "Longest Consecutive Sequence",
+	"frequency": "503",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "129710",
+	"submit_num": "342146"
+}, {
+	"id": "129",
+	"show_id": "129",
+	"leetcode_id": "129",
+	"title": "Sum Root to Leaf Numbers",
+	"frequency": "243",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "127972",
+	"submit_num": "341681"
+}, {
+	"id": "130",
+	"show_id": "130",
+	"leetcode_id": "130",
+	"title": "Surrounded Regions",
+	"frequency": "294",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "95735",
+	"submit_num": "496937"
+}, {
+	"id": "131",
+	"show_id": "131",
+	"leetcode_id": "131",
+	"title": "Palindrome Partitioning",
+	"frequency": "359",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "113255",
+	"submit_num": "323715"
+}, {
+	"id": "132",
+	"show_id": "132",
+	"leetcode_id": "132",
+	"title": "Palindrome Partitioning II",
+	"frequency": "283",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "78152",
+	"submit_num": "316681"
+}, {
+	"id": "133",
+	"show_id": "133",
+	"leetcode_id": "133",
+	"title": "Clone Graph",
+	"frequency": "372",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "137832",
+	"submit_num": "547178"
+}, {
+	"id": "134",
+	"show_id": "134",
+	"leetcode_id": "134",
+	"title": "Gas Station",
+	"frequency": "445",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "97818",
+	"submit_num": "327970"
+}, {
+	"id": "135",
+	"show_id": "135",
+	"leetcode_id": "135",
+	"title": "Candy",
+	"frequency": "403",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "75672",
+	"submit_num": "301218"
+}, {
+	"id": "136",
+	"show_id": "136",
+	"leetcode_id": "136",
+	"title": "Single Number",
+	"frequency": "625",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "269640",
+	"submit_num": "488347"
+}, {
+	"id": "137",
+	"show_id": "137",
+	"leetcode_id": "137",
+	"title": "Single Number II",
+	"frequency": "552",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "129358",
+	"submit_num": "305526"
+}, {
+	"id": "138",
+	"show_id": "138",
+	"leetcode_id": "138",
+	"title": "Copy List with Random Pointer",
+	"frequency": "558",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "142899",
+	"submit_num": "549669"
+}, {
+	"id": "139",
+	"show_id": "139",
+	"leetcode_id": "139",
+	"title": "Word Break",
+	"frequency": "544",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "192077",
+	"submit_num": "617395"
+}, {
+	"id": "140",
+	"show_id": "140",
+	"leetcode_id": "140",
+	"title": "Word Break II",
+	"frequency": "441",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "106448",
+	"submit_num": "439701"
+}, {
+	"id": "141",
+	"show_id": "141",
+	"leetcode_id": "141",
+	"title": "Linked List Cycle",
+	"frequency": "588",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "227040",
+	"submit_num": "645338"
+}, {
+	"id": "142",
+	"show_id": "142",
+	"leetcode_id": "142",
+	"title": "Linked List Cycle II",
+	"frequency": "483",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "136389",
+	"submit_num": "442452"
+}, {
+	"id": "143",
+	"show_id": "143",
+	"leetcode_id": "143",
+	"title": "Reorder List",
+	"frequency": "448",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "106339",
+	"submit_num": "402037"
+}, {
+	"id": "144",
+	"show_id": "144",
+	"leetcode_id": "144",
+	"title": "Binary Tree Preorder Traversal",
+	"frequency": "333",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "209336",
+	"submit_num": "452437"
+}, {
+	"id": "145",
+	"show_id": "145",
+	"leetcode_id": "145",
+	"title": "Binary Tree Postorder Traversal",
+	"frequency": "296",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "164874",
+	"submit_num": "399494"
+}, {
+	"id": "146",
+	"show_id": "146",
+	"leetcode_id": "146",
+	"title": "LRU Cache",
+	"frequency": "596",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "157993",
+	"submit_num": "821989"
+}, {
+	"id": "147",
+	"show_id": "147",
+	"leetcode_id": "147",
+	"title": "Insertion Sort List",
+	"frequency": "512",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "113977",
+	"submit_num": "338846"
+}, {
+	"id": "148",
+	"show_id": "148",
+	"leetcode_id": "148",
+	"title": "Sort List",
+	"frequency": "585",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "123789",
+	"submit_num": "419197"
+}, {
+	"id": "149",
+	"show_id": "149",
+	"leetcode_id": "149",
+	"title": "Max Points on a Line",
+	"frequency": "561",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "88682",
+	"submit_num": "582809"
+}, {
+	"id": "150",
+	"show_id": "150",
+	"leetcode_id": "150",
+	"title": "Evaluate Reverse Polish Notation",
+	"frequency": "526",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "108109",
+	"submit_num": "385310"
+}, {
+	"id": "151",
+	"show_id": "151",
+	"leetcode_id": "151",
+	"title": "Reverse Words in a String",
+	"frequency": "584",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "184818",
+	"submit_num": "1178107"
+}, {
+	"id": "152",
+	"show_id": "152",
+	"leetcode_id": "152",
+	"title": "Maximum Product Subarray",
+	"frequency": "539",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "127638",
+	"submit_num": "481298"
+}, {
+	"id": "153",
+	"show_id": "153",
+	"leetcode_id": "153",
+	"title": "Find Minimum in Rotated Sorted Array",
+	"frequency": "535",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "180365",
+	"submit_num": "444348"
+}, {
+	"id": "154",
+	"show_id": "154",
+	"leetcode_id": "154",
+	"title": "Find Minimum in Rotated Sorted Array II",
+	"frequency": "389",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "90602",
+	"submit_num": "240546"
+}, {
+	"id": "155",
+	"show_id": "155",
+	"leetcode_id": "155",
+	"title": "Min Stack",
+	"frequency": "594",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "168068",
+	"submit_num": "552620"
+}, {
+	"id": "156",
+	"show_id": "156",
+	"leetcode_id": "156",
+	"title": "Binary Tree Upside Down",
+	"frequency": "267",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "32275",
+	"submit_num": "70886"
+}, {
+	"id": "157",
+	"show_id": "157",
+	"leetcode_id": "157",
+	"title": "Read N Characters Given Read4",
+	"frequency": "251",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "43577",
+	"submit_num": "149303"
+}, {
+	"id": "158",
+	"show_id": "158",
+	"leetcode_id": "158",
+	"title": "Read N Characters Given Read4 II - Call multiple times",
+	"frequency": "231",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "37117",
+	"submit_num": "150137"
+}, {
+	"id": "159",
+	"show_id": "159",
+	"leetcode_id": "159",
+	"title": "Longest Substring with At Most Two Distinct Characters",
+	"frequency": "239",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "34387",
+	"submit_num": "80974"
+}, {
+	"id": "160",
+	"show_id": "160",
+	"leetcode_id": "160",
+	"title": "Intersection of Two Linked Lists",
+	"frequency": "531",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "170249",
+	"submit_num": "551217"
+}, {
+	"id": "161",
+	"show_id": "161",
+	"leetcode_id": "161",
+	"title": "One Edit Distance",
+	"frequency": "324",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "45783",
+	"submit_num": "144369"
+}, {
+	"id": "162",
+	"show_id": "162",
+	"leetcode_id": "162",
+	"title": "Find Peak Element",
+	"frequency": "441",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "139465",
+	"submit_num": "361919"
+}, {
+	"id": "163",
+	"show_id": "163",
+	"leetcode_id": "163",
+	"title": "Missing Ranges",
+	"frequency": "246",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "35543",
+	"submit_num": "151319"
+}, {
+	"id": "164",
+	"show_id": "164",
+	"leetcode_id": "164",
+	"title": "Maximum Gap",
+	"frequency": "487",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "53501",
+	"submit_num": "178886"
+}, {
+	"id": "165",
+	"show_id": "165",
+	"leetcode_id": "165",
+	"title": "Compare Version Numbers",
+	"frequency": "416",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "95078",
+	"submit_num": "461125"
+}, {
+	"id": "166",
+	"show_id": "166",
+	"leetcode_id": "166",
+	"title": "Fraction to Recurring Decimal",
+	"frequency": "392",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "60421",
+	"submit_num": "336530"
+}, {
+	"id": "167",
+	"show_id": "167",
+	"leetcode_id": "167",
+	"title": "Two Sum II - Input array is sorted",
+	"frequency": "466",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "119983",
+	"submit_num": "253943"
+}, {
+	"id": "168",
+	"show_id": "168",
+	"leetcode_id": "168",
+	"title": "Excel Sheet Column Title",
+	"frequency": "429",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "126361",
+	"submit_num": "467902"
+}, {
+	"id": "169",
+	"show_id": "169",
+	"leetcode_id": "169",
+	"title": "Majority Element",
+	"frequency": "592",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "239514",
+	"submit_num": "503212"
+}, {
+	"id": "170",
+	"show_id": "170",
+	"leetcode_id": "170",
+	"title": "Two Sum III - Data structure design",
+	"frequency": "238",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "34551",
+	"submit_num": "132998"
+}, {
+	"id": "171",
+	"show_id": "171",
+	"leetcode_id": "171",
+	"title": "Excel Sheet Column Number",
+	"frequency": "560",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "155512",
+	"submit_num": "323072"
+}, {
+	"id": "172",
+	"show_id": "172",
+	"leetcode_id": "172",
+	"title": "Factorial Trailing Zeroes",
+	"frequency": "563",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "109057",
+	"submit_num": "297011"
+}, {
+	"id": "173",
+	"show_id": "173",
+	"leetcode_id": "173",
+	"title": "Binary Search Tree Iterator",
+	"frequency": "514",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "117576",
+	"submit_num": "273363"
+}, {
+	"id": "174",
+	"show_id": "174",
+	"leetcode_id": "174",
+	"title": "Dungeon Game",
+	"frequency": "305",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "46409",
+	"submit_num": "193007"
+}, {
+	"id": "175",
+	"show_id": "175",
+	"leetcode_id": "175",
+	"title": "Combine Two Tables",
+	"frequency": "621",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "75937",
+	"submit_num": "185754"
+}, {
+	"id": "176",
+	"show_id": "176",
+	"leetcode_id": "176",
+	"title": "Second Highest Salary",
+	"frequency": "529",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "60378",
+	"submit_num": "272303"
+}, {
+	"id": "177",
+	"show_id": "177",
+	"leetcode_id": "177",
+	"title": "Nth Highest Salary",
+	"frequency": "364",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "30501",
+	"submit_num": "154120"
+}, {
+	"id": "178",
+	"show_id": "178",
+	"leetcode_id": "178",
+	"title": "Rank Scores",
+	"frequency": "442",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "31026",
+	"submit_num": "109634"
+}, {
+	"id": "179",
+	"show_id": "179",
+	"leetcode_id": "179",
+	"title": "Largest Number",
+	"frequency": "508",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "87509",
+	"submit_num": "376812"
+}, {
+	"id": "180",
+	"show_id": "180",
+	"leetcode_id": "180",
+	"title": "Consecutive Numbers",
+	"frequency": "458",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "26445",
+	"submit_num": "99885"
+}, {
+	"id": "181",
+	"show_id": "181",
+	"leetcode_id": "181",
+	"title": "Employees Earning More Than Their Managers",
+	"frequency": "496",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "53688",
+	"submit_num": "142869"
+}, {
+	"id": "182",
+	"show_id": "182",
+	"leetcode_id": "182",
+	"title": "Duplicate Emails",
+	"frequency": "421",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "57164",
+	"submit_num": "130813"
+}, {
+	"id": "183",
+	"show_id": "183",
+	"leetcode_id": "183",
+	"title": "Customers Who Never Order",
+	"frequency": "296",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "50444",
+	"submit_num": "142476"
+}, {
+	"id": "184",
+	"show_id": "184",
+	"leetcode_id": "184",
+	"title": "Department Highest Salary",
+	"frequency": "342",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "30490",
+	"submit_num": "139034"
+}, {
+	"id": "185",
+	"show_id": "185",
+	"leetcode_id": "185",
+	"title": "Department Top Three Salaries",
+	"frequency": "488",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "19336",
+	"submit_num": "102304"
+}, {
+	"id": "186",
+	"show_id": "186",
+	"leetcode_id": "186",
+	"title": "Reverse Words in a String II",
+	"frequency": "184",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "36398",
+	"submit_num": "126542"
+}, {
+	"id": "187",
+	"show_id": "187",
+	"leetcode_id": "187",
+	"title": "Repeated DNA Sequences",
+	"frequency": "459",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "89285",
+	"submit_num": "273313"
+}, {
+	"id": "188",
+	"show_id": "188",
+	"leetcode_id": "188",
+	"title": "Best Time to Buy and Sell Stock IV",
+	"frequency": "448",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "57089",
+	"submit_num": "230487"
+}, {
+	"id": "189",
+	"show_id": "189",
+	"leetcode_id": "189",
+	"title": "Rotate Array",
+	"frequency": "486",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "161665",
+	"submit_num": "642819"
+}, {
+	"id": "190",
+	"show_id": "190",
+	"leetcode_id": "190",
+	"title": "Reverse Bits",
+	"frequency": "433",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "123920",
+	"submit_num": "420549"
+}, {
+	"id": "191",
+	"show_id": "191",
+	"leetcode_id": "191",
+	"title": "Number of 1 Bits",
+	"frequency": "590",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "179876",
+	"submit_num": "447787"
+}, {
+	"id": "192",
+	"show_id": "192",
+	"leetcode_id": "192",
+	"title": "Word Frequency",
+	"frequency": "555",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "10801",
+	"submit_num": "41699"
+}, {
+	"id": "193",
+	"show_id": "193",
+	"leetcode_id": "193",
+	"title": "Valid Phone Numbers",
+	"frequency": "575",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "14012",
+	"submit_num": "56497"
+}, {
+	"id": "194",
+	"show_id": "194",
+	"leetcode_id": "194",
+	"title": "Transpose File",
+	"frequency": "571",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "6213",
+	"submit_num": "28983"
+}, {
+	"id": "195",
+	"show_id": "195",
+	"leetcode_id": "195",
+	"title": "Tenth Line",
+	"frequency": "609",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "23958",
+	"submit_num": "71615"
+}, {
+	"id": "196",
+	"show_id": "196",
+	"leetcode_id": "196",
+	"title": "Delete Duplicate Emails",
+	"frequency": "399",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "37497",
+	"submit_num": "157741"
+}, {
+	"id": "197",
+	"show_id": "197",
+	"leetcode_id": "197",
+	"title": "Rising Temperature",
+	"frequency": "546",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "41388",
+	"submit_num": "136736"
+}, {
+	"id": "198",
+	"show_id": "198",
+	"leetcode_id": "198",
+	"title": "House Robber",
+	"frequency": "572",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "178553",
+	"submit_num": "449302"
+}, {
+	"id": "199",
+	"show_id": "199",
+	"leetcode_id": "199",
+	"title": "Binary Tree Right Side View",
+	"frequency": "348",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "100011",
+	"submit_num": "237593"
+}, {
+	"id": "200",
+	"show_id": "200",
+	"leetcode_id": "200",
+	"title": "Number of Islands",
+	"frequency": "547",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "152294",
+	"submit_num": "421809"
+}, {
+	"id": "201",
+	"show_id": "201",
+	"leetcode_id": "201",
+	"title": "Bitwise AND of Numbers Range",
+	"frequency": "362",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "62526",
+	"submit_num": "182308"
+}, {
+	"id": "202",
+	"show_id": "202",
+	"leetcode_id": "202",
+	"title": "Happy Number",
+	"frequency": "564",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "149132",
+	"submit_num": "361191"
+}, {
+	"id": "203",
+	"show_id": "203",
+	"leetcode_id": "203",
+	"title": "Remove Linked List Elements",
+	"frequency": "423",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "141442",
+	"submit_num": "426359"
+}, {
+	"id": "204",
+	"show_id": "204",
+	"leetcode_id": "204",
+	"title": "Count Primes",
+	"frequency": "449",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "142152",
+	"submit_num": "533521"
+}, {
+	"id": "205",
+	"show_id": "205",
+	"leetcode_id": "205",
+	"title": "Isomorphic Strings",
+	"frequency": "433",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "126607",
+	"submit_num": "367120"
+}, {
+	"id": "206",
+	"show_id": "206",
+	"leetcode_id": "206",
+	"title": "Reverse Linked List",
+	"frequency": "597",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "306845",
+	"submit_num": "659908"
+}, {
+	"id": "207",
+	"show_id": "207",
+	"leetcode_id": "207",
+	"title": "Course Schedule",
+	"frequency": "315",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "110257",
+	"submit_num": "331560"
+}, {
+	"id": "208",
+	"show_id": "208",
+	"leetcode_id": "208",
+	"title": "Implement Trie (Prefix Tree)",
+	"frequency": "395",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "100006",
+	"submit_num": "330979"
+}, {
+	"id": "209",
+	"show_id": "209",
+	"leetcode_id": "209",
+	"title": "Minimum Size Subarray Sum",
+	"frequency": "303",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "106540",
+	"submit_num": "335163"
+}, {
+	"id": "210",
+	"show_id": "210",
+	"leetcode_id": "210",
+	"title": "Course Schedule II",
+	"frequency": "202",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "82300",
+	"submit_num": "276712"
+}, {
+	"id": "211",
+	"show_id": "211",
+	"leetcode_id": "211",
+	"title": "Add and Search Word - Data structure design",
+	"frequency": "194",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "69683",
+	"submit_num": "282000"
+}, {
+	"id": "212",
+	"show_id": "212",
+	"leetcode_id": "212",
+	"title": "Word Search II",
+	"frequency": "319",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "58903",
+	"submit_num": "241471"
+}, {
+	"id": "213",
+	"show_id": "213",
+	"leetcode_id": "213",
+	"title": "House Robber II",
+	"frequency": "258",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "69640",
+	"submit_num": "201792"
+}, {
+	"id": "214",
+	"show_id": "214",
+	"leetcode_id": "214",
+	"title": "Shortest Palindrome",
+	"frequency": "397",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "49080",
+	"submit_num": "196573"
+}, {
+	"id": "215",
+	"show_id": "215",
+	"leetcode_id": "215",
+	"title": "Kth Largest Element in an Array",
+	"frequency": "420",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "184237",
+	"submit_num": "457504"
+}, {
+	"id": "216",
+	"show_id": "216",
+	"leetcode_id": "216",
+	"title": "Combination Sum III",
+	"frequency": "328",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "82736",
+	"submit_num": "177523"
+}, {
+	"id": "217",
+	"show_id": "217",
+	"leetcode_id": "217",
+	"title": "Contains Duplicate",
+	"frequency": "569",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "195201",
+	"submit_num": "417966"
+}, {
+	"id": "218",
+	"show_id": "218",
+	"leetcode_id": "218",
+	"title": "The Skyline Problem",
+	"frequency": "461",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "55739",
+	"submit_num": "194603"
+}, {
+	"id": "219",
+	"show_id": "219",
+	"leetcode_id": "219",
+	"title": "Contains Duplicate II",
+	"frequency": "532",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "133565",
+	"submit_num": "408041"
+}, {
+	"id": "220",
+	"show_id": "220",
+	"leetcode_id": "220",
+	"title": "Contains Duplicate III",
+	"frequency": "481",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "63342",
+	"submit_num": "335404"
+}, {
+	"id": "221",
+	"show_id": "221",
+	"leetcode_id": "221",
+	"title": "Maximal Square",
+	"frequency": "331",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "80101",
+	"submit_num": "266874"
+}, {
+	"id": "222",
+	"show_id": "222",
+	"leetcode_id": "222",
+	"title": "Count Complete Tree Nodes",
+	"frequency": "380",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "73256",
+	"submit_num": "264743"
+}, {
+	"id": "223",
+	"show_id": "223",
+	"leetcode_id": "223",
+	"title": "Rectangle Area",
+	"frequency": "519",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "68617",
+	"submit_num": "204909"
+}, {
+	"id": "224",
+	"show_id": "224",
+	"leetcode_id": "224",
+	"title": "Basic Calculator",
+	"frequency": "434",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "60687",
+	"submit_num": "215032"
+}, {
+	"id": "225",
+	"show_id": "225",
+	"leetcode_id": "225",
+	"title": "Implement Stack using Queues",
+	"frequency": "297",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "87357",
+	"submit_num": "257798"
+}, {
+	"id": "226",
+	"show_id": "226",
+	"leetcode_id": "226",
+	"title": "Invert Binary Tree",
+	"frequency": "576",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "213216",
+	"submit_num": "403303"
+}, {
+	"id": "227",
+	"show_id": "227",
+	"leetcode_id": "227",
+	"title": "Basic Calculator II",
+	"frequency": "350",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "59739",
+	"submit_num": "200644"
+}, {
+	"id": "228",
+	"show_id": "228",
+	"leetcode_id": "228",
+	"title": "Summary Ranges",
+	"frequency": "493",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "92901",
+	"submit_num": "295266"
+}, {
+	"id": "229",
+	"show_id": "229",
+	"leetcode_id": "229",
+	"title": "Majority Element II",
+	"frequency": "482",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "66294",
+	"submit_num": "228555"
+}, {
+	"id": "230",
+	"show_id": "230",
+	"leetcode_id": "230",
+	"title": "Kth Smallest Element in a BST",
+	"frequency": "368",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "127369",
+	"submit_num": "283568"
+}, {
+	"id": "231",
+	"show_id": "231",
+	"leetcode_id": "231",
+	"title": "Power of Two",
+	"frequency": "469",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "160357",
+	"submit_num": "395331"
+}, {
+	"id": "232",
+	"show_id": "232",
+	"leetcode_id": "232",
+	"title": "Implement Queue using Stacks",
+	"frequency": "428",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "99072",
+	"submit_num": "262245"
+}, {
+	"id": "233",
+	"show_id": "233",
+	"leetcode_id": "233",
+	"title": "Number of Digit One",
+	"frequency": "518",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "32879",
+	"submit_num": "113961"
+}, {
+	"id": "234",
+	"show_id": "234",
+	"leetcode_id": "234",
+	"title": "Palindrome Linked List",
+	"frequency": "533",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "141355",
+	"submit_num": "424077"
+}, {
+	"id": "235",
+	"show_id": "235",
+	"leetcode_id": "235",
+	"title": "Lowest Common Ancestor of a Binary Search Tree",
+	"frequency": "502",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "178616",
+	"submit_num": "450726"
+}, {
+	"id": "236",
+	"show_id": "236",
+	"leetcode_id": "236",
+	"title": "Lowest Common Ancestor of a Binary Tree",
+	"frequency": "445",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "145407",
+	"submit_num": "484839"
+}, {
+	"id": "237",
+	"show_id": "237",
+	"leetcode_id": "237",
+	"title": "Delete Node in a Linked List",
+	"frequency": "610",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "188301",
+	"submit_num": "398902"
+}, {
+	"id": "238",
+	"show_id": "238",
+	"leetcode_id": "238",
+	"title": "Product of Array Except Self",
+	"frequency": "566",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "133613",
+	"submit_num": "266536"
+}, {
+	"id": "239",
+	"show_id": "239",
+	"leetcode_id": "239",
+	"title": "Sliding Window Maximum",
+	"frequency": "367",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "80844",
+	"submit_num": "238059"
+}, {
+	"id": "240",
+	"show_id": "240",
+	"leetcode_id": "240",
+	"title": "Search a 2D Matrix II",
+	"frequency": "456",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "99488",
+	"submit_num": "254627"
+}, {
+	"id": "241",
+	"show_id": "241",
+	"leetcode_id": "241",
+	"title": "Different Ways to Add Parentheses",
+	"frequency": "455",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "52213",
+	"submit_num": "114612"
+}, {
+	"id": "242",
+	"show_id": "242",
+	"leetcode_id": "242",
+	"title": "Valid Anagram",
+	"frequency": "506",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "193746",
+	"submit_num": "410425"
+}, {
+	"id": "243",
+	"show_id": "243",
+	"leetcode_id": "243",
+	"title": "Shortest Word Distance",
+	"frequency": "267",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "40184",
+	"submit_num": "75231"
+}, {
+	"id": "244",
+	"show_id": "244",
+	"leetcode_id": "244",
+	"title": "Shortest Word Distance II",
+	"frequency": "272",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "28510",
+	"submit_num": "70329"
+}, {
+	"id": "245",
+	"show_id": "245",
+	"leetcode_id": "245",
+	"title": "Shortest Word Distance III",
+	"frequency": "88",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "25549",
+	"submit_num": "49951"
+}, {
+	"id": "246",
+	"show_id": "246",
+	"leetcode_id": "246",
+	"title": "Strobogrammatic Number",
+	"frequency": "166",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "32784",
+	"submit_num": "81587"
+}, {
+	"id": "247",
+	"show_id": "247",
+	"leetcode_id": "247",
+	"title": "Strobogrammatic Number II",
+	"frequency": "153",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "26350",
+	"submit_num": "64446"
+}, {
+	"id": "248",
+	"show_id": "248",
+	"leetcode_id": "248",
+	"title": "Strobogrammatic Number III",
+	"frequency": "158",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "10974",
+	"submit_num": "33805"
+}, {
+	"id": "249",
+	"show_id": "249",
+	"leetcode_id": "249",
+	"title": "Group Shifted Strings",
+	"frequency": "210",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "30893",
+	"submit_num": "71089"
+}, {
+	"id": "250",
+	"show_id": "250",
+	"leetcode_id": "250",
+	"title": "Count Univalue Subtrees",
+	"frequency": "316",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "20114",
+	"submit_num": "46322"
+}, {
+	"id": "251",
+	"show_id": "251",
+	"leetcode_id": "251",
+	"title": "Flatten 2D Vector",
+	"frequency": "280",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "33486",
+	"submit_num": "81289"
+}, {
+	"id": "252",
+	"show_id": "252",
+	"leetcode_id": "252",
+	"title": "Meeting Rooms",
+	"frequency": "295",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "44693",
+	"submit_num": "91748"
+}, {
+	"id": "253",
+	"show_id": "253",
+	"leetcode_id": "253",
+	"title": "Meeting Rooms II",
+	"frequency": "375",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "59378",
+	"submit_num": "150132"
+}, {
+	"id": "254",
+	"show_id": "254",
+	"leetcode_id": "254",
+	"title": "Factor Combinations",
+	"frequency": "163",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "34670",
+	"submit_num": "79208"
+}, {
+	"id": "255",
+	"show_id": "255",
+	"leetcode_id": "255",
+	"title": "Verify Preorder Sequence in Binary Search Tree",
+	"frequency": "214",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "23551",
+	"submit_num": "57626"
+}, {
+	"id": "256",
+	"show_id": "256",
+	"leetcode_id": "256",
+	"title": "Paint House",
+	"frequency": "252",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "31470",
+	"submit_num": "67870"
+}, {
+	"id": "257",
+	"show_id": "257",
+	"leetcode_id": "257",
+	"title": "Binary Tree Paths",
+	"frequency": "377",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "143713",
+	"submit_num": "355420"
+}, {
+	"id": "258",
+	"show_id": "258",
+	"leetcode_id": "258",
+	"title": "Add Digits",
+	"frequency": "582",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "186237",
+	"submit_num": "360686"
+}, {
+	"id": "259",
+	"show_id": "259",
+	"leetcode_id": "259",
+	"title": "3Sum Smaller",
+	"frequency": "190",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "33139",
+	"submit_num": "78993"
+}, {
+	"id": "260",
+	"show_id": "260",
+	"leetcode_id": "260",
+	"title": "Single Number III",
+	"frequency": "471",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "77402",
+	"submit_num": "146805"
+}, {
+	"id": "261",
+	"show_id": "261",
+	"leetcode_id": "261",
+	"title": "Graph Valid Tree",
+	"frequency": "118",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "49592",
+	"submit_num": "129291"
+}, {
+	"id": "262",
+	"show_id": "262",
+	"leetcode_id": "262",
+	"title": "Trips and Users",
+	"frequency": "348",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "15885",
+	"submit_num": "84569"
+}, {
+	"id": "263",
+	"show_id": "263",
+	"leetcode_id": "263",
+	"title": "Ugly Number",
+	"frequency": "454",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "116530",
+	"submit_num": "294551"
+}, {
+	"id": "264",
+	"show_id": "264",
+	"leetcode_id": "264",
+	"title": "Ugly Number II",
+	"frequency": "361",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "69922",
+	"submit_num": "210495"
+}, {
+	"id": "265",
+	"show_id": "265",
+	"leetcode_id": "265",
+	"title": "Paint House II",
+	"frequency": "118",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "28191",
+	"submit_num": "73499"
+}, {
+	"id": "266",
+	"show_id": "266",
+	"leetcode_id": "266",
+	"title": "Palindrome Permutation",
+	"frequency": "261",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "41052",
+	"submit_num": "70855"
+}, {
+	"id": "267",
+	"show_id": "267",
+	"leetcode_id": "267",
+	"title": "Palindrome Permutation II",
+	"frequency": "136",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "16791",
+	"submit_num": "52130"
+}, {
+	"id": "268",
+	"show_id": "268",
+	"leetcode_id": "268",
+	"title": "Missing Number",
+	"frequency": "490",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "153102",
+	"submit_num": "342763"
+}, {
+	"id": "269",
+	"show_id": "269",
+	"leetcode_id": "269",
+	"title": "Alien Dictionary",
+	"frequency": "329",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "36236",
+	"submit_num": "140163"
+}, {
+	"id": "270",
+	"show_id": "270",
+	"leetcode_id": "270",
+	"title": "Closest Binary Search Tree Value",
+	"frequency": "198",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "45348",
+	"submit_num": "112248"
+}, {
+	"id": "271",
+	"show_id": "271",
+	"leetcode_id": "271",
+	"title": "Encode and Decode Strings",
+	"frequency": "164",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "26391",
+	"submit_num": "100967"
+}, {
+	"id": "272",
+	"show_id": "272",
+	"leetcode_id": "272",
+	"title": "Closest Binary Search Tree Value II",
+	"frequency": "170",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "21163",
+	"submit_num": "53224"
+}, {
+	"id": "273",
+	"show_id": "273",
+	"leetcode_id": "273",
+	"title": "Integer to English Words",
+	"frequency": "497",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "52938",
+	"submit_num": "233750"
+}, {
+	"id": "274",
+	"show_id": "274",
+	"leetcode_id": "274",
+	"title": "H-Index",
+	"frequency": "287",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "90680",
+	"submit_num": "269319"
+}, {
+	"id": "275",
+	"show_id": "275",
+	"leetcode_id": "275",
+	"title": "H-Index II",
+	"frequency": "220",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "58590",
+	"submit_num": "168393"
+}, {
+	"id": "276",
+	"show_id": "276",
+	"leetcode_id": "276",
+	"title": "Paint Fence",
+	"frequency": "236",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "29779",
+	"submit_num": "85293"
+}, {
+	"id": "277",
+	"show_id": "277",
+	"leetcode_id": "277",
+	"title": "Find the Celebrity",
+	"frequency": "327",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "42787",
+	"submit_num": "119573"
+}, {
+	"id": "278",
+	"show_id": "278",
+	"leetcode_id": "278",
+	"title": "First Bad Version",
+	"frequency": "411",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "131050",
+	"submit_num": "504502"
+}, {
+	"id": "279",
+	"show_id": "279",
+	"leetcode_id": "279",
+	"title": "Perfect Squares",
+	"frequency": "474",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "99441",
+	"submit_num": "263777"
+}, {
+	"id": "280",
+	"show_id": "280",
+	"leetcode_id": "280",
+	"title": "Wiggle Sort",
+	"frequency": "407",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "38079",
+	"submit_num": "65165"
+}, {
+	"id": "281",
+	"show_id": "281",
+	"leetcode_id": "281",
+	"title": "Zigzag Iterator",
+	"frequency": "291",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "33822",
+	"submit_num": "64965"
+}, {
+	"id": "282",
+	"show_id": "282",
+	"leetcode_id": "282",
+	"title": "Expression Add Operators",
+	"frequency": "381",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "43080",
+	"submit_num": "141249"
+}, {
+	"id": "283",
+	"show_id": "283",
+	"leetcode_id": "283",
+	"title": "Move Zeroes",
+	"frequency": "589",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "253449",
+	"submit_num": "495433"
+}, {
+	"id": "284",
+	"show_id": "284",
+	"leetcode_id": "284",
+	"title": "Peeking Iterator",
+	"frequency": "303",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "51001",
+	"submit_num": "143525"
+}, {
+	"id": "285",
+	"show_id": "285",
+	"leetcode_id": "285",
+	"title": "Inorder Successor in BST",
+	"frequency": "286",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "51372",
+	"submit_num": "142079"
+}, {
+	"id": "286",
+	"show_id": "286",
+	"leetcode_id": "286",
+	"title": "Walls and Gates",
+	"frequency": "219",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "41980",
+	"submit_num": "92914"
+}, {
+	"id": "287",
+	"show_id": "287",
+	"leetcode_id": "287",
+	"title": "Find the Duplicate Number",
+	"frequency": "484",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "95154",
+	"submit_num": "215852"
+}, {
+	"id": "288",
+	"show_id": "288",
+	"leetcode_id": "288",
+	"title": "Unique Word Abbreviation",
+	"frequency": "139",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "30683",
+	"submit_num": "174162"
+}, {
+	"id": "289",
+	"show_id": "289",
+	"leetcode_id": "289",
+	"title": "Game of Life",
+	"frequency": "465",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "60889",
+	"submit_num": "163444"
+}, {
+	"id": "290",
+	"show_id": "290",
+	"leetcode_id": "290",
+	"title": "Word Pattern",
+	"frequency": "392",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "95835",
+	"submit_num": "287419"
+}, {
+	"id": "291",
+	"show_id": "291",
+	"leetcode_id": "291",
+	"title": "Word Pattern II",
+	"frequency": "248",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "20308",
+	"submit_num": "52944"
+}, {
+	"id": "292",
+	"show_id": "292",
+	"leetcode_id": "292",
+	"title": "Nim Game",
+	"frequency": "627",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "153166",
+	"submit_num": "276806"
+}, {
+	"id": "293",
+	"show_id": "293",
+	"leetcode_id": "293",
+	"title": "Flip Game",
+	"frequency": "134",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "30031",
+	"submit_num": "52693"
+}, {
+	"id": "294",
+	"show_id": "294",
+	"leetcode_id": "294",
+	"title": "Flip Game II",
+	"frequency": "120",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "31093",
+	"submit_num": "66399"
+}, {
+	"id": "295",
+	"show_id": "295",
+	"leetcode_id": "295",
+	"title": "Find Median from Data Stream",
+	"frequency": "372",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "54299",
+	"submit_num": "188979"
+}, {
+	"id": "296",
+	"show_id": "296",
+	"leetcode_id": "296",
+	"title": "Best Meeting Point",
+	"frequency": "357",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "15659",
+	"submit_num": "29993"
+}, {
+	"id": "297",
+	"show_id": "297",
+	"leetcode_id": "297",
+	"title": "Serialize and Deserialize Binary Tree",
+	"frequency": "424",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "91316",
+	"submit_num": "266026"
+}, {
+	"id": "298",
+	"show_id": "298",
+	"leetcode_id": "298",
+	"title": "Binary Tree Longest Consecutive Sequence",
+	"frequency": "232",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "40047",
+	"submit_num": "96283"
+}, {
+	"id": "299",
+	"show_id": "299",
+	"leetcode_id": "299",
+	"title": "Bulls and Cows",
+	"frequency": "393",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "64512",
+	"submit_num": "181130"
+}, {
+	"id": "300",
+	"show_id": "300",
+	"leetcode_id": "300",
+	"title": "Longest Increasing Subsequence",
+	"frequency": "340",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "110365",
+	"submit_num": "284247"
+}, {
+	"id": "301",
+	"show_id": "301",
+	"leetcode_id": "301",
+	"title": "Remove Invalid Parentheses",
+	"frequency": "417",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "61278",
+	"submit_num": "171182"
+}, {
+	"id": "302",
+	"show_id": "302",
+	"leetcode_id": "302",
+	"title": "Smallest Rectangle Enclosing Black Pixels",
+	"frequency": "85",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "16420",
+	"submit_num": "35376"
+}, {
+	"id": "303",
+	"show_id": "303",
+	"leetcode_id": "303",
+	"title": "Range Sum Query - Immutable",
+	"frequency": "444",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "87313",
+	"submit_num": "277141"
+}, {
+	"id": "304",
+	"show_id": "304",
+	"leetcode_id": "304",
+	"title": "Range Sum Query 2D - Immutable",
+	"frequency": "308",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "40715",
+	"submit_num": "152595"
+}, {
+	"id": "305",
+	"show_id": "305",
+	"leetcode_id": "305",
+	"title": "Number of Islands II",
+	"frequency": "195",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "29950",
+	"submit_num": "75675"
+}, {
+	"id": "306",
+	"show_id": "306",
+	"leetcode_id": "306",
+	"title": "Additive Number",
+	"frequency": "437",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "29250",
+	"submit_num": "105569"
+}, {
+	"id": "307",
+	"show_id": "307",
+	"leetcode_id": "307",
+	"title": "Range Sum Query - Mutable",
+	"frequency": "215",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "40732",
+	"submit_num": "185494"
+}, {
+	"id": "308",
+	"show_id": "308",
+	"leetcode_id": "308",
+	"title": "Range Sum Query 2D - Mutable",
+	"frequency": "263",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "19918",
+	"submit_num": "79399"
+}, {
+	"id": "309",
+	"show_id": "309",
+	"leetcode_id": "309",
+	"title": "Best Time to Buy and Sell Stock with Cooldown",
+	"frequency": "382",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "54944",
+	"submit_num": "131655"
+}, {
+	"id": "310",
+	"show_id": "310",
+	"leetcode_id": "310",
+	"title": "Minimum Height Trees",
+	"frequency": "161",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "40700",
+	"submit_num": "140460"
+}, {
+	"id": "311",
+	"show_id": "311",
+	"leetcode_id": "311",
+	"title": "Sparse Matrix Multiplication",
+	"frequency": "331",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "41689",
+	"submit_num": "79844"
+}, {
+	"id": "312",
+	"show_id": "312",
+	"leetcode_id": "312",
+	"title": "Burst Balloons",
+	"frequency": "452",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "34827",
+	"submit_num": "79965"
+}, {
+	"id": "313",
+	"show_id": "313",
+	"leetcode_id": "313",
+	"title": "Super Ugly Number",
+	"frequency": "276",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "43617",
+	"submit_num": "114168"
+}, {
+	"id": "314",
+	"show_id": "314",
+	"leetcode_id": "314",
+	"title": "Binary Tree Vertical Order Traversal",
+	"frequency": "204",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "38958",
+	"submit_num": "103021"
+}, {
+	"id": "315",
+	"show_id": "315",
+	"leetcode_id": "315",
+	"title": "Count of Smaller Numbers After Self",
+	"frequency": "388",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "42423",
+	"submit_num": "121400"
+}, {
+	"id": "316",
+	"show_id": "316",
+	"leetcode_id": "316",
+	"title": "Remove Duplicate Letters",
+	"frequency": "466",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "37063",
+	"submit_num": "122602"
+}, {
+	"id": "317",
+	"show_id": "317",
+	"leetcode_id": "317",
+	"title": "Shortest Distance from All Buildings",
+	"frequency": "194",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "21494",
+	"submit_num": "61987"
+}, {
+	"id": "318",
+	"show_id": "318",
+	"leetcode_id": "318",
+	"title": "Maximum Product of Word Lengths",
+	"frequency": "362",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "58808",
+	"submit_num": "129775"
+}, {
+	"id": "319",
+	"show_id": "319",
+	"leetcode_id": "319",
+	"title": "Bulb Switcher",
+	"frequency": "533",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "45699",
+	"submit_num": "106671"
+}, {
+	"id": "320",
+	"show_id": "320",
+	"leetcode_id": "320",
+	"title": "Generalized Abbreviation",
+	"frequency": "246",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "27164",
+	"submit_num": "59004"
+}, {
+	"id": "321",
+	"show_id": "321",
+	"leetcode_id": "321",
+	"title": "Create Maximum Number",
+	"frequency": "273",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "21874",
+	"submit_num": "88110"
+}, {
+	"id": "322",
+	"show_id": "322",
+	"leetcode_id": "322",
+	"title": "Coin Change",
+	"frequency": "372",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "82801",
+	"submit_num": "310306"
+}, {
+	"id": "323",
+	"show_id": "323",
+	"leetcode_id": "323",
+	"title": "Number of Connected Components in an Undirected Graph",
+	"frequency": "83",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "33331",
+	"submit_num": "68379"
+}, {
+	"id": "324",
+	"show_id": "324",
+	"leetcode_id": "324",
+	"title": "Wiggle Sort II",
+	"frequency": "356",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "35876",
+	"submit_num": "136198"
+}, {
+	"id": "325",
+	"show_id": "325",
+	"leetcode_id": "325",
+	"title": "Maximum Size Subarray Sum Equals k",
+	"frequency": "281",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "43850",
+	"submit_num": "101364"
+}, {
+	"id": "326",
+	"show_id": "326",
+	"leetcode_id": "326",
+	"title": "Power of Three",
+	"frequency": "520",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "115437",
+	"submit_num": "284521"
+}, {
+	"id": "327",
+	"show_id": "327",
+	"leetcode_id": "327",
+	"title": "Count of Range Sum",
+	"frequency": "336",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "22163",
+	"submit_num": "72707"
+}, {
+	"id": "328",
+	"show_id": "328",
+	"leetcode_id": "328",
+	"title": "Odd Even Linked List",
+	"frequency": "546",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "84875",
+	"submit_num": "191022"
+}, {
+	"id": "329",
+	"show_id": "329",
+	"leetcode_id": "329",
+	"title": "Longest Increasing Path in a Matrix",
+	"frequency": "309",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "47438",
+	"submit_num": "127575"
+}, {
+	"id": "330",
+	"show_id": "330",
+	"leetcode_id": "330",
+	"title": "Patching Array",
+	"frequency": "304",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "25137",
+	"submit_num": "77246"
+}, {
+	"id": "331",
+	"show_id": "331",
+	"leetcode_id": "331",
+	"title": "Verify Preorder Serialization of a Binary Tree",
+	"frequency": "172",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "42653",
+	"submit_num": "115644"
+}, {
+	"id": "332",
+	"show_id": "332",
+	"leetcode_id": "332",
+	"title": "Reconstruct Itinerary",
+	"frequency": "288",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "44048",
+	"submit_num": "148212"
+}, {
+	"id": "333",
+	"show_id": "333",
+	"leetcode_id": "333",
+	"title": "Largest BST Subtree",
+	"frequency": "50",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "19189",
+	"submit_num": "62093"
+}, {
+	"id": "334",
+	"show_id": "334",
+	"leetcode_id": "334",
+	"title": "Increasing Triplet Subsequence",
+	"frequency": "358",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "53913",
+	"submit_num": "134674"
+}, {
+	"id": "335",
+	"show_id": "335",
+	"leetcode_id": "335",
+	"title": "Self Crossing",
+	"frequency": "498",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "15717",
+	"submit_num": "60637"
+}, {
+	"id": "336",
+	"show_id": "336",
+	"leetcode_id": "336",
+	"title": "Palindrome Pairs",
+	"frequency": "466",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "34659",
+	"submit_num": "128473"
+}, {
+	"id": "337",
+	"show_id": "337",
+	"leetcode_id": "337",
+	"title": "House Robber III",
+	"frequency": "336",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "57993",
+	"submit_num": "130520"
+}, {
+	"id": "338",
+	"show_id": "338",
+	"leetcode_id": "338",
+	"title": "Counting Bits",
+	"frequency": "548",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "101353",
+	"submit_num": "163517"
+}, {
+	"id": "339",
+	"show_id": "339",
+	"leetcode_id": "339",
+	"title": "Nested List Weight Sum",
+	"frequency": "338",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "31279",
+	"submit_num": "49226"
+}, {
+	"id": "340",
+	"show_id": "340",
+	"leetcode_id": "340",
+	"title": "Longest Substring with At Most K Distinct Characters",
+	"frequency": "318",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "33713",
+	"submit_num": "85924"
+}, {
+	"id": "341",
+	"show_id": "341",
+	"leetcode_id": "341",
+	"title": "Flatten Nested List Iterator",
+	"frequency": "404",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "55833",
+	"submit_num": "130365"
+}, {
+	"id": "342",
+	"show_id": "342",
+	"leetcode_id": "342",
+	"title": "Power of Four",
+	"frequency": "311",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "79015",
+	"submit_num": "202977"
+}, {
+	"id": "343",
+	"show_id": "343",
+	"leetcode_id": "343",
+	"title": "Integer Break",
+	"frequency": "366",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "52966",
+	"submit_num": "114096"
+}, {
+	"id": "344",
+	"show_id": "344",
+	"leetcode_id": "344",
+	"title": "Reverse String",
+	"frequency": "626",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "211703",
+	"submit_num": "353153"
+}, {
+	"id": "345",
+	"show_id": "345",
+	"leetcode_id": "345",
+	"title": "Reverse Vowels of a String",
+	"frequency": "460",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "98555",
+	"submit_num": "252991"
+}, {
+	"id": "346",
+	"show_id": "346",
+	"leetcode_id": "346",
+	"title": "Moving Average from Data Stream",
+	"frequency": "318",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "33999",
+	"submit_num": "56806"
+}, {
+	"id": "347",
+	"show_id": "347",
+	"leetcode_id": "347",
+	"title": "Top K Frequent Elements",
+	"frequency": "489",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "90043",
+	"submit_num": "182450"
+}, {
+	"id": "348",
+	"show_id": "348",
+	"leetcode_id": "348",
+	"title": "Design Tic-Tac-Toe",
+	"frequency": "265",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "20461",
+	"submit_num": "44457"
+}, {
+	"id": "349",
+	"show_id": "349",
+	"leetcode_id": "349",
+	"title": "Intersection of Two Arrays",
+	"frequency": "479",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "117874",
+	"submit_num": "245952"
+}, {
+	"id": "350",
+	"show_id": "350",
+	"leetcode_id": "350",
+	"title": "Intersection of Two Arrays II",
+	"frequency": "427",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "91217",
+	"submit_num": "203272"
+}, {
+	"id": "351",
+	"show_id": "351",
+	"leetcode_id": "351",
+	"title": "Android Unlock Patterns",
+	"frequency": "179",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "18638",
+	"submit_num": "41689"
+}, {
+	"id": "352",
+	"show_id": "352",
+	"leetcode_id": "352",
+	"title": "Data Stream as Disjoint Intervals",
+	"frequency": "221",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "16053",
+	"submit_num": "39341"
+}, {
+	"id": "353",
+	"show_id": "353",
+	"leetcode_id": "353",
+	"title": "Design Snake Game",
+	"frequency": "52",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "10553",
+	"submit_num": "38970"
+}, {
+	"id": "354",
+	"show_id": "354",
+	"leetcode_id": "354",
+	"title": "Russian Doll Envelopes",
+	"frequency": "286",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "26720",
+	"submit_num": "82001"
+}, {
+	"id": "355",
+	"show_id": "355",
+	"leetcode_id": "355",
+	"title": "Design Twitter",
+	"frequency": "179",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "23094",
+	"submit_num": "89498"
+}, {
+	"id": "356",
+	"show_id": "356",
+	"leetcode_id": "356",
+	"title": "Line Reflection",
+	"frequency": "30",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "13181",
+	"submit_num": "43599"
+}, {
+	"id": "357",
+	"show_id": "357",
+	"leetcode_id": "357",
+	"title": "Count Numbers with Unique Digits",
+	"frequency": "336",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "43562",
+	"submit_num": "94513"
+}, {
+	"id": "358",
+	"show_id": "358",
+	"leetcode_id": "358",
+	"title": "Rearrange String k Distance Apart",
+	"frequency": "95",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "13111",
+	"submit_num": "41308"
+}, {
+	"id": "359",
+	"show_id": "359",
+	"leetcode_id": "359",
+	"title": "Logger Rate Limiter",
+	"frequency": "143",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "22938",
+	"submit_num": "37905"
+}, {
+	"id": "360",
+	"show_id": "360",
+	"leetcode_id": "360",
+	"title": "Sort Transformed Array",
+	"frequency": "134",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "15308",
+	"submit_num": "34189"
+}, {
+	"id": "361",
+	"show_id": "361",
+	"leetcode_id": "361",
+	"title": "Bomb Enemy",
+	"frequency": "174",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "21279",
+	"submit_num": "53223"
+}, {
+	"id": "362",
+	"show_id": "362",
+	"leetcode_id": "362",
+	"title": "Design Hit Counter",
+	"frequency": "256",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "21845",
+	"submit_num": "39788"
+}, {
+	"id": "363",
+	"show_id": "363",
+	"leetcode_id": "363",
+	"title": "Max Sum of Rectangle No Larger Than K",
+	"frequency": "272",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "17751",
+	"submit_num": "52827"
+}, {
+	"id": "364",
+	"show_id": "364",
+	"leetcode_id": "364",
+	"title": "Nested List Weight Sum II",
+	"frequency": "208",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "19911",
+	"submit_num": "36943"
+}, {
+	"id": "365",
+	"show_id": "365",
+	"leetcode_id": "365",
+	"title": "Water and Jug Problem",
+	"frequency": "148",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "18564",
+	"submit_num": "66433"
+}, {
+	"id": "366",
+	"show_id": "366",
+	"leetcode_id": "366",
+	"title": "Find Leaves of Binary Tree",
+	"frequency": "154",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "23527",
+	"submit_num": "38660"
+}, {
+	"id": "367",
+	"show_id": "367",
+	"leetcode_id": "367",
+	"title": "Valid Perfect Square",
+	"frequency": "227",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "63741",
+	"submit_num": "165203"
+}, {
+	"id": "368",
+	"show_id": "368",
+	"leetcode_id": "368",
+	"title": "Largest Divisible Subset",
+	"frequency": "272",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "31580",
+	"submit_num": "93391"
+}, {
+	"id": "369",
+	"show_id": "369",
+	"leetcode_id": "369",
+	"title": "Plus One Linked List",
+	"frequency": "63",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "20171",
+	"submit_num": "36629"
+}, {
+	"id": "370",
+	"show_id": "370",
+	"leetcode_id": "370",
+	"title": "Range Addition",
+	"frequency": "80",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "15646",
+	"submit_num": "27447"
+}, {
+	"id": "371",
+	"show_id": "371",
+	"leetcode_id": "371",
+	"title": "Sum of Two Integers",
+	"frequency": "611",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "88606",
+	"submit_num": "173444"
+}, {
+	"id": "372",
+	"show_id": "372",
+	"leetcode_id": "372",
+	"title": "Super Pow",
+	"frequency": "316",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "19540",
+	"submit_num": "56475"
+}, {
+	"id": "373",
+	"show_id": "373",
+	"leetcode_id": "373",
+	"title": "Find K Pairs with Smallest Sums",
+	"frequency": "178",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "36695",
+	"submit_num": "117717"
+}, {
+	"id": "374",
+	"show_id": "374",
+	"leetcode_id": "374",
+	"title": "Guess Number Higher or Lower",
+	"frequency": "410",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "64907",
+	"submit_num": "178818"
+}, {
+	"id": "375",
+	"show_id": "375",
+	"leetcode_id": "375",
+	"title": "Guess Number Higher or Lower II",
+	"frequency": "303",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "27970",
+	"submit_num": "77571"
+}, {
+	"id": "376",
+	"show_id": "376",
+	"leetcode_id": "376",
+	"title": "Wiggle Subsequence",
+	"frequency": "237",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "30417",
+	"submit_num": "84254"
+}, {
+	"id": "377",
+	"show_id": "377",
+	"leetcode_id": "377",
+	"title": "Combination Sum IV",
+	"frequency": "267",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "53007",
+	"submit_num": "124378"
+}, {
+	"id": "378",
+	"show_id": "378",
+	"leetcode_id": "378",
+	"title": "Kth Smallest Element in a Sorted Matrix",
+	"frequency": "331",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "52760",
+	"submit_num": "116165"
+}, {
+	"id": "379",
+	"show_id": "379",
+	"leetcode_id": "379",
+	"title": "Design Phone Directory",
+	"frequency": "88",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "13460",
+	"submit_num": "38315"
+}, {
+	"id": "380",
+	"show_id": "380",
+	"leetcode_id": "380",
+	"title": "Insert Delete GetRandom O(1)",
+	"frequency": "323",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "51783",
+	"submit_num": "130114"
+}, {
+	"id": "381",
+	"show_id": "381",
+	"leetcode_id": "381",
+	"title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+	"frequency": "159",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "22089",
+	"submit_num": "75028"
+}, {
+	"id": "382",
+	"show_id": "382",
+	"leetcode_id": "382",
+	"title": "Linked List Random Node",
+	"frequency": "264",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "35082",
+	"submit_num": "73980"
+}, {
+	"id": "383",
+	"show_id": "383",
+	"leetcode_id": "383",
+	"title": "Ransom Note",
+	"frequency": "478",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "72005",
+	"submit_num": "151099"
+}, {
+	"id": "384",
+	"show_id": "384",
+	"leetcode_id": "384",
+	"title": "Shuffle an Array",
+	"frequency": "522",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "36669",
+	"submit_num": "77508"
+}, {
+	"id": "385",
+	"show_id": "385",
+	"leetcode_id": "385",
+	"title": "Mini Parser",
+	"frequency": "214",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "20339",
+	"submit_num": "65874"
+}, {
+	"id": "386",
+	"show_id": "386",
+	"leetcode_id": "386",
+	"title": "Lexicographical Numbers",
+	"frequency": "438",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "26134",
+	"submit_num": "62019"
+}, {
+	"id": "387",
+	"show_id": "387",
+	"leetcode_id": "387",
+	"title": "First Unique Character in a String",
+	"frequency": "482",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "98218",
+	"submit_num": "207701"
+}, {
+	"id": "388",
+	"show_id": "388",
+	"leetcode_id": "388",
+	"title": "Longest Absolute File Path",
+	"frequency": "574",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "41712",
+	"submit_num": "111951"
+}, {
+	"id": "389",
+	"show_id": "389",
+	"leetcode_id": "389",
+	"title": "Find the Difference",
+	"frequency": "370",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "93969",
+	"submit_num": "183725"
+}, {
+	"id": "390",
+	"show_id": "390",
+	"leetcode_id": "390",
+	"title": "Elimination Game",
+	"frequency": "415",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "15170",
+	"submit_num": "35708"
+}, {
+	"id": "391",
+	"show_id": "391",
+	"leetcode_id": "391",
+	"title": "Perfect Rectangle",
+	"frequency": "257",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "12935",
+	"submit_num": "47407"
+}, {
+	"id": "392",
+	"show_id": "392",
+	"leetcode_id": "392",
+	"title": "Is Subsequence",
+	"frequency": "232",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "46292",
+	"submit_num": "103571"
+}, {
+	"id": "393",
+	"show_id": "393",
+	"leetcode_id": "393",
+	"title": "UTF-8 Validation",
+	"frequency": "217",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "19997",
+	"submit_num": "57611"
+}, {
+	"id": "394",
+	"show_id": "394",
+	"leetcode_id": "394",
+	"title": "Decode String",
+	"frequency": "330",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "46402",
+	"submit_num": "110436"
+}, {
+	"id": "395",
+	"show_id": "395",
+	"leetcode_id": "395",
+	"title": "Longest Substring with At Least K Repeating Characters",
+	"frequency": "383",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "22295",
+	"submit_num": "61992"
+}, {
+	"id": "396",
+	"show_id": "396",
+	"leetcode_id": "396",
+	"title": "Rotate Function",
+	"frequency": "276",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "25348",
+	"submit_num": "75301"
+}, {
+	"id": "397",
+	"show_id": "397",
+	"leetcode_id": "397",
+	"title": "Integer Replacement",
+	"frequency": "138",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "26675",
+	"submit_num": "87834"
+}, {
+	"id": "398",
+	"show_id": "398",
+	"leetcode_id": "398",
+	"title": "Random Pick Index",
+	"frequency": "149",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "31128",
+	"submit_num": "70207"
+}, {
+	"id": "399",
+	"show_id": "399",
+	"leetcode_id": "399",
+	"title": "Evaluate Division",
+	"frequency": "271",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "24635",
+	"submit_num": "58711"
+}, {
+	"id": "400",
+	"show_id": "400",
+	"leetcode_id": "400",
+	"title": "Nth Digit",
+	"frequency": "242",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "31235",
+	"submit_num": "103535"
+}, {
+	"id": "401",
+	"show_id": "401",
+	"leetcode_id": "401",
+	"title": "Binary Watch",
+	"frequency": "322",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "42663",
+	"submit_num": "95108"
+}, {
+	"id": "402",
+	"show_id": "402",
+	"leetcode_id": "402",
+	"title": "Remove K Digits",
+	"frequency": "116",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "27722",
+	"submit_num": "106313"
+}, {
+	"id": "403",
+	"show_id": "403",
+	"leetcode_id": "403",
+	"title": "Frog Jump",
+	"frequency": "249",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "22712",
+	"submit_num": "69692"
+}, {
+	"id": "404",
+	"show_id": "404",
+	"leetcode_id": "404",
+	"title": "Sum of Left Leaves",
+	"frequency": "250",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "77112",
+	"submit_num": "162631"
+}, {
+	"id": "405",
+	"show_id": "405",
+	"leetcode_id": "405",
+	"title": "Convert a Number to Hexadecimal",
+	"frequency": "154",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "31388",
+	"submit_num": "76439"
+}, {
+	"id": "406",
+	"show_id": "406",
+	"leetcode_id": "406",
+	"title": "Queue Reconstruction by Height",
+	"frequency": "464",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "38002",
+	"submit_num": "67088"
+}, {
+	"id": "407",
+	"show_id": "407",
+	"leetcode_id": "407",
+	"title": "Trapping Rain Water II",
+	"frequency": "203",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "14836",
+	"submit_num": "39182"
+}, {
+	"id": "408",
+	"show_id": "408",
+	"leetcode_id": "408",
+	"title": "Valid Word Abbreviation",
+	"frequency": "16",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "14264",
+	"submit_num": "50395"
+}, {
+	"id": "409",
+	"show_id": "409",
+	"leetcode_id": "409",
+	"title": "Longest Palindrome",
+	"frequency": "203",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "57432",
+	"submit_num": "125499"
+}, {
+	"id": "410",
+	"show_id": "410",
+	"leetcode_id": "410",
+	"title": "Split Array Largest Sum",
+	"frequency": "240",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "20135",
+	"submit_num": "51479"
+}, {
+	"id": "411",
+	"show_id": "411",
+	"leetcode_id": "411",
+	"title": "Minimum Unique Word Abbreviation",
+	"frequency": "100",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "6958",
+	"submit_num": "20601"
+}, {
+	"id": "412",
+	"show_id": "412",
+	"leetcode_id": "412",
+	"title": "Fizz Buzz",
+	"frequency": "578",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "101202",
+	"submit_num": "173636"
+}, {
+	"id": "413",
+	"show_id": "413",
+	"leetcode_id": "413",
+	"title": "Arithmetic Slices",
+	"frequency": "305",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "33593",
+	"submit_num": "61450"
+}, {
+	"id": "414",
+	"show_id": "414",
+	"leetcode_id": "414",
+	"title": "Third Maximum Number",
+	"frequency": "229",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "52825",
+	"submit_num": "188642"
+}, {
+	"id": "415",
+	"show_id": "415",
+	"leetcode_id": "415",
+	"title": "Add Strings",
+	"frequency": "314",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "50392",
+	"submit_num": "120740"
+}, {
+	"id": "416",
+	"show_id": "416",
+	"leetcode_id": "416",
+	"title": "Partition Equal Subset Sum",
+	"frequency": "212",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "36812",
+	"submit_num": "93920"
+}, {
+	"id": "417",
+	"show_id": "417",
+	"leetcode_id": "417",
+	"title": "Pacific Atlantic Water Flow",
+	"frequency": "226",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "22169",
+	"submit_num": "64109"
+}, {
+	"id": "418",
+	"show_id": "418",
+	"leetcode_id": "418",
+	"title": "Sentence Screen Fitting",
+	"frequency": "168",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "17017",
+	"submit_num": "60545"
+}, {
+	"id": "419",
+	"show_id": "419",
+	"leetcode_id": "419",
+	"title": "Battleships in a Board",
+	"frequency": "523",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "38202",
+	"submit_num": "60940"
+}, {
+	"id": "420",
+	"show_id": "420",
+	"leetcode_id": "420",
+	"title": "Strong Password Checker",
+	"frequency": "493",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4112",
+	"submit_num": "20248"
+}, {
+	"id": "421",
+	"show_id": "421",
+	"leetcode_id": "421",
+	"title": "Maximum XOR of Two Numbers in an Array",
+	"frequency": "437",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "19848",
+	"submit_num": "41730"
+}, {
+	"id": "422",
+	"show_id": "422",
+	"leetcode_id": "422",
+	"title": "Valid Word Square",
+	"frequency": "26",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "14376",
+	"submit_num": "39276"
+}, {
+	"id": "423",
+	"show_id": "423",
+	"leetcode_id": "423",
+	"title": "Reconstruct Original Digits from English",
+	"frequency": "177",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "13639",
+	"submit_num": "30609"
+}, {
+	"id": "424",
+	"show_id": "424",
+	"leetcode_id": "424",
+	"title": "Longest Repeating Character Replacement",
+	"frequency": "177",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "16795",
+	"submit_num": "39187"
+}, {
+	"id": "425",
+	"show_id": "425",
+	"leetcode_id": "425",
+	"title": "Word Squares",
+	"frequency": "126",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "12812",
+	"submit_num": "29288"
+}, {
+	"id": "426",
+	"show_id": "432",
+	"leetcode_id": "432",
+	"title": "All O`one Data Structure",
+	"frequency": "245",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "8564",
+	"submit_num": "30594"
+}, {
+	"id": "427",
+	"show_id": "433",
+	"leetcode_id": "433",
+	"title": "Minimum Genetic Mutation",
+	"frequency": "491",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "10988",
+	"submit_num": "31796"
+}, {
+	"id": "428",
+	"show_id": "434",
+	"leetcode_id": "434",
+	"title": "Number of Segments in a String",
+	"frequency": "154",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "33914",
+	"submit_num": "92400"
+}, {
+	"id": "429",
+	"show_id": "435",
+	"leetcode_id": "435",
+	"title": "Non-overlapping Intervals",
+	"frequency": "150",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "19059",
+	"submit_num": "45880"
+}, {
+	"id": "430",
+	"show_id": "436",
+	"leetcode_id": "436",
+	"title": "Find Right Interval",
+	"frequency": "77",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "16532",
+	"submit_num": "39839"
+}, {
+	"id": "431",
+	"show_id": "437",
+	"leetcode_id": "437",
+	"title": "Path Sum III",
+	"frequency": "307",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "48085",
+	"submit_num": "120002"
+}, {
+	"id": "432",
+	"show_id": "438",
+	"leetcode_id": "438",
+	"title": "Find All Anagrams in a String",
+	"frequency": "270",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "54089",
+	"submit_num": "159237"
+}, {
+	"id": "433",
+	"show_id": "439",
+	"leetcode_id": "439",
+	"title": "Ternary Expression Parser",
+	"frequency": "117",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "9301",
+	"submit_num": "18109"
+}, {
+	"id": "434",
+	"show_id": "440",
+	"leetcode_id": "440",
+	"title": "K-th Smallest in Lexicographical Order",
+	"frequency": "241",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "5497",
+	"submit_num": "21497"
+}, {
+	"id": "435",
+	"show_id": "441",
+	"leetcode_id": "441",
+	"title": "Arranging Coins",
+	"frequency": "180",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "40512",
+	"submit_num": "111404"
+}, {
+	"id": "436",
+	"show_id": "442",
+	"leetcode_id": "442",
+	"title": "Find All Duplicates in an Array",
+	"frequency": "424",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "49298",
+	"submit_num": "87059"
+}, {
+	"id": "437",
+	"show_id": "443",
+	"leetcode_id": "443",
+	"title": "String Compression",
+	"frequency": "158",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "10293",
+	"submit_num": "27881"
+}, {
+	"id": "438",
+	"show_id": "444",
+	"leetcode_id": "444",
+	"title": "Sequence Reconstruction",
+	"frequency": "21",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "8822",
+	"submit_num": "44874"
+}, {
+	"id": "439",
+	"show_id": "445",
+	"leetcode_id": "445",
+	"title": "Add Two Numbers II",
+	"frequency": "408",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "41550",
+	"submit_num": "90163"
+}, {
+	"id": "440",
+	"show_id": "446",
+	"leetcode_id": "446",
+	"title": "Arithmetic Slices II - Subsequence",
+	"frequency": "118",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "8096",
+	"submit_num": "29107"
+}, {
+	"id": "441",
+	"show_id": "447",
+	"leetcode_id": "447",
+	"title": "Number of Boomerangs",
+	"frequency": "271",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "32298",
+	"submit_num": "69909"
+}, {
+	"id": "442",
+	"show_id": "448",
+	"leetcode_id": "448",
+	"title": "Find All Numbers Disappeared in an Array",
+	"frequency": "475",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "75186",
+	"submit_num": "146517"
+}, {
+	"id": "443",
+	"show_id": "449",
+	"leetcode_id": "449",
+	"title": "Serialize and Deserialize BST",
+	"frequency": "268",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "22914",
+	"submit_num": "53664"
+}, {
+	"id": "444",
+	"show_id": "450",
+	"leetcode_id": "450",
+	"title": "Delete Node in a BST",
+	"frequency": "233",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "28192",
+	"submit_num": "75216"
+}, {
+	"id": "445",
+	"show_id": "451",
+	"leetcode_id": "451",
+	"title": "Sort Characters By Frequency",
+	"frequency": "297",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "45597",
+	"submit_num": "88620"
+}, {
+	"id": "446",
+	"show_id": "452",
+	"leetcode_id": "452",
+	"title": "Minimum Number of Arrows to Burst Balloons",
+	"frequency": "182",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "19103",
+	"submit_num": "42894"
+}, {
+	"id": "447",
+	"show_id": "453",
+	"leetcode_id": "453",
+	"title": "Minimum Moves to Equal Array Elements",
+	"frequency": "411",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "37543",
+	"submit_num": "78255"
+}, {
+	"id": "448",
+	"show_id": "454",
+	"leetcode_id": "454",
+	"title": "4Sum II",
+	"frequency": "259",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "26538",
+	"submit_num": "55651"
+}, {
+	"id": "449",
+	"show_id": "455",
+	"leetcode_id": "455",
+	"title": "Assign Cookies",
+	"frequency": "253",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "37239",
+	"submit_num": "78712"
+}, {
+	"id": "450",
+	"show_id": "456",
+	"leetcode_id": "456",
+	"title": "132 Pattern",
+	"frequency": "197",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "15868",
+	"submit_num": "56183"
+}, {
+	"id": "451",
+	"show_id": "457",
+	"leetcode_id": "457",
+	"title": "Circular Array Loop",
+	"frequency": "470",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4455",
+	"submit_num": "20559"
+}, {
+	"id": "452",
+	"show_id": "458",
+	"leetcode_id": "458",
+	"title": "Poor Pigs",
+	"frequency": "617",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "7603",
+	"submit_num": "18287"
+}, {
+	"id": "453",
+	"show_id": "459",
+	"leetcode_id": "459",
+	"title": "Repeated Substring Pattern",
+	"frequency": "216",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "46440",
+	"submit_num": "121663"
+}, {
+	"id": "454",
+	"show_id": "460",
+	"leetcode_id": "460",
+	"title": "LFU Cache",
+	"frequency": "301",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "17952",
+	"submit_num": "72099"
+}, {
+	"id": "455",
+	"show_id": "461",
+	"leetcode_id": "461",
+	"title": "Hamming Distance",
+	"frequency": "622",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "129502",
+	"submit_num": "185812"
+}, {
+	"id": "456",
+	"show_id": "462",
+	"leetcode_id": "462",
+	"title": "Minimum Moves to Equal Array Elements II",
+	"frequency": "175",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "22100",
+	"submit_num": "42572"
+}, {
+	"id": "457",
+	"show_id": "463",
+	"leetcode_id": "463",
+	"title": "Island Perimeter",
+	"frequency": "536",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "69118",
+	"submit_num": "119826"
+}, {
+	"id": "458",
+	"show_id": "464",
+	"leetcode_id": "464",
+	"title": "Can I Win",
+	"frequency": "161",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "18063",
+	"submit_num": "71087"
+}, {
+	"id": "459",
+	"show_id": "465",
+	"leetcode_id": "465",
+	"title": "Optimal Account Balancing",
+	"frequency": "85",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "6844",
+	"submit_num": "17671"
+}, {
+	"id": "460",
+	"show_id": "466",
+	"leetcode_id": "466",
+	"title": "Count The Repetitions",
+	"frequency": "211",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "5175",
+	"submit_num": "18842"
+}, {
+	"id": "461",
+	"show_id": "467",
+	"leetcode_id": "467",
+	"title": "Unique Substrings in Wraparound String",
+	"frequency": "132",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "11232",
+	"submit_num": "33824"
+}, {
+	"id": "462",
+	"show_id": "468",
+	"leetcode_id": "468",
+	"title": "Validate IP Address",
+	"frequency": "129",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "11505",
+	"submit_num": "55644"
+}, {
+	"id": "463",
+	"show_id": "469",
+	"leetcode_id": "469",
+	"title": "Convex Polygon",
+	"frequency": "40",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "4818",
+	"submit_num": "14163"
+}, {
+	"id": "464",
+	"show_id": "471",
+	"leetcode_id": "471",
+	"title": "Encode String with Shortest Length",
+	"frequency": "52",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "7255",
+	"submit_num": "16831"
+}, {
+	"id": "465",
+	"show_id": "472",
+	"leetcode_id": "472",
+	"title": "Concatenated Words",
+	"frequency": "107",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "10326",
+	"submit_num": "33523"
+}, {
+	"id": "466",
+	"show_id": "473",
+	"leetcode_id": "473",
+	"title": "Matchsticks to Square",
+	"frequency": "59",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "13979",
+	"submit_num": "39373"
+}, {
+	"id": "467",
+	"show_id": "474",
+	"leetcode_id": "474",
+	"title": "Ones and Zeroes",
+	"frequency": "222",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "18029",
+	"submit_num": "46056"
+}, {
+	"id": "468",
+	"show_id": "475",
+	"leetcode_id": "475",
+	"title": "Heaters",
+	"frequency": "214",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "25592",
+	"submit_num": "86403"
+}, {
+	"id": "469",
+	"show_id": "476",
+	"leetcode_id": "476",
+	"title": "Number Complement",
+	"frequency": "451",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "67972",
+	"submit_num": "111289"
+}, {
+	"id": "470",
+	"show_id": "477",
+	"leetcode_id": "477",
+	"title": "Total Hamming Distance",
+	"frequency": "177",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "28224",
+	"submit_num": "59072"
+}, {
+	"id": "471",
+	"show_id": "479",
+	"leetcode_id": "479",
+	"title": "Largest Palindrome Product",
+	"frequency": "528",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "8214",
+	"submit_num": "32743"
+}, {
+	"id": "472",
+	"show_id": "480",
+	"leetcode_id": "480",
+	"title": "Sliding Window Median",
+	"frequency": "88",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "11503",
+	"submit_num": "36990"
+}, {
+	"id": "473",
+	"show_id": "481",
+	"leetcode_id": "481",
+	"title": "Magical String",
+	"frequency": "290",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "12316",
+	"submit_num": "26962"
+}, {
+	"id": "474",
+	"show_id": "482",
+	"leetcode_id": "482",
+	"title": "License Key Formatting",
+	"frequency": "260",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "26602",
+	"submit_num": "65686"
+}, {
+	"id": "475",
+	"show_id": "483",
+	"leetcode_id": "483",
+	"title": "Smallest Good Base",
+	"frequency": "90",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "6369",
+	"submit_num": "18872"
+}, {
+	"id": "476",
+	"show_id": "484",
+	"leetcode_id": "484",
+	"title": "Find Permutation",
+	"frequency": "49",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "7579",
+	"submit_num": "13627"
+}, {
+	"id": "477",
+	"show_id": "485",
+	"leetcode_id": "485",
+	"title": "Max Consecutive Ones",
+	"frequency": "276",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "70031",
+	"submit_num": "129860"
+}, {
+	"id": "478",
+	"show_id": "486",
+	"leetcode_id": "486",
+	"title": "Predict the Winner",
+	"frequency": "220",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "21918",
+	"submit_num": "48543"
+}, {
+	"id": "479",
+	"show_id": "487",
+	"leetcode_id": "487",
+	"title": "Max Consecutive Ones II",
+	"frequency": "32",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "10661",
+	"submit_num": "23078"
+}, {
+	"id": "480",
+	"show_id": "488",
+	"leetcode_id": "488",
+	"title": "Zuma Game",
+	"frequency": "65",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "5353",
+	"submit_num": "14400"
+}, {
+	"id": "481",
+	"show_id": "490",
+	"leetcode_id": "490",
+	"title": "The Maze",
+	"frequency": "63",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "11112",
+	"submit_num": "25511"
+}, {
+	"id": "482",
+	"show_id": "491",
+	"leetcode_id": "491",
+	"title": "Increasing Subsequences",
+	"frequency": "92",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "15796",
+	"submit_num": "40484"
+}, {
+	"id": "483",
+	"show_id": "492",
+	"leetcode_id": "492",
+	"title": "Construct the Rectangle",
+	"frequency": "228",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "30584",
+	"submit_num": "63426"
+}, {
+	"id": "484",
+	"show_id": "493",
+	"leetcode_id": "493",
+	"title": "Reverse Pairs",
+	"frequency": "129",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "9734",
+	"submit_num": "46181"
+}, {
+	"id": "485",
+	"show_id": "494",
+	"leetcode_id": "494",
+	"title": "Target Sum",
+	"frequency": "184",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "43070",
+	"submit_num": "98276"
+}, {
+	"id": "486",
+	"show_id": "495",
+	"leetcode_id": "495",
+	"title": "Teemo Attacking",
+	"frequency": "176",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "21110",
+	"submit_num": "40919"
+}, {
+	"id": "487",
+	"show_id": "496",
+	"leetcode_id": "496",
+	"title": "Next Greater Element I",
+	"frequency": "313",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "47835",
+	"submit_num": "84411"
+}, {
+	"id": "488",
+	"show_id": "498",
+	"leetcode_id": "498",
+	"title": "Diagonal Traverse",
+	"frequency": "292",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "15475",
+	"submit_num": "33447"
+}, {
+	"id": "489",
+	"show_id": "499",
+	"leetcode_id": "499",
+	"title": "The Maze III",
+	"frequency": "28",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "4515",
+	"submit_num": "13483"
+}, {
+	"id": "490",
+	"show_id": "500",
+	"leetcode_id": "500",
+	"title": "Keyboard Row",
+	"frequency": "462",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "53682",
+	"submit_num": "89722"
+}, {
+	"id": "491",
+	"show_id": "501",
+	"leetcode_id": "501",
+	"title": "Find Mode in Binary Search Tree",
+	"frequency": "209",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "29033",
+	"submit_num": "76859"
+}, {
+	"id": "492",
+	"show_id": "502",
+	"leetcode_id": "502",
+	"title": "IPO",
+	"frequency": "97",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "6356",
+	"submit_num": "17318"
+}, {
+	"id": "493",
+	"show_id": "503",
+	"leetcode_id": "503",
+	"title": "Next Greater Element II",
+	"frequency": "202",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "22824",
+	"submit_num": "47662"
+}, {
+	"id": "494",
+	"show_id": "504",
+	"leetcode_id": "504",
+	"title": "Base 7",
+	"frequency": "161",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "24606",
+	"submit_num": "55821"
+}, {
+	"id": "495",
+	"show_id": "505",
+	"leetcode_id": "505",
+	"title": "The Maze II",
+	"frequency": "63",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "9937",
+	"submit_num": "25425"
+}, {
+	"id": "496",
+	"show_id": "506",
+	"leetcode_id": "506",
+	"title": "Relative Ranks",
+	"frequency": "285",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "26411",
+	"submit_num": "56422"
+}, {
+	"id": "497",
+	"show_id": "507",
+	"leetcode_id": "507",
+	"title": "Perfect Number",
+	"frequency": "206",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "19652",
+	"submit_num": "59662"
+}, {
+	"id": "498",
+	"show_id": "508",
+	"leetcode_id": "508",
+	"title": "Most Frequent Subtree Sum",
+	"frequency": "157",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "26148",
+	"submit_num": "49967"
+}, {
+	"id": "499",
+	"show_id": "513",
+	"leetcode_id": "513",
+	"title": "Find Bottom Left Tree Value",
+	"frequency": "191",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "36762",
+	"submit_num": "65347"
+}, {
+	"id": "500",
+	"show_id": "514",
+	"leetcode_id": "514",
+	"title": "Freedom Trail",
+	"frequency": "66",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "7351",
+	"submit_num": "18687"
+}, {
+	"id": "501",
+	"show_id": "515",
+	"leetcode_id": "515",
+	"title": "Find Largest Value in Each Tree Row",
+	"frequency": "167",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "32612",
+	"submit_num": "58923"
+}, {
+	"id": "502",
+	"show_id": "516",
+	"leetcode_id": "516",
+	"title": "Longest Palindromic Subsequence",
+	"frequency": "301",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "25410",
+	"submit_num": "59386"
+}, {
+	"id": "503",
+	"show_id": "517",
+	"leetcode_id": "517",
+	"title": "Super Washing Machines",
+	"frequency": "153",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "7326",
+	"submit_num": "20102"
+}, {
+	"id": "504",
+	"show_id": "518",
+	"leetcode_id": "518",
+	"title": "Coin Change 2",
+	"frequency": "452",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "10358",
+	"submit_num": "30269"
+}, {
+	"id": "505",
+	"show_id": "520",
+	"leetcode_id": "520",
+	"title": "Detect Capital",
+	"frequency": "188",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "48182",
+	"submit_num": "92615"
+}, {
+	"id": "506",
+	"show_id": "521",
+	"leetcode_id": "521",
+	"title": "Longest Uncommon Subsequence I ",
+	"frequency": "249",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "25767",
+	"submit_num": "46324"
+}, {
+	"id": "507",
+	"show_id": "522",
+	"leetcode_id": "522",
+	"title": "Longest Uncommon Subsequence II",
+	"frequency": "101",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "9598",
+	"submit_num": "29941"
+}, {
+	"id": "508",
+	"show_id": "523",
+	"leetcode_id": "523",
+	"title": "Continuous Subarray Sum",
+	"frequency": "112",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "28484",
+	"submit_num": "122021"
+}, {
+	"id": "509",
+	"show_id": "524",
+	"leetcode_id": "524",
+	"title": "Longest Word in Dictionary through Deleting",
+	"frequency": "147",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "18294",
+	"submit_num": "42110"
+}, {
+	"id": "510",
+	"show_id": "525",
+	"leetcode_id": "525",
+	"title": "Contiguous Array",
+	"frequency": "143",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "20852",
+	"submit_num": "50453"
+}, {
+	"id": "511",
+	"show_id": "526",
+	"leetcode_id": "526",
+	"title": "Beautiful Arrangement",
+	"frequency": "254",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "19559",
+	"submit_num": "36380"
+}, {
+	"id": "512",
+	"show_id": "527",
+	"leetcode_id": "527",
+	"title": "Word Abbreviation",
+	"frequency": "1",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "4468",
+	"submit_num": "10132"
+}, {
+	"id": "513",
+	"show_id": "529",
+	"leetcode_id": "529",
+	"title": "Minesweeper",
+	"frequency": "213",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "14663",
+	"submit_num": "29525"
+}, {
+	"id": "514",
+	"show_id": "530",
+	"leetcode_id": "530",
+	"title": "Minimum Absolute Difference in BST",
+	"frequency": "224",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "30868",
+	"submit_num": "65419"
+}, {
+	"id": "515",
+	"show_id": "531",
+	"leetcode_id": "531",
+	"title": "Lonely Pixel I",
+	"frequency": "6",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "9156",
+	"submit_num": "16348"
+}, {
+	"id": "516",
+	"show_id": "532",
+	"leetcode_id": "532",
+	"title": "K-diff Pairs in an Array",
+	"frequency": "155",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "31714",
+	"submit_num": "112448"
+}, {
+	"id": "517",
+	"show_id": "533",
+	"leetcode_id": "533",
+	"title": "Lonely Pixel II",
+	"frequency": "30",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "5118",
+	"submit_num": "11347"
+}, {
+	"id": "518",
+	"show_id": "534",
+	"leetcode_id": "534",
+	"title": "Design TinyURL",
+	"frequency": "615",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "0",
+	"submit_num": "134"
+}, {
+	"id": "519",
+	"show_id": "535",
+	"leetcode_id": "535",
+	"title": "Encode and Decode TinyURL",
+	"frequency": "602",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "29234",
+	"submit_num": "39549"
+}, {
+	"id": "520",
+	"show_id": "536",
+	"leetcode_id": "536",
+	"title": "Construct Binary Tree from String",
+	"frequency": "38",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "9415",
+	"submit_num": "21918"
+}, {
+	"id": "521",
+	"show_id": "537",
+	"leetcode_id": "537",
+	"title": "Complex Number Multiplication",
+	"frequency": "205",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "20688",
+	"submit_num": "32409"
+}, {
+	"id": "522",
+	"show_id": "538",
+	"leetcode_id": "538",
+	"title": "Convert BST to Greater Tree",
+	"frequency": "279",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "33109",
+	"submit_num": "67474"
+}, {
+	"id": "523",
+	"show_id": "539",
+	"leetcode_id": "539",
+	"title": "Minimum Time Difference",
+	"frequency": "156",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "14373",
+	"submit_num": "31209"
+}, {
+	"id": "524",
+	"show_id": "540",
+	"leetcode_id": "540",
+	"title": "Single Element in a Sorted Array",
+	"frequency": "507",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "25166",
+	"submit_num": "44877"
+}, {
+	"id": "525",
+	"show_id": "541",
+	"leetcode_id": "541",
+	"title": "Reverse String II",
+	"frequency": "246",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "32127",
+	"submit_num": "73352"
+}, {
+	"id": "526",
+	"show_id": "542",
+	"leetcode_id": "542",
+	"title": "01 Matrix",
+	"frequency": "255",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "16811",
+	"submit_num": "51085"
+}, {
+	"id": "527",
+	"show_id": "543",
+	"leetcode_id": "543",
+	"title": "Diameter of Binary Tree",
+	"frequency": "326",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "46488",
+	"submit_num": "102999"
+}, {
+	"id": "528",
+	"show_id": "544",
+	"leetcode_id": "544",
+	"title": "Output Contest Matches",
+	"frequency": "109",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "6383",
+	"submit_num": "8880"
+}, {
+	"id": "529",
+	"show_id": "545",
+	"leetcode_id": "545",
+	"title": "Boundary of Binary Tree",
+	"frequency": "98",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "7997",
+	"submit_num": "24785"
+}, {
+	"id": "530",
+	"show_id": "546",
+	"leetcode_id": "546",
+	"title": "Remove Boxes",
+	"frequency": "234",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4945",
+	"submit_num": "14036"
+}, {
+	"id": "531",
+	"show_id": "547",
+	"leetcode_id": "547",
+	"title": "Friend Circles",
+	"frequency": "304",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "29054",
+	"submit_num": "59051"
+}, {
+	"id": "532",
+	"show_id": "548",
+	"leetcode_id": "548",
+	"title": "Split Array with Equal Sum",
+	"frequency": "46",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "3569",
+	"submit_num": "9488"
+}, {
+	"id": "533",
+	"show_id": "549",
+	"leetcode_id": "549",
+	"title": "Binary Tree Longest Consecutive Sequence II",
+	"frequency": "34",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "6539",
+	"submit_num": "15207"
+}, {
+	"id": "534",
+	"show_id": "551",
+	"leetcode_id": "551",
+	"title": "Student Attendance Record I",
+	"frequency": "140",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "27046",
+	"submit_num": "61002"
+}, {
+	"id": "535",
+	"show_id": "552",
+	"leetcode_id": "552",
+	"title": "Student Attendance Record II",
+	"frequency": "55",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "6352",
+	"submit_num": "20186"
+}, {
+	"id": "536",
+	"show_id": "553",
+	"leetcode_id": "553",
+	"title": "Optimal Division",
+	"frequency": "180",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "12015",
+	"submit_num": "21779"
+}, {
+	"id": "537",
+	"show_id": "554",
+	"leetcode_id": "554",
+	"title": "Brick Wall",
+	"frequency": "117",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "18585",
+	"submit_num": "40340"
+}, {
+	"id": "538",
+	"show_id": "555",
+	"leetcode_id": "555",
+	"title": "Split Concatenated Strings",
+	"frequency": "16",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2393",
+	"submit_num": "6338"
+}, {
+	"id": "539",
+	"show_id": "556",
+	"leetcode_id": "556",
+	"title": "Next Greater Element III",
+	"frequency": "142",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "11316",
+	"submit_num": "38927"
+}, {
+	"id": "540",
+	"show_id": "557",
+	"leetcode_id": "557",
+	"title": "Reverse Words in a String III",
+	"frequency": "465",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "57214",
+	"submit_num": "95370"
+}, {
+	"id": "541",
+	"show_id": "560",
+	"leetcode_id": "560",
+	"title": "Subarray Sum Equals K",
+	"frequency": "305",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "27211",
+	"submit_num": "67242"
+}, {
+	"id": "542",
+	"show_id": "561",
+	"leetcode_id": "561",
+	"title": "Array Partition I",
+	"frequency": "599",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "62994",
+	"submit_num": "94602"
+}, {
+	"id": "543",
+	"show_id": "562",
+	"leetcode_id": "562",
+	"title": "Longest Line of Consecutive One in Matrix",
+	"frequency": "70",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "6008",
+	"submit_num": "14544"
+}, {
+	"id": "544",
+	"show_id": "563",
+	"leetcode_id": "563",
+	"title": "Binary Tree Tilt",
+	"frequency": "195",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "24603",
+	"submit_num": "52092"
+}, {
+	"id": "545",
+	"show_id": "564",
+	"leetcode_id": "564",
+	"title": "Find the Closest Palindrome",
+	"frequency": "249",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4869",
+	"submit_num": "27731"
+}, {
+	"id": "546",
+	"show_id": "565",
+	"leetcode_id": "565",
+	"title": "Array Nesting",
+	"frequency": "187",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "14506",
+	"submit_num": "29259"
+}, {
+	"id": "547",
+	"show_id": "566",
+	"leetcode_id": "566",
+	"title": "Reshape the Matrix",
+	"frequency": "339",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "40775",
+	"submit_num": "70278"
+}, {
+	"id": "548",
+	"show_id": "567",
+	"leetcode_id": "567",
+	"title": "Permutation in String",
+	"frequency": "122",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "17389",
+	"submit_num": "47445"
+}, {
+	"id": "549",
+	"show_id": "568",
+	"leetcode_id": "568",
+	"title": "Maximum Vacation Days",
+	"frequency": "45",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "5978",
+	"submit_num": "15648"
+}, {
+	"id": "550",
+	"show_id": "569",
+	"leetcode_id": "569",
+	"title": "Median Employee Salary",
+	"frequency": "73",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "959",
+	"submit_num": "2666"
+}, {
+	"id": "551",
+	"show_id": "570",
+	"leetcode_id": "570",
+	"title": "Managers with at Least 5 Direct Reports",
+	"frequency": "39",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2921",
+	"submit_num": "5082"
+}, {
+	"id": "552",
+	"show_id": "571",
+	"leetcode_id": "571",
+	"title": "Find Median Given Frequency of Numbers",
+	"frequency": "108",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "868",
+	"submit_num": "2261"
+}, {
+	"id": "553",
+	"show_id": "572",
+	"leetcode_id": "572",
+	"title": "Subtree of Another Tree",
+	"frequency": "208",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "37045",
+	"submit_num": "90918"
+}, {
+	"id": "554",
+	"show_id": "573",
+	"leetcode_id": "573",
+	"title": "Squirrel Simulation",
+	"frequency": "31",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "3644",
+	"submit_num": "6914"
+}, {
+	"id": "555",
+	"show_id": "574",
+	"leetcode_id": "574",
+	"title": "Winning Candidate",
+	"frequency": "59",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2045",
+	"submit_num": "6157"
+}, {
+	"id": "556",
+	"show_id": "575",
+	"leetcode_id": "575",
+	"title": "Distribute Candies",
+	"frequency": "321",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "37714",
+	"submit_num": "64680"
+}, {
+	"id": "557",
+	"show_id": "576",
+	"leetcode_id": "576",
+	"title": "Out of Boundary Paths",
+	"frequency": "61",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "8411",
+	"submit_num": "27311"
+}, {
+	"id": "558",
+	"show_id": "577",
+	"leetcode_id": "577",
+	"title": "Employee Bonus",
+	"frequency": "24",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "3278",
+	"submit_num": "6378"
+}, {
+	"id": "559",
+	"show_id": "578",
+	"leetcode_id": "578",
+	"title": "Get Highest Answer Rate Question",
+	"frequency": "20",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2004",
+	"submit_num": "7187"
+}, {
+	"id": "560",
+	"show_id": "579",
+	"leetcode_id": "579",
+	"title": "Find Cumulative Salary of an Employee",
+	"frequency": "23",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "788",
+	"submit_num": "2994"
+}, {
+	"id": "561",
+	"show_id": "580",
+	"leetcode_id": "580",
+	"title": "Count Student Number in Departments",
+	"frequency": "76",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2816",
+	"submit_num": "7258"
+}, {
+	"id": "562",
+	"show_id": "581",
+	"leetcode_id": "581",
+	"title": "Shortest Unsorted Continuous Subarray",
+	"frequency": "192",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "27412",
+	"submit_num": "93796"
+}, {
+	"id": "563",
+	"show_id": "582",
+	"leetcode_id": "582",
+	"title": "Kill Process",
+	"frequency": "133",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "10533",
+	"submit_num": "20912"
+}, {
+	"id": "564",
+	"show_id": "583",
+	"leetcode_id": "583",
+	"title": "Delete Operation for Two Strings",
+	"frequency": "173",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "14187",
+	"submit_num": "31813"
+}, {
+	"id": "565",
+	"show_id": "584",
+	"leetcode_id": "584",
+	"title": "Find Customer Referee",
+	"frequency": "3",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "3152",
+	"submit_num": "5112"
+}, {
+	"id": "566",
+	"show_id": "585",
+	"leetcode_id": "585",
+	"title": "Investments in 2016",
+	"frequency": "39",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2324",
+	"submit_num": "5087"
+}, {
+	"id": "567",
+	"show_id": "586",
+	"leetcode_id": "586",
+	"title": "Customer Placing the Largest Number of Orders",
+	"frequency": "60",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "3602",
+	"submit_num": "6120"
+}, {
+	"id": "568",
+	"show_id": "587",
+	"leetcode_id": "587",
+	"title": "Erect the Fence",
+	"frequency": "57",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "3798",
+	"submit_num": "11455"
+}, {
+	"id": "569",
+	"show_id": "588",
+	"leetcode_id": "588",
+	"title": "Design In-Memory File System",
+	"frequency": "46",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "2344",
+	"submit_num": "6429"
+}, {
+	"id": "570",
+	"show_id": "591",
+	"leetcode_id": "591",
+	"title": "Tag Validator",
+	"frequency": "15",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "2602",
+	"submit_num": "8439"
+}, {
+	"id": "571",
+	"show_id": "592",
+	"leetcode_id": "592",
+	"title": "Fraction Addition and Subtraction",
+	"frequency": "110",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "7120",
+	"submit_num": "15464"
+}, {
+	"id": "572",
+	"show_id": "593",
+	"leetcode_id": "593",
+	"title": "Valid Square",
+	"frequency": "130",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "9614",
+	"submit_num": "23912"
+}, {
+	"id": "573",
+	"show_id": "594",
+	"leetcode_id": "594",
+	"title": "Longest Harmonious Subsequence",
+	"frequency": "196",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17783",
+	"submit_num": "43192"
+}, {
+	"id": "574",
+	"show_id": "595",
+	"leetcode_id": "595",
+	"title": "Big Countries",
+	"frequency": "607",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "32836",
+	"submit_num": "45820"
+}, {
+	"id": "575",
+	"show_id": "596",
+	"leetcode_id": "596",
+	"title": "Classes More Than 5 Students",
+	"frequency": "201",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "11623",
+	"submit_num": "40381"
+}, {
+	"id": "576",
+	"show_id": "597",
+	"leetcode_id": "597",
+	"title": "Friend Requests I: Overall Acceptance Rate",
+	"frequency": "87",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "3376",
+	"submit_num": "8699"
+}, {
+	"id": "577",
+	"show_id": "598",
+	"leetcode_id": "598",
+	"title": "Range Addition II",
+	"frequency": "190",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17135",
+	"submit_num": "35456"
+}, {
+	"id": "578",
+	"show_id": "599",
+	"leetcode_id": "599",
+	"title": "Minimum Index Sum of Two Lists",
+	"frequency": "185",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "25186",
+	"submit_num": "54125"
+}, {
+	"id": "579",
+	"show_id": "600",
+	"leetcode_id": "600",
+	"title": "Non-negative Integers without Consecutive Ones",
+	"frequency": "81",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4854",
+	"submit_num": "15475"
+}, {
+	"id": "580",
+	"show_id": "601",
+	"leetcode_id": "601",
+	"title": "Human Traffic of Stadium",
+	"frequency": "212",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "3770",
+	"submit_num": "10913"
+}, {
+	"id": "581",
+	"show_id": "602",
+	"leetcode_id": "602",
+	"title": "Friend Requests II: Who Has the Most Friends",
+	"frequency": "7",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2642",
+	"submit_num": "6209"
+}, {
+	"id": "582",
+	"show_id": "603",
+	"leetcode_id": "603",
+	"title": "Consecutive Available Seats",
+	"frequency": "9",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "2070",
+	"submit_num": "3746"
+}, {
+	"id": "583",
+	"show_id": "604",
+	"leetcode_id": "604",
+	"title": "Design Compressed String Iterator",
+	"frequency": "22",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "6569",
+	"submit_num": "19897"
+}, {
+	"id": "584",
+	"show_id": "605",
+	"leetcode_id": "605",
+	"title": "Can Place Flowers",
+	"frequency": "186",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "25902",
+	"submit_num": "85902"
+}, {
+	"id": "585",
+	"show_id": "606",
+	"leetcode_id": "606",
+	"title": "Construct String from Binary Tree",
+	"frequency": "278",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "28062",
+	"submit_num": "56310"
+}, {
+	"id": "586",
+	"show_id": "607",
+	"leetcode_id": "607",
+	"title": "Sales Person",
+	"frequency": "51",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "2625",
+	"submit_num": "5166"
+}, {
+	"id": "587",
+	"show_id": "608",
+	"leetcode_id": "608",
+	"title": "Tree Node",
+	"frequency": "98",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2502",
+	"submit_num": "4595"
+}, {
+	"id": "588",
+	"show_id": "609",
+	"leetcode_id": "609",
+	"title": "Find Duplicate File in System",
+	"frequency": "326",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "10290",
+	"submit_num": "19638"
+}, {
+	"id": "589",
+	"show_id": "610",
+	"leetcode_id": "610",
+	"title": "Triangle Judgement",
+	"frequency": "36",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "2704",
+	"submit_num": "4612"
+}, {
+	"id": "590",
+	"show_id": "611",
+	"leetcode_id": "611",
+	"title": "Valid Triangle Number",
+	"frequency": "173",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "14420",
+	"submit_num": "34028"
+}, {
+	"id": "591",
+	"show_id": "612",
+	"leetcode_id": "612",
+	"title": "Shortest Distance in a Plane",
+	"frequency": "39",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "1745",
+	"submit_num": "3304"
+}, {
+	"id": "592",
+	"show_id": "613",
+	"leetcode_id": "613",
+	"title": "Shortest Distance in a Line",
+	"frequency": "106",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "3390",
+	"submit_num": "4825"
+}, {
+	"id": "593",
+	"show_id": "614",
+	"leetcode_id": "614",
+	"title": "Second Degree Follower",
+	"frequency": "48",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "1455",
+	"submit_num": "6217"
+}, {
+	"id": "594",
+	"show_id": "615",
+	"leetcode_id": "615",
+	"title": "Average Salary: Departments VS Company",
+	"frequency": "28",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "814",
+	"submit_num": "2575"
+}, {
+	"id": "595",
+	"show_id": "616",
+	"leetcode_id": "616",
+	"title": "Add Bold Tag in String",
+	"frequency": "80",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "7683",
+	"submit_num": "19717"
+}, {
+	"id": "596",
+	"show_id": "617",
+	"leetcode_id": "617",
+	"title": "Merge Two Binary Trees",
+	"frequency": "554",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "63892",
+	"submit_num": "94480"
+}, {
+	"id": "597",
+	"show_id": "618",
+	"leetcode_id": "618",
+	"title": "Students Report By Geography",
+	"frequency": "75",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "670",
+	"submit_num": "1557"
+}, {
+	"id": "598",
+	"show_id": "619",
+	"leetcode_id": "619",
+	"title": "Biggest Single Number",
+	"frequency": "29",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "2600",
+	"submit_num": "7227"
+}, {
+	"id": "599",
+	"show_id": "620",
+	"leetcode_id": "620",
+	"title": "Not Boring Movies",
+	"frequency": "230",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17387",
+	"submit_num": "29274"
+}, {
+	"id": "600",
+	"show_id": "621",
+	"leetcode_id": "621",
+	"title": "Task Scheduler",
+	"frequency": "387",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "24319",
+	"submit_num": "56786"
+}, {
+	"id": "601",
+	"show_id": "623",
+	"leetcode_id": "623",
+	"title": "Add One Row to Tree",
+	"frequency": "94",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "12677",
+	"submit_num": "27305"
+}, {
+	"id": "602",
+	"show_id": "624",
+	"leetcode_id": "624",
+	"title": "Maximum Distance in Arrays",
+	"frequency": "124",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "9454",
+	"submit_num": "27123"
+}, {
+	"id": "603",
+	"show_id": "625",
+	"leetcode_id": "625",
+	"title": "Minimum Factorization",
+	"frequency": "43",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "4257",
+	"submit_num": "13631"
+}, {
+	"id": "604",
+	"show_id": "626",
+	"leetcode_id": "626",
+	"title": "Exchange Seats",
+	"frequency": "282",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4176",
+	"submit_num": "8674"
+}, {
+	"id": "605",
+	"show_id": "627",
+	"leetcode_id": "627",
+	"title": "Swap Salary",
+	"frequency": "495",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "18676",
+	"submit_num": "27836"
+}, {
+	"id": "606",
+	"show_id": "628",
+	"leetcode_id": "628",
+	"title": "Maximum Product of Three Numbers",
+	"frequency": "406",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "28637",
+	"submit_num": "63770"
+}, {
+	"id": "607",
+	"show_id": "629",
+	"leetcode_id": "629",
+	"title": "K Inverse Pairs Array",
+	"frequency": "131",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4301",
+	"submit_num": "16061"
+}, {
+	"id": "608",
+	"show_id": "630",
+	"leetcode_id": "630",
+	"title": "Course Schedule III",
+	"frequency": "114",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4918",
+	"submit_num": "16885"
+}, {
+	"id": "609",
+	"show_id": "631",
+	"leetcode_id": "631",
+	"title": "Design Excel Sum Formula",
+	"frequency": "62",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "1643",
+	"submit_num": "5997"
+}, {
+	"id": "610",
+	"show_id": "632",
+	"leetcode_id": "632",
+	"title": "Smallest Range",
+	"frequency": "307",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "7401",
+	"submit_num": "17499"
+}, {
+	"id": "611",
+	"show_id": "633",
+	"leetcode_id": "633",
+	"title": "Sum of Square Numbers",
+	"frequency": "199",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "18932",
+	"submit_num": "58370"
+}, {
+	"id": "612",
+	"show_id": "634",
+	"leetcode_id": "634",
+	"title": "Find the Derangement of An Array",
+	"frequency": "78",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "3040",
+	"submit_num": "8594"
+}, {
+	"id": "613",
+	"show_id": "635",
+	"leetcode_id": "635",
+	"title": "Design Log Storage System",
+	"frequency": "104",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "4234",
+	"submit_num": "8589"
+}, {
+	"id": "614",
+	"show_id": "636",
+	"leetcode_id": "636",
+	"title": "Exclusive Time of Functions",
+	"frequency": "186",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "11640",
+	"submit_num": "26233"
+}, {
+	"id": "615",
+	"show_id": "637",
+	"leetcode_id": "637",
+	"title": "Average of Levels in Binary Tree",
+	"frequency": "262",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "33351",
+	"submit_num": "59677"
+}, {
+	"id": "616",
+	"show_id": "638",
+	"leetcode_id": "638",
+	"title": "Shopping Offers",
+	"frequency": "162",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "8815",
+	"submit_num": "19683"
+}, {
+	"id": "617",
+	"show_id": "639",
+	"leetcode_id": "639",
+	"title": "Decode Ways II",
+	"frequency": "58",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "9496",
+	"submit_num": "38690"
+}, {
+	"id": "618",
+	"show_id": "640",
+	"leetcode_id": "640",
+	"title": "Solve the Equation",
+	"frequency": "107",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "7825",
+	"submit_num": "19997"
+}, {
+	"id": "619",
+	"show_id": "642",
+	"leetcode_id": "642",
+	"title": "Design Search Autocomplete System",
+	"frequency": "135",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "4448",
+	"submit_num": "14182"
+}, {
+	"id": "620",
+	"show_id": "643",
+	"leetcode_id": "643",
+	"title": "Maximum Average Subarray I",
+	"frequency": "231",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "22959",
+	"submit_num": "60937"
+}, {
+	"id": "621",
+	"show_id": "644",
+	"leetcode_id": "644",
+	"title": "Maximum Average Subarray II",
+	"frequency": "145",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "4287",
+	"submit_num": "17673"
+}, {
+	"id": "622",
+	"show_id": "645",
+	"leetcode_id": "645",
+	"title": "Set Mismatch",
+	"frequency": "196",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "21327",
+	"submit_num": "53396"
+}, {
+	"id": "623",
+	"show_id": "646",
+	"leetcode_id": "646",
+	"title": "Maximum Length of Pair Chain",
+	"frequency": "183",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "15123",
+	"submit_num": "31808"
+}, {
+	"id": "624",
+	"show_id": "647",
+	"leetcode_id": "647",
+	"title": "Palindromic Substrings",
+	"frequency": "384",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "29071",
+	"submit_num": "52427"
+}, {
+	"id": "625",
+	"show_id": "648",
+	"leetcode_id": "648",
+	"title": "Replace Words",
+	"frequency": "221",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "12866",
+	"submit_num": "26997"
+}, {
+	"id": "626",
+	"show_id": "649",
+	"leetcode_id": "649",
+	"title": "Dota2 Senate",
+	"frequency": "29",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4254",
+	"submit_num": "11650"
+}, {
+	"id": "627",
+	"show_id": "650",
+	"leetcode_id": "650",
+	"title": "2 Keys Keyboard",
+	"frequency": "172",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "14734",
+	"submit_num": "32819"
+}, {
+	"id": "628",
+	"show_id": "651",
+	"leetcode_id": "651",
+	"title": "4 Keys Keyboard",
+	"frequency": "34",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "5989",
+	"submit_num": "12119"
+}, {
+	"id": "629",
+	"show_id": "652",
+	"leetcode_id": "652",
+	"title": "Find Duplicate Subtrees",
+	"frequency": "200",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "10301",
+	"submit_num": "27717"
+}, {
+	"id": "630",
+	"show_id": "653",
+	"leetcode_id": "653",
+	"title": "Two Sum IV - Input is a BST",
+	"frequency": "283",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "28964",
+	"submit_num": "57521"
+}, {
+	"id": "631",
+	"show_id": "654",
+	"leetcode_id": "654",
+	"title": "Maximum Binary Tree",
+	"frequency": "405",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "22870",
+	"submit_num": "32756"
+}, {
+	"id": "632",
+	"show_id": "655",
+	"leetcode_id": "655",
+	"title": "Print Binary Tree",
+	"frequency": "233",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "7270",
+	"submit_num": "14603"
+}, {
+	"id": "633",
+	"show_id": "656",
+	"leetcode_id": "656",
+	"title": "Coin Path",
+	"frequency": "4",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "3436",
+	"submit_num": "13363"
+}, {
+	"id": "634",
+	"show_id": "657",
+	"leetcode_id": "657",
+	"title": "Judge Route Circle",
+	"frequency": "541",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "54493",
+	"submit_num": "79323"
+}, {
+	"id": "635",
+	"show_id": "658",
+	"leetcode_id": "658",
+	"title": "Find K Closest Elements",
+	"frequency": "151",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "12816",
+	"submit_num": "36128"
+}, {
+	"id": "636",
+	"show_id": "659",
+	"leetcode_id": "659",
+	"title": "Split Array into Consecutive Subsequences",
+	"frequency": "138",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "6550",
+	"submit_num": "17866"
+}, {
+	"id": "637",
+	"show_id": "660",
+	"leetcode_id": "660",
+	"title": "Remove 9",
+	"frequency": "102",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "3604",
+	"submit_num": "7398"
+}, {
+	"id": "638",
+	"show_id": "661",
+	"leetcode_id": "661",
+	"title": "Image Smoother",
+	"frequency": "279",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "13385",
+	"submit_num": "29100"
+}, {
+	"id": "639",
+	"show_id": "662",
+	"leetcode_id": "662",
+	"title": "Maximum Width of Binary Tree",
+	"frequency": "127",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "10446",
+	"submit_num": "27451"
+}, {
+	"id": "640",
+	"show_id": "663",
+	"leetcode_id": "663",
+	"title": "Equal Tree Partition",
+	"frequency": "42",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "6489",
+	"submit_num": "17772"
+}, {
+	"id": "641",
+	"show_id": "664",
+	"leetcode_id": "664",
+	"title": "Strange Printer",
+	"frequency": "210",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4146",
+	"submit_num": "12335"
+}, {
+	"id": "642",
+	"show_id": "665",
+	"leetcode_id": "665",
+	"title": "Non-decreasing Array",
+	"frequency": "236",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17651",
+	"submit_num": "85092"
+}, {
+	"id": "643",
+	"show_id": "666",
+	"leetcode_id": "666",
+	"title": "Path Sum IV",
+	"frequency": "18",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "3881",
+	"submit_num": "7760"
+}, {
+	"id": "644",
+	"show_id": "667",
+	"leetcode_id": "667",
+	"title": "Beautiful Arrangement II",
+	"frequency": "253",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "7777",
+	"submit_num": "15052"
+}, {
+	"id": "645",
+	"show_id": "668",
+	"leetcode_id": "668",
+	"title": "Kth Smallest Number in Multiplication Table",
+	"frequency": "74",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4673",
+	"submit_num": "11842"
+}, {
+	"id": "646",
+	"show_id": "669",
+	"leetcode_id": "669",
+	"title": "Trim a Binary Search Tree",
+	"frequency": "426",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "21469",
+	"submit_num": "36782"
+}, {
+	"id": "647",
+	"show_id": "670",
+	"leetcode_id": "670",
+	"title": "Maximum Swap",
+	"frequency": "195",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "16157",
+	"submit_num": "41863"
+}, {
+	"id": "648",
+	"show_id": "671",
+	"leetcode_id": "671",
+	"title": "Second Minimum Node In a Binary Tree",
+	"frequency": "152",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17487",
+	"submit_num": "41648"
+}, {
+	"id": "649",
+	"show_id": "672",
+	"leetcode_id": "672",
+	"title": "Bulb Switcher II",
+	"frequency": "214",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4500",
+	"submit_num": "9181"
+}, {
+	"id": "650",
+	"show_id": "673",
+	"leetcode_id": "673",
+	"title": "Number of Longest Increasing Subsequence",
+	"frequency": "202",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "11372",
+	"submit_num": "36020"
+}, {
+	"id": "651",
+	"show_id": "674",
+	"leetcode_id": "674",
+	"title": "Longest Continuous Increasing Subsequence",
+	"frequency": "260",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "23002",
+	"submit_num": "54194"
+}, {
+	"id": "652",
+	"show_id": "675",
+	"leetcode_id": "675",
+	"title": "Cut Off Trees for Golf Event",
+	"frequency": "121",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4557",
+	"submit_num": "16842"
+}, {
+	"id": "653",
+	"show_id": "676",
+	"leetcode_id": "676",
+	"title": "Implement Magic Dictionary",
+	"frequency": "68",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "8918",
+	"submit_num": "17928"
+}, {
+	"id": "654",
+	"show_id": "677",
+	"leetcode_id": "677",
+	"title": "Map Sum Pairs",
+	"frequency": "90",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "8853",
+	"submit_num": "16966"
+}, {
+	"id": "655",
+	"show_id": "678",
+	"leetcode_id": "678",
+	"title": "Valid Parenthesis String",
+	"frequency": "163",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "8525",
+	"submit_num": "29147"
+}, {
+	"id": "656",
+	"show_id": "679",
+	"leetcode_id": "679",
+	"title": "24 Game",
+	"frequency": "217",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "5439",
+	"submit_num": "13949"
+}, {
+	"id": "657",
+	"show_id": "680",
+	"leetcode_id": "680",
+	"title": "Valid Palindrome II",
+	"frequency": "180",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "19326",
+	"submit_num": "59297"
+}, {
+	"id": "658",
+	"show_id": "681",
+	"leetcode_id": "681",
+	"title": "Next Closest Time",
+	"frequency": "350",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "11574",
+	"submit_num": "27027"
+}, {
+	"id": "659",
+	"show_id": "682",
+	"leetcode_id": "682",
+	"title": "Baseball Game",
+	"frequency": "300",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17166",
+	"submit_num": "29311"
+}, {
+	"id": "660",
+	"show_id": "683",
+	"leetcode_id": "683",
+	"title": "K Empty Slots",
+	"frequency": "354",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "9648",
+	"submit_num": "26924"
+}, {
+	"id": "661",
+	"show_id": "684",
+	"leetcode_id": "684",
+	"title": "Redundant Connection",
+	"frequency": "82",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "9609",
+	"submit_num": "22534"
+}, {
+	"id": "662",
+	"show_id": "685",
+	"leetcode_id": "685",
+	"title": "Redundant Connection II",
+	"frequency": "92",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "3957",
+	"submit_num": "13912"
+}, {
+	"id": "663",
+	"show_id": "686",
+	"leetcode_id": "686",
+	"title": "Repeated String Match",
+	"frequency": "266",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "18814",
+	"submit_num": "55429"
+}, {
+	"id": "664",
+	"show_id": "687",
+	"leetcode_id": "687",
+	"title": "Longest Univalue Path",
+	"frequency": "269",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "16460",
+	"submit_num": "49002"
+}, {
+	"id": "665",
+	"show_id": "688",
+	"leetcode_id": "688",
+	"title": "Knight Probability in Chessboard",
+	"frequency": "96",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "5265",
+	"submit_num": "13233"
+}, {
+	"id": "666",
+	"show_id": "689",
+	"leetcode_id": "689",
+	"title": "Maximum Sum of 3 Non-Overlapping Subarrays",
+	"frequency": "189",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "7660",
+	"submit_num": "18293"
+}, {
+	"id": "667",
+	"show_id": "690",
+	"leetcode_id": "690",
+	"title": "Employee Importance",
+	"frequency": "298",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "14732",
+	"submit_num": "28232"
+}, {
+	"id": "668",
+	"show_id": "691",
+	"leetcode_id": "691",
+	"title": "Stickers to Spell Word",
+	"frequency": "47",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "3256",
+	"submit_num": "9458"
+}, {
+	"id": "669",
+	"show_id": "692",
+	"leetcode_id": "692",
+	"title": "Top K Frequent Words",
+	"frequency": "184",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "11530",
+	"submit_num": "27727"
+}, {
+	"id": "670",
+	"show_id": "693",
+	"leetcode_id": "693",
+	"title": "Binary Number with Alternating Bits",
+	"frequency": "185",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "14601",
+	"submit_num": "26295"
+}, {
+	"id": "671",
+	"show_id": "694",
+	"leetcode_id": "694",
+	"title": "Number of Distinct Islands",
+	"frequency": "43",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "5598",
+	"submit_num": "12310"
+}, {
+	"id": "672",
+	"show_id": "695",
+	"leetcode_id": "695",
+	"title": "Max Area of Island",
+	"frequency": "385",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "17723",
+	"submit_num": "34013"
+}, {
+	"id": "673",
+	"show_id": "696",
+	"leetcode_id": "696",
+	"title": "Count Binary Substrings",
+	"frequency": "312",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "10502",
+	"submit_num": "20429"
+}, {
+	"id": "674",
+	"show_id": "697",
+	"leetcode_id": "697",
+	"title": "Degree of an Array",
+	"frequency": "384",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "14000",
+	"submit_num": "29758"
+}, {
+	"id": "675",
+	"show_id": "698",
+	"leetcode_id": "698",
+	"title": "Partition to K Equal Sum Subsets",
+	"frequency": "230",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "9866",
+	"submit_num": "26147"
+}, {
+	"id": "676",
+	"show_id": "699",
+	"leetcode_id": "699",
+	"title": "Falling Squares",
+	"frequency": "25",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "2895",
+	"submit_num": "7720"
+}, {
+	"id": "677",
+	"show_id": "711",
+	"leetcode_id": "711",
+	"title": "Number of Distinct Islands II",
+	"frequency": "88",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "984",
+	"submit_num": "2281"
+}, {
+	"id": "678",
+	"show_id": "712",
+	"leetcode_id": "712",
+	"title": "Minimum ASCII Delete Sum for Two Strings",
+	"frequency": "159",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "5165",
+	"submit_num": "10051"
+}, {
+	"id": "679",
+	"show_id": "713",
+	"leetcode_id": "713",
+	"title": "Subarray Product Less Than K",
+	"frequency": "119",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "6958",
+	"submit_num": "21027"
+}, {
+	"id": "680",
+	"show_id": "714",
+	"leetcode_id": "714",
+	"title": "Best Time to Buy and Sell Stock with Transaction Fee",
+	"frequency": "165",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "9964",
+	"submit_num": "22603"
+}, {
+	"id": "681",
+	"show_id": "715",
+	"leetcode_id": "715",
+	"title": "Range Module",
+	"frequency": "128",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "2345",
+	"submit_num": "7441"
+}, {
+	"id": "682",
+	"show_id": "716",
+	"leetcode_id": "716",
+	"title": "Max Stack",
+	"frequency": "123",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "2717",
+	"submit_num": "7291"
+}, {
+	"id": "683",
+	"show_id": "717",
+	"leetcode_id": "717",
+	"title": "1-bit and 2-bit Characters",
+	"frequency": "360",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "12353",
+	"submit_num": "24840"
+}, {
+	"id": "684",
+	"show_id": "718",
+	"leetcode_id": "718",
+	"title": "Maximum Length of Repeated Subarray",
+	"frequency": "214",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "9117",
+	"submit_num": "22221"
+}, {
+	"id": "685",
+	"show_id": "719",
+	"leetcode_id": "719",
+	"title": "Find K-th Smallest Pair Distance",
+	"frequency": "157",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "4577",
+	"submit_num": "17019"
+}, {
+	"id": "686",
+	"show_id": "720",
+	"leetcode_id": "720",
+	"title": "Longest Word in Dictionary",
+	"frequency": "146",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "8725",
+	"submit_num": "20854"
+}, {
+	"id": "687",
+	"show_id": "721",
+	"leetcode_id": "721",
+	"title": "Accounts Merge",
+	"frequency": "91",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "5978",
+	"submit_num": "18603"
+}, {
+	"id": "688",
+	"show_id": "722",
+	"leetcode_id": "722",
+	"title": "Remove Comments",
+	"frequency": "37",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2797",
+	"submit_num": "10317"
+}, {
+	"id": "689",
+	"show_id": "723",
+	"leetcode_id": "723",
+	"title": "Candy Crush",
+	"frequency": "49",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "1588",
+	"submit_num": "2854"
+}, {
+	"id": "690",
+	"show_id": "724",
+	"leetcode_id": "724",
+	"title": "Find Pivot Index",
+	"frequency": "159",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "11677",
+	"submit_num": "29172"
+}, {
+	"id": "691",
+	"show_id": "725",
+	"leetcode_id": "725",
+	"title": "Split Linked List in Parts",
+	"frequency": "125",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "6500",
+	"submit_num": "13469"
+}, {
+	"id": "692",
+	"show_id": "726",
+	"leetcode_id": "726",
+	"title": "Number of Atoms",
+	"frequency": "146",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "3390",
+	"submit_num": "7625"
+}, {
+	"id": "693",
+	"show_id": "727",
+	"leetcode_id": "727",
+	"title": "Minimum Window Subsequence",
+	"frequency": "11",
+	"private": "1",
+	"difficulty": "3",
+	"ac_num": "2930",
+	"submit_num": "9378"
+}, {
+	"id": "694",
+	"show_id": "728",
+	"leetcode_id": "728",
+	"title": "Self Dividing Numbers",
+	"frequency": "443",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "18501",
+	"submit_num": "27415"
+}, {
+	"id": "695",
+	"show_id": "729",
+	"leetcode_id": "729",
+	"title": "My Calendar I",
+	"frequency": "66",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "7335",
+	"submit_num": "17575"
+}, {
+	"id": "696",
+	"show_id": "730",
+	"leetcode_id": "730",
+	"title": "Count Different Palindromic Subsequences",
+	"frequency": "144",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1881",
+	"submit_num": "5339"
+}, {
+	"id": "697",
+	"show_id": "731",
+	"leetcode_id": "731",
+	"title": "My Calendar II",
+	"frequency": "151",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4328",
+	"submit_num": "11625"
+}, {
+	"id": "698",
+	"show_id": "732",
+	"leetcode_id": "732",
+	"title": "My Calendar III",
+	"frequency": "186",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "2157",
+	"submit_num": "4007"
+}, {
+	"id": "699",
+	"show_id": "733",
+	"leetcode_id": "733",
+	"title": "Flood Fill",
+	"frequency": "121",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "7757",
+	"submit_num": "16078"
+}, {
+	"id": "700",
+	"show_id": "734",
+	"leetcode_id": "734",
+	"title": "Sentence Similarity",
+	"frequency": "67",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "6243",
+	"submit_num": "16204"
+}, {
+	"id": "701",
+	"show_id": "735",
+	"leetcode_id": "735",
+	"title": "Asteroid Collision",
+	"frequency": "55",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4780",
+	"submit_num": "12815"
+}, {
+	"id": "702",
+	"show_id": "736",
+	"leetcode_id": "736",
+	"title": "Parse Lisp Expression",
+	"frequency": "103",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1378",
+	"submit_num": "3299"
+}, {
+	"id": "703",
+	"show_id": "737",
+	"leetcode_id": "737",
+	"title": "Sentence Similarity II",
+	"frequency": "133",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "4407",
+	"submit_num": "10576"
+}, {
+	"id": "704",
+	"show_id": "738",
+	"leetcode_id": "738",
+	"title": "Monotone Increasing Digits",
+	"frequency": "25",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "3831",
+	"submit_num": "9174"
+}, {
+	"id": "705",
+	"show_id": "739",
+	"leetcode_id": "739",
+	"title": "Daily Temperatures",
+	"frequency": "294",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "7630",
+	"submit_num": "14193"
+}, {
+	"id": "706",
+	"show_id": "740",
+	"leetcode_id": "740",
+	"title": "Delete and Earn",
+	"frequency": "215",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "5014",
+	"submit_num": "11616"
+}, {
+	"id": "707",
+	"show_id": "741",
+	"leetcode_id": "741",
+	"title": "Cherry Pickup",
+	"frequency": "44",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1527",
+	"submit_num": "6661"
+}, {
+	"id": "708",
+	"show_id": "742",
+	"leetcode_id": "743",
+	"title": "Closest Leaf in a Binary Tree",
+	"frequency": "10",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2377",
+	"submit_num": "7157"
+}, {
+	"id": "709",
+	"show_id": "743",
+	"leetcode_id": "744",
+	"title": "Network Delay Time",
+	"frequency": "71",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "3849",
+	"submit_num": "11279"
+}, {
+	"id": "710",
+	"show_id": "744",
+	"leetcode_id": "745",
+	"title": "Find Smallest Letter Greater Than Target",
+	"frequency": "85",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "8597",
+	"submit_num": "18677"
+}, {
+	"id": "711",
+	"show_id": "745",
+	"leetcode_id": "746",
+	"title": "Prefix and Suffix Search",
+	"frequency": "72",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "2271",
+	"submit_num": "9361"
+}, {
+	"id": "712",
+	"show_id": "746",
+	"leetcode_id": "747",
+	"title": "Min Cost Climbing Stairs",
+	"frequency": "332",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "10346",
+	"submit_num": "23410"
+}, {
+	"id": "713",
+	"show_id": "747",
+	"leetcode_id": "748",
+	"title": "Largest Number At Least Twice of Others",
+	"frequency": "228",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "8083",
+	"submit_num": "18534"
+}, {
+	"id": "714",
+	"show_id": "748",
+	"leetcode_id": "749",
+	"title": "Shortest Completing Word",
+	"frequency": "54",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "4182",
+	"submit_num": "7729"
+}, {
+	"id": "715",
+	"show_id": "749",
+	"leetcode_id": "750",
+	"title": "Contain Virus",
+	"frequency": "42",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "946",
+	"submit_num": "2404"
+}, {
+	"id": "716",
+	"show_id": "750",
+	"leetcode_id": "751",
+	"title": "Number Of Corner Rectangles",
+	"frequency": "8",
+	"private": "1",
+	"difficulty": "2",
+	"ac_num": "2977",
+	"submit_num": "5888"
+}, {
+	"id": "717",
+	"show_id": "751",
+	"leetcode_id": "752",
+	"title": "IP to CIDR",
+	"frequency": "145",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "1236",
+	"submit_num": "2203"
+}, {
+	"id": "718",
+	"show_id": "752",
+	"leetcode_id": "753",
+	"title": "Open the Lock",
+	"frequency": "13",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2626",
+	"submit_num": "6950"
+}, {
+	"id": "719",
+	"show_id": "753",
+	"leetcode_id": "754",
+	"title": "Cracking the Safe",
+	"frequency": "155",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1869",
+	"submit_num": "4624"
+}, {
+	"id": "720",
+	"show_id": "754",
+	"leetcode_id": "755",
+	"title": "Reach a Number",
+	"frequency": "35",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2102",
+	"submit_num": "8547"
+}, {
+	"id": "721",
+	"show_id": "755",
+	"leetcode_id": "756",
+	"title": "Pour Water",
+	"frequency": "62",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2015",
+	"submit_num": "5977"
+}, {
+	"id": "722",
+	"show_id": "756",
+	"leetcode_id": "757",
+	"title": "Pyramid Transition Matrix",
+	"frequency": "113",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "1917",
+	"submit_num": "4415"
+}, {
+	"id": "723",
+	"show_id": "757",
+	"leetcode_id": "759",
+	"title": "Set Intersection Size At Least Two",
+	"frequency": "55",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1136",
+	"submit_num": "3370"
+}, {
+	"id": "724",
+	"show_id": "758",
+	"leetcode_id": "760",
+	"title": "Bold Words in String",
+	"frequency": "0",
+	"private": "1",
+	"difficulty": "1",
+	"ac_num": "1912",
+	"submit_num": "5420"
+}, {
+	"id": "725",
+	"show_id": "759",
+	"leetcode_id": "761",
+	"title": "Employee Free Time",
+	"frequency": "0",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "2156",
+	"submit_num": "4238"
+}, {
+	"id": "726",
+	"show_id": "760",
+	"leetcode_id": "762",
+	"title": "Find Anagram Mappings",
+	"frequency": "545",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "12019",
+	"submit_num": "15939"
+}, {
+	"id": "727",
+	"show_id": "761",
+	"leetcode_id": "763",
+	"title": "Special Binary String",
+	"frequency": "99",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "912",
+	"submit_num": "2473"
+}, {
+	"id": "728",
+	"show_id": "762",
+	"leetcode_id": "767",
+	"title": "Prime Number of Set Bits in Binary Representation",
+	"frequency": "111",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "4235",
+	"submit_num": "7465"
+}, {
+	"id": "729",
+	"show_id": "763",
+	"leetcode_id": "768",
+	"title": "Partition Labels",
+	"frequency": "141",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "3988",
+	"submit_num": "5999"
+}, {
+	"id": "730",
+	"show_id": "764",
+	"leetcode_id": "769",
+	"title": "Largest Plus Sign",
+	"frequency": "12",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2276",
+	"submit_num": "6322"
+}, {
+	"id": "731",
+	"show_id": "765",
+	"leetcode_id": "770",
+	"title": "Couples Holding Hands",
+	"frequency": "19",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1569",
+	"submit_num": "3293"
+}, {
+	"id": "732",
+	"show_id": "766",
+	"leetcode_id": "777",
+	"title": "Toeplitz Matrix",
+	"frequency": "229",
+	"private": "0",
+	"difficulty": "1",
+	"ac_num": "4642",
+	"submit_num": "7201"
+}, {
+	"id": "733",
+	"show_id": "767",
+	"leetcode_id": "778",
+	"title": "Reorganize String",
+	"frequency": "2",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2238",
+	"submit_num": "6376"
+}, {
+	"id": "734",
+	"show_id": "768",
+	"leetcode_id": "779",
+	"title": "Max Chunks To Make Sorted II",
+	"frequency": "0",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "1515",
+	"submit_num": "3613"
+}, {
+	"id": "735",
+	"show_id": "769",
+	"leetcode_id": "780",
+	"title": "Max Chunks To Make Sorted",
+	"frequency": "13",
+	"private": "0",
+	"difficulty": "2",
+	"ac_num": "2393",
+	"submit_num": "5255"
+}, {
+	"id": "736",
+	"show_id": "770",
+	"leetcode_id": "781",
+	"title": "Basic Calculator IV",
+	"frequency": "169",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "292",
+	"submit_num": "672"
+}, {
+	"id": "737",
+	"show_id": "772",
+	"leetcode_id": "785",
+	"title": "Basic Calculator III",
+	"frequency": "260",
+	"private": "0",
+	"difficulty": "3",
+	"ac_num": "346",
+	"submit_num": "1046"
+}]

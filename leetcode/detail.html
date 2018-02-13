@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>Leetcode</title>
+    <link rel="stylesheet" href="./weui.css"/>
+    <link rel="stylesheet" href="./example.css"/>
+
+    <style type="text/css">
+       /* .page__ft {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.page__ft img {
+    height: 19px;
+}*/
+
+pre{
+    white-space:pre-wrap; word-wrap:break-word; 
+    background: #EEEEEE;
+    padding: 5px;
+}
+
+
+    </style>
+</head>
+<body ontouchstart>
+    
+    <div class="container" id="container"><div class="page js_show article" id="detail">
+
+
+
+    <div class="page__bd">
+        <article class="weui-article" id="content">
+
+        </article>
+    </div>
+
+
+    <div class="page__ft">
+        <a href="javascript:home()"><img src="./icon_footer_link.png"></a>
+    </div>
+</div></div>
+
+<script type="text/javascript" src="./zepto.min.js"></script>
+
+<script type="text/javascript">
+    var id = parseInt(new URL(location).searchParams.get("id"));
+    var html="";
+    $.getJSON("./data/"+id+".js",function(data){
+        if(!data.content)data.content="";
+
+        document.title=data.title;
+        html+="<h1>"+data.title+"</h2>"+data.content;
+        html+='<div class="weui-loadmore weui-loadmore_line"><span class="weui-loadmore__tips">ANSWERS</span></div>';
+        for(var i=0;i<data.answers.length;i++){
+            var answer=data.answers[i];
+            if(!answer.content)answer.content="";
+            if(!answer.title)answer.title="";
+            html+="<h2>"+answer.title+"</h2><pre style='background:white'>"+(answer.content.replace(/\\n/g,"<br/>").replace(/\\t/g,"&nbsp;"))+"</pre>";
+            html+='<div class="weui-loadmore weui-loadmore_line weui-loadmore_dot"><span class="weui-loadmore__tips"></span></div>';
+        }
+        $("#content").html(html);
+
+    });
+
+   
+</script>
+
+
+</body>
+</html>

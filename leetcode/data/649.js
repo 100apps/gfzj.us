@@ -1,0 +1,93 @@
+{
+	"difficulty":"2",
+	"submit_num":"9181",
+	"show_id":"672",
+	"leetcode_id":"672",
+	"answers":[
+		{
+			"lc_ans_id":"107269",
+			"view":"4999",
+			"top":"0",
+			"title":"Java O(1)",
+			"vote":"26",
+			"content":"We only need to consider special cases which n<=2 and m < 3. When n >2 and m >=3, the result is 8. \\nThe four buttons:\\n\\n1. Flip all the lights.\\n2. Flip lights with even numbers.\\n3. Flip lights with odd numbers.\\n4. Flip lights with (3k + 1) numbers, k = 0, 1, 2, ...\\n\\n\\nIf we use button 1 and 2, it equals to use button 3.\\nSimilarly...\\n\\n`1 + 2 --> 3,    1 + 3 --> 2,      2 + 3 --> 1`\\nSo, there are only 8 cases. \\n\\n`All_on`, `1`, `2`, `3`, `4`, `1+4`, `2+4`, `3+4`\\n\\nAnd we can get all the cases, when n>2 and m>=3.\\n```java\\nclass Solution {\\n    public int flipLights(int n, int m) {\\n        if(m==0) return 1;\\n        if(n==1) return 2;\\n        if(n==2&&m==1) return 3;\\n        if(n==2) return 4;\\n        if(m==1) return 4;\\n        if(m==2) return 7;\\n        if(m>=3) return 8;\\n        return 8;\\n    }\\n}\\n```"
+		},
+		{
+			"lc_ans_id":"107271",
+			"view":"3007",
+			"top":"1",
+			"title":"C++, concise code, O(1)",
+			"vote":"17",
+			"content":"When n <= 1, the solution is trial.\\n\\nFrom the 4 types of operations, \\n``` \\n1. Flip all the lights.\\n2. Flip lights with even numbers.\\n3. Flip lights with odd numbers.\\n4. Flip lights with (3k + 1) numbers, k = 0, 1, 2, ...\\n```\\nThere are three important observations:\\n1) For any operation, only odd or even matters, i.e. 0 or 1. Two same operations equal no operation.\\n2) The first 3 operations can be reduced to 1 or 0 operation. For example, flip all + flip even = flip odd. So the result of the first 3 operations is the same as either 1 operation or original.   \\n3) The solution for n > 3 is the same as n = 3. \\nFor example, 1 0 0 ....., I use 0 and 1 to represent off and on.\\nThe state of 2nd digit indicates even flip; The state of 3rd digit indicates odd flip; And the state difference of 1st and 3rd digits indicates 3k+1 flip.\\n\\nIn summary, the question can be simplified as m <= 3, n <= 3. I am sure you can figure out the rest easily. \\n```\\nclass Solution {\\npublic:\\n    int flipLights(int n, int m) {\\n        if (m == 0 || n == 0) return 1;\\n        if (n == 1) return 2;\\n        if (n == 2) return m == 1? 3:4;\\n        if (m == 1) return 4;\\n        return m == 2? 7:8;\\n    }\\n};\\n```"
+		},
+		{
+			"lc_ans_id":"107272",
+			"view":"1498",
+			"top":"2",
+			"title":"Short and Clean Java O(1) Solution",
+			"vote":"10",
+			"content":"> `1`: light is on\\n> `0`: light is off\\n\\n**n == 1**\\n\\nOnly **2** possibilities: `1` and `0`.\\n\\n**n == 2**\\n\\nAfter one operation, it has only **3** possibilities: `00`, `10` and `01`.\\nAfter two and more operations, it has only **4** possibilities: `11`, `10`, `01` and `00`.\\n\\n**n == 3**\\n\\nAfter one operation, it has only **4** possibilities: `000`, `101`, `010` and `011`.\\nAfter two operations, it has **7** possibilities: `111`,`101`,`010`,`100`,`000`,`001` and `110`.\\nAfter three and more operations, it has **8** possibilities, plus `011` on above case.\\n\\n**n >= 4**\\n\\nAfter one operation, it has only **4** possibilities: `0000`, `1010`, `0101` and `0110`.\\nAfter two or more operations: it has **8** possibilities, `1111`,`1010`,`0101`,`0111`,`0000`,`0011`, `1100` and `1001`.\\n\\n```java\\nclass Solution {\\n    public int flipLights(int n, int m) {\\n        if (m == 0) return 1;\\n        if (n <= 0 || m < 0) return 0;\\n        \\n        if (n == 1) return 2;\\n        else if (n == 2) return (m == 1) ? 3 : 4;\\n        else return (m == 1) ? 4 : ((m == 2) ? 7 : 8);\\n    }\\n}\\n```"
+		},
+		{
+			"lc_ans_id":"107267",
+			"view":"1517",
+			"top":"3",
+			"title":"Python, Straightforward with Explanation",
+			"vote":"10",
+			"content":"Suppose we did `f[0]` of the first operation, `f[1]` of the second, `f[2]` of the third, and `f[3]` of the fourth, where `sum(f) == m`.\\n\\nFirst, all these operations commute: doing operation A followed by operation B yields the same result as doing operation B followed by operation A.  Also, doing operation A followed by operation A again is the same as doing nothing.  So really, we only needed to know the residues `cand[i] = f[i] % 2`.  There are only 16 different possibilities for the residues in total, so we can try them all.\\n\\nWe'll loop `cand` through all 16 possibilities `(0, 0, 0, 0), (0, 0, 0, 1), ..., (1, 1, 1, 1)`.  A necessary and sufficient condition for `cand` to be valid is that `sum(cand) % 2 == m % 2 and sum(cand) <= m`, as only when these conditions are satisfied can we find some `f` with `sum(f) == m` and `cand[i] = f[i] % 2`.\\n\\nAlso, as the sequence of lights definitely repeats every 6 lights, we could replace `n` with `min(n, 6)`. Actually, we could replace it with `min(n, 3)`, as those lights are representative: that is, knowing the first 3 lights is enough to reconstruct what the next 3 lights will be.  If the first 3 lights are X, Y, Z, then with a little effort we can prove the next 3 lights will be (X^Y^Z), Z, Y.\\n\\n```python\\ndef flipLights(self, n, m):\\n    seen = set()\\n    for cand in itertools.product((0, 1), repeat = 4):\\n        if sum(cand) % 2 == m % 2 and sum(cand) <= m:\\n            A = []\\n            for i in xrange(min(n, 3)):\\n                light = 1\\n                light ^= cand[0]\\n                light ^= cand[1] and i % 2\\n                light ^= cand[2] and i % 2 == 0\\n                light ^= cand[3] and i % 3 == 0\\n                A.append(light)\\n            seen.add(tuple(A))\\n\\n    return len(seen)\\n```"
+		},
+		{
+			"lc_ans_id":"107270",
+			"view":"974",
+			"top":"4",
+			"title":"Easy to understand Java BFS solution O(m)",
+			"vote":"7",
+			"content":"I see all are math based solutions and it is O(1). \\nHere is my BFS solution to count all potential status for n bulb after m operations.\\n\\n```\\npublic int flipLights(int n, int m) {\\n        n = n <= 6? n: (n % 6 + 6);\\n        \\n        Set<Integer> visited = new HashSet<>();\\n        Queue<Integer> queue = new LinkedList<>();\\n        int init = (1 << n) - 1;\\n        queue.offer(init);\\n        for (int i=0; i<m; i++) {\\n            int size = queue.size();\\n            visited.clear();\\n            for (int k=0; k<size; k++) {\\n                int s = queue.poll();\\n                int[] next = new int[] {flipAll(s, n), \\n                     flipEven(s, n), flipOdd(s, n), flip3k1(s, n)};\\n                for (int s1: next) {\\n                    if (!visited.contains(s1)) {\\n                        queue.offer(s1);\\n                        visited.add(s1);\\n                    }\\n                }\\n            }\\n        }\\n        return queue.size();\\n    }\\n    \\n    private int flipAll(int s, int n) {\\n        int x = (1 << n) - 1;\\n        return s ^ x;\\n    }\\n\\n    private int flipEven(int s, int n) {\\n        for (int i=0; i<n; i+=2) {\\n            s ^= 1 << i;\\n        }\\n        return s;\\n    }\\n\\n    private int flipOdd(int s, int n) {\\n        for (int i=1; i<n; i+=2) {\\n            s ^= 1 << i;\\n        }\\n        return s;\\n    }\\n\\n    private int flip3k1(int s, int n) {\\n        for (int i=0; i<n; i+=3) {\\n            s ^= 1 << i;\\n        }\\n        return s;\\n    }\\n```"
+		},
+		{
+			"lc_ans_id":"107282",
+			"view":"356",
+			"top":"5",
+			"title":"Java O(1) solution",
+			"vote":"5",
+			"content":"There's a total only `six` possible answers:\\n`1, 2, 3, 4, 7 and 8`\\n```\\npublic int flipLights(int n, int m) {\\n            if (n == 1 && m > 0) {\\n                return 2;\\n            } else if (n == 2 && m == 1) {\\n                return 3;\\n            } else if ((n > 2 && m == 1) || (n == 2 && m > 1)) {\\n                return 4;\\n            } else if (n > 2 && m == 2) {\\n                return 7;\\n            } else if (n > 2 && m > 2) {\\n                return 8;\\n            } else {\\n                return 1;\\n            }\\n        }\\n```\\n\\nOne can imagine there's a 2d array `dp` with `m` rows and `n` columns, suppose m == 5 and n == 7, this `dp` matrix will be like the following:\\n\\n```\\n2, 3, 4, 4, 4, 4, 4, \\n2, 4, 7, 7, 7, 7, 7, \\n2, 4, 8, 8, 8, 8, 8, \\n2, 4, 8, 8, 8, 8, 8, \\n2, 4, 8, 8, 8, 8, 8,\\n```\\n\\nAs `m` and `n` extend, the result will be fixed, so a total only 6 possible answers, we could basically \"hardcode\" them as the above.\\n\\nAlso viewable [here](https://github.com/fishercoder1534/Leetcode/blob/master/src/main/java/com/fishercoder/solutions/_672.java) on Github."
+		},
+		{
+			"lc_ans_id":"107273",
+			"view":"605",
+			"top":"6",
+			"title":"2 short lines, simple formula",
+			"vote":"2",
+			"content":"    int flipLights(int n, int m) {\\n        n = min(n, 3);\\n        return min(1<<n, 1+m*n);\\n    }\\n\\nI can't (yet?) explain the `1+m*n` part, though. Really I just wrote a brute force solution, looked at the results for all cases where n, m &le; 10 and found a formula for the pattern I saw :-)"
+		},
+		{
+			"lc_ans_id":"107290",
+			"view":"250",
+			"top":"7",
+			"title":"Python solution (this is not a programming questions IMO)",
+			"vote":"2",
+			"content":"```\\nclass Solution:\\n    def flipLights(self, n, m):\\n        \"\"\"\\n        :type n: int\\n        :type m: int\\n        :rtype: int\\n        \"\"\"\\n        if m == 0:\\n            return 1\\n        if n >= 3:\\n            return 4 if m == 1 else 7 if m == 2 else 8\\n        if n == 2:\\n            return 3 if m == 1 else 4\\n        if n == 1:\\n            return 2\\n```"
+		},
+		{
+			"lc_ans_id":"107291",
+			"view":"385",
+			"top":"8",
+			"title":"Simple Math Python O(1)",
+			"vote":"2",
+			"content":"    def flipLights(self, n, m):\\n        if m == 0:      \\n            return 1\\n        if n == 1:\\n            return 2\\n        if m == 1 and n == 2:\\n            return 3\\n        if m == 1 or n == 2:\\n            return 4\\n        if m == 2:\\n            return 7\\n        return 8"
+		},
+		{
+			"lc_ans_id":"107278",
+			"view":"118",
+			"top":"9",
+			"title":"Very easy to understand C++ with detailed explanation",
+			"vote":"1",
+			"content":"At first this problem appears very intimidating.  However, after walking through actual values, it is very simple.  Below is my solution, and a step-by-step analysis for each part of code.  Please feel free to provide comments to add/edit this post in order to provide better understanding for everyone.  Thanks!\\n\\n```\\nclass Solution {\\npublic:\\n    int flipLights(int n, int m) {\\n        \\n        if (m==0) { return 1; }\\n        \\n        if (n==1){\\n            if (m>=1) { return 2; }\\n        }\\n        if (n==2){\\n            if (m==1) { return 3; }\\n            if (m>=2) { return 4; }\\n        }\\n        if (n>=3){\\n            if (m==1) { return 4; }\\n            if (m==2) { return 7; }\\n            if (m>=3) { return 8; }\\n        }\\n        \\n        return 0; // invalid value for n or m\\n    }\\n};\\n```\\n**STEP-BY-STEP ANALYSIS:**\\n\\n**Part 1: Description**\\nThe first value to consider is m=0 operations.  Regardless how many n lightbulbs there are with initial state ON, with 0 operations, all n lightbulbs will remain ON.  Therefore, there is only one state ( all n lightbulbs ON ).\\n\\n**Part 1: Code**\\n```\\nif (m==0) { return 1; }\\n\\n```\\n\\n**Part 2: Description**\\nNow consider one lightbulb (n=1).  If we perform m=1 operation on that 1 lightbulb, then that 1 operation can be (flip all, flip odd, flip even, or flip 3k+1 [k=0, 3k+1=1]).  The lightbulb's end state after 1 operation from [ flip all, flip odd, or flip 3k+1 ] is OFF.  The end state after 1 operation from [ flip even ] is ON (since there are no even lightbulbs to flip, this single odd lightbulb remains ON).  Therefore, there are 2 states for this 1 lightbulb after 1 operation.  Below is a table summary of this lightbulb and its potential states.  ON=1 and OFF=0.\\n\\n```\\nn=1\\nlightbulb ID       1\\n\\nINIT_STATE:\\n(initially ON)     1\\n\\nm=1\\nOPERATIONS:\\n                   0 ( after 1 operation: flip all, odd, or 3k+1 )\\n                   1 ( after 1 operation: flip even )\\nSTATE_COUNT:\\n                   2 ( 0 or 1 )\\n```\\n\\nNow consider if there are any additional unique states which can be created with this one lightbulb with more than one operation.  There are none.  Either this one lightbulb is ON or OFF after m=1 operations.  Any additional operations revert the lightbulb to a previous state, so there are no additional unique states created by any m>=1 operations.\\n\\n**Part 2: Code**\\n```\\n        if (n==1){\\n            if (m>=1) { return 2; }\\n        }\\n```\\n\\n**Part 3: Description**\\nNext consider n=2 lightbulbs.  The logic here is again the same as above, so I will skip the complete description and instead directly create an abridged table summary:\\n\\n```\\nn=2\\nlightbulb ID       1 2\\n\\nINIT_STATE:\\n(initially ON)     1 1\\n\\nm=1\\nOPERATIONS:\\n                   0 0 ( after 1 operation: flip all )\\n                   0 1 ( after 1 operation: flip odd or 3k+1 )\\n                   1 0 ( after 1 operation: flip even )\\nm=1\\nSTATE_COUNT:\\n                   3 ( 00 or 01 or 10 )\\n\\nm=2\\nOPERATIONS:\\n                   0 0 ( after 2 operations: flip odd, flip even )\\n                   0 1 ( after 2 operations: flip all, flip even )\\n                   1 0 ( after 2 operations: flip all, flip odd )\\n                   1 1 ( after 2 operations: flip all, flip all )\\n\\nm=2\\nSTATE_COUNT:\\n                   4 ( 00 or 01 or 10 or 11 )\\n```\\n\\nThere are multiple ways to arrive at the same lightbulb state with m=2 operations, but I did NOT list them all.  This brevity is on purpose in order to help keep my verbose post as short and concise as possible.  There is no need to list them all anyways because we are only interested in the amount of unique states in the end, NOT all the different ways which we arrived at those states.\\n\\nNow consider if there are any additional unique states which can be created with these two lightbulbs with more than two operations.  There are none.  Any additional operation m>=2 reverts these 2 lightbulbs to a previous state.\\n\\n**Part 3: Code**\\n```\\n        if (n==2){\\n            if (m==1) { return 3; }\\n            if (m>=2) { return 4; }\\n        }\\n```\\n\\n**Part 4: Description**\\nNext consider n=3 lightbulbs. The logic here is again the same as above, so I will skip the complete description and instead directly create another abridged table summary:\\n\\n```\\nn=2\\nlightbulb ID       1 2 3\\n\\nINIT_STATE:\\n(initially ON)     1 1 1\\n\\nm=1\\nOPERATIONS:\\n                   0 0 0 ( after 1 operation: flip all )\\n                   0 1 0 ( after 1 operation: flip odd )\\n                   0 1 1 ( after 1 operation: flip 3k+1 ) \\n                   1 0 1 ( after 1 operation: flip even )\\nm=1\\nSTATE_COUNT:\\n                   4 ( 000 or 010 or 011 or 101 )\\n\\nm=2\\nOPERATIONS:\\n                   0 0 0 ( after 2 operations: flip odd, flip even )\\n                   0 0 1 ( after 2 operations: flip 3k+1, flip even )\\n                   0 1 0 ( after 2 operations: flip even, flip all )\\n                   1 0 0 ( after 2 operations: flip all, flip 3k+1 )\\n                   1 0 1 ( after 2 operations: flip odd, flip all )\\n                   1 1 0 ( after 2 operations: flip odd, flip 3k+1 )\\n                   1 1 1 ( after 2 operations: flip all, flip all )\\n\\nm=2\\nSTATE_COUNT:\\n                   7 ( 000 or 001 or 010 or 100 or 101 or 110 or 111 )\\n\\nm=3\\nOPERATIONS:\\n                   ect...\\n                   ect...\\n                   ect...\\nm=3\\nSTATE_COUNT:\\n                   8 ( 000 or 001 or 010 or 011 or 100 or 101 or 110 or 111 )\\n```\\nAgain, there are multiple ways to arrive at the same lightbulb state with m=2 and m=3 operations, but I did NOT list them all. This brevity is on purpose.  Also, I did NOT explicitly write out all the different permutations for m=3, since they are all redundant states except for 011 which can be created with 3 operations [ flip 3k+1, flip odd, flip odd ].\\n\\nAgain, consider if there are any additional unique states which can be created with these three lightbulbs with more than three operations. There are none. Any additional operation m>=3 reverts these 3 lightbulbs to a previous state.  Also consider if there are more unique states which can be created with more than n=3 lightbulbs.  There are none.  Any additional amount of lightbulbs n>=3 does NOT create a new unique state.  Instead repeated patterns are observed for lightbulbs that are even 2,4,6,etc (i.e. lightbulbs at positions 2(k+1), k=0,1,2... ), lightbulbs that are odd 1,3,5,etc (i.e. lightbulbs at positions 2k+1, k=0,1,2...), and lightbulbs at every 3rd position 1,4,7,10,etc ( i.e. lightbulbs at positions 3k+1, k=0,1,2...).\\n\\n**Part 4: Code**\\n```\\n        if (n>=3){\\n            if (m==1) { return 4; }\\n            if (m==2) { return 7; }\\n            if (m>=3) { return 8; }\\n        }\\n```"
+		}
+	],
+	"id":"649",
+	"title":"Bulb Switcher II",
+	"content":"<p>\r\nThere is a room with <code>n</code> lights which are turned on initially and 4 buttons on the wall. After performing exactly <code>m</code> unknown operations towards buttons, you need to return how many different kinds of status of the <code>n</code> lights could be.\r\n</p>\r\n\r\n<p>\r\nSuppose <code>n</code> lights are labeled as number [1, 2, 3 ..., n], function of these 4 buttons are given below:\r\n\r\n<ol>\r\n<li>Flip all the lights.</li>\r\n<li>Flip lights with even numbers.</li>\r\n<li>Flip lights with odd numbers.</li>\r\n<li>Flip lights with (3k + 1) numbers, k = 0, 1, 2, ...</li>\r\n</ol>\r\n</p>\r\n\r\n\r\n<p><b>Example 1:</b><br />\r\n<pre>\r\n<b>Input:</b> n = 1, m = 1.\r\n<b>Output:</b> 2\r\n<b>Explanation:</b> Status can be: [on], [off]\r\n</pre>\r\n</p>\r\n\r\n\r\n<p><b>Example 2:</b><br />\r\n<pre>\r\n<b>Input:</b> n = 2, m = 1.\r\n<b>Output:</b> 3\r\n<b>Explanation:</b> Status can be: [on, off], [off, on], [off, off]\r\n</pre>\r\n</p>\r\n\r\n\r\n<p><b>Example 3:</b><br />\r\n<pre>\r\n<b>Input:</b> n = 3, m = 1.\r\n<b>Output:</b> 4\r\n<b>Explanation:</b> Status can be: [off, on, off], [on, off, on], [off, off, off], [off, on, on].\r\n</pre>\r\n</p>\r\n\r\n<p><b>Note:</b>\r\n<code>n</code> and <code>m</code> both fit in range [0, 1000].\r\n</p>\r\n",
+	"frequency":"214",
+	"ac_num":"4500"
+}

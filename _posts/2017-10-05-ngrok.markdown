@@ -1,0 +1,35 @@
+---
+layout: post
+title: "ngrok 内网穿越神器"
+date: 2017-10-05 01:07:24 +800
+categories: 
+by: gf
+description: ngrok 服务使用
+---
+
+[ngrok](https://github.com/inconshreveable/ngrok) 是一款反响代理（tcp）工具，根据网上的教程，我也搭了一个服务，方便自己使用。
+
+# client 下载
+
+- [darwin_amd64](https://ng.gfzj.us/darwin_amd64/ngrok)
+- [linux_amd64](https://ng.gfzj.us/linux_amd64/ngrok)
+- [windows_amd64](https://ng.gfzj.us/windows_amd64/ngrok)
+
+# 使用
+
+`~/.ngrok` 文件如下：
+
+```yaml
+server_addr: 'ng.gfzj.us:4443'
+trust_host_root_certs: false
+```
+
+
+```bash
+# 反代本机 22 端口
+ngrok -proto=tcp 22
+
+# 反代本机 http 服务
+ngrok -subdomain=demo -proto=http 8000
+```
+

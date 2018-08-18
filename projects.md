@@ -38,3 +38,5 @@ permalink: /projects/
 - [屌丝博客群租](http://www.gfzj.us/ourblogs/)
     现实生活中的蚁族VPS也需要合租
 
+- [Leetcode](http://www.gfzj.us/leetcode/)
+    刷题，勤能补拙

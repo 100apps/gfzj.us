@@ -1,0 +1,93 @@
+{
+	"difficulty":"2",
+	"submit_num":"31796",
+	"show_id":"433",
+	"leetcode_id":"433",
+	"answers":[
+		{
+			"lc_ans_id":"91484",
+			"view":"11326",
+			"top":"0",
+			"title":"Java Solution using BFS",
+			"vote":"16",
+			"content":"```\\npublic class Solution {\\n    public int minMutation(String start, String end, String[] bank) {\\n        if(start.equals(end)) return 0;\\n        \\n        Set<String> bankSet = new HashSet<>();\\n        for(String b: bank) bankSet.add(b);\\n        \\n        char[] charSet = new char[]{'A', 'C', 'G', 'T'};\\n        \\n        int level = 0;\\n        Set<String> visited = new HashSet<>();\\n        Queue<String> queue = new LinkedList<>();\\n        queue.offer(start);\\n        visited.add(start);\\n        \\n        while(!queue.isEmpty()) {\\n            int size = queue.size();\\n            while(size-- > 0) {\\n                String curr = queue.poll();\\n                if(curr.equals(end)) return level;\\n                \\n                char[] currArray = curr.toCharArray();\\n                for(int i = 0; i < currArray.length; i++) {\\n                    char old = currArray[i];\\n                    for(char c: charSet) {\\n                        currArray[i] = c;\\n                        String next = new String(currArray);\\n                        if(!visited.contains(next) && bankSet.contains(next)) {\\n                            visited.add(next);\\n                            queue.offer(next);\\n                        }\\n                    }\\n                    currArray[i] = old;\\n                }\\n            }\\n            level++;\\n        }\\n        return -1;\\n    }\\n}\\n```"
+		},
+		{
+			"lc_ans_id":"91604",
+			"view":"3766",
+			"top":"1",
+			"title":"C++ two end BFS solution, exactly same as 127.Word Ladder",
+			"vote":"5",
+			"content":"If the length of gene is limited, maybe we can consider to encode ATGC with 2 bits\\n\\n```\\nclass Solution {\\npublic:\\n    int minMutation(string start, string end, vector<string>& bank) {\\n        unordered_set<string> dict(bank.begin(), bank.end());\\n        if (!dict.count(end)) return -1;\\n        unordered_set<string> bset, eset, *set1, *set2;\\n        bset.insert(start), eset.insert(end);\\n        int step = 0, n = start.size();\\n        while (!bset.empty() and !eset.empty()) {\\n            if (bset.size() <= eset.size())\\n                set1 = &bset, set2 = &eset;\\n            else set2 = &bset, set1 = &eset;\\n            unordered_set<string> tmp;\\n            step ++;\\n            for (auto itr = set1->begin(); itr != set1->end(); ++itr) {\\n                for (int i = 0; i < n; ++i) {\\n                    string dna = *itr;\\n                    for (auto g : string(\"ATGC\")) {\\n                        dna[i] = g;\\n                        if (set2->count(dna)) return step;\\n                        if (dict.count(dna)) {\\n                            tmp.insert(dna);\\n                            dict.erase(dna);\\n                        }\\n                    }\\n                }\\n            }\\n            *set1 = tmp;\\n        }\\n        return -1;\\n    }\\n};\\n```"
+		},
+		{
+			"lc_ans_id":"91495",
+			"view":"2471",
+			"top":"2",
+			"title":"Clear Java solution based on BFS (similar to Word Ladder)",
+			"vote":"4",
+			"content":"Here we just implement BFS from the start string. It is quite similar to what we have done in the Word Ladder problem. Below is my code.\\n\\n```\\npublic int minMutation(String start, String end, String[] bank) {\\n        if (bank == null || bank.length == 0) {\\n            return -1;\\n        }\\n        if (start.equals(end)) {\\n            return 0;\\n        }\\n        HashSet<String> set = new HashSet<>(); // to quick check whether a sequence exists\\n        set.add(start);\\n        for (String s : bank) {\\n            set.add(s);\\n        }\\n        int dist = 0;\\n        HashSet<String> visited = new HashSet<>(); // to store visited sequence\\n        Queue<String> q = new LinkedList<>();\\n        q.offer(start);\\n        visited.add(start);\\n        char[] dict = new char[]{'A', 'C', 'G', 'T'};\\n        while (!q.isEmpty()) {\\n            int size = q.size();\\n            dist++;\\n            for (int i = 0; i < size; i++) {\\n                String cur = q.poll();\\n                for (String next : findNext(cur, dict, set)) {\\n                    if (visited.contains(next)) {\\n                        continue;\\n                    }\\n                    if (next.equals(end)) {\\n                        return dist;\\n                    }\\n                    visited.add(next);\\n                    q.offer(next);\\n                }\\n            }\\n        }\\n        return -1;\\n    }\\n    \\n    private List<String> findNext(String cur, char[] dict, HashSet<String> set) {\\n        List<String> res = new ArrayList<>();\\n        // traverse all the possible sequence cases\\n        for (int i = 0; i < cur.length(); i++) {\\n            for (char ch : dict) {\\n                if (ch == cur.charAt(i)) {\\n                    continue;\\n                }\\n                char[] temp = cur.toCharArray();\\n                temp[i] = ch;\\n                String next = new String(temp);\\n                if (set.contains(next)) {\\n                    res.add(next);\\n                }\\n            }\\n        }\\n        return res;\\n    }\\n\\n```"
+		},
+		{
+			"lc_ans_id":"91489",
+			"view":"1575",
+			"top":"3",
+			"title":"Python Solution using BFS",
+			"vote":"3",
+			"content":"```\\nimport collections\\n\\ndef viableMutation(current_mutation, next_mutation):\\n    changes = 0\\n    for i in xrange(len(current_mutation)):\\n        if current_mutation[i] != next_mutation[i]:\\n            changes += 1\\n    return changes == 1\\n\\nclass Solution(object):\\n    def minMutation(self, start, end, bank):\\n        \"\"\"\\n        :type start: str\\n        :type end: str\\n        :type bank: List[str]\\n        :rtype: int\\n        \"\"\"\\n        queue = collections.deque()\\n        queue.append([start, start, 0]) # current, previous, num_steps\\n        while queue:\\n            current, previous, num_steps = queue.popleft()\\n            if current == end:  # in BFS, the first instance of current == end will yield the minimum\\n                return num_steps\\n            for string in bank:\\n                if viableMutation(current, string) and string != previous:\\n                    queue.append([string, current, num_steps+1])\\n        return -1\\n```"
+		},
+		{
+			"lc_ans_id":"91514",
+			"view":"743",
+			"top":"4",
+			"title":"Easy Java Solution (Beats most of the solutions)",
+			"vote":"3",
+			"content":"```\\npublic class Solution {\\n    public int minMutation(String start, String end, String[] bank) {\\n        Queue<String> queue = new LinkedList<>();\\n        char[] chars = {'A', 'C', 'G', 'T'};\\n        Set<String> bankSet = new HashSet<>();\\n        int level = 0;\\n        queue.offer(start);\\n        for (String b : bank) {\\n            bankSet.add(b);\\n        }\\n        while(!queue.isEmpty()) {\\n            int size = queue.size();\\n            while(size-- > 0) {\\n                String currString = queue.poll();\\n                if (currString.equals(end)) return level;\\n                for (int i = 0; i < currString.length(); i++) {\\n                    for (char ch: chars) {\\n                        char[] currChars = currString.toCharArray();\\n                        currChars[i] = ch;\\n                        String modString = new String(currChars);\\n                        if (bankSet.contains(modString)) {\\n                            queue.add(modString);\\n                            bankSet.remove(modString);\\n                        }\\n                    }\\n                }\\n            }\\n            level++;\\n        }\\n        return -1;\\n    }\\n}\\n```"
+		},
+		{
+			"lc_ans_id":"91493",
+			"view":"2771",
+			"top":"5",
+			"title":"Java 2ms BackTracking solution.",
+			"vote":"3",
+			"content":"Hi all, \\nI tried to solve this problem using backtracking as an exercise. \\nWhat do you think?\\n\\n```\\npublic class Solution {\\n    public int minMutation(String start, String end, String[] bank) {\\n        if(start.length()!=end.length()) return -1;\\n        if(start==end) return 0;\\n        \\n        Set<String> set = new HashSet<>();\\n        \\n        int min = Integer.MAX_VALUE;\\n        for(String s: bank){\\n            if(dist(start,s)>1) continue;\\n            set.add(s);\\n            min = Math.min(min, minMutation(s,end,bank,set,0));\\n            set.remove(s);\\n        }\\n        \\n        if(min==Integer.MAX_VALUE) return -1;\\n        return min;\\n    }\\n    \\n    public int minMutation(String current, String end, String[] bank, Set<String> set, int depth){\\n        if(current.equals(end)) return 1;\\n        int min = Integer.MAX_VALUE;\\n        \\n        if(depth>=end.length()) return min;\\n        \\n        for(String s: bank){\\n            int diff=dist(current,s);\\n            if(!set.contains(s) && (diff==1)){\\n                set.add(s);\\n                int num = minMutation(s,end,bank,set,depth+1);\\n                min = Math.min(min, num);\\n                set.remove(s);\\n            }\\n        }\\n        if(min==Integer.MAX_VALUE)\\n            return min;\\n        return 1+min;\\n    }\\n    \\n    // counts the distance between two strings\\n    public int dist(String start, String end){\\n        if(start.length()!=end.length()) return Integer.MAX_VALUE;\\n        int diff = 0;\\n        for(int i=0; i<start.length(); i++){\\n            if(start.charAt(i)!=end.charAt(i)) diff++;\\n        }\\n        return diff;\\n    }\\n} \\n```"
+		},
+		{
+			"lc_ans_id":"91559",
+			"view":"726",
+			"top":"6",
+			"title":"JAVA Bidirectional BFS method same as Word Ladder",
+			"vote":"2",
+			"content":"```\\npublic class Solution {\\n    public int minMutation(String start, String end, String[] bank) {\\n        if(bank==null||bank.length==0)\\n        return -1;\\n        \\n        Set<String> bank1 = new HashSet<>();\\n        for(String s : bank)\\n        bank1.add(s);\\n        if(!bank1.contains(end))\\n        return -1;\\n        \\n        char[] gene = new char[]{'A','C','G','T'};\\n        Set<String> set1 = new HashSet<>();\\n        Set<String> set2 = new HashSet<>();\\n        \\n        set1.add(start);\\n        set2.add(end);\\n        \\n        \\n        int count=0;\\n        while(!set1.isEmpty()&&!set2.isEmpty()){\\n            if(set1.size()>set2.size()){\\n                Set<String> t=set1;\\n                set1=set2;\\n                set2=t;\\n            }\\n            Set<String> temp = new HashSet<>();\\n            \\n            for(String s : set1){\\n                char[] arr = s.toCharArray();\\n                for(int i=0;i<arr.length;i++){\\n                    char old=arr[i];\\n                    for(int j=0;j<gene.length;j++){\\n                        if(gene[j]==old)\\n                        continue;\\n                        arr[i]=gene[j];\\n                        String candi = String.valueOf(arr);\\n                        if(set2.contains(candi))\\n                        return count+1;\\n                        if(bank1.contains(candi)){\\n                        temp.add(candi);\\n                        bank1.remove(candi);\\n                        }\\n                        arr[i]=old;\\n                    }\\n                }\\n            }\\n            count++;\\n            set1=temp;\\n        }\\n        return -1;\\n    }\\n}\\n````"
+		},
+		{
+			"lc_ans_id":"91581",
+			"view":"1225",
+			"top":"7",
+			"title":"C++ BFS (0ms)",
+			"vote":"2",
+			"content":"```\\nclass Solution {\\npublic:\\n    int minMutation(string start, string end, vector<string>& bank) {\\n        queue<string> toVisit;\\n        unordered_set<string> dict(bank.begin(), bank.end());\\n        int dist = 0;\\n        \\n        if(!dict.count(end)) return -1;\\n        \\n        toVisit.push(start);\\n        dict.insert(start); dict.insert(end);\\n        while(!toVisit.empty()) {\\n            int n = toVisit.size();\\n            for(int i=0; i<n; i++) {\\n                string str = toVisit.front();\\n                toVisit.pop();\\n                if(str==end) return dist;\\n                addWord(str, dict, toVisit);\\n            }\\n            dist++;\\n        }\\n        return -1;\\n        \\n    }\\n    \\n    void addWord(string word, unordered_set<string>& dict, queue<string>& toVisit) {\\n        dict.erase(word);\\n        for(int i=0; i<word.size(); i++) {\\n            char tmp = word[i];\\n            for(char c:string(\"ACGT\")) {\\n                word[i] = c;\\n                if(dict.count(word)) {\\n                    toVisit.push(word);\\n                    dict.erase(word);\\n                }\\n            }\\n            word[i] = tmp;\\n        }\\n    }\\n};\\n```"
+		},
+		{
+			"lc_ans_id":"91571",
+			"view":"2724",
+			"top":"8",
+			"title":"Java BFS Solution",
+			"vote":"2",
+			"content":"Explain: Every time we find a mismatch letter then check if it is in the bank, if so, then we add it to the queue for bfs traverse. \"#\" is used to mark end of each level. time complexity should be o(length of bank)\\n\\n```\\npublic int minMutation(String start, String end, String[] bank) {\\n        if(start==null || end==null || start.length()!=end.length()) return -1;\\n        Set<String> bankSet = new HashSet<>();\\n        for(String s:bank){\\n            bankSet.add(s);\\n        }\\n        if(!bankSet.contains(end)) return -1;\\n        Queue<String> q = new LinkedList<>();\\n        q.offer(start);\\n        q.offer(\"#\");\\n        char[] che = end.toCharArray();\\n        int level = 0;\\n        int min = Integer.MAX_VALUE;\\n        char[] genes = new char[]{'A','C','G','T'};\\n        while(!q.isEmpty()){\\n            String tmp = q.poll();\\n            if(tmp.equals(\"#\")){\\n                level++;\\n                if(!q.isEmpty())q.offer(\"#\");\\n            } \\n            else if(tmp.equals(end)) min=Math.min(min,level);\\n            else{\\n                char[] chs = tmp.toCharArray();\\n                for(int i=0;i<chs.length;i++)\\n                {\\n                    if(chs[i]!=che[i])\\n                    {\\n                        char c = chs[i];\\n                        for(char x:genes)\\n                        {\\n                           if(x!=c){\\n                               chs[i]=x;\\n                               String ns = String.valueOf(chs);\\n                               if(bankSet.contains(ns)) q.offer(ns);\\n                           }\\n                        }\\n                        chs[i]=c;\\n                    }\\n                }\\n            }\\n        }\\n        \\n        return min==Integer.MAX_VALUE? -1 : min;\\n    }\\n```"
+		},
+		{
+			"lc_ans_id":"91491",
+			"view":"192",
+			"top":"9",
+			"title":"DFS java",
+			"vote":"1",
+			"content":"```\\nclass Solution {\\n    // check\\n    // if two seqs only diff in one char it is a valid mutation\\n    // find all the seq has one diff\\n    // get closer to the end.\\n    // keep a explored Set\\n    \\n    \\n        \\n    public int minMutation(String start, String end, String[] bank) {\\n        boolean[] explored = new boolean[bank.length];    \\n        if (bank.length == 0) return -1;\\n        return minMutation(explored, start, end,  bank);\\n        \\n    }\\n    \\n    int minMutation(boolean[] explored, String start, String end, String[] bank) {\\n        \\n        if (start.equals(end)) return 0;\\n        \\n        int step = bank.length + 1;\\n        for (int i = 0; i < bank.length; i++) {\\n            if (diffOne(start , bank[i]) && ! explored[i]) {\\n                explored[i] = true;\\n                int temp = minMutation(explored, bank[i], end, bank);\\n                if (temp != -1) {\\n                    step = Math.min(step, temp);    \\n                }                \\n                explored[i] = false;\\n            }                        \\n        }\\n        return step == bank.length + 1 ? -1 : 1 + step;\\n    }\\n    \\n    \\n    boolean diffOne(String s1, String s2) {\\n        char[] s1c = s1.toCharArray();\\n        char[] s2c = s2.toCharArray();\\n        int count = 0;\\n        for (int i = 0; i < s1c.length; i++) {\\n            if (s1c[i] != s2c[i]) count ++;\\n            if (count >= 2) return false;\\n        }\\n        return count == 1;\\n    }\\n}\\n```"
+		}
+	],
+	"id":"427",
+	"title":"Minimum Genetic Mutation",
+	"content":"<p>A gene string can be represented by an 8-character long string, with choices from <code>\"A\"</code>, <code>\"C\"</code>, <code>\"G\"</code>, <code>\"T\"</code>.</p>\r\n\r\n<p>Suppose we need to investigate about a mutation (mutation from \"start\" to \"end\"), where ONE mutation is defined as ONE single character changed in the gene string.</p>\r\n\r\n<p>For example, <code>\"AACCGGTT\"</code> -> <code>\"AACCGGTA\"</code> is 1 mutation.</p>\r\n\r\n<p>Also, there is a given gene \"bank\", which records all the valid gene mutations. A gene must be in the bank to make it a valid gene string.</p>\r\n\r\n<p>Now, given 3 things - start, end, bank, your task is to determine what is the minimum number of mutations needed to mutate from \"start\" to \"end\". If there is no such a mutation, return -1.</p>\r\n\r\n<p><b>Note:</b>\r\n<ol>\r\n<li>Starting point is assumed to be valid, so it might not be included in the bank.</li>\r\n<li>If multiple mutations are needed, all mutations during in the sequence must be valid.</li>\r\n<li>You may assume start and end string is not the same.</li>\r\n</ol>\r\n</p>\r\n\r\n<p><b>Example 1:</b>\r\n<pre>\r\nstart: \"AACCGGTT\"\r\nend:   \"AACCGGTA\"\r\nbank: [\"AACCGGTA\"]\r\n\r\nreturn: 1\r\n</pre>\r\n</p>\r\n\r\n<p><b>Example 2:</b>\r\n<pre>\r\nstart: \"AACCGGTT\"\r\nend:   \"AAACGGTA\"\r\nbank: [\"AACCGGTA\", \"AACCGCTA\", \"AAACGGTA\"]\r\n\r\nreturn: 2\r\n</pre>\r\n</p>\r\n\r\n<p><b>Example 3:</b>\r\n<pre>\r\nstart: \"AAAAACCC\"\r\nend:   \"AACCCCCC\"\r\nbank: [\"AAAACCCC\", \"AAACCCCC\", \"AACCCCCC\"]\r\n\r\nreturn: 3\r\n</pre>\r\n</p>",
+	"frequency":"491",
+	"ac_num":"10988"
+}

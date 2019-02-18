@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <style>
+    html, body{
+      width: 100%;
+      height: 100%;
+
+      background-color: #000;
+
+      overflow: hidden;
+    }
+
+    #game-container{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -250px 0 0 -400px;
+    }
+
+    /**
+ * app.css
+ * @author dron
+ * @create 2015-09-30
+ */
+
+.lottery-viewport{
+  width: 8em;
+  height: 5em;
+  font-size: 100px;
+  pointer-events: none;
+  user-select: none;
+  /*background-color: #333;*/
+  /*overflow: hidden;*/
+}
+
+.lottery-viewport.show{
+
+}
+
+.lottery-viewport .list, .lottery-viewport .flag{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lottery-viewport .rotating, .lottery-viewport .flipping{
+  height: .78em;
+}
+
+.lottery-viewport .rotating{
+  position: absolute;
+
+  width: 5em;
+  margin-top: -.39em;
+
+  transform-origin: 100% 50%;
+  -webkit-perspective: 200;
+}
+
+.lottery-viewport .flag .rotating{
+  transform: translate3D( 3em, 2.5em, 0 );
+}
+
+.lottery-viewport .flipping{
+  width: 1.56em;
+
+  line-height: .78em;
+  text-align: center;
+
+  overflow: hidden;
+  transform-origin: 50% 50%;
+  transform: rotateY(38deg);
+}
+
+.lottery-viewport.show .flipping{
+
+}
+
+.lottery-viewport .flag .flipping{
+  background-image: url(flag.png);
+  background-size: cover;
+}
+
+.lottery-viewport .text{
+  font-size: .56em;
+  font-weight: 700;
+  color: #ffb400;
+}
+  </style>
+</head>
+<body>
+
+<div class="lottery-viewport" id="game-container"></div>
+
+<script>
+/**
+ * app.js
+ * @author dron
+ * @create 2015-09-30
+ */
+
+var nameLottery = function( shuffle, tmpl, now, appendHTML ){
+  var exports = {};
+  var data = null;
+
+  var configs = {
+    offset: 5,
+    maxSpeed: 0.03,
+    accelerationUp: 0.00009,
+    accelerationDown: -0.00003,
+    fixDuretion: 1000,
+    fixTimingFunction: function( index, offset, target, framesNum ){ if((index /= framesNum) < (1 / 2.75)) return target * (7.5625 * index * index) + offset; else if(index < (2 / 2.75)) return target * (7.5625 * (index -= (1.5 / 2.75)) * index + .75) + offset; else if(index < (2.5 / 2.75)) return target * (7.5625 * (index -= (2.25 / 2.75)) * index + .9375) + offset; else return target * (7.5625 * (index -= (2.625 / 2.75)) * index + .984375) + offset; }
+  };
+
+  var rendering = {
+    pointer: 0,
+    fixStartPointer: 0,
+    fixDistance: 0,
+    speed: 0,
+    acceleration: 0,
+    readyState: "stopped",
+    nameActive: false
+  };
+
+  var container = null;
+  var listContainer = null;
+
+  var round = Math.round, abs = Math.abs;
+
+  var generateData = function( names ){
+    var list = names.split( "," );
+    shuffle( list );
+    var length = list.length;
+
+    return { 
+      count: length, 
+      items: list.map( function( name, index ){
+        return {
+          name: name,
+          index: index
+        };
+      } )
+    };
+  };
+
+  var mainloop = function(){
+    var lastPointer = 0;
+    var lastTime = null;
+    var lastFixTime = null;
+
+    return function mainloop(){
+      if( lastTime === null )
+        lastTime = now();
+
+      var nowTime = now();
+      var diffTime = nowTime - lastTime;
+
+      lastTime = nowTime;
+
+      // readyState
+      if( rendering.readyState == "stopping" && rendering.speed == 0 ){
+        rendering.readyState = "fixing";
+        rendering.fixStartPointer = rendering.pointer;
+        rendering.fixDistance = round( rendering.pointer ) - rendering.pointer;
+        lastFixTime = nowTime;
+      }else if( rendering.readyState == "fixing" ){
+        var fixDiffTime = nowTime - lastFixTime;
+
+        if( fixDiffTime > configs.fixDuretion ){
+          fixDiffTime = configs.fixDuretion;
+          rendering.readyState = "stopped";
+          rendering.nameActive = true;
+        }
+
+        rendering.pointer = configs.fixTimingFunction( fixDiffTime, rendering.fixStartPointer, rendering.fixDistance, configs.fixDuretion );
+      }
+
+      // speed
+      rendering.speed += rendering.acceleration * diffTime;
+
+      if( rendering.speed > configs.maxSpeed ){
+        rendering.speed = configs.maxSpeed;
+        rendering.acceleration = 0;
+      }else if( rendering.speed < 0 ){
+        rendering.speed = 0;
+        rendering.acceleration = 0;
+      }
+
+      // pointer
+      rendering.pointer += rendering.speed * diffTime;
+
+      if( rendering.pointer > data.count - 1 )
+        rendering.pointer -= data.count;
+
+      if( lastPointer != rendering.pointer ){
+        renderList();
+        lastPointer = rendering.pointer;
+      }else if( rendering.nameActive ){
+        // var el = document.querySelector( ".lottery-viewport .text[active]" );
+
+        // if( el ){
+        //   el.className += " active";
+        // }
+      }
+
+      //
+      requestAnimationFrame( mainloop );
+    }
+  }();
+
+  var layoutTemplate = tmpl( [
+    "<div class='list'></div>",
+    "<div class='flag'>",
+      "<div class='rotating'><div class='flipping'></div></div>",
+    "</div>"
+  ] );
+
+  var itemTemplate = tmpl( [
+    "<div id='nameLottery_{{ index }}' class='rotating' style='{{ cssText }}'>",
+      "<div class='flipping'><div class='text'>{{ name }}</div></div>",
+    "</div>"
+  ] );
+
+  var cssTextTemplate = tmpl( [
+    "transform: translate3D(3em,2.5em,0) rotate({{ distance * 10.5 }}deg);",
+    "opacity: {{ 1 - Math.abs( distance * 0.2 ) }};"
+  ] );
+
+  var initRender = function(){
+    container.innerHTML = layoutTemplate();
+    listContainer = container.querySelector( ".list" );
+    renderList();
+  };
+
+  var renderList = function(){
+    var p = round( rendering.pointer );
+    var min = p - configs.offset, max = p + configs.offset;
+
+    var html = [], item, el;
+
+    for( var i = min, d, c, index; i <= max; i ++ ){
+      d = i - rendering.pointer;
+      index = i;
+      
+      if( i < 0 ){
+        index += data.count;
+      }else if( i > data.count - 1 ){
+        index -= data.count;
+      }
+
+      item = data.items[ index ];
+      c = cssTextTemplate( {
+        distance: d
+        // blur: rendering.speed
+      } );
+
+      if( el = document.getElementById( "nameLottery_" + item.index ) ){
+        el.style.cssText = c;
+      }else{
+        html.push( itemTemplate( {
+          name: item.name,
+          index: item.index,
+          cssText: c
+        } ) );
+      }
+    }
+
+    if( html.length )
+      appendHTML( listContainer, html.join( "" ) );
+  };
+
+  exports.init = function( conf ){
+    data = generateData( conf.names );
+    container = document.querySelector( conf.container );
+    initRender();
+    mainloop();
+  };
+
+  exports.scroll = function(){
+    rendering.readyState = "scrolling";
+    rendering.acceleration = configs.accelerationUp;
+  };
+
+  exports.stop = function(){
+    rendering.readyState = "stopping";
+    rendering.acceleration = configs.accelerationDown;
+  };
+
+  exports.getReadyState = function(){
+    return rendering.readyState;
+  };
+
+  return exports;
+}(
+  function shuffle( array ){
+    for( var i = array.length - 1, j, t; i > 0; i -- ){
+      j = 0 | ( Math.random() * ( i + 1 ) );
+      t = array[ i ];
+      array[ i ] = array[ j ];
+      array[ j ] = t;
+    }
+  },
+
+  function tmpl(){
+    var literals, settings, matcher, escaper, escapes;
+
+    literals = /\\([\{\}])|\u200c([^\u200d])\u200d/g;
+    settings = { evaluate: /\{\{\{([\s\S]+?)\}\}\}/g, interpolate: /\{\{([\s\S]+?)\}\}/g };
+    matcher = new RegExp( settings.evaluate.source + "|" + settings.interpolate.source + "|$", "g" );
+
+    escaper = /\\|"|\r|\n|\t|\u2028|\u2029/g;
+    escapes = {
+      "\"": "\"", "\\": "\\", "\r": "r", "\n": "n", "\t": "t",
+      "\u2028": "u2028", "\u2029": "u2029"
+    };
+
+    return function tmpl( text, data ){
+      var render, index, source, template;
+
+      index = 0;
+
+      source = "_p_p_ = \"";
+
+      if( text instanceof Array )
+        text = text.join( "" );
+
+      text = text.replace( literals, "\u200c$1\u200d" );
+
+      text.replace( matcher, function( match, evaluate, interpolate, offset ){
+        source += text.slice( index, offset ).replace( escaper, function( match ){
+          return "\\" + escapes[ match ];
+        } );
+
+        if( evaluate )
+          source += "\"; " + evaluate + "; _p_p_ += \"";
+
+        if( interpolate )
+          source += "\" + ( ( _t_t_ = ( " + interpolate + " ) ) == null ? \"\" : _t_t_ ) + \"";
+
+        index = offset + match.length;
+        return match;
+      } );
+
+      source = source.replace( literals, "$2" );
+      source = "var _t_t_, _p_p_; with( _d_d_ || {} ){ " + source + "\"; } return _p_p_;";
+
+      try{
+        render = new Function( "_d_d_", source );
+      }catch( e ){
+        e.source = source;
+        throw e;
+      }
+
+      if( data )
+        return render( data );
+
+      template = function( data ) {
+        return render.call( this, data );
+      };
+
+      template.source = "function( _d_d_ ){ " + source + " }";
+
+      return template;
+    }
+  }(),
+
+  function now(){
+    return new Date().getTime();
+  },
+
+  function appendHTML( el, html ){
+    var layer = document.createElement( "div" );
+    layer.innerHTML = html;
+
+    var nodes = [].slice.call( layer.childNodes, 0 );
+
+    for( var i = 0, l = nodes.length; i < l; i ++ )
+      el.appendChild( nodes[ i ] );
+  }
+);
+</script>
+
+<script>
+/**
+ * main.js
+ * @author dron
+ * @create 2015-09-30
+ */
+
+nameLottery.init( {
+  names: '宋江,卢俊义,吴用,公孙胜,关胜,林冲,秦明,呼延灼,花荣,柴进,李应,朱仝,鲁智深,武松,董平,张清,杨志,徐宁,索超,戴宗,刘唐,李逵,史进,穆弘,雷横,李俊,阮小二,张横,阮小五,张顺,阮小七,杨雄,石秀,解珍,解宝,燕青',
+  container: "#game-container"
+} );
+
+document.body.addEventListener( "mousedown", function( event ){
+  if( nameLottery.getReadyState() == "stopped" ){
+    nameLottery.scroll();
+  }else if( nameLottery.getReadyState() == "scrolling" ){
+    nameLottery.stop();
+  }
+
+  event.preventDefault();
+} );
+</script>
+  
+</body>
+</html>

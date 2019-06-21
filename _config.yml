@@ -10,7 +10,7 @@ github_username:  100apps
 # Build settings
 markdown: kramdown
 
-paginate: 10
+paginate: 20
 paginate_path: "page:num"
 timezone: 'Asia/Shanghai'
 
@@ -22,6 +22,6 @@ authors:
  gf:
   display_name: Guangfeng Liu
   email: gf@gfzj.us
-  note: 一枚普通的码农@阿里巴巴
+  note: 一枚普通的码农@饿了么/阿里巴巴
 
 plugins: [jekyll-paginate]

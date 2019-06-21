@@ -102,6 +102,6 @@ LANG=sv\_SE.ISO8859-1
 好了，大功告成，现在可以运行WTK和Emulator了，而且还是中文的
 
 
-[5f9f56339934dcadc0c149928814263d.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/5f9f56339934dcadc0c149928814263d.gif
-[5fd353a0c9e01ebe82f863e803d8bce1.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/5fd353a0c9e01ebe82f863e803d8bce1.gif
-[914da57c5f34f76ae7e90ca99e06389a.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/914da57c5f34f76ae7e90ca99e06389a.gif
+[5f9f56339934dcadc0c149928814263d.gif]: /gfzjus_blog/tech/2014-10-22/5f9f56339934dcadc0c149928814263d.gif
+[5fd353a0c9e01ebe82f863e803d8bce1.gif]: /gfzjus_blog/tech/2014-10-22/5fd353a0c9e01ebe82f863e803d8bce1.gif
+[914da57c5f34f76ae7e90ca99e06389a.gif]: /gfzjus_blog/tech/2014-10-22/914da57c5f34f76ae7e90ca99e06389a.gif

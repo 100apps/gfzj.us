@@ -25,5 +25,5 @@ permalink: /tech/113.html
 
 [buyVM]: https://my.frantech.ca/aff.php?aff=783
 [directspace.net]: http://eportal.directspace.net/aff.php?aff=1626
-[buyvm]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/cc75c0ff677293bab231fa4d98fb00f7.jpg
-[directspace]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/70c9e0be0c9f195a8085131d04123ec4.jpg
+[buyvm]: /gfzjus_blog/tech/2014-10-22/cc75c0ff677293bab231fa4d98fb00f7.jpg
+[directspace]: /gfzjus_blog/tech/2014-10-22/70c9e0be0c9f195a8085131d04123ec4.jpg

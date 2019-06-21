@@ -40,7 +40,7 @@ for charles 3.11.1, just download [charlse](http://www.charlesproxy.com/assets/r
 
 
 #  update 2015.06.24
-for charles 3.10.1, please go to <http://www.gfzj.us/tech/2015/06/24/charles-hacking.html>
+for charles 3.10.1, please go to </tech/2015/06/24/charles-hacking.html>
 
 [charles](http://www.charlesproxy.com/)是一个非常好用的跨平台代理工具，比fiddler功能更多，支持socks代理。
 方便购买的还是请自己购买，对于学生党和屌丝党，我们可以从官方下载试用版，然后用注册码激活。

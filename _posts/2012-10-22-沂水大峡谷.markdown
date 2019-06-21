@@ -16,9 +16,9 @@ permalink: /tech/57.html
 [![20121022-164126.jpg][]][20121022-164126.jpg 1]
 
 
-[20121022-164017.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/2ee102caf532e86b743b49a5c05ba804.jpg
+[20121022-164017.jpg]: /gfzjus_blog/tech/2014-10-22/2ee102caf532e86b743b49a5c05ba804.jpg
 [20121022-164017.jpg 1]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/10/20121022-164017.jpg
-[20121022-164043.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/60944b728d3bac4d0e0721f8c69c9a83.jpg
+[20121022-164043.jpg]: /gfzjus_blog/tech/2014-10-22/60944b728d3bac4d0e0721f8c69c9a83.jpg
 [20121022-164043.jpg 1]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/10/20121022-164043.jpg
-[20121022-164126.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/30ae117a38e03255aeda4a4f27139bb9.jpg
+[20121022-164126.jpg]: /gfzjus_blog/tech/2014-10-22/30ae117a38e03255aeda4a4f27139bb9.jpg
 [20121022-164126.jpg 1]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/10/20121022-1641261.jpg

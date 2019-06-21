@@ -64,7 +64,7 @@ apt-get或者brew，随意吧。创建一个目录。假设叫做pages，里面�
 经测试，github的CNAME文件是可以绑定多个域名的。但是优先级始终没有搞懂，因为github会把CNAME绑定的所有域名都301到一个，但是具体事哪一个，我测试了昨天和今天大结果不一样。比较郁闷，所以刚脆只绑定一个好了。
 
 
-[CMS_github pages_qiniu]: http://www.gfzj.us/tech/116.html
+[CMS_github pages_qiniu]: /tech/116.html
 [https_github.com_join]: https://github.com/join
 [https_gitcafe.com_signup]: https://gitcafe.com/signup
 [http_www.net.cn_domain_dns]: http://www.net.cn/domain/dns

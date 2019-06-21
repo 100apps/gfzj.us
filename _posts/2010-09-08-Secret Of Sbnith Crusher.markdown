@@ -70,7 +70,7 @@ References
 
 
 [Google]: http://wwww.google.com/
-[sbnith crusher_s shape]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/d03891c41c4b20353707992f589c1339.jpg
+[sbnith crusher_s shape]: /gfzjus_blog/tech/2014-10-22/d03891c41c4b20353707992f589c1339.jpg
 [1]: http://sbnith-crusher.appspot.com/#ref-1
 [2]: http://sbnith-crusher.appspot.com/#ref-2
 [Wikipedia_ crusher]: http://en.wikipedia.org/wiki/Crusher

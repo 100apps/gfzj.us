@@ -23,7 +23,7 @@ permalink: /projects/
 - [AppSense](http://www.appsense.me/)
     AppSense工作室 － 创意惊艳世界
 
-- [slider.js](http://www.gfzj.us/slider/)
+- [slider.js](/slider/)
     js幻灯片效果类库
 
 - [BT狗](https://btgle.com/)
@@ -35,8 +35,8 @@ permalink: /projects/
 - [宁静致远](http://peaceworldfound.com/)
     无宁静无以致远，不读书不可远行。
 
-- [屌丝博客群租](http://www.gfzj.us/ourblogs/)
+- [屌丝博客群租](/ourblogs/)
     现实生活中的蚁族VPS也需要合租
 
-- [Leetcode](http://www.gfzj.us/leetcode/)
+- [Leetcode](/leetcode/)
     刷题，勤能补拙

@@ -3,7 +3,7 @@ layout: post
 title: "祝你「新婚快乐」"
 date: 2014-10-31 19:50:32
 category: life
-img: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/707f48f503cc1a079e40279ace535b18.jpg
+img: /gfzjus_blog/life/2014-11-10/707f48f503cc1a079e40279ace535b18.jpg
 by: gf
 description: 好朋友金友结婚了。再次相聚竟是四年后。祝你「新婚快乐」！
 permalink: /life/205.html
@@ -13,4 +13,4 @@ permalink: /life/205.html
 见到小伙伴们非常开心，仿佛又回到大学的时候。祝你「新婚快乐」！
 
 
-[707f48f503cc1a079e40279ace535b18.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-11-10/707f48f503cc1a079e40279ace535b18.jpg
+[707f48f503cc1a079e40279ace535b18.jpg]: /gfzjus_blog/life/2014-11-10/707f48f503cc1a079e40279ace535b18.jpg

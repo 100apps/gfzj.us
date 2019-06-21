@@ -33,4 +33,4 @@ permalink: /tech/148.html
     }
 
 
-[bfd350dc7b3f849124eb0386cc0c4086.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/bfd350dc7b3f849124eb0386cc0c4086.gif
+[bfd350dc7b3f849124eb0386cc0c4086.gif]: /gfzjus_blog/tech/2014-10-22/bfd350dc7b3f849124eb0386cc0c4086.gif

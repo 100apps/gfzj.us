@@ -56,9 +56,9 @@ O2O也不是什么新东西，一直在提，看起来很美好。但是没有�
 
 
 [Link 1]: http://www.baidu.com/s?ie=utf-8&wd=哈伦裤价格
-[-]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/eb770d88a2ca327722233f0acda17b79.jpg
-[- 1]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/e18af23e139889def8d7428b958ec388.jpg
-[- 2]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4a7dd42f6b2c1fca05537a7158adc2a4.jpg
+[-]: /gfzjus_blog/tech/2014-10-22/eb770d88a2ca327722233f0acda17b79.jpg
+[- 1]: /gfzjus_blog/tech/2014-10-22/e18af23e139889def8d7428b958ec388.jpg
+[- 2]: /gfzjus_blog/tech/2014-10-22/4a7dd42f6b2c1fca05537a7158adc2a4.jpg
 [_KTV]: http://bbs.taobao.com/catalog/thread/508895-263485264.htm?spm=1.1000386.221670.2.apjcUh
 [http_www.taobao.com_market_auto_qcrsl.php]: http://www.taobao.com/market/auto/qcrsl.php
-[a61ff2eca0ed9ed8ed0cb9d38af0a5b8.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a61ff2eca0ed9ed8ed0cb9d38af0a5b8.png
+[a61ff2eca0ed9ed8ed0cb9d38af0a5b8.png]: /gfzjus_blog/tech/2014-10-22/a61ff2eca0ed9ed8ed0cb9d38af0a5b8.png

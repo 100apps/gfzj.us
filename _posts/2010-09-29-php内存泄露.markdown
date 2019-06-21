@@ -14,4 +14,4 @@ permalink: /tech/170.html
 
 
 
-[416e3ebe92203e0b31e44effbab43dcd.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/416e3ebe92203e0b31e44effbab43dcd.jpg
+[416e3ebe92203e0b31e44effbab43dcd.jpg]: /gfzjus_blog/tech/2014-10-22/416e3ebe92203e0b31e44effbab43dcd.jpg

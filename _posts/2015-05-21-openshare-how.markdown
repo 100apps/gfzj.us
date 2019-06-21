@@ -142,7 +142,7 @@ void instrumentObjcMessageSends();
 }
 {%endhighlight%}
 
-这样在/tmp/下目录就能生成`/tmp/msgSends-1234`类似的文件了。可以用`tail -f`查看。非常方便。加上[从源代码编译objc runtime](http://www.gfzj.us/tech/2015/04/01/objc-runtime-compile-from-source-code.html)中提到的方法，现在都有两种监控消息发送的方法了。另外还听说`Dtrace`的方法。
+这样在/tmp/下目录就能生成`/tmp/msgSends-1234`类似的文件了。可以用`tail -f`查看。非常方便。加上[从源代码编译objc runtime](/tech/2015/04/01/objc-runtime-compile-from-source-code.html)中提到的方法，现在都有两种监控消息发送的方法了。另外还听说`Dtrace`的方法。
 
 ------
 

@@ -33,5 +33,5 @@ permalink: /tech/159.html
 而最怕的是，才出「盲山」，又入「狗镇」。
 
 
-[893b464c3f12edfb0c672cf9b7cd1dba.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/893b464c3f12edfb0c672cf9b7cd1dba.png
-[893b464c3f12edfb0c672cf9b7cd1dba.png 1]: http://www.gfzj.us/wp-content/uploads/2014/09/Untitled-3.png
+[893b464c3f12edfb0c672cf9b7cd1dba.png]: /gfzjus_blog/tech/2014-10-22/893b464c3f12edfb0c672cf9b7cd1dba.png
+[893b464c3f12edfb0c672cf9b7cd1dba.png 1]: /wp-content/uploads/2014/09/Untitled-3.png

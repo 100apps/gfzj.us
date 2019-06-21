@@ -13,4 +13,4 @@ permalink: /tech/177.html
 3.pxe，我一直没有安装成果。试了好几次了，放弃。因为我买转接线了。我有光驱了~哈哈
 
 
-[5586fc004979047e1ed01736143be01a.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/5586fc004979047e1ed01736143be01a.jpg
+[5586fc004979047e1ed01736143be01a.jpg]: /gfzjus_blog/tech/2014-10-22/5586fc004979047e1ed01736143be01a.jpg

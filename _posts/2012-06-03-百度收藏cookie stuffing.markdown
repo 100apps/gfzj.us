@@ -60,11 +60,11 @@ permalink: /tech/36.html
 暂时想到的一种应用是，自动添加当前页面的keywords到用户的收藏里面，比如这个页面的keyword是 破碎机、破碎机厂家。那么当用户搜索这个两个词中任何一个的时候，都是这个页面。在最上面啊。直接把百科给秒了。更牛逼的应用还是等各位看官来发掘吧。
 
 
-[1761eb9d8fbbd44a79c3cbd0ed126480.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/1761eb9d8fbbd44a79c3cbd0ed126480.png
+[1761eb9d8fbbd44a79c3cbd0ed126480.png]: /gfzjus_blog/tech/2014-10-22/1761eb9d8fbbd44a79c3cbd0ed126480.png
 [Link 1]: http://www.baidu.com/search/favo/help.html
-[fb7c43dd3c121e2e0cd3d54608ddea4e.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/fb7c43dd3c121e2e0cd3d54608ddea4e.png
+[fb7c43dd3c121e2e0cd3d54608ddea4e.png]: /gfzjus_blog/tech/2014-10-22/fb7c43dd3c121e2e0cd3d54608ddea4e.png
 [http_ooxxbaidu.sinaapp.com]: http://ooxxbaidu.sinaapp.com/
 [http_ooxxbaidu.sinaapp.com_1.js]: http://ooxxbaidu.sinaapp.com/1.js
 [Link 2]: http://gfzj.sinaapp.com/285.html
 [Link 3]: http://www.baidu.com/s?wd=干爹
-[2a1726783c4a2f21f58de0fe195506bc.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/2a1726783c4a2f21f58de0fe195506bc.png
+[2a1726783c4a2f21f58de0fe195506bc.png]: /gfzjus_blog/tech/2014-10-22/2a1726783c4a2f21f58de0fe195506bc.png

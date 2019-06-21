@@ -18,7 +18,7 @@ permalink: /tech/143.html
 
 
 [Link 1]: http://www.zhihu.com/question/21089810
-[EE46F5C3-AD13-413A-8693-8BBDE0C0A3E1]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/e1e404babad924a331905896a2d85e04.jpg
-[EE46F5C3-AD13-413A-8693-8BBDE0C0A3E1 1]: http://www.gfzj.us/wp-content/uploads/2014/06/EE46F5C3-AD13-413A-8693-8BBDE0C0A3E1.jpg
-[12328bf0706c994020fb5d3e00c06ccc.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/12328bf0706c994020fb5d3e00c06ccc.jpg
-[12328bf0706c994020fb5d3e00c06ccc.jpg 1]: http://www.gfzj.us/wp-content/uploads/2014/06/p171526619-1.jpg
+[EE46F5C3-AD13-413A-8693-8BBDE0C0A3E1]: /gfzjus_blog/tech/2014-10-22/e1e404babad924a331905896a2d85e04.jpg
+[EE46F5C3-AD13-413A-8693-8BBDE0C0A3E1 1]: /wp-content/uploads/2014/06/EE46F5C3-AD13-413A-8693-8BBDE0C0A3E1.jpg
+[12328bf0706c994020fb5d3e00c06ccc.jpg]: /gfzjus_blog/tech/2014-10-22/12328bf0706c994020fb5d3e00c06ccc.jpg
+[12328bf0706c994020fb5d3e00c06ccc.jpg 1]: /wp-content/uploads/2014/06/p171526619-1.jpg

@@ -26,5 +26,5 @@ permalink: /tech/151.html
 
 [https_www.henleyglobal.com_files_download_hvri_VISA_Index_2014_04_11_Web.pdf]: https://www.henleyglobal.com/files/download/hvri/VISA_Index_2014_04_11_Web.pdf
 [Link 1]: http://zh.wikipedia.org/zh/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E7%AD%BE%E8%AF%81%E6%94%BF%E7%AD%96
-[fc41b63f37b332b5b4dd98c1bbaaf0a1.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/fc41b63f37b332b5b4dd98c1bbaaf0a1.jpg
-[eb38714617480fadbab1b533d8d7775b.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/eb38714617480fadbab1b533d8d7775b.jpg
+[fc41b63f37b332b5b4dd98c1bbaaf0a1.jpg]: /gfzjus_blog/tech/2014-10-22/fc41b63f37b332b5b4dd98c1bbaaf0a1.jpg
+[eb38714617480fadbab1b533d8d7775b.jpg]: /gfzjus_blog/tech/2014-10-22/eb38714617480fadbab1b533d8d7775b.jpg

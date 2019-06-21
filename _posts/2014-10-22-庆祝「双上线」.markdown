@@ -3,7 +3,7 @@ layout: post
 title: "庆祝「双上线」"
 date: 2014-10-22 15:16:34
 category: life
-img: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
+img: /gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
 by: gf
 description: 我做的iOS应用「体重宝」今天通过审核上架了。我的博客也改版了，并且迁移到了帝国CMS，卡卡的Wordpress，goodbye!
 permalink: /life/202.html
@@ -21,6 +21,6 @@ permalink: /life/202.html
 ![体重宝下载地址][ea6c93cab8edbff0fec0d812c9439883.jpg]
 
 
-[b08a5173a3e793ebae2ba4b66886080b.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
+[b08a5173a3e793ebae2ba4b66886080b.jpg]: /gfzjus_blog/life/2014-10-22/b08a5173a3e793ebae2ba4b66886080b.jpg
 [https_itunes.apple.com_app_id925697616]: https://itunes.apple.com/app/id925697616
-[ea6c93cab8edbff0fec0d812c9439883.jpg]: http://www.gfzj.us/gfzjus_blog/life/2014-10-22/ea6c93cab8edbff0fec0d812c9439883.jpg
+[ea6c93cab8edbff0fec0d812c9439883.jpg]: /gfzjus_blog/life/2014-10-22/ea6c93cab8edbff0fec0d812c9439883.jpg

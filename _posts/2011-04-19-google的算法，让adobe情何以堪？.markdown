@@ -11,8 +11,8 @@ permalink: /tech/11.html
 
 
 [google]: http://www.google.com.hk/search?hl=zh-CN&source=hp&biw=1440&bih=768&q=acrobat+x&aq=f&aqi=g-g8g2&aql=&oq=
-[acrobat x - Google]: http://www.gfzj.us/wp-content/uploads/2011/04/acrobat-x-Google-搜索-300x279.png
-[acrobat x - Google _acrobat x - Google]: http://www.gfzj.us/wp-content/uploads/2011/04/acrobat-x-Google-搜索.png
+[acrobat x - Google]: /wp-content/uploads/2011/04/acrobat-x-Google-搜索-300x279.png
+[acrobat x - Google _acrobat x - Google]: /wp-content/uploads/2011/04/acrobat-x-Google-搜索.png
 [Link 1]: http://www.google.com/#hl=en&sugexp=ldymls&xhr=t&q=acrobat+x&cp=9&pf=p&sclient=psy&source=hp&aq=0&aqi=&aql=&oq=acrobat+x&pbx=1&bav=on.2,or.r_gc.r_pw.&fp=d86f5b57a34b1a36
-[acrobat x - Google Search]: http://www.gfzj.us/wp-content/uploads/2011/04/acrobat-x-Google-Search-300x270.png
-[acrobat x - Google Search 1]: http://www.gfzj.us/wp-content/uploads/2011/04/acrobat-x-Google-Search.png
+[acrobat x - Google Search]: /wp-content/uploads/2011/04/acrobat-x-Google-Search-300x270.png
+[acrobat x - Google Search 1]: /wp-content/uploads/2011/04/acrobat-x-Google-Search.png

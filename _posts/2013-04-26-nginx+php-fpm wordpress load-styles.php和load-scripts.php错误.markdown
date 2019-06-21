@@ -39,4 +39,4 @@ buffer并不都是好的，比如
 我们期望，每隔一秒返回一个数，但是实际上nginx是一下子返回的。就是因为buffer。
 
 
-[wordpress jquery]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/02a66a26911132e285459169bcd05229.jpg
+[wordpress jquery]: /gfzjus_blog/tech/2014-10-22/02a66a26911132e285459169bcd05229.jpg

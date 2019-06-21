@@ -20,7 +20,7 @@ permalink: /tech/166.html
 
 
 
-[7bcc25b599ad975b1edf8a71c10b6353.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/7bcc25b599ad975b1edf8a71c10b6353.jpg
-[f6a41a22dd052d6a8064d396a0c87532.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/f6a41a22dd052d6a8064d396a0c87532.jpg
-[1daa82705426a2bdae3e999f147b84fb.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/1daa82705426a2bdae3e999f147b84fb.jpg
+[7bcc25b599ad975b1edf8a71c10b6353.jpg]: /gfzjus_blog/tech/2014-10-22/7bcc25b599ad975b1edf8a71c10b6353.jpg
+[f6a41a22dd052d6a8064d396a0c87532.jpg]: /gfzjus_blog/tech/2014-10-22/f6a41a22dd052d6a8064d396a0c87532.jpg
+[1daa82705426a2bdae3e999f147b84fb.jpg]: /gfzjus_blog/tech/2014-10-22/1daa82705426a2bdae3e999f147b84fb.jpg
 [js]: http://liuguangfeng.googlecode.com/files/go.7z

@@ -64,5 +64,5 @@ mac下面还可以选择声卡。比如我只把MPlayer输出到音响，默认�
     while true;do echo 下载播放列表; curl "http://www.douban.com/j/app/radio/people?type=n&formats=aac&pt=0.0&channel=1&app_name=radio_ipad&version=2" |sed 's/\\\\//g'|pcregrep -o2 --om-separator=" " 'artist":"(.*?)","url":"(.*?)"(.*?)title":"(.*?)"'|tail -4 > /tmp/douban.playlist.m3u;mplayer -ao coreaudio:device_id=$device -playlist /tmp/douban.playlist.m3u;done
 
 
-[shell_douban]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/33b63611b4e0901a6cf4452a57d8704f.jpg
-[shell_douban_shell_douban]: http://www.gfzj.us/wp-content/uploads/2014/01/shell版douban音乐.jpg
+[shell_douban]: /gfzjus_blog/tech/2014-10-22/33b63611b4e0901a6cf4452a57d8704f.jpg
+[shell_douban_shell_douban]: /wp-content/uploads/2014/01/shell版douban音乐.jpg

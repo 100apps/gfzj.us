@@ -33,8 +33,8 @@ permalink: /tech/16.html
 
 [AutoIt3]: http://www.autoitscript.com/site/autoit/
 [Link 1]: https://addons.mozilla.org/zh-cn/firefox/addon/greasemonkey/
-[fiddler]: http://www.gfzj.us/www.fiddler2.com
+[fiddler]: /www.fiddler2.com
 [push]: http://littz.com/china-telecom-advertising-walk-away-point-push.html
 [Link 2]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/09/stat.zip
-[fuck]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/508f43a1cdebd7ec924deaebf028ce94.jpg
+[fuck]: /gfzjus_blog/tech/2014-10-22/508f43a1cdebd7ec924deaebf028ce94.jpg
 [fuck_fuck]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/09/QQ截图20110927113754.jpg

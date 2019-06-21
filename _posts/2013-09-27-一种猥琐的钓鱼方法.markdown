@@ -55,5 +55,5 @@ parent.window.opener.location [ 很早很早以前就有人用来劫持搜索引
 
 [Link 1]: http://www.baidu.com/s?wd=上海破碎机生产厂家
 [Google chrome a_visited background image not working]: http://stackoverflow.com/questions/3788855/google-chrome-avisited-background-image-not-working?answertab=votes#tab-top
-[ie8]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4319a9d8c36f8a0aa2d5b7098f5680b7.png
+[ie8]: /gfzjus_blog/tech/2014-10-22/4319a9d8c36f8a0aa2d5b7098f5680b7.png
 [Link 2]: http://26836659.blogcn.com/articles/%E4%B8%80%E7%A7%8D%E7%AE%80%E5%8D%95%E7%9A%84js%E5%8A%AB%E6%8C%81%E7%99%BE%E5%BA%A6se%E7%9A%84%E4%BB%A3%E7%A0%81.html

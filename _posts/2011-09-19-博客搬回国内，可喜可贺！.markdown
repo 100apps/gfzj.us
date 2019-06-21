@@ -19,5 +19,5 @@ permalink: /tech/15.html
 
 
 [sina app]: http://sae.sina.com.cn/activity/invite/16532/msn
-[IMG_20110919_232137]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/19fece8add056d6c30a5a7d9b841e498.jpg
+[IMG_20110919_232137]: /gfzjus_blog/tech/2014-10-22/19fece8add056d6c30a5a7d9b841e498.jpg
 [IMG_20110919_232137_IMG_20110919_232137]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/09/IMG_20110919_232137.jpg

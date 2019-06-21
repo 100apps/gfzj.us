@@ -75,5 +75,5 @@ update Wed Dec 17 14:12:26 CST 2014
 	System.setProperty("socksProxyPort", "8889");
 
 [Fiddler]: http://fiddler2.com/
-[Fiddler_https]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4728bd11b921c30906926f31b87093d6.png
+[Fiddler_https]: /gfzjus_blog/tech/2014-10-22/4728bd11b921c30906926f31b87093d6.png
 [Charles]: http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/

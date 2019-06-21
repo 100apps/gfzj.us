@@ -46,4 +46,4 @@ permalink: /tech/117.html
 [J78FT-J48BQ-HH2M7-CYVTM-MXRHY]: https://www.google.com.hk/search?q=J78FT-J48BQ-HH2M7-CYVTM-MXRHY
 [http_www.landiannews.com_key_E5_88_86_E4_BA_AB]: http://www.landiannews.com/key%E5%88%86%E4%BA%AB
 [http_winba.me_win8-office2013-key.html]: http://winba.me/win8-office2013-key.html
-[624d16617874092c6299fdd4b2eaf66a.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/624d16617874092c6299fdd4b2eaf66a.jpg
+[624d16617874092c6299fdd4b2eaf66a.jpg]: /gfzjus_blog/tech/2014-10-22/624d16617874092c6299fdd4b2eaf66a.jpg

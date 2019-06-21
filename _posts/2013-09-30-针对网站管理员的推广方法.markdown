@@ -25,5 +25,5 @@ permalink: /tech/101.html
 2.直接用浏览器，模拟人。请求某个url的时候，给浏览器的头部加一个referrer字段，然后打开。程序实现简单，但是估计比较慢。而且明显的好处是对所有的统计代码都有效，不仅限于百度统计。
 
 
-[document.referrer]: http://www.gfzj.us/719.html
-[referrer]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/4bfeab0759037d2d76cdc2d2e057b29f.jpg
+[document.referrer]: /719.html
+[referrer]: /gfzjus_blog/tech/2014-10-22/4bfeab0759037d2d76cdc2d2e057b29f.jpg

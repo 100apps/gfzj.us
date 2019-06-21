@@ -324,5 +324,5 @@ permalink: /tech/43.html
     }
 
 
-[541f7c9b2c635bf6c3f8ac9e00e970a8.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/541f7c9b2c635bf6c3f8ac9e00e970a8.jpg
+[541f7c9b2c635bf6c3f8ac9e00e970a8.jpg]: /gfzjus_blog/tech/2014-10-22/541f7c9b2c635bf6c3f8ac9e00e970a8.jpg
 [541f7c9b2c635bf6c3f8ac9e00e970a8.jpg 1]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/08/未命名.jpg

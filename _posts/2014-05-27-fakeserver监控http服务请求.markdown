@@ -99,4 +99,4 @@ die("<h1>503 Service Unavailable</h1>");
 {% endhighlight%}
 
 
-[fakeserver]: http://www.gfzj.us/wp-content/uploads/2014/05/fakeserver.7z
+[fakeserver]: /wp-content/uploads/2014/05/fakeserver.7z

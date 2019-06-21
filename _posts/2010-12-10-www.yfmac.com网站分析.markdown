@@ -90,11 +90,11 @@ Sogou的举报信箱是： .
 
 
 [www.yfmac.com]: http://www.yfmac.com/
-[01a67f23d9bd8cd82dc65e11f65f658a.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/01a67f23d9bd8cd82dc65e11f65f658a.jpg
-[a3463f0f0a95dd13dce058144ee5fe08.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a3463f0f0a95dd13dce058144ee5fe08.jpg
-[0eacc9faada16a505ff08fee2914ec74.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/0eacc9faada16a505ff08fee2914ec74.jpg
-[ff30f95a6bf39cf4312cb6a65e0307e8.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/ff30f95a6bf39cf4312cb6a65e0307e8.jpg
-[98a0683327a8820d73dcc0b60e2e02ba.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/98a0683327a8820d73dcc0b60e2e02ba.jpg
+[01a67f23d9bd8cd82dc65e11f65f658a.jpg]: /gfzjus_blog/tech/2014-10-22/01a67f23d9bd8cd82dc65e11f65f658a.jpg
+[a3463f0f0a95dd13dce058144ee5fe08.jpg]: /gfzjus_blog/tech/2014-10-22/a3463f0f0a95dd13dce058144ee5fe08.jpg
+[0eacc9faada16a505ff08fee2914ec74.jpg]: /gfzjus_blog/tech/2014-10-22/0eacc9faada16a505ff08fee2914ec74.jpg
+[ff30f95a6bf39cf4312cb6a65e0307e8.jpg]: /gfzjus_blog/tech/2014-10-22/ff30f95a6bf39cf4312cb6a65e0307e8.jpg
+[98a0683327a8820d73dcc0b60e2e02ba.jpg]: /gfzjus_blog/tech/2014-10-22/98a0683327a8820d73dcc0b60e2e02ba.jpg
 [www.hustgroup.com]: http://www.hustgroup.com/
 [www.shbiangchina.com]: http://www.shbiangchina.com/
 [http_utility.baidu.com_antispam_spamreport.php]: http://utility.baidu.com/antispam/spamreport.php

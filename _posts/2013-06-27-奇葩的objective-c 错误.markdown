@@ -30,6 +30,6 @@ permalink: /tech/82.html
 我和小伙伴们都惊呆了！
 
 
-[for_xcode]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/b10c0907ae7310637111b5190d9b2000.jpg
-[xcode for]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/5d91d842d1b462f8f0b287390c297a01.jpg
-[for]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/e14508a3aef85aa2e38f1383b4a62d77.jpg
+[for_xcode]: /gfzjus_blog/tech/2014-10-22/b10c0907ae7310637111b5190d9b2000.jpg
+[xcode for]: /gfzjus_blog/tech/2014-10-22/5d91d842d1b462f8f0b287390c297a01.jpg
+[for]: /gfzjus_blog/tech/2014-10-22/e14508a3aef85aa2e38f1383b4a62d77.jpg

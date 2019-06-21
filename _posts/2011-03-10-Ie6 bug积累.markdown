@@ -13,5 +13,5 @@ permalink: /tech/4.html
 2.  $("id").children 把注释也给包括了,真让人郁闷啊。有的版本甚至连换行符都包括。
 
 
-[031011_0924_Ie6bug11.png]: http://www.gfzj.us/wp-content/uploads/2011/03/031011_0924_Ie6bug11.png
-[031011_0924_Ie6bug21.png]: http://www.gfzj.us/wp-content/uploads/2011/03/031011_0924_Ie6bug21.png
+[031011_0924_Ie6bug11.png]: /wp-content/uploads/2011/03/031011_0924_Ie6bug11.png
+[031011_0924_Ie6bug21.png]: /wp-content/uploads/2011/03/031011_0924_Ie6bug21.png

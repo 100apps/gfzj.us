@@ -22,4 +22,4 @@ permalink: /tech/188.html
 ![8155b9eb4ceaf656d1ce26caff7fe0dd.jpg][]
 
 
-[8155b9eb4ceaf656d1ce26caff7fe0dd.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/8155b9eb4ceaf656d1ce26caff7fe0dd.jpg
+[8155b9eb4ceaf656d1ce26caff7fe0dd.jpg]: /gfzjus_blog/tech/2014-10-22/8155b9eb4ceaf656d1ce26caff7fe0dd.jpg

@@ -57,4 +57,4 @@ permalink: /tech/91.html
 放眼未来，做好规划，不要只顾眼前的几百块钱。还有就是，跟(像我这样)真诚的人做朋友。
 
 
-[9ab3a55e806555f3dcc6fcaaaf7f4cc2.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/9ab3a55e806555f3dcc6fcaaaf7f4cc2.jpg
+[9ab3a55e806555f3dcc6fcaaaf7f4cc2.jpg]: /gfzjus_blog/tech/2014-10-22/9ab3a55e806555f3dcc6fcaaaf7f4cc2.jpg

@@ -26,5 +26,5 @@ permalink: /tech/84.html
 
 
 [Link 1]: http://blog.sina.com.cn/s/blog_67cdafe201014odm.html
-[8d6293736c50ca9d8802fba6e29d2192.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/8d6293736c50ca9d8802fba6e29d2192.jpg
+[8d6293736c50ca9d8802fba6e29d2192.jpg]: /gfzjus_blog/tech/2014-10-22/8d6293736c50ca9d8802fba6e29d2192.jpg
 [http_zh.flightaware.com]: http://zh.flightaware.com/

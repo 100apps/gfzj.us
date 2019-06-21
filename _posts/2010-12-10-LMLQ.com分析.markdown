@@ -130,8 +130,8 @@ lmlq排名靠前是有道理的。首先资格比较老，其次链接比较多�
 
 
 
-[0589bf901c1905a50e74aa3a85f8e442.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/0589bf901c1905a50e74aa3a85f8e442.jpg
-[64f6d3846f2188b79680b7c44675ec2b.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/64f6d3846f2188b79680b7c44675ec2b.jpg
-[df34038eb9f31a61d24f4aa613833ffe.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/df34038eb9f31a61d24f4aa613833ffe.jpg
+[0589bf901c1905a50e74aa3a85f8e442.jpg]: /gfzjus_blog/tech/2014-10-22/0589bf901c1905a50e74aa3a85f8e442.jpg
+[64f6d3846f2188b79680b7c44675ec2b.jpg]: /gfzjus_blog/tech/2014-10-22/64f6d3846f2188b79680b7c44675ec2b.jpg
+[df34038eb9f31a61d24f4aa613833ffe.jpg]: /gfzjus_blog/tech/2014-10-22/df34038eb9f31a61d24f4aa613833ffe.jpg
 [www.shanxiposuiji.com]: http://www.shanxiposuiji.com/
 [http_liuguangfeng.googlecode.com_files_lmlq.com_E5_88_86_E6_9E_90.rar]: http://liuguangfeng.googlecode.com/files/lmlq.com%E5%88%86%E6%9E%90.rar

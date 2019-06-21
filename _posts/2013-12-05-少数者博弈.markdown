@@ -21,4 +21,4 @@ permalink: /tech/104.html
 
 
 [Link 1]: http://wiki.mbalib.com/wiki/%E5%B0%91%E6%95%B0%E8%80%85%E5%8D%9A%E5%BC%88
-[V]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/aa81492f1f197006ad203fddfa7a881d.jpg
+[V]: /gfzjus_blog/tech/2014-10-22/aa81492f1f197006ad203fddfa7a881d.jpg

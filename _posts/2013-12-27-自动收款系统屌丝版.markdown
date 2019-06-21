@@ -50,10 +50,10 @@ permalink: /tech/109.html
      tag select inbox
      tag idle
 
-配置 [http://www.gfzj.us/tools/alipay.html][http_www.gfzj.us_tools_alipay.html]效果不错
+配置 [/tools/alipay.html][http_www.gfzj.us_tools_alipay.html]效果不错
 
 
-[44dd8cb04569c6b6b9aed64020884cff.png]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/44dd8cb04569c6b6b9aed64020884cff.png
-[79bea01431201d8138587fc8a729b9c8.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/79bea01431201d8138587fc8a729b9c8.jpg
+[44dd8cb04569c6b6b9aed64020884cff.png]: /gfzjus_blog/tech/2014-10-22/44dd8cb04569c6b6b9aed64020884cff.png
+[79bea01431201d8138587fc8a729b9c8.jpg]: /gfzjus_blog/tech/2014-10-22/79bea01431201d8138587fc8a729b9c8.jpg
 [AA]: http://help.alipay.com/lab/help_detail.htm?help_id=212215
-[http_www.gfzj.us_tools_alipay.html]: http://www.gfzj.us/tools/alipay.html
+[http_www.gfzj.us_tools_alipay.html]: /tools/alipay.html

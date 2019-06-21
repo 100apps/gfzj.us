@@ -183,7 +183,7 @@ RushPlayer的流媒体播放地址在：
 今天发现一个朝鲜电视台：mmst://112.170.78.145/chosun 主持人说话都带哭的，真受不鸟。大家一定要自己用MPlayer或者vlc感受一下。
 
 
-[c5006725817bce353f665bc70c5b4c59.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/c5006725817bce353f665bc70c5b4c59.jpg
+[c5006725817bce353f665bc70c5b4c59.jpg]: /gfzjus_blog/tech/2014-10-22/c5006725817bce353f665bc70c5b4c59.jpg
 [RushPlayer]: http://itunes.apple.com/cn/app/rushplayer/id452990487?mt=8
-[rushplayer]: http://www.gfzj.us/wp-content/uploads/2014/07/rushplayer.json_.7z
-[rushplayer.xspf]: http://www.gfzj.us/wp-content/uploads/2014/07/rushplayer.xspf_.7z
+[rushplayer]: /wp-content/uploads/2014/07/rushplayer.json_.7z
+[rushplayer.xspf]: /wp-content/uploads/2014/07/rushplayer.xspf_.7z

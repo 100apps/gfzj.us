@@ -111,4 +111,4 @@ chrome插件开发确实比firefox简单多了,而且不用重启浏览器。现
 熟悉了开发流程，其实像firefox下油猴的功能，chrome就相当好实现了。但是更底层的api，估计需要查看官方文档了: http://developer.chrome.com/extensions/‎
 
 
-[chrome]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/e83785daaa1344f09ac4d12e71effa2d.jpg
+[chrome]: /gfzjus_blog/tech/2014-10-22/e83785daaa1344f09ac4d12e71effa2d.jpg

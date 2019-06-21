@@ -17,5 +17,5 @@ mac实际上不需要手动进行磁盘整理，因为它会自己optimization�
 
 [About disk optimization with Mac OS X]: http://support.apple.com/kb/ht1375
 [iDefrag]: http://pan.baidu.com/s/1i3uZ1op
-[iDefrag 1]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/b5498de4f4daaa66fbf865620ba31ccc.jpg
-[iDefrag_iDefrag 1]: http://www.gfzj.us/wp-content/uploads/2014/07/iDefrag.jpg
+[iDefrag 1]: /gfzjus_blog/tech/2014-10-22/b5498de4f4daaa66fbf865620ba31ccc.jpg
+[iDefrag_iDefrag 1]: /wp-content/uploads/2014/07/iDefrag.jpg

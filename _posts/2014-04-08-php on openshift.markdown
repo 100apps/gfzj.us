@@ -47,4 +47,4 @@ openshift其实是用的aws的云服务。所以此时，一个应用就相当�
 [https_www.openshift.com_app_account_new]: https://www.openshift.com/app/account/new
 [puttygen.exe]: http://the.earth.li/~sgtatham/putty/latest/x86/puttygen.exe
 [https_openshift.redhat.com_app_console_application_type_cart_php-5.4]: https://openshift.redhat.com/app/console/application_type/cart!php-5.4
-[php-sbjq.rhcloud.com]: http://www.gfzj.us/php-sbjq.rhcloud.com
+[php-sbjq.rhcloud.com]: /php-sbjq.rhcloud.com

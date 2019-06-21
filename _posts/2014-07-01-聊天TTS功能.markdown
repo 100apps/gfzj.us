@@ -47,5 +47,5 @@ permalink: /tech/144.html
 这个功能有时候还挺方便的，在自己不方便说话的时候，TTS一下，代替自己说话。不知道腾讯的同学能否考虑？
 
 
-[tts-client]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/78040a599526eb0b2e8a6ad2f4abbd30.jpg
-[tts-server]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/eb5e73096a4662424eaddd97932a2358.jpg
+[tts-client]: /gfzjus_blog/tech/2014-10-22/78040a599526eb0b2e8a6ad2f4abbd30.jpg
+[tts-server]: /gfzjus_blog/tech/2014-10-22/eb5e73096a4662424eaddd97932a2358.jpg

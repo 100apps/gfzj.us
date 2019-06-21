@@ -12,5 +12,5 @@ permalink: /tech/19.html
 [![IMG\_20111017\_085320][IMG_20111017_085320]][IMG_20111017_085320_IMG_20111017_085320]
 
 
-[IMG_20111017_085320]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/84761aad72cdee51abae20e61bb1c656.jpg
+[IMG_20111017_085320]: /gfzjus_blog/tech/2014-10-22/84761aad72cdee51abae20e61bb1c656.jpg
 [IMG_20111017_085320_IMG_20111017_085320]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2011/10/IMG_20111017_085320.jpg

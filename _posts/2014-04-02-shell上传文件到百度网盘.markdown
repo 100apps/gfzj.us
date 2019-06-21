@@ -35,7 +35,7 @@ linux server中配合crontab可以做很多实用的功能，你懂得。
     BDUSS=VN2xxxxWkhLN345Vn5OQnlnUW54cmRicG9vcHllT35hNFYxRTNjeGZLZ3FFR05UQVFBQUFBJCQAAAAAAAAAAAEAAACWZN5DsrzCs8u5Ymx1ZTJkaWUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqDO1MqgztTT
     if [ x$BDUSS = "x" ]
     then
-     echo 请先设置BDUSS，参考 http://www.gfzj.us/900.html
+     echo 请先设置BDUSS，参考 /900.html
      exit
     fi
     
@@ -98,4 +98,4 @@ linux server中配合crontab可以做很多实用的功能，你懂得。
 
 另外，上面的脚本已经push到Github上：<https://github.com/100apps/tools>
 
-[cookie]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/378debc7546e4a853198948e03ec5e56.jpg
+[cookie]: /gfzjus_blog/tech/2014-10-22/378debc7546e4a853198948e03ec5e56.jpg

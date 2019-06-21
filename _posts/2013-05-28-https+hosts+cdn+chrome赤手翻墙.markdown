@@ -76,7 +76,7 @@ dns污染，最好的解决方法是本地hosts文件修改，不请求dns了。
 
 [http_www.dnsqueries.com_en_dns_lookup.php]: http://www.dnsqueries.com/en/dns_lookup.php
 [https_code.google.com_apis_ajax_playground_type_visualization_geo_map]: https://code.google.com/apis/ajax/playground/?type=visualization#geo_map
-[chrome]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/172a33d86577a031ce498b44f026e35a.png
-[google-playground]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/c439d2fc610fe94a9d3e3d438c916034.png
-[facebook-youtube]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/dac69dff53dd584e32ab232beabf585d.png
+[chrome]: /gfzjus_blog/tech/2014-10-22/172a33d86577a031ce498b44f026e35a.png
+[google-playground]: /gfzjus_blog/tech/2014-10-22/c439d2fc610fe94a9d3e3d438c916034.png
+[facebook-youtube]: /gfzjus_blog/tech/2014-10-22/dac69dff53dd584e32ab232beabf585d.png
 [http_www.slideshare.net]: http://www.slideshare.net/

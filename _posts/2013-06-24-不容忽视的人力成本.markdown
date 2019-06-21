@@ -22,4 +22,4 @@ permalink: /tech/81.html
 ![机箱主板图][5203d09d8eb0a5533b41fded6e919ca5.jpg]
 
 
-[5203d09d8eb0a5533b41fded6e919ca5.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/5203d09d8eb0a5533b41fded6e919ca5.jpg
+[5203d09d8eb0a5533b41fded6e919ca5.jpg]: /gfzjus_blog/tech/2014-10-22/5203d09d8eb0a5533b41fded6e919ca5.jpg

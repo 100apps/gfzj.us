@@ -111,4 +111,4 @@ php直接file\_get\_content($url)试试，如果不能下载，帝国肯定也�
 
 
 [https_github.com_emmetio_textarea]: https://github.com/emmetio/textarea
-[sitemap.php]: http://www.gfzj.us/wp-content/uploads/2014/04/sitemap.php_.7z
+[sitemap.php]: /wp-content/uploads/2014/04/sitemap.php_.7z

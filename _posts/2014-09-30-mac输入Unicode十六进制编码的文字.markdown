@@ -22,8 +22,8 @@ Photoshop可以不重启就reload字体，执行下面操作：window→characte
 
 
 [icomoon]: https://icomoon.io/app/#/select
-[mac-unicode]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a4c00488f30a429da5673c9222419f4e.jpg
-[mac-unicode 1]: http://www.gfzj.us/wp-content/uploads/2014/09/mac-unicode.jpg
+[mac-unicode]: /gfzjus_blog/tech/2014-10-22/a4c00488f30a429da5673c9222419f4e.jpg
+[mac-unicode 1]: /wp-content/uploads/2014/09/mac-unicode.jpg
 [http_app.fontastic.me]: http://app.fontastic.me
-[ps]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/ef4dd8530f17d9adb82a4cd6f30163b6.jpg
-[ps_ps]: http://www.gfzj.us/wp-content/uploads/2014/09/ps重新加载字体.jpg
+[ps]: /gfzjus_blog/tech/2014-10-22/ef4dd8530f17d9adb82a4cd6f30163b6.jpg
+[ps_ps]: /wp-content/uploads/2014/09/ps重新加载字体.jpg

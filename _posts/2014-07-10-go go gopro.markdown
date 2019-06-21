@@ -21,7 +21,7 @@ gopro的牛逼之处在于可以远程控制，我们可以组合多个gopro，�
 当然还有最近比较火的：[BEIJING FROM ABOVE / BY Trey Ratcliff][BEIJING FROM ABOVE _ BY Trey Ratcliff],整套设备，DJI Phantom 2飞行器+Zenmuse H3三轴云台+Gopro Hero 3摄像机 估计要8k左右。
 
 
-[gopro]: http://www.gfzj.us/www.gopro.com/
+[gopro]: /www.gopro.com/
 [_600_36_]: http://v.youku.com/v_show/id_XNzI5NTIwNzYw.html
 [Maverick Mei-25_GoPro_-_ Grand Cross]: http://v.youku.com/v_show/id_XNzM4Mjk0NjQ4.html
 [GoPro]: http://www.startos.com/soft/news/observed/2014070749499.html

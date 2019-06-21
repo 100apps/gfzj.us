@@ -37,6 +37,6 @@ permalink: /tech/162.html
 
 
 [http_21shsb.net_ip]: http://21shsb.net/ip
-[c617c9dfa7658074eb77443b88f594b0.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/c617c9dfa7658074eb77443b88f594b0.jpg
+[c617c9dfa7658074eb77443b88f594b0.jpg]: /gfzjus_blog/tech/2014-10-22/c617c9dfa7658074eb77443b88f594b0.jpg
 [Link 1]: http://liuguangfeng.googlecode.com/files/socks5.rar
 [Link 2]: http://code.google.com/p/liuguangfeng/source/browse/trunk/socks5.cpp

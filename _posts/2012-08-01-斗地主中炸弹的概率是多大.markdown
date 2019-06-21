@@ -130,5 +130,5 @@ permalink: /tech/41.html
 **不用越狱**，用itools打开斗地主，找到Documents文件夹下面的savegame.dat ,用二进制编辑器(winhex,ue等)找到第三排编号0000020h,第C/D/E 位是我们要修改的积分的地址.比如c位改成FF,D位改成FF,E位改成01。找到你的iphone，进入qq斗地主试试把。
 
 
-[-]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/6a0660d3937d7c789dd7f2a5ca7f3d69.png
+[-]: /gfzjus_blog/tech/2014-10-22/6a0660d3937d7c789dd7f2a5ca7f3d69.png
 [-_-]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/08/照片.png

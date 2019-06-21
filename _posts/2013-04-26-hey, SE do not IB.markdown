@@ -116,5 +116,5 @@ gov的外链
 
 [Link 1]: http://zhanzhang.baidu.com/wiki/160
 [Link 2]: http://index.baidu.com/main/word.php?word=%CC%D4%B1%A6%C9%CC%B3%C7
-[baidu-tmall]: http://www.gfzj.us/images/baidu-tmall.png
-[google-tmall]: http://www.gfzj.us/images/google-tmall.png
+[baidu-tmall]: /images/baidu-tmall.png
+[google-tmall]: /images/google-tmall.png

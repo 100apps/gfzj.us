@@ -10,7 +10,7 @@ img: /images/server-spy.png
 
 # 起因
 
-由于我们现在用了[API的环境和版本号一定要在URL里面支持](http://www.gfzj.us/2016/07/11/info-in-url.html)的方案。导致我们的开发、线上、灰度、测试的域名是一样的。很多同事抱怨说，浏览器打开一个页面比如<https://www.houpix.com>，我根本不知道它是哪个环境的。我们的临时方案是挂上Charles看一下，overview里面当然有IP信息，就知道是哪个环境了；如果没有挂Charles，通过开发者工具栏看一下network请求也能知道。无论如何，还是感觉有点麻烦，没有那种一抬眼就能解决的办法。
+由于我们现在用了[API的环境和版本号一定要在URL里面支持](/2016/07/11/info-in-url.html)的方案。导致我们的开发、线上、灰度、测试的域名是一样的。很多同事抱怨说，浏览器打开一个页面比如<https://www.houpix.com>，我根本不知道它是哪个环境的。我们的临时方案是挂上Charles看一下，overview里面当然有IP信息，就知道是哪个环境了；如果没有挂Charles，通过开发者工具栏看一下network请求也能知道。无论如何，还是感觉有点麻烦，没有那种一抬眼就能解决的办法。
 
 起初找到一个插件[Header Spy](https://addons.mozilla.org/en-us/firefox/addon/header-spy/)，应该可以解决我们的需求。我们的openresty配置中，不同环境的Server字段返回时不同的：
 

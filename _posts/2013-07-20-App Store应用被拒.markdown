@@ -62,4 +62,4 @@ Learn more about system-provided items in the [iOS Human Interface Guidelines][i
 [Safari HTML Reference_ Introduction]: http://developer.apple.com/safari/library/documentation/AppleApplications/Reference/SafariHTMLRef/Introduction.html#//apple_ref/doc/uid/TP40002049
 [iOS Human Interface Guidelines]: https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html
 [iOS Human Interface Guidelines 1]: http://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/MobileHIG.pdf
-[app store]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/a481ea227ed7dbd9514a7c3c33c6c8e6.png
+[app store]: /gfzjus_blog/tech/2014-10-22/a481ea227ed7dbd9514a7c3c33c6c8e6.png

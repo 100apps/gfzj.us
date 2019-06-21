@@ -3,7 +3,7 @@ layout: post
 title: "谈谈「死刑」"
 date: 2014-11-10 20:22:10
 category: book
-img: http://www.gfzj.us/gfzjus_blog/book/2014-11-10/502f11dd4f477dba0fe3137d3342b20e.jpg
+img: /gfzjus_blog/book/2014-11-10/502f11dd4f477dba0fe3137d3342b20e.jpg
 by: gf
 keyword: 死刑,政府,人民,民主
 description: 以前跟阿翔争论过「中国到底该不该废除死刑」，最近听了《逻辑思维》的一期节目：一个该死者的意外生存(罗辑思维)。感觉很有道理，现在可以总结一下。

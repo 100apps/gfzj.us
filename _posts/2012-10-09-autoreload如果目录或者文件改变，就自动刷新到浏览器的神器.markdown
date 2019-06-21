@@ -12,5 +12,5 @@ permalink: /tech/54.html
 
 
 [autoreload]: https://addons.mozilla.org/en-US/firefox/addon/auto-reload/
-[autoreload 1]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/1cc7671d71cfd621ae3b894f52f3de12.png
+[autoreload 1]: /gfzjus_blog/tech/2014-10-22/1cc7671d71cfd621ae3b894f52f3de12.png
 [autoreload_autoreload 1]: http://gfzj-wordpress.stor.sinaapp.com/uploads/2012/10/Screenshot-10092012-101810-AM.png

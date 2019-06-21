@@ -52,5 +52,5 @@ ps:很早以前就有过这样的经历，明明知道这个问题用这种比�
 ![50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg][]
 
 
-[3cea0c20b839b53dc4f793b8e92fa8a3.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/3cea0c20b839b53dc4f793b8e92fa8a3.gif
-[50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg
+[3cea0c20b839b53dc4f793b8e92fa8a3.gif]: /gfzjus_blog/tech/2014-10-22/3cea0c20b839b53dc4f793b8e92fa8a3.gif
+[50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg]: /gfzjus_blog/tech/2014-10-22/50519b3ddf4cd546d0d5b2a4d2cb99f9.jpg

@@ -99,4 +99,4 @@ Server {
 	# klist                 //查看ticket信息
 	# service zookeeper-server restart 
 
-[link1]: http://www.gfzj.us/series/kerberized_hadoop/2015/03/31/Kerberized_HDFS.html "Kerberized_HDFS"
+[link1]: /series/kerberized_hadoop/2015/03/31/Kerberized_HDFS.html "Kerberized_HDFS"

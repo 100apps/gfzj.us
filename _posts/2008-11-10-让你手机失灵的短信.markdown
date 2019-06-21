@@ -55,5 +55,5 @@ END:IMELODY
 ![32b54ffc2971e48f858dcb697b888fc6.jpg][]
 
 
-[e101fc2488d649a43f06cc760040bc8f.gif]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/e101fc2488d649a43f06cc760040bc8f.gif
-[32b54ffc2971e48f858dcb697b888fc6.jpg]: http://www.gfzj.us/gfzjus_blog/tech/2014-10-22/32b54ffc2971e48f858dcb697b888fc6.jpg
+[e101fc2488d649a43f06cc760040bc8f.gif]: /gfzjus_blog/tech/2014-10-22/e101fc2488d649a43f06cc760040bc8f.gif
+[32b54ffc2971e48f858dcb697b888fc6.jpg]: /gfzjus_blog/tech/2014-10-22/32b54ffc2971e48f858dcb697b888fc6.jpg

@@ -21,4 +21,4 @@ permalink: /tech/1.html
 
 
 [Link 1]: http://www.shibangchina.com/kji/hr/2011/zpxc.html
-[030611_1233_Javascript1.png]: http://www.gfzj.us/wp-content/uploads/2011/03/030611_1233_Javascript1.png
+[030611_1233_Javascript1.png]: /wp-content/uploads/2011/03/030611_1233_Javascript1.png

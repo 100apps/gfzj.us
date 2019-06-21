@@ -55,5 +55,5 @@ permalink: /tech/100.html
 
 [http_www.zhe800.com]: http://www.zhe800.com/
 [http_out.zhe800.com_ju_fan_jingjulian_85469_page_stats_w_index_3_1]: http://out.zhe800.com/ju/fan/jingjulian_85469?page_stats_w=index/3*1
-[referrer]: http://www.gfzj.us/wp-content/uploads/2013/09/test-referrer.php
+[referrer]: /wp-content/uploads/2013/09/test-referrer.php
 [http_english.stackexchange.com_questions_42630_referer-or-referrer]: http://english.stackexchange.com/questions/42630/referer-or-referrer

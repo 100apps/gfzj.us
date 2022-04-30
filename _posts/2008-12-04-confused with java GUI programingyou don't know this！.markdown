@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "confused with java GUI programing?you don\'t know this！"
+title: "confused with java GUI programing?you dont know this！"
 date: 2008-12-04 18:13:00
 category: tech
 by: gf

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mse to curl （自动复制到剪切板）</title>
+    <script>
+        function $(id) {
+            return document.getElementById(id);
+        }
+
+        function go() {
+            var input = decodeURIComponent($("t").value.trim());
+
+            var data = input.match(/--data-raw '(.*?)'/)
+            data = data[1].match(/params=(.*$)/);
+            data = JSON.parse(data[1]);
+
+            console.log(data);
+
+
+
+            var targetIp = data["TargetIp"] ? data["TargetIp"] : "127.0.0.1";
+            var method = data["MethodSignature"].split("~");
+            var service = data["Service"].replace(':', '/');
+
+
+            var output = "curl  -H 'Content-Type: application/json' -H 'Http-Rpc-Type: JsonContent' http://" + targetIp + ":12220/" + service + "/" + method[0] + " -d '\n\n";
+
+            var req = {};
+            req["argsTypes"] = method.length > 1 ? method[1].split(";") : [];
+            req["argsObjs"] = JSON.parse(data["InvokeArgs"]);
+            var str = JSON.stringify(req, null, 2);
+
+            output += str + "\n'";
+
+            $("r").value = output;
+
+            var content = document.getElementById('r');
+            content.select();
+            document.execCommand('copy');
+
+        }
+    </script>
+</head>
+
+<body>
+    <table width="100%">
+        <tr>
+            <td width="50%">
+                <p>先把 mse 的api.json?action=InvokeMethod请求复制到剪切板，然后复制到右边的文本框里面。自动生成 url。就可以在服务器上直接运行了</p>
+                <img src='mse-to-curl.png' width="100%">
+
+            </td>
+
+            <td>
+
+                <textarea placeholder="把 mse 的请求复制到这里" name="t" id="t" style="width:100%;height:600px" onkeyup="go()"></textarea>
+                <button onclick="go()" style="width:100%;height:50px;">go</button>
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="2"> <textarea placeholder="这里是转换的 curl 结果。自动复制" name="r" id="r" style="width:100%;height:500px"></textarea>
+            </td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

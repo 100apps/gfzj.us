@@ -40,6 +40,32 @@
             content.select();
             document.execCommand('copy');
 
+
+
+            var l = {
+                "appName": "ele-waimai-channel",
+                "env": "pre",
+                "serviceType": "HSF",
+                "ip": targetIp,
+                "interfaceName": data["Service"].split(":")[0],
+                "methodName": data["MethodSignature"],
+                "group": "HSF",
+                "version": data["Service"].split(":")[1],
+                "input": data["InvokeArgs"],
+                "rpcContext": "{}",
+                "eagleEyeContext": "{}",
+                "timeOut": "30000",
+                "shadow": false,
+                "origin": "HSF-CONSOLE",
+                "empId": "130407",
+                "time": Date.now()
+            };
+
+            var lstr = "curl -H 'Host: ali-dp.alibaba-inc.com'   -H 'Content-type: application/json' 'http://ali-dp.alibaba-inc.com/plugin/api/execute'  --data-binary '\n" +
+                JSON.stringify(l, null, 2) +
+                "\n'";
+            document.getElementById('l').value = lstr;
+
         }
     </script>
 </head>
@@ -55,15 +81,19 @@
 
             <td>
 
-                <textarea placeholder="把 mse 的请求复制到这里" name="t" id="t" style="width:100%;height:600px" onkeyup="go()"></textarea>
+                <textarea placeholder="把 mse 的请求复制到这里" name="t" id="t" style="width:100%;height:500px" onkeyup="go()"></textarea>
                 <button onclick="go()" style="width:100%;height:50px;">go</button>
             </td>
         </tr>
         <tr>
 
-            <td colspan="2"> <textarea placeholder="这里是转换的 curl 结果。自动复制" name="r" id="r" style="width:100%;height:500px"></textarea>
+            <td> <textarea placeholder="这里是转换的 curl 结果。自动复制" name="r" id="r" style="width:100%;height:500px"></textarea>
+            </td>
+
+            <td> <textarea placeholder="这里是转换的 curl 结果。本机可以执行" name="l" id="l" style="width:100%;height:500px"></textarea>
             </td>
         </tr>
+
 
     </table>
 

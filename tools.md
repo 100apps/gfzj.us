@@ -12,4 +12,4 @@ permalink: /tools/
 - [json to excel](https://www.convertcsv.com/json-to-csv.htm)
 - [csv 添加引号](https://onlinelisttools.com/quote-list-items)
 - [mse to curl](mse-to-curl.html)
-- [curl to php](curl-to-php)
+- [curl to php](curl-to-php) 、 [curl to java](https://fivesmallq.github.io/curl-to-java/) 、 [curl to go](https://mholt.github.io/curl-to-go/) 
